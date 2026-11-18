@@ -38,7 +38,7 @@ ALVOS = {
 # ---- Números-chave dos problemas (usar EXATAMENTE estes valores) -------------------------------
 PARCELAS_DUPLICADAS = 312                 # registros duplicados em fato_parcelas.id_parcela (lote de 16/11)
 RECEBIMENTO_SUPERESTIMADO_PCT = 1.8       # % de superestimação do recebimento de 16/11
-TELEFONIA_PARADA_DESDE = "2026-11-14"     # 1º dia sem dados de voz (14, 15 e 16/11 ausentes) -> "parada há 3 dias"
+TELEFONIA_PARADA_DESDE = "2026-11-14"     # 1º dia SEM DADOS de voz (14, 15 e 16/11 ausentes); as cargas de 15, 16 e 17/11 falharam -> "parada há 3 dias"
 TELEFONIA_DIAS_PARADA = 3
 NPS_DUP_INICIO = "2026-10-01"             # duplicidade de respostas começa aqui
 NPS_REPORTADO_OUT = 62                    # NPS de outubro/2026 levado ao comitê de 05/11
@@ -63,7 +63,7 @@ INCIDENTES = [
          relatorios={"cobranca-carteira": "Recebimento e recuperação superestimados em ~1,8% no dia 16/11", "cobranca-safra": "Efeito marginal nas curvas de safra (abaixo de 0,1 p.p.)"}),
     dict(id="INC-2032", tabela="stg_telefonia_cdr", tipo="rotina_parada", severidade="critico",
          titulo="Rotina de telefonia parada há 3 dias",
-         tecnico="`ingest_telefonia` falha desde 14/11 às 02:10 com erro de autenticação no SFTP da operadora (credencial expirada). Quatro execuções consecutivas sem sucesso.",
+         tecnico="`ingest_telefonia` falha desde 15/11 às 02:10 com erro de autenticação no SFTP da operadora (credencial expirada). Três execuções consecutivas sem sucesso; a última carga válida é de 14/11, com dados até 13/11.",
          negocio="O relatório de Atendimento não tem chamadas de voz de 14 a 16/11. Volume, TMA, TME e abandono do canal Voz estão desatualizados e o total de contatos parece ter caído.",
          causa="Senha do SFTP com rotação trimestral e sem alerta de expiração; falha sem notificação ao dono.",
          acao="Renovar a credencial, reprocessar os 3 dias e configurar alerta de falha com dono definido.",
@@ -133,7 +133,7 @@ PROBLEMAS = {
     # vermelhos
     "stg_crm_propostas": ("volume_anomalo", "412 linhas carregadas contra média de 1.148 (queda de 64%)"),
     "stg_banco_boletos_registrados": ("rotina_falhou", "Rotina falhou hoje às 03:40: certificado da API do banco expirado"),
-    "stg_telefonia_cdr": ("rotina_parada", "Sem atualização há 3 dias: falha de autenticação no SFTP da operadora desde 14/11"),
+    "stg_telefonia_cdr": ("rotina_parada", "Sem atualização há 3 dias: falha de autenticação no SFTP da operadora desde 15/11"),
     "stg_whatsapp_conversas": ("sem_pk", "Tabela sem chave primária definida; 2,3% de conversas repetidas nos últimos 7 dias"),
     "dim_cliente": ("nulos", "18% de nulos em `cpf_cliente` nos cadastros do canal Parceiro (4,1% do total)"),
     "dim_cota": ("fk_orfa", "147 cotas com `id_grupo` inexistente em `dim_grupo`"),

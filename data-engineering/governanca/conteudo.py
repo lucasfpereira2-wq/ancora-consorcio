@@ -31,8 +31,8 @@ INCIDENTES_META = {
         ("Registros duplicados", f_int(C.PARCELAS_DUPLICADAS)), ("Recebimento superestimado em 16/11", f"~{_PCT}%")]
         + ([("Valor lançado em duplicidade", _mil(VL_DUP))] if VL_DUP else [])
         + ([("Recebimento de 16/11: relatório x correto", f"{_mi(VL_REC)} x {_mi(VL_REC_OK)}")] if VL_REC and VL_REC_OK else [])),
-    "INC-2032": dict(detectado="2026-11-17T06:05:00-03:00", inicio="2026-11-14T02:10:00-03:00", situacao="aberto", metricas=[
-        ("Dias sem dados de voz", f"{C.TELEFONIA_DIAS_PARADA} (14 a 16/11)"), ("Última carga com sucesso", "13/11 às 02:10")]
+    "INC-2032": dict(detectado="2026-11-17T06:05:00-03:00", inicio="2026-11-15T02:10:00-03:00", situacao="aberto", metricas=[
+        ("Dias sem dados de voz", f"{C.TELEFONIA_DIAS_PARADA} (14 a 16/11)"), ("Última carga com sucesso", "14/11 às 02:10")]
         + ([("Contatos de voz não carregados (estimativa)", f_int(VOZ_PERDIDA))] if VOZ_PERDIDA else [])
         + [("Tabelas a jusante paradas", "2")]),
     "INC-2027": dict(detectado="2026-11-06T10:20:00-03:00", inicio=C.NPS_DUP_INICIO + "T00:00:00-03:00", situacao="em_analise", metricas=[

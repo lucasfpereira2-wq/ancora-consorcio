@@ -12,18 +12,18 @@
   ],
   "status": "vermelho",
   "ultima_execucao": {
-   "inicio": "2026-11-17T02:10:46-03:00",
-   "duracao_seg": 26,
+   "inicio": "2026-11-17T02:10:03-03:00",
+   "duracao_seg": 27,
    "status": "falha",
    "mensagem": "Falha de autenticação no SFTP da operadora (530 Login incorrect): credencial expirada."
   },
-  "taxa_sucesso_30d": 86.7,
+  "taxa_sucesso_30d": 90.0,
   "duracao_media_seg": 24,
-  "falhas_30d": 4,
+  "falhas_30d": 3,
   "falhas_recorrentes": [
    {
     "erro": "Falha de autenticação no SFTP da operadora (530 Login incorrect): credencial expirada.",
-    "ocorrencias": 4,
+    "ocorrencias": 3,
     "ultima": "2026-11-17"
    }
   ],
@@ -160,8 +160,8 @@
    },
    {
     "data": "2026-11-14",
-    "status": "falha",
-    "duracao_seg": 25
+    "status": "sucesso",
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-15",
@@ -171,12 +171,12 @@
    {
     "data": "2026-11-16",
     "status": "falha",
-    "duracao_seg": 25
+    "duracao_seg": 27
    },
    {
     "data": "2026-11-17",
     "status": "falha",
-    "duracao_seg": 26
+    "duracao_seg": 27
    }
   ]
  },
@@ -201,13 +201,13 @@
    "status": "falha",
    "mensagem": "Tarefa ignorada (upstream_failed): `stg_telefonia_cdr` não foi carregada."
   },
-  "taxa_sucesso_30d": 86.7,
+  "taxa_sucesso_30d": 90.0,
   "duracao_media_seg": 49,
-  "falhas_30d": 4,
+  "falhas_30d": 3,
   "falhas_recorrentes": [
    {
     "erro": "Tarefa ignorada (upstream_failed): `stg_telefonia_cdr` não foi carregada.",
-    "ocorrencias": 4,
+    "ocorrencias": 3,
     "ultima": "2026-11-17"
    }
   ],
@@ -344,8 +344,8 @@
    },
    {
     "data": "2026-11-14",
-    "status": "falha",
-    "duracao_seg": 35
+    "status": "sucesso",
+    "duracao_seg": 49
    },
    {
     "data": "2026-11-15",
@@ -563,13 +563,13 @@
    "status": "falha",
    "mensagem": "Etapa de voz ignorada por falha na dependência `fato_chamada`; canais digitais carregados e execução marcada como falha."
   },
-  "taxa_sucesso_30d": 86.7,
-  "duracao_media_seg": 327,
-  "falhas_30d": 4,
+  "taxa_sucesso_30d": 90.0,
+  "duracao_media_seg": 326,
+  "falhas_30d": 3,
   "falhas_recorrentes": [
    {
     "erro": "Etapa de voz ignorada por falha na dependência `fato_chamada`; canais digitais carregados e execução marcada como falha.",
-    "ocorrencias": 4,
+    "ocorrencias": 3,
     "ultima": "2026-11-17"
    }
   ],
@@ -706,18 +706,18 @@
    },
    {
     "data": "2026-11-14",
-    "status": "falha",
-    "duracao_seg": 56
+    "status": "sucesso",
+    "duracao_seg": 300
    },
    {
     "data": "2026-11-15",
     "status": "falha",
-    "duracao_seg": 87
+    "duracao_seg": 51
    },
    {
     "data": "2026-11-16",
     "status": "falha",
-    "duracao_seg": 116
+    "duracao_seg": 97
    },
    {
     "data": "2026-11-17",

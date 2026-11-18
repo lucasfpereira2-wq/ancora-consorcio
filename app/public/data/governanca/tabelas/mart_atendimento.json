@@ -13,9 +13,9 @@
  "status": "vermelho",
  "motivo_status": "Canal Voz sem dados de 14 a 16/11; carga do mart ignorada por falha na dependência",
  "tem_pk": true,
- "saude": 14.8,
- "ultima_carga": "2026-11-13T05:10:32-03:00",
- "atraso_horas": 75.0,
+ "saude": 14.9,
+ "ultima_carga": "2026-11-14T05:10:08-03:00",
+ "atraso_horas": 51.0,
  "linhas": 237291,
  "testes_total": 7,
  "testes_falhando": 1,
@@ -47,7 +47,7 @@
   "sucesso",
   "sucesso",
   "sucesso",
-  "falha",
+  "sucesso",
   "falha",
   "falha",
   "falha"
@@ -411,17 +411,16 @@
   {
    "data": "2026-11-14",
    "inicio": "2026-11-14T05:10:08-03:00",
-   "duracao_seg": 56,
-   "linhas": 192,
+   "duracao_seg": 300,
+   "linhas": 354,
    "linhas_esperadas": 343,
-   "status": "falha",
-   "anomalia_volume": true,
-   "mensagem": "Etapa de voz ignorada por falha na dependência `fato_chamada`; canais digitais carregados e execução marcada como falha."
+   "status": "sucesso",
+   "anomalia_volume": false
   },
   {
    "data": "2026-11-15",
    "inicio": "2026-11-15T05:10:40-03:00",
-   "duracao_seg": 87,
+   "duracao_seg": 51,
    "linhas": 192,
    "linhas_esperadas": 343,
    "status": "falha",
@@ -430,8 +429,8 @@
   },
   {
    "data": "2026-11-16",
-   "inicio": "2026-11-16T05:10:47-03:00",
-   "duracao_seg": 116,
+   "inicio": "2026-11-16T05:10:38-03:00",
+   "duracao_seg": 97,
    "linhas": 192,
    "linhas_esperadas": 343,
    "status": "falha",
@@ -551,7 +550,7 @@
     "ok",
     "ok",
     "ok",
-    "alerta",
+    "ok",
     "alerta",
     "alerta",
     "alerta"
@@ -565,15 +564,15 @@
    "severidade": "critico",
    "resultado": "falha",
    "evidencia": "Canal Voz sem dados de 14 a 16/11; carga do mart ignorada por falha na dependência",
-   "valor_observado": 98.8,
+   "valor_observado": 74.8,
    "limite": 24,
    "unidade": "horas",
    "historico_7d": [
     "ok",
     "ok",
     "ok",
+    "ok",
     "alerta",
-    "falha",
     "falha",
     "falha"
    ],
@@ -621,7 +620,7 @@
   "linhas": [
    {
     "valores": [
-     "2026-11-12",
+     "2026-11-13",
      "E-mail",
      33,
      459,
@@ -633,12 +632,12 @@
      27,
      4,
      41,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-11",
+     "2026-11-12",
      "Voz",
      43,
      730,
@@ -650,12 +649,12 @@
      20,
      3,
      30,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-12",
+     "2026-11-13",
      "Voz",
      52,
      873,
@@ -667,12 +666,12 @@
      38,
      6,
      57,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-10",
+     "2026-11-11",
      "WhatsApp",
      33,
      398,
@@ -684,12 +683,12 @@
      18,
      2,
      27,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-11",
+     "2026-11-12",
      "App",
      56,
      393,
@@ -701,12 +700,12 @@
      20,
      3,
      30,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-12",
+     "2026-11-13",
      "Chat",
      53,
      759,
@@ -718,12 +717,12 @@
      34,
      5,
      50,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-10",
+     "2026-11-11",
      "E-mail",
      41,
      629,
@@ -735,12 +734,12 @@
      36,
      5,
      54,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-12",
+     "2026-11-13",
      "E-mail",
      50,
      574,
@@ -752,12 +751,12 @@
      29,
      4,
      44,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-12",
+     "2026-11-13",
      "App",
      31,
      675,
@@ -769,12 +768,12 @@
      31,
      5,
      47,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-12",
+     "2026-11-13",
      "App",
      39,
      30,
@@ -786,12 +785,12 @@
      0,
      0,
      1,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-11",
+     "2026-11-12",
      "WhatsApp",
      48,
      811,
@@ -803,12 +802,12 @@
      23,
      3,
      35,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    },
    {
     "valores": [
-     "2026-11-12",
+     "2026-11-13",
      "App",
      48,
      391,
@@ -820,7 +819,7 @@
      16,
      2,
      24,
-     "2026-11-13 05:10:32"
+     "2026-11-14 05:10:08"
     ]
    }
   ]

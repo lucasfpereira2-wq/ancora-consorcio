@@ -136,8 +136,9 @@ _pipe("ingest_helpdesk", "2026-11-05", "alerta", "Limite de requisições da API
 _pipe("mart_executivo", "2026-11-08", "atrasada", "Aguardou os marts de origem; iniciou com 1 hora de atraso.", atraso_h=1)
 _pipe("ingest_pesquisas", "2026-11-10", "falha", "Token da API da plataforma de pesquisas expirado (HTTP 401). Renovado manualmente no mesmo dia.")
 
-# Cenário: telefonia parada desde 14/11
-for _d in ("2026-11-14", "2026-11-15", "2026-11-16", "2026-11-17"):
+# Cenário: telefonia parada. Última carga com sucesso em 14/11 (dados até 13/11); as cargas de 15, 16 e 17/11
+# falharam, então faltam os dados de voz de 14, 15 e 16/11 -> "parada há 3 dias"
+for _d in ("2026-11-15", "2026-11-16", "2026-11-17"):
     _tab("stg_telefonia_cdr", _d, "falha", "Falha de autenticação no SFTP da operadora (530 Login incorrect): credencial expirada.")
     _tab("fato_chamada", _d, "nao_executou", "Tarefa ignorada (upstream_failed): `stg_telefonia_cdr` não foi carregada.")
     _tab("mart_atendimento", _d, "falha",

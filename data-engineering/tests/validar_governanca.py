@@ -162,10 +162,10 @@ def main():
         return {e["data"]: e for e in det(n)["execucoes"]}
 
     tel = execs("stg_telefonia_cdr")
-    assert all(tel[d]["status"] == "falha" for d in ("2026-11-14", "2026-11-15", "2026-11-16", "2026-11-17")) and tel["2026-11-13"]["status"] == "sucesso"
-    assert tel["2026-11-14"]["inicio"].startswith("2026-11-14T02:10") and resumos["stg_telefonia_cdr"]["ultima_carga"].startswith("2026-11-13")
+    assert all(tel[d]["status"] == "falha" for d in ("2026-11-15", "2026-11-16", "2026-11-17")) and tel["2026-11-14"]["status"] == "sucesso"
+    assert tel["2026-11-15"]["inicio"].startswith("2026-11-15T02:10") and resumos["stg_telefonia_cdr"]["ultima_carga"].startswith("2026-11-14")
     for n in ("fato_chamada", "mart_atendimento"):
-        assert all(execs(n)[d]["status"] in ("nao_executou", "falha") for d in ("2026-11-14", "2026-11-15", "2026-11-16", "2026-11-17")), n
+        assert all(execs(n)[d]["status"] in ("nao_executou", "falha") for d in ("2026-11-15", "2026-11-16", "2026-11-17")), n
     prop = execs("stg_crm_propostas")[hoje]
     assert prop["status"] == "sucesso" and prop["linhas"] == cenario.PROPOSTAS_D1 and prop["linhas_esperadas"] == cenario.PROPOSTAS_MEDIA and prop["anomalia_volume"]
     bol = execs("stg_banco_boletos_registrados")[hoje]

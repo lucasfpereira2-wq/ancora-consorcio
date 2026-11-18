@@ -209,8 +209,8 @@
   "titulo": "Dados com problema crítico",
   "mensagem": "Este relatório usa `stg_telefonia_cdr`, que está parada há 3 dias. O canal Voz não tem dados de 14 a 16/11 e os indicadores de voz estão desatualizados. O NPS de outubro foi divulgado como 62; o correto é 56 (respostas duplicadas em `fato_pesquisa_nps`).",
   "tabela_principal": "stg_telefonia_cdr",
-  "atualizado_em": "2026-11-13T05:10:32-03:00",
-  "horas_desde_atualizacao": 98.8,
+  "atualizado_em": "2026-11-14T05:10:08-03:00",
+  "horas_desde_atualizacao": 74.8,
   "problemas": [
    {
     "tabela": "stg_telefonia_cdr",

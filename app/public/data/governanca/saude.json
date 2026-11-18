@@ -109,11 +109,11 @@
   },
   {
    "data": "2026-11-14",
-   "indice": 82.5
+   "indice": 86.3
   },
   {
    "data": "2026-11-15",
-   "indice": 82.2
+   "indice": 82.5
   },
   {
    "data": "2026-11-16",
@@ -154,7 +154,7 @@
  "por_dominio": [
   {
    "dominio": "Staging",
-   "indice": 71.5,
+   "indice": 71.6,
    "tabelas": 14,
    "vermelho": 4,
    "amarelo": 1,
@@ -236,7 +236,7 @@
  "por_camada": [
   {
    "camada": "staging",
-   "indice": 71.5,
+   "indice": 71.6,
    "tabelas": 14,
    "vermelho": 4,
    "amarelo": 1,
@@ -244,7 +244,7 @@
   },
   {
    "camada": "core",
-   "indice": 74.5,
+   "indice": 74.6,
    "tabelas": 60,
    "vermelho": 6,
    "amarelo": 17,
