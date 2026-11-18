@@ -412,7 +412,7 @@ export function RelatoriosImpactados({ ids, selos, meta, status }: { ids: string
         const selo = selos?.[id]
         const nav = relatorioPorId(id)
         const titulo = meta?.relatorios.find((r) => r.id === id)?.titulo ?? nav?.titulo ?? id
-        const rota = meta?.relatorios.find((r) => r.id === id)?.rota ?? nav?.rota ?? `/relatorios/${id}`
+        const rota = `/impactos?relatorio=${id}`
         const Icone = nav?.icone
         const st = selo ? statusDoSelo(selo.nivel) : null
         return (

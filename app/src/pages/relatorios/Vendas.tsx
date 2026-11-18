@@ -116,7 +116,6 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
   const cubos = dados.cubos as Record<'vendas' | 'metas' | 'funil' | 'cancelamentos', Cubo>
   const k = useIndicadores(dados, f)
   const vendedores = (dados.extras.vendedores as Vendedor[] | undefined) ?? []
-  const cenario = dados.extras.cenario as { propostas_16nov?: number; propostas_media_segundas?: number } | undefined
   const notas = dados.extras.notas as { metas?: string } | undefined
 
   return (
@@ -191,7 +190,7 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
 
       <div className="grid gap-4 xl:grid-cols-2">
         <MetaPorRegional f={f} cuboVendas={cubos.vendas} cuboMetas={cubos.metas} />
-        <FunilComercial f={f} cubo={cubos.funil} cenario={cenario} />
+        <FunilComercial f={f} cubo={cubos.funil} />
       </div>
 
       <div className="grid gap-4 xl:grid-cols-2">

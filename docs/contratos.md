@@ -41,6 +41,7 @@ Dono de cada arquivo: `meta.json` e `relatorios/*` → Engenharia de Dados. `gov
 | `/farol` | Farol de Dados (grade, lista, heatmap) |
 | `/farol/:tabela` | Detalhe da tabela |
 | `/rotinas` | Rotinas / Pipelines |
+| `/impactos` | Impacto nos relatórios: selo de confiança, tabela causadora e desvio de cada relatório |
 | `/glossario` | Glossário de métricas |
 | `/relatorios/vendas` · `/relatorios/cobranca-carteira` · `/relatorios/cobranca-safra` · `/relatorios/atendimento` · `/relatorios/assembleias` | Relatórios |
 | `/plano-90-dias` | Plano de 90 dias |
@@ -75,6 +76,6 @@ R$ com ponto de milhar e vírgula decimal; percentuais com vírgula; datas dd/mm
 ## 6. Regras de coerência (o QA valida)
 
 1. O farol de cada tabela nasce das execuções e dos testes simulados, e precisa bater com o status-alvo de `tabelas.py`.
-2. O selo de cada relatório é derivado do upstream na linhagem e bate com `SELOS_ESPERADOS`.
+2. O selo de cada relatório é derivado do upstream na linhagem e bate com `SELOS_ESPERADOS`. **Os selos e alertas aparecem somente na página `/impactos`**; as páginas de relatório ficam limpas, com os números como publicados.
 3. Os números citados em incidentes e selos são os mesmos presentes nos cubos (312 duplicados, +1,8%, NPS 62 x 56, voz ausente em 14–16/11, propostas 412 x 1.148).
 4. Totais de KPI = soma dos detalhamentos sob o mesmo filtro.

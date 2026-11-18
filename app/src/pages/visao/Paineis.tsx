@@ -21,7 +21,7 @@ export function ConfiancaRelatorios({ selos }: { selos: Record<string, Selo> | n
     <section id="confianca" aria-label="Confiança dos relatórios" className="flex w-full min-w-0 scroll-mt-20 flex-col rounded-2xl border border-border bg-card shadow-card">
       <header className="px-5 pb-3 pt-4">
         <h2 className="text-base font-semibold tracking-tight">Confiança dos relatórios</h2>
-        <p className="mt-0.5 text-[13px] text-muted-foreground">O selo de cada relatório deriva das tabelas que o alimentam.</p>
+        <p className="mt-0.5 text-[13px] text-muted-foreground">O selo de cada relatório deriva das tabelas que o alimentam. Clique para ver o impacto.</p>
       </header>
       <ul className="flex flex-1 flex-col divide-y divide-border border-t border-border">
         {RELATORIOS.map((r) => {
@@ -33,7 +33,7 @@ export function ConfiancaRelatorios({ selos }: { selos: Record<string, Selo> | n
               {status && <span className={cn('absolute inset-y-3 left-0 w-[3px] rounded-r-full', STATUS_INFO[status].ponto)} aria-hidden />}
               <div className="flex items-center gap-2.5">
                 <Icone className="size-4 shrink-0 text-muted-foreground" aria-hidden />
-                <Link to={r.rota} className="min-w-0 truncate text-sm font-semibold tracking-tight after:absolute after:inset-0 hover:text-primary">
+                <Link to={`/impactos?relatorio=${r.relatorio}`} className="min-w-0 truncate text-sm font-semibold tracking-tight after:absolute after:inset-0 hover:text-primary">
                   {r.titulo}
                 </Link>
                 {selo && status ? <StatusBadge status={status} rotulo={ROTULO_SELO[selo.nivel]} tamanho="sm" className="ml-auto" /> : <span className="ml-auto text-xs text-muted-foreground">Selo indisponível</span>}
@@ -50,7 +50,7 @@ export function ConfiancaRelatorios({ selos }: { selos: Record<string, Selo> | n
                     {selo.problemas.length > 0 && <> · {selo.problemas.length} {selo.problemas.length === 1 ? 'ressalva' : 'ressalvas'}</>}
                   </span>
                   <span className="inline-flex items-center gap-1 font-semibold text-primary">
-                    Abrir
+                    Ver impacto
                     <ArrowRight className="size-3.5" aria-hidden />
                   </span>
                 </p>

@@ -9,6 +9,7 @@ import {
   Milestone,
   Newspaper,
   Radar,
+  ShieldAlert,
   TrendingUp,
   Wallet,
   Workflow,
@@ -19,7 +20,7 @@ export interface ItemNavegacao {
   rota: string
   titulo: string
   icone: LucideIcon
-  /** id do relatório (liga ao selo de confiança e aos cubos) */
+  /** id do relatório (liga aos cubos e ao selo exibido em Impacto nos relatórios) */
   relatorio?: string
   descricao?: string
 }
@@ -39,6 +40,7 @@ export const GRUPOS_NAVEGACAO: { titulo: string; itens: ItemNavegacao[] }[] = [
     itens: [
       { rota: '/farol', titulo: 'Farol', icone: Radar, descricao: 'Status das 80 tabelas monitoradas' },
       { rota: '/rotinas', titulo: 'Rotinas', icone: Workflow, descricao: 'Pipelines, execuções e falhas' },
+      { rota: '/impactos', titulo: 'Impacto nos relatórios', icone: ShieldAlert, descricao: 'Selo de confiança e desvios de cada relatório' },
       { rota: '/glossario', titulo: 'Glossário', icone: BookOpen, descricao: 'Definições oficiais das métricas' },
     ],
   },

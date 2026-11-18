@@ -1,12 +1,10 @@
-import { TriangleAlert, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import type { ReactNode, Ref } from 'react'
-import { Link } from 'react-router-dom'
 import { EChart, type EChartHandle } from '@/components/dados/EChart'
-import { Dica } from '@/components/ui/tooltip'
 import { useTema } from '@/lib/tema'
 import { tokensGrafico } from '@/lib/tema-echarts'
 import { cn } from '@/lib/utils'
-import { opcao, TABELA_TELEFONIA, tooltipHTML, type LinhaTooltip } from './util'
+import { opcao, tooltipHTML, type LinhaTooltip } from './util'
 
 /** Título de bloco do relatório (tendência, motivos, satisfação...). */
 export function Secao({ id, titulo, descricao, acoes, children }: { id?: string; titulo: string; descricao?: ReactNode; acoes?: ReactNode; children: ReactNode }) {
@@ -70,21 +68,6 @@ export function ChipFiltro({ rotulo, aoRemover }: { rotulo: string; aoRemover: (
       <span className="truncate">{rotulo}</span>
       <X className="size-3.5 shrink-0 opacity-70" aria-hidden />
     </button>
-  )
-}
-
-/** Alerta de indicador desatualizado pela telefonia parada: ícone + tooltip + link para o Farol. */
-export function AlertaVozKpi() {
-  return (
-    <Dica texto="Indicador desatualizado: voz sem dados de 14 a 16/11. Clique para ver a rotina no Farol.">
-      <Link
-        to={`/farol/${TABELA_TELEFONIA}`}
-        className="inline-flex items-center gap-1 rounded-md font-medium text-status-amarelo-texto underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-ring"
-      >
-        <TriangleAlert className="size-3.5 shrink-0" aria-hidden />
-        Voz sem dados de 14 a 16/11
-      </Link>
-    </Dica>
   )
 }
 

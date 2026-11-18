@@ -1,4 +1,4 @@
-/** Utilitários locais do relatório de Atendimento (formatação, NPS, telefonia parada, tooltips). */
+/** Utilitários locais do relatório de Atendimento (formatação, NPS, filtros, tooltips). */
 import { useCallback, useMemo } from 'react'
 import type { EChartsOption } from '@/components/dados/EChart'
 import type { FiltrosCubo } from '@/lib/cubo'
@@ -8,9 +8,6 @@ import { useTema, type Tema } from '@/lib/tema'
 import { tokensGrafico, type TokensGrafico } from '@/lib/tema-echarts'
 
 export const DIM_CANAL = 'canal_atendimento'
-export const TABELA_TELEFONIA = 'stg_telefonia_cdr'
-export const TABELA_NPS = 'fato_pesquisa_nps'
-export const CANAL_VOZ = 'Voz'
 
 /** Tema atual + tokens de gráfico com referência estável (seguro em dependências de useMemo). */
 export function useTokens(): { tema: Tema; t: TokensGrafico } {
@@ -60,11 +57,10 @@ export function difPts(atual: number | null, anterior: number | null): { variaca
 }
 
 // ----------------------------------------------------------------------------------------------
-// NPS reportado × corrigido
+// NPS
 // ----------------------------------------------------------------------------------------------
 
-export type ModoNps = 'reportado' | 'corrigido'
-export const MEDIDAS_NPS = ['promotores', 'neutros', 'detratores', 'promotores_dup', 'neutros_dup', 'detratores_dup']
+export const MEDIDAS_NPS = ['promotores', 'neutros', 'detratores']
 
 export interface PartesNps {
   promotores: number
@@ -75,31 +71,12 @@ export interface PartesNps {
   nps: number | null
 }
 
-/** Reportado = como está no cubo (com duplicatas); corrigido = reportado − parte duplicada. */
-export function partesNps(v: Record<string, number>, modo: ModoNps): PartesNps {
-  const c = modo === 'corrigido' ? 1 : 0
-  const promotores = (v.promotores ?? 0) - c * (v.promotores_dup ?? 0)
-  const neutros = (v.neutros ?? 0) - c * (v.neutros_dup ?? 0)
-  const detratores = (v.detratores ?? 0) - c * (v.detratores_dup ?? 0)
+export function partesNps(v: Record<string, number>): PartesNps {
+  const promotores = v.promotores ?? 0
+  const neutros = v.neutros ?? 0
+  const detratores = v.detratores ?? 0
   const respostas = promotores + neutros + detratores
   return { promotores, neutros, detratores, respostas, nps: respostas > 0 ? ((promotores - detratores) / respostas) * 100 : null }
-}
-
-// ----------------------------------------------------------------------------------------------
-// Telefonia parada
-// ----------------------------------------------------------------------------------------------
-
-export interface AlertaVoz {
-  /** o período filtrado inclui dias sem dados de voz e o canal Voz está na seleção */
-  afetado: boolean
-  /** dias ausentes dentro do período (YYYY-MM-DD) */
-  dias: string[]
-}
-
-export function alertaVoz(diasAusentes: string[], periodo: { inicio: string; fim: string }, canais: string[]): AlertaVoz {
-  const dias = diasAusentes.filter((d) => d >= periodo.inicio && d <= periodo.fim)
-  const vozNaSelecao = canais.length === 0 || canais.includes(CANAL_VOZ)
-  return { afetado: vozNaSelecao && dias.length > 0, dias }
 }
 
 // ----------------------------------------------------------------------------------------------

@@ -1,6 +1,5 @@
-import { ArrowRight, CalendarRange, Info, Layers, ShieldAlert, ThumbsDown, ThumbsUp, TrendingDown, UserMinus } from 'lucide-react'
+import { CalendarRange, Info, ShieldAlert, ThumbsDown, ThumbsUp, TrendingDown, UserMinus } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { KpiCard } from '@/components/dados'
 import { LayoutRelatorio } from '@/components/relatorio/LayoutRelatorio'
 import { filtrar } from '@/lib/cubo'
@@ -108,7 +107,6 @@ export default function CobrancaSafra() {
   const mobQ = Number(mobQuebra)
   const porSegmento = useMemo(() => (cubo && selecionar ? quebraNoMob(cubo, selecionar('segmento'), 'segmento', mobQ) : []), [cubo, selecionar, mobQ])
   const porCanal = useMemo(() => (cubo && selecionar ? quebraNoMob(cubo, selecionar('canal'), 'canal', mobQ) : []), [cubo, selecionar, mobQ])
-  const orfas = Number((dados?.extras?.cenario as { cotas_fk_orfa?: number } | undefined)?.cotas_fk_orfa ?? 0)
 
   const alternarSegmento = (nome: string) => {
     const s = useFiltros.getState()
@@ -225,16 +223,6 @@ export default function CobrancaSafra() {
             </div>
           </Secao>
 
-          {orfas > 0 && (
-            <p className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-muted-foreground">
-              <Layers className="size-3.5" aria-hidden />
-              {fmtNumero(orfas)} cotas com grupo inexistente no cadastro ficam fora das análises por grupo e safra.
-              <Link to="/farol/dim_cota" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
-                Ver <code className="rounded bg-muted px-1 py-0.5">dim_cota</code> no Farol
-                <ArrowRight className="size-3" aria-hidden />
-              </Link>
-            </p>
-          )}
         </>
       )}
     </LayoutRelatorio>

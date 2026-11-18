@@ -1,6 +1,4 @@
-import { TriangleAlert } from 'lucide-react'
 import { useMemo, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import { ChartCard } from '@/components/dados'
 import { EChart, type EChartHandle, type EChartsOption } from '@/components/dados/EChart'
 import { agrupar, filtrar, razao, serieTemporal, serieTemporalPor, totais } from '@/lib/cubo'
@@ -133,9 +131,8 @@ export function MetaPorRegional({ f, cuboVendas, cuboMetas }: PropsBase & { cubo
 // Funil comercial
 // ----------------------------------------------------------------------------------------------
 
-const DIA_CARGA_PARCIAL = '2026-11-16'
 
-export function FunilComercial({ f, cubo, cenario }: PropsBase & { cubo: Cubo; cenario?: { propostas_16nov?: number; propostas_media_segundas?: number } }) {
+export function FunilComercial({ f, cubo }: PropsBase & { cubo: Cubo }) {
   const ref = useRef<EChartHandle>(null)
   const tema = useTema((s) => s.tema)
 
@@ -199,7 +196,6 @@ export function FunilComercial({ f, cubo, cenario }: PropsBase & { cubo: Cubo; c
     }
   }, [etapas, tema])
 
-  const incluiCargaParcial = f.periodo.inicio <= DIA_CARGA_PARCIAL && f.periodo.fim >= DIA_CARGA_PARCIAL
   const total = razao(etapas[3]?.valor, etapas[0]?.valor)
 
   return (
@@ -213,23 +209,6 @@ export function FunilComercial({ f, cubo, cenario }: PropsBase & { cubo: Cubo; c
         colunas: ['Etapa', 'Volume', 'Conversão da etapa anterior (%)', 'Em relação aos leads (%)'],
         linhas: etapas.map((e) => [e.nome, Math.round(e.valor), e.daAnterior === null ? null : Math.round(e.daAnterior * 1000) / 10, e.doTopo === null ? null : Math.round(e.doTopo * 1000) / 10]),
       })}
-      rodape={
-        incluiCargaParcial ? (
-          <span className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
-            <TriangleAlert className="size-3.5 shrink-0 text-status-amarelo" aria-hidden />
-            <span>
-              Propostas de 16/11 com carga parcial
-              {cenario?.propostas_16nov && cenario.propostas_media_segundas
-                ? ` (${fmtNumero(cenario.propostas_16nov)} contra média de ${fmtNumero(cenario.propostas_media_segundas)} nas segundas)`
-                : ''}
-              .
-            </span>
-            <Link to="/farol/stg_crm_propostas" className="font-medium text-primary underline-offset-2 hover:underline">
-              Ver stg_crm_propostas no Farol
-            </Link>
-          </span>
-        ) : undefined
-      }
     >
       <EChart ref={ref} altura={208} option={option} descricao="Funil comercial: leads, propostas, propostas aprovadas e contratos" />
       <dl className="mt-3 grid grid-cols-3 gap-2">

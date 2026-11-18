@@ -5,7 +5,7 @@ Foi construído por **Lucas Pereira** como peça de apresentação para a posiç
 
 > Ambiente simulado. Dados fictícios gerados para demonstração. O projeto não usa logotipo, marca nem dados reais de nenhuma empresa.
 
-**A tese do Hub:** relatório confiável depende de dado governado. Cada número exibido carrega um selo de confiança que nasce do monitoramento das tabelas que o alimentam.
+**A tese do Hub:** relatório confiável depende de dado governado. Cada relatório tem um selo de confiança que nasce do monitoramento das tabelas que o alimentam.
 
 ![Visão Executiva](docs/prints/visao-executiva.png)
 
@@ -13,12 +13,12 @@ Foi construído por **Lucas Pereira** como peça de apresentação para a posiç
 
 | Dor relatada | Como o Hub trata |
 |---|---|
-| Informação divulgada de forma incorreta | Selo de confiança em todo relatório e alternância "reportado × corrigido" (caso do NPS: 62 divulgado, 56 real) |
+| Informação divulgada de forma incorreta | Página Impacto nos relatórios: para cada relatório, o número publicado, o número correto e a tabela causadora (caso do NPS: 62 divulgado, 56 real) |
 | Rotinas que não atualizam | Farol com frescor contra SLA, histórico de 30 dias e página de Rotinas (caso da telefonia parada há 3 dias) |
 | Rotinas que atualizam com dados duplicados | Teste de unicidade com evidência e amostra das linhas (312 parcelas duplicadas inflando o recebimento em 1,8%) |
 | Tabelas sem chave primária | Selo "SEM PK" no catálogo e teste de existência de chave em todas as tabelas |
 
-O ponto central é a **ligação entre as duas metades**: o problema nasce em uma tabela, percorre a linhagem e aparece no relatório como um aviso que leva de volta à tabela.
+O ponto central é a **ligação entre as duas metades**: o problema nasce em uma tabela, percorre a linhagem e chega a um relatório. Os relatórios ficam limpos, como a diretoria os consome; a página **Impacto nos relatórios** mostra o selo de cada um e leva de volta à tabela.
 
 ## O que tem no portal
 
@@ -28,13 +28,15 @@ O ponto central é a **ligação entre as duas metades**: o problema nasce em um
 | **Visão Executiva** | Índice de Saúde dos Dados, farol das 80 tabelas, rotinas com falha, Top 5 problemas em linguagem de negócio |
 | **Farol de Dados** | Catálogo das 80 tabelas em grade, lista e heatmap de 30 dias; detalhe com frescor, execuções, testes, schema, linhagem interativa e amostra |
 | **Rotinas** | Pipelines, agenda, taxa de sucesso e falhas recorrentes |
+| **Impacto nos relatórios** | Selo de confiança dos 5 relatórios, com o número publicado, o número correto e a tabela que causa a diferença |
 | **Relatórios** | Vendas, Carteira e Inadimplência, Safra/MOB/Cohort, Atendimento, Assembleias e Contemplações |
 | **Plano de 90 dias** | Diagnóstico, padronização e monitoramento, com métricas de sucesso e projeção do índice |
 | **Glossário e Artigos** | Definição oficial das métricas e textos do autor |
 
 ![Farol de Dados](docs/prints/farol.png)
 ![Detalhe da tabela com linhagem](docs/prints/tabela-detalhe.png)
-![Relatório com selo de confiança](docs/prints/relatorio-cobranca.png)
+![Impacto nos relatórios](docs/prints/impacto-relatorios.png)
+![Relatório de Cobrança](docs/prints/relatorio-cobranca.png)
 
 ## Arquitetura
 
@@ -64,7 +66,8 @@ flowchart LR
 
   subgraph APP[app - React, TypeScript, Vite]
     FAR[Farol de Dados]
-    REL[5 relatórios com selo de confiança]
+    IMP[Impacto nos relatórios - selos]
+    REL[5 relatórios executivos]
     PLA[Plano de 90 dias]
   end
 
@@ -78,7 +81,8 @@ flowchart LR
   CAT --> VAL
   CUB --> REL
   CAT --> FAR
-  CAT -- selo --> REL
+  CAT -- selo --> IMP
+  IMP --> REL
   CAT --> PLA
   APP --> GH[GitHub Pages]
 ```

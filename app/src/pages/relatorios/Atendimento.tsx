@@ -1,5 +1,5 @@
-import { Clock, Gauge, Headset, Hourglass, PhoneOff, Smile, ThumbsUp, TriangleAlert } from 'lucide-react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { Clock, Gauge, Headset, Hourglass, PhoneOff, Smile, ThumbsUp } from 'lucide-react'
+import { useMemo } from 'react'
 import { KpiCard } from '@/components/dados'
 import { LayoutRelatorio } from '@/components/relatorio/LayoutRelatorio'
 import { compararPeriodos, filtrar, razao, serieTemporal } from '@/lib/cubo'
@@ -13,17 +13,12 @@ import { BlocoMotivos } from './atendimento/BlocoMotivos'
 import { BlocoNps } from './atendimento/BlocoNps'
 import { BlocoSatisfacao } from './atendimento/BlocoSatisfacao'
 import { BlocoVolume } from './atendimento/BlocoVolume'
-import { AlertaVozKpi, Secao } from './atendimento/Comuns'
-import { alertaVoz, difPP, difPts, DIM_CANAL, fmtMMSS, MEDIDAS_NPS, partesNps, type ModoNps } from './atendimento/util'
+import { Secao } from './atendimento/Comuns'
+import { difPP, difPts, DIM_CANAL, fmtMMSS, MEDIDAS_NPS, partesNps } from './atendimento/util'
 
 const ID = 'atendimento'
 const MEDIDAS_CONTATOS = ['contatos', 'atendidos', 'abandonados', 'soma_tma_seg', 'soma_tme_seg', 'base_fcr', 'resolvidos_fcr']
 const MEDIDAS_CSAT = ['respostas', 'satisfeitos']
-
-interface Cenario {
-  voz_dias_ausentes?: string[]
-  nps_dup_inicio?: string
-}
 
 /** Relatório de Atendimento ao Cliente: volume, tempos, abandono, FCR, motivos, perfil horário, NPS e CSAT. */
 export default function Atendimento() {
@@ -50,11 +45,6 @@ export default function Atendimento() {
 
 function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos }) {
   const { contatos, motivos, hora, nps, csat, detracao } = dados.cubos
-  const cenario = (dados.extras?.cenario ?? {}) as Cenario
-  const diasSemVoz = useMemo(() => cenario.voz_dias_ausentes ?? [], [cenario.voz_dias_ausentes])
-  const [modoNps, setModoNps] = useState<ModoNps>('reportado')
-
-  const voz = useMemo(() => alertaVoz(diasSemVoz, f.periodo, f.canais), [diasSemVoz, f.periodo, f.canais])
 
   // ---- KPIs: período atual × período anterior de mesmo tamanho (razões sempre de numerador/denominador)
   const kpi = useMemo(() => {
@@ -87,11 +77,10 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
   const kpiNps = useMemo(() => {
     const c = compararPeriodos(nps, f.filtrosCubo, f.meta, MEDIDAS_NPS)
     const s = serieTemporal(nps, filtrar(nps, f.filtrosCubo, f.meta), f.granularidade, MEDIDAS_NPS, f.periodo)
-    const ponto = (i: number, m: ModoNps) => partesNps(Object.fromEntries(MEDIDAS_NPS.map((k) => [k, s.valores[k][i]])), m).nps
     return {
-      atual: c.atual,
-      anterior: c.periodoAnterior ? c.anterior : null,
-      spark: { reportado: s.buckets.map((_, i) => ponto(i, 'reportado')), corrigido: s.buckets.map((_, i) => ponto(i, 'corrigido')) },
+      atual: partesNps(c.atual),
+      anterior: c.periodoAnterior ? partesNps(c.anterior).nps : null,
+      spark: s.buckets.map((_, i) => partesNps(Object.fromEntries(MEDIDAS_NPS.map((k) => [k, s.valores[k][i]]))).nps),
     }
   }, [nps, f.filtrosCubo, f.meta, f.granularidade, f.periodo])
 
@@ -108,31 +97,15 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
 
   const a = kpi.atual
   const b = kpi.anterior
-  const npsAtual = partesNps(kpiNps.atual, modoNps)
-  const npsOutro = partesNps(kpiNps.atual, modoNps === 'reportado' ? 'corrigido' : 'reportado')
-  const npsAnterior = kpiNps.anterior ? partesNps(kpiNps.anterior, modoNps).nps : null
-  const npsDivergente = npsAtual.nps != null && npsOutro.nps != null && Math.abs(npsAtual.nps - npsOutro.nps) >= 0.05
   const vAbandono = difPP(a.abandono, b?.abandono ?? null)
   const vFcr = difPP(a.fcr, b?.fcr ?? null)
-  const vNps = difPts(npsAtual.nps, npsAnterior)
+  const vNps = difPts(kpiNps.atual.nps, kpiNps.anterior)
   const vCsat = difPP(kpiCsat.atual, kpiCsat.anterior)
-  const alerta = voz.afetado ? <AlertaVozKpi /> : undefined
-  // Contorno local de um bug da base: a animação de entrada do LayoutRelatorio (`animate-entrar`, com transform e
-  // fill-mode both) transforma o contêiner em bloco de contenção de `position: fixed`, o que quebra a tela cheia
-  // do ChartCard. Terminada a animação, ela é cancelada (o estado final é idêntico ao estado sem animação).
-  const refTopo = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    const alvo = refTopo.current?.closest('.animate-entrar')
-    if (!alvo) return
-    const id = window.setTimeout(() => alvo.getAnimations().forEach((an) => an.cancel()), 700)
-    return () => window.clearTimeout(id)
-  }, [])
-
   const irParaNps = () => document.getElementById('nps')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
   return (
     <>
-      <div ref={refTopo} className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <KpiCard
           className="sm:col-span-2"
           rotulo="Volume de contatos"
@@ -151,7 +124,6 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
           variacao={variacao(a.tma, b?.tma)}
           maiorE="pior"
           sparkline={serie.tma}
-          detalhe={alerta}
           definicao="Tempo médio de atendimento (mm:ss): soma do tempo de atendimento dividida pelos contatos atendidos."
         />
         <KpiCard
@@ -161,7 +133,6 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
           variacao={variacao(a.tme, b?.tme)}
           maiorE="pior"
           sparkline={serie.tme}
-          detalhe={alerta}
           definicao="Tempo médio de espera (mm:ss): soma do tempo em fila dividida pelos contatos atendidos."
         />
         <KpiCard
@@ -172,7 +143,6 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
           variacaoTexto={vAbandono.texto}
           maiorE="pior"
           sparkline={serie.abandono}
-          detalhe={alerta}
           definicao="Contatos abandonados antes do atendimento divididos pelo total de contatos. Subir é ruim."
         />
         <KpiCard
@@ -185,22 +155,14 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
           definicao="First Contact Resolution: contatos resolvidos no primeiro contato divididos pelos contatos atendidos."
         />
         <KpiCard
-          rotulo={`NPS ${modoNps === 'reportado' ? 'reportado' : 'corrigido'}`}
+          rotulo="NPS"
           icone={Gauge}
-          valor={npsAtual.nps == null ? '–' : fmtNumero(npsAtual.nps, 0)}
+          valor={kpiNps.atual.nps == null ? '–' : fmtNumero(kpiNps.atual.nps, 0)}
           variacao={vNps.variacao}
           variacaoTexto={vNps.texto}
-          sparkline={kpiNps.spark[modoNps]}
+          sparkline={kpiNps.spark}
           onClick={irParaNps}
-          detalhe={
-            npsDivergente ? (
-              <span className="inline-flex items-center gap-1">
-                <TriangleAlert className="size-3.5 shrink-0 text-status-amarelo-texto" aria-hidden />
-                {modoNps === 'reportado' ? 'Inclui respostas duplicadas · corrigido' : 'Sem duplicatas · reportado'}: {fmtNumero(npsOutro.nps, 0)}
-              </span>
-            ) : undefined
-          }
-          definicao="Net Promoter Score: % de promotores menos % de detratores. O alternador Reportado | Corrigido fica na seção de NPS."
+          definicao={`Net Promoter Score: % de promotores menos % de detratores (${fmtNumero(kpiNps.atual.respostas)} respostas no período).`}
         />
         <KpiCard
           rotulo="CSAT"
@@ -214,8 +176,8 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
       </div>
 
       <Secao titulo="Volume e canais" descricao="A tendência da demanda e o nível de serviço de cada canal. Clicar num canal nos comparativos filtra o relatório inteiro.">
-        <BlocoVolume cubo={contatos} f={f} diasSemVoz={diasSemVoz} />
-        <BlocoCanais cubo={contatos} f={f} voz={voz} />
+        <BlocoVolume cubo={contatos} f={f} />
+        <BlocoCanais cubo={contatos} f={f} />
       </Secao>
 
       <BlocoMotivos cubo={motivos} f={f} />
@@ -224,7 +186,7 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
         <BlocoHeatmap cubo={hora} f={f} />
       </Secao>
 
-      <BlocoNps cubo={nps} f={f} modo={modoNps} aoMudarModo={setModoNps} inicioDuplicidade={cenario.nps_dup_inicio ?? null} />
+      <BlocoNps cubo={nps} f={f} />
       <BlocoSatisfacao detracao={detracao} csat={csat} f={f} />
     </>
   )

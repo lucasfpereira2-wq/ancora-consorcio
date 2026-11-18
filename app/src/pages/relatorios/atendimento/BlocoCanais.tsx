@@ -8,7 +8,7 @@ import { useTema } from '@/lib/tema'
 import { corDaSerie } from '@/lib/tema-echarts'
 import type { Cubo } from '@/types/cubo'
 import { BarrasH, type ItemBarra } from './Comuns'
-import { CANAL_VOZ, DIM_CANAL, fmtMMSS, opcao, pctCSV, semCanal, tooltipHTML, useAlternarCanal, type AlertaVoz, type LinhaTooltip } from './util'
+import { DIM_CANAL, fmtMMSS, opcao, pctCSV, semCanal, tooltipHTML, useAlternarCanal, type LinhaTooltip } from './util'
 
 interface SerieRazao {
   nome: string
@@ -31,7 +31,6 @@ function LinhasPorCanal({
   buckets,
   rotulos,
   ordem,
-  rodapeTooltip,
 }: {
   titulo: string
   subtitulo: string
@@ -40,7 +39,6 @@ function LinhasPorCanal({
   buckets: string[]
   rotulos: string[]
   ordem: string[]
-  rodapeTooltip?: (indice: number) => string | undefined
 }) {
   const ref = useRef<EChartHandle>(null)
   const tema = useTema((s) => s.tema)
@@ -57,8 +55,8 @@ function LinhasPorCanal({
             if (!params.length) return ''
             const linhas: LinhaTooltip[] = [...params]
               .sort((a, b) => (b.value ?? -1) - (a.value ?? -1))
-              .map((p) => ({ nome: p.seriesName, cor: p.color, valor: p.value == null ? 'sem dados' : fmtMMSS(p.value) }))
-            return tooltipHTML(rotulos[params[0].dataIndex] ?? '', linhas, rodapeTooltip?.(params[0].dataIndex))
+              .map((p) => ({ nome: p.seriesName, cor: p.color, valor: fmtMMSS(p.value) }))
+            return tooltipHTML(rotulos[params[0].dataIndex] ?? '', linhas)
           },
         },
         xAxis: { type: 'category', data: rotulos, boundaryGap: false },
@@ -74,7 +72,7 @@ function LinhasPorCanal({
           lineStyle: { width: 2 },
         })),
       })
-  }, [series, buckets.length, rotulos, ordem, tema, rodapeTooltip])
+  }, [series, buckets.length, rotulos, ordem, tema])
   return (
     <ChartCard
       titulo={titulo}
@@ -96,7 +94,7 @@ function LinhasPorCanal({
 const NOME_G = { mes: 'mês', semana: 'semana', dia: 'dia' } as const
 
 /** TMA e TME por canal no tempo + taxa de abandono e FCR por canal (clicar num canal filtra o relatório). */
-export function BlocoCanais({ cubo, f, voz }: { cubo: Cubo; f: FiltrosResolvidos; voz: AlertaVoz }) {
+export function BlocoCanais({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) {
   const refAbandono = useRef<EChartHandle>(null)
   const refFcr = useRef<EChartHandle>(null)
   const tema = useTema((s) => s.tema)
@@ -158,16 +156,6 @@ export function BlocoCanais({ cubo, f, voz }: { cubo: Cubo; f: FiltrosResolvidos
     [porCanal, ordem, tema],
   )
 
-  const dicaVoz = useMemo(() => {
-    if (!voz.afetado) return undefined
-    return (i: number) => {
-      const b = tempos.buckets[i]
-      if (!b) return undefined
-      const pega = voz.dias.some((d) => (f.granularidade === 'mes' ? d.startsWith(b) : f.granularidade === 'dia' ? d === b : d >= b && d < somar7(b)))
-      return pega ? `${CANAL_VOZ} sem dados de 14 a 16/11: indicador desatualizado.` : undefined
-    }
-  }, [voz, tempos.buckets, f.granularidade])
-
   const dicaClique = 'Clique para filtrar o relatório por este canal (clique de novo para remover).'
   const notaFiltro = f.canais.length ? ` · em destaque: ${f.canais.join(', ')}` : ''
 
@@ -182,7 +170,6 @@ export function BlocoCanais({ cubo, f, voz }: { cubo: Cubo; f: FiltrosResolvidos
           buckets={tempos.buckets}
           rotulos={tempos.rotulos}
           ordem={ordem}
-          rodapeTooltip={dicaVoz}
         />
         <LinhasPorCanal
           titulo="Quanto o cliente espera até ser atendido?"
@@ -192,7 +179,6 @@ export function BlocoCanais({ cubo, f, voz }: { cubo: Cubo; f: FiltrosResolvidos
           buckets={tempos.buckets}
           rotulos={tempos.rotulos}
           ordem={ordem}
-          rodapeTooltip={dicaVoz}
         />
       </div>
       <div className="grid gap-4 xl:grid-cols-2">
@@ -245,9 +231,4 @@ export function BlocoCanais({ cubo, f, voz }: { cubo: Cubo; f: FiltrosResolvidos
       </div>
     </>
   )
-}
-
-function somar7(d: string): string {
-  const ms = Date.UTC(Number(d.slice(0, 4)), Number(d.slice(5, 7)) - 1, Number(d.slice(8, 10))) + 7 * 86_400_000
-  return new Date(ms).toISOString().slice(0, 10)
 }

@@ -296,7 +296,7 @@ export function LinhagemFluxo({ linhagem, tabela }: { linhagem: DadosLinhagem; t
             if (n.type !== 'no') return
             const no = (n.data as DadosNo).no
             if (no.tipo === 'tabela' && no.id !== tabela) navegar(rotaTabela(no.id))
-            else if (no.tipo === 'relatorio' && no.rota) navegar(no.rota)
+            else if (no.tipo === 'relatorio') navegar(`/impactos?relatorio=${no.id.replace(/^relatorio:/, '')}`)
           }}
           aria-label={`Linhagem de ${tabela}`}
         >

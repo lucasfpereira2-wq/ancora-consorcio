@@ -1,7 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { EmptyState } from '@/components/dados/EmptyState'
-import { SeloConfianca } from '@/components/dados/SeloConfianca'
 import { SkeletonRelatorio } from '@/components/dados/Skeletons'
 import { CabecalhoPagina } from '@/components/layout/Pagina'
 import { relatorioPorId } from '@/lib/relatorios'
@@ -9,7 +8,7 @@ import { cn } from '@/lib/utils'
 import { BarraFiltros, type BarraFiltrosProps } from './BarraFiltros'
 
 export interface LayoutRelatorioProps {
-  /** id do relatório: liga o Selo de Confiança (selos.json) e o ícone/título padrão */
+  /** id do relatório: liga o ícone/título padrão (o selo de confiança fica na página Impacto nos relatórios) */
   relatorio: string
   titulo?: string
   subtitulo?: ReactNode
@@ -28,7 +27,7 @@ export interface LayoutRelatorioProps {
 }
 
 /**
- * Casca das páginas de relatório: cabeçalho, Selo de Confiança, barra de filtros fixa e conteúdo
+ * Casca das páginas de relatório: cabeçalho, barra de filtros fixa e conteúdo
  * com estados de carregando/vazio.
  *
  *   <LayoutRelatorio relatorio="vendas" subtitulo="..." filtros={{ canal: { rotulo: 'Canal', opcoes } }}
@@ -39,9 +38,8 @@ export function LayoutRelatorio({ relatorio, titulo, subtitulo, icone, filtros, 
   return (
     <div className={cn('mx-auto w-full max-w-[1600px]', className)}>
       <CabecalhoPagina titulo={titulo ?? info?.titulo ?? 'Relatório'} subtitulo={subtitulo ?? info?.descricao} icone={icone ?? info?.icone} acoes={acoes} />
-      <SeloConfianca relatorio={relatorio} className="mt-4" />
       {filtros !== false && (
-        <div className="sticky top-14 z-20 -mx-4 mt-3 border-b border-transparent bg-background/85 px-4 py-2.5 backdrop-blur-md sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div className="sticky top-14 z-20 -mx-4 mt-4 border-b border-transparent bg-background/85 px-4 py-2.5 backdrop-blur-md sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           <BarraFiltros {...filtros} />
         </div>
       )}

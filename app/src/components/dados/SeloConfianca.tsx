@@ -42,7 +42,7 @@ export interface SeloConfiancaProps {
 }
 
 /**
- * Selo de Confiança: diz, no topo de cada relatório, se os números podem ser usados.
+ * Selo de Confiança: diz se os números de um relatório podem ser usados (exibido na página Impacto nos relatórios).
  * Deriva de governanca/selos.json (upstream do relatório na linhagem).
  */
 export function SeloConfianca({ relatorio, expandido = false, className }: SeloConfiancaProps) {

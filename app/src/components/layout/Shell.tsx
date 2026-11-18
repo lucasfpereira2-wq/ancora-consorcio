@@ -2,7 +2,6 @@ import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { CalendarClock, ChevronRight, Menu, Moon, PanelLeft, PanelLeftClose, Sun, X } from 'lucide-react'
 import { Suspense, useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
-import { StatusDot, statusDoSelo } from '@/components/dados/StatusBadge'
 import { SkeletonRelatorio } from '@/components/dados/Skeletons'
 import { Button } from '@/components/ui/button'
 import { DialogOverlay, DialogPortal } from '@/components/ui/dialog'
@@ -20,7 +19,8 @@ const CHAVE_SIDEBAR = 'hub-ancora:sidebar-recolhida'
 
 function ItemMenu({ item, recolhida, aoNavegar }: { item: ItemNavegacao; recolhida: boolean; aoNavegar?: () => void }) {
   const { dados: selos } = useSelos()
-  const selo = item.relatorio ? selos?.[item.relatorio] : undefined
+  // os relatórios ficam limpos no menu: a contagem de relatórios com ressalva aparece só no item de impacto
+  const comRessalva = item.rota === '/impactos' && selos ? Object.values(selos).filter((s) => s.nivel !== 'confiavel').length : 0
   const link = (
     <NavLink
       to={item.rota}
@@ -36,11 +36,15 @@ function ItemMenu({ item, recolhida, aoNavegar }: { item: ItemNavegacao; recolhi
     >
       <item.icone className="size-[18px] shrink-0 opacity-80 group-hover:opacity-100" aria-hidden />
       {!recolhida && <span className="flex-1 truncate">{item.titulo}</span>}
-      {selo && <StatusDot status={statusDoSelo(selo.nivel)} pulsar={selo.nivel === 'critico'} titulo={selo.titulo} className={cn(recolhida && 'absolute right-1.5 top-1.5')} tamanho={recolhida ? 6 : 8} />}
+      {comRessalva > 0 && (
+        <span className={cn('tabular grid h-[18px] min-w-[18px] place-items-center rounded-full bg-status-amarelo px-1 text-[11px] font-bold leading-none text-marinho-950', recolhida && 'absolute right-0.5 top-0.5 h-4 min-w-4 text-[10px]')} title={`${comRessalva} relatórios com ressalva`}>
+          {comRessalva}
+        </span>
+      )}
     </NavLink>
   )
   return recolhida ? (
-    <Dica texto={selo ? `${item.titulo} · ${selo.titulo}` : item.titulo} lado="right">
+    <Dica texto={item.titulo} lado="right">
       {link}
     </Dica>
   ) : (

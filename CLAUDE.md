@@ -23,6 +23,10 @@ rotinas que duplicam dados e tabelas sem chave primária.
 - Site 100% estático, sem backend. Dados em JSON gerados por Python com seed fixa.
 - Dados pessoais do candidato ainda não informados ficam como `[PREENCHER]` em `app/src/content/perfil.json`
   (LinkedIn, e-mail, agenda, foto). Portfólio: https://www.lucasanalytics.com.br/
+- **Os relatórios NÃO mostram alertas de erro de dados** (decisão do dono em 17/11): ficam limpos, com os números como
+  publicados, para mostrar que o candidato também faz relatórios bonitos. Selos de confiança, "publicado × correto" e
+  links para a tabela causadora vivem somente na página **Impacto nos relatórios** (`/impactos`). Não reintroduzir
+  selo, aviso ou alternador "Reportado | Corrigido" dentro das páginas de relatório.
 - Manter este arquivo sempre atualizado.
 
 ## Stack
@@ -61,8 +65,9 @@ cd app && npm run build                       # build de produção em app/dist
 
 ## Narrativa central (o coração do Hub)
 
-Cada problema de dado se propaga pela linhagem até um relatório, e o relatório mostra um
-**selo de confiança** que aponta de volta para a tabela no Farol.
+Cada problema de dado se propaga pela linhagem até um relatório. A página **Impacto nos relatórios** mostra o
+**selo de confiança** de cada relatório, o número publicado contra o correto, e aponta de volta para a tabela no Farol.
+Caminho da demo: Home → problema → tabela no Farol → linhagem → Impacto nos relatórios → relatório → Plano de 90 dias.
 
 | Problema | Tabela | Efeito no negócio |
 |---|---|---|
@@ -98,9 +103,10 @@ UI/UX e Front-end, Visualização (relatórios), QA.
 - [x] Onda 1a: simulação e cubos dos 5 relatórios (284 validações passando; `python3 data-engineering/run_all.py`)
 - [x] Onda 1b: motor de governança (índice 71,5; 47/21/12; 31 pipelines; 524 testes; 10 incidentes; 28 termos)
 - [x] Onda 1c: design system, shell, abertura, artigos, plano de 90 dias, filtros globais, motor de cubos, selo de confiança
-- [ ] Onda 2: Home, Farol, detalhe da tabela, Rotinas, Glossário · 5 relatórios (em andamento, 5 agentes em paralelo)
+- [x] Onda 2: Home, Farol (grade, lista, heatmap), detalhe da tabela com linhagem, Rotinas, Glossário e os 5 relatórios
+- [x] Página Impacto nos relatórios (`app/src/pages/ImpactoRelatorios.tsx`); alertas removidos das páginas de relatório
 - [ ] QA com screenshots
-- [ ] README, roteiro de demo, workflow de deploy
+- [x] README, roteiro de demo (`docs/roteiro-demo.md`), workflow de deploy (`.github/workflows/deploy.yml`)
 
 ## Pendências conhecidas
 

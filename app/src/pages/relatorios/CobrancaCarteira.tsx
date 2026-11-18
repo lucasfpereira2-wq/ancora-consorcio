@@ -1,5 +1,5 @@
 import { Banknote, CircleDollarSign, Handshake, Layers, Percent, ShieldAlert, TrendingDown, Wallet } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { KpiCard } from '@/components/dados'
 import { LayoutRelatorio } from '@/components/relatorio/LayoutRelatorio'
 import { compararPeriodos, filtrar, periodoAnterior, razao, serieTemporal, totais, type FiltrosCubo } from '@/lib/cubo'
@@ -8,7 +8,7 @@ import { useFiltrosResolvidos } from '@/lib/filtros'
 import { fmtCompacto, fmtData, fmtNumero, fmtPct, variacao } from '@/lib/formato'
 import { ComposicaoFaixas } from './carteira/ComposicaoFaixas'
 import { fmtPP, posicaoCarteira, serieEstoque, ultimaFotografia } from './carteira/dados'
-import { Recebimento, type Duplicidade, type ModoRecebimento } from './carteira/Recebimento'
+import { Recebimento } from './carteira/Recebimento'
 import { Recuperacao } from './carteira/Recuperacao'
 import { RollRate } from './carteira/RollRate'
 import { TendenciaCarteira } from './carteira/TendenciaCarteira'
@@ -19,13 +19,12 @@ const ID = 'cobranca-carteira'
 /**
  * Cobrança: Carteira e Inadimplência.
  * KPIs (última fotografia) → tendência com drill-down → composição por faixa → roll rate → recebimento
- * (Reportado × Corrigido) → recuperação e efetividade por canal.
+ → recuperação e efetividade por canal.
  */
 export default function CobrancaCarteira() {
   const { dados, carregando } = useRelatorio(ID)
   const { dados: meta } = useMeta()
   const f = useFiltrosResolvidos({ dimCanal: 'canal_cobranca' })
-  const [modo, setModo] = useState<ModoRecebimento>('reportado')
 
   const cubos = dados?.cubos
   /** segmento, regional e UF (sem período e sem canal: o canal de cobrança é filtro local da seção de recuperação) */
@@ -53,15 +52,7 @@ export default function CobrancaCarteira() {
     const linhas = filtrar(cubo, comPeriodo, f.meta)
     const comp = compararPeriodos(cubo, comPeriodo, f.meta)
     const serie = serieTemporal(cubo, linhas, f.granularidade, undefined, f.periodo)
-    // duplicidade dentro do período: dia com parcelas duplicadas
-    const porDia = serieTemporal(cubo, linhas, 'dia', ['valor_recebido', 'valor_recebido_dup', 'parcelas_dup'])
-    let dup: Duplicidade | null = null
-    porDia.buckets.forEach((b, i) => {
-      if (porDia.valores.parcelas_dup[i] > 0 && (!dup || porDia.valores.valor_recebido_dup[i] > dup.valor)) {
-        dup = { data: b, parcelas: Math.round(porDia.valores.parcelas_dup[i]), valor: porDia.valores.valor_recebido_dup[i], reportadoDia: porDia.valores.valor_recebido[i] }
-      }
-    })
-    return { cubo, comp, serie, dup: dup as Duplicidade | null }
+    return { cubo, comp, serie }
   }, [cubos, comPeriodo, f.meta, f.granularidade, f.periodo])
 
   // ---- recuperação (fluxo, todos os canais no KPI) ----
@@ -76,13 +67,11 @@ export default function CobrancaCarteira() {
   const b = carteira?.anterior
   const pos = carteira?.serie.posicoes ?? []
   const compFoto = carteira?.dataAnterior ? `vs ${fmtData(carteira.dataAnterior)}` : undefined
-  const corrigir = (t: Record<string, number>) => (modo === 'corrigido' ? t.valor_recebido - t.valor_recebido_dup : t.valor_recebido)
-  const recAtual = receb ? corrigir(receb.comp.atual) : null
-  const recAnterior = receb?.comp.periodoAnterior && receb.comp.anterior.valor_recebido ? corrigir(receb.comp.anterior) : null
+  const recAtual = receb ? receb.comp.atual.valor_recebido : null
+  const recAnterior = receb?.comp.periodoAnterior && receb.comp.anterior.valor_recebido ? receb.comp.anterior.valor_recebido : null
   const pctPrev = receb ? razao(recAtual, receb.comp.atual.valor_previsto) : null
   const pctPrevAnt = receb && recAnterior != null ? razao(recAnterior, receb.comp.anterior.valor_previsto) : null
-  const recSerie = receb ? receb.serie.valores.valor_recebido.map((v, i) => (modo === 'corrigido' ? v - receb.serie.valores.valor_recebido_dup[i] : v)) : []
-  const etiquetaModo = modo === 'corrigido' ? 'corrigido' : 'reportado'
+  const recSerie = receb ? receb.serie.valores.valor_recebido : []
 
   return (
     <LayoutRelatorio
@@ -123,10 +112,10 @@ export default function CobrancaCarteira() {
               definicao="Soma das parcelas vencidas e não pagas das cotas ativas (diferente do saldo devedor das cotas em atraso)."
             />
             <KpiCard
-              rotulo={`Recebimento (${etiquetaModo})`} icone={Banknote} valor={<span className="whitespace-nowrap">{fmtCompacto(recAtual, { moeda: true })}</span>} variacao={variacao(recAtual, recAnterior)} maiorE="melhor"
+              rotulo="Recebimento" icone={Banknote} valor={<span className="whitespace-nowrap">{fmtCompacto(recAtual, { moeda: true })}</span>} variacao={variacao(recAtual, recAnterior)} maiorE="melhor"
               sparkline={recSerie}
-              detalhe={receb.dup ? (modo === 'corrigido' ? `Sem ${fmtCompacto(receb.dup.valor, { moeda: true })} de parcelas duplicadas` : `Inclui ${fmtCompacto(receb.dup.valor, { moeda: true })} de parcelas duplicadas`) : `${fmtNumero(receb.comp.atual.parcelas_pagas)} parcelas pagas`}
-              definicao="Valor das parcelas pagas no período. Reportado: como está na tabela de parcelas. Corrigido: sem os lançamentos duplicados. Alterne a visão no card de recebimento."
+              detalhe={`${fmtNumero(receb.comp.atual.parcelas_pagas)} parcelas pagas`}
+              definicao="Valor das parcelas pagas no período."
             />
             <KpiCard
               rotulo="Recebido sobre o previsto" icone={Percent} valor={<span className="whitespace-nowrap">{fmtPct(pctPrev)}</span>} variacao={pctPrev != null && pctPrevAnt != null ? pctPrev - pctPrevAnt : null}
@@ -150,8 +139,8 @@ export default function CobrancaCarteira() {
             {cubos?.roll_rate && <RollRate cubo={cubos.roll_rate} filtrosBase={base} meta={f.meta} periodo={f.periodo} />}
           </Secao>
 
-          <Secao titulo="Recebimento" descricao="Previsto × recebido. O alternador mostra o número como reportado pela tabela e o número corrigido, sem duplicidades.">
-            <Recebimento serie={receb.serie} granularidade={f.granularidade} modo={modo} onModo={setModo} dup={receb.dup} />
+          <Secao titulo="Recebimento" descricao="Quanto das parcelas previstas entrou no caixa em cada período.">
+            <Recebimento serie={receb.serie} granularidade={f.granularidade} />
           </Secao>
 
           <Recuperacao cubo={recup.cubo} filtros={comPeriodo} meta={f.meta} granularidade={f.granularidade} periodo={f.periodo} />

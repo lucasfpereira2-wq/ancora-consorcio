@@ -1,6 +1,5 @@
-import { ArrowLeft, ChevronRight, MousePointerClick, TriangleAlert } from 'lucide-react'
+import { ArrowLeft, ChevronRight, MousePointerClick } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { ChartCard } from '@/components/dados'
 import { EChart, type EChartHandle } from '@/components/dados/EChart'
 import { Button } from '@/components/ui/button'
@@ -9,7 +8,7 @@ import type { FiltrosResolvidos } from '@/lib/filtros'
 import { fmtData, fmtDiaMes, fmtMes, fmtNumero, fmtPct } from '@/lib/formato'
 import { corDaSerie } from '@/lib/tema-echarts'
 import type { Cubo } from '@/types/cubo'
-import { CANAL_VOZ, DIM_CANAL, fmtEixo, opcao, TABELA_TELEFONIA, tooltipHTML, useTokens, type LinhaTooltip } from './util'
+import { DIM_CANAL, fmtEixo, opcao, tooltipHTML, useTokens, type LinhaTooltip } from './util'
 
 interface Nivel {
   g: Granularidade
@@ -50,9 +49,9 @@ function tituloDoBucket(bucket: string, g: Granularidade, nivel: { inicio: strin
 
 /**
  * Tendência de volume por canal com drill-down mês → semana → dia. O clique numa barra detalha o bucket;
- * a trilha permite voltar. Dias sem dados de voz ficam marcados com uma faixa.
+ * a trilha permite voltar.
  */
-export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosResolvidos; diasSemVoz: string[] }) {
+export function BlocoVolume({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) {
   const ref = useRef<EChartHandle>(null)
   const { tema, t } = useTokens()
 
@@ -72,19 +71,6 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
   }, [cubo, f.filtrosCubo, f.meta, nivel])
 
   const ordemCanais = useMemo(() => cubo.dims.find((d) => d.nome === DIM_CANAL)?.valores ?? [], [cubo])
-  const vozNaSelecao = serie.series.some((s) => s.nome === CANAL_VOZ) || !f.canais.length || f.canais.includes(CANAL_VOZ)
-
-  // buckets que contêm dias sem dados de voz
-  const afetados = useMemo(() => {
-    if (!vozNaSelecao) return [] as number[]
-    const out: number[] = []
-    serie.buckets.forEach((b, i) => {
-      const r = intervaloDoBucket(b, nivel.g, nivel)
-      if (diasSemVoz.some((d) => d >= r.inicio && d <= r.fim)) out.push(i)
-    })
-    return out
-  }, [serie.buckets, nivel, diasSemVoz, vozNaSelecao])
-  const primeiroDiaSemVoz = diasSemVoz[0]
 
   const rotulos = useMemo(
     () =>
@@ -100,50 +86,24 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
 
   const option = useMemo(() => {
     const denso = serie.buckets.length > 45
-    const series = serie.series.map((s, k) => {
-      const ehVoz = s.nome === CANAL_VOZ
-      return {
-        type: 'bar',
-        name: s.nome,
-        stack: 'canais',
-        cursor: proximo ? 'pointer' : 'default',
-        barMaxWidth: 44,
-        barCategoryGap: denso ? '18%' : '32%',
-        itemStyle: {
-          color: corDaSerie(ordemCanais.indexOf(s.nome), tema),
-          borderRadius: 0,
-          borderColor: t.superficie,
-          borderWidth: denso ? 0 : 1,
-        },
-        emphasis: { focus: 'none' },
-        // no nível diário, voz sem dado é ausência (null), não zero
-        data: s.valores.map((v, i) => (ehVoz && nivel.g === 'dia' && afetados.includes(i) ? null : v)),
-        markArea:
-          k === 0 && afetados.length
-            ? {
-                silent: true,
-                itemStyle: { color: t.status.amarelo, opacity: tema === 'escuro' ? 0.16 : 0.14 },
-                label: {
-                  show: true,
-                  position: afetados[afetados.length - 1] >= serie.buckets.length - 3 ? 'insideTopRight' : 'insideTop',
-                  distance: 0,
-                  offset: [0, -20],
-                  color: t.texto,
-                  fontSize: 11,
-                  fontWeight: 600,
-                },
-                data: [
-                  [
-                    { name: `Voz sem dados desde ${primeiroDiaSemVoz ? fmtDiaMes(primeiroDiaSemVoz) : '14/11'}`, xAxis: afetados[0] },
-                    { xAxis: afetados[afetados.length - 1] },
-                  ],
-                ],
-              }
-            : undefined,
-      }
-    })
+    const series = serie.series.map((s) => ({
+      type: 'bar',
+      name: s.nome,
+      stack: 'canais',
+      cursor: proximo ? 'pointer' : 'default',
+      barMaxWidth: 44,
+      barCategoryGap: denso ? '18%' : '32%',
+      itemStyle: {
+        color: corDaSerie(ordemCanais.indexOf(s.nome), tema),
+        borderRadius: 0,
+        borderColor: t.superficie,
+        borderWidth: denso ? 0 : 1,
+      },
+      emphasis: { focus: 'none' },
+      data: s.valores,
+    }))
     return opcao({
-      grid: { left: 8, right: 16, top: 58, bottom: 8, containLabel: true },
+      grid: { left: 8, right: 16, top: 40, bottom: 8, containLabel: true },
       legend: { top: 0, left: 0 },
       tooltip: {
         trigger: 'axis',
@@ -152,30 +112,21 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
           if (!params.length) return ''
           const i = params[0].dataIndex
           const total = params.reduce((s, p) => s + (p.value ?? 0), 0)
-          const linhas: LinhaTooltip[] = params.map((p) => {
-            const semDado = p.seriesName === CANAL_VOZ && afetados.includes(i) && (p.value == null || nivel.g !== 'dia')
-            return {
-              nome: p.seriesName,
-              cor: p.color,
-              valor: p.value == null ? 'sem dados' : fmtNumero(p.value),
-              nota: p.value == null ? undefined : semDado ? 'parcial' : total ? fmtPct(p.value / total, 0) : undefined,
-            }
-          })
+          const linhas: LinhaTooltip[] = params.map((p) => ({
+            nome: p.seriesName,
+            cor: p.color,
+            valor: fmtNumero(p.value ?? 0),
+            nota: total ? fmtPct((p.value ?? 0) / total, 0) : undefined,
+          }))
           linhas.push({ nome: 'Total', valor: fmtNumero(total), separar: true })
-          const rodape = [
-            afetados.includes(i) ? 'Canal Voz sem dados de 14 a 16/11: o total está subestimado.' : '',
-            proximo ? `Clique para detalhar por ${NOME_NIVEL[proximo]}.` : '',
-          ]
-            .filter(Boolean)
-            .join(' ')
-          return tooltipHTML(tituloDoBucket(serie.buckets[i], nivel.g, nivel), linhas, rodape || undefined)
+          return tooltipHTML(tituloDoBucket(serie.buckets[i], nivel.g, nivel), linhas, proximo ? `Clique para detalhar por ${NOME_NIVEL[proximo]}.` : undefined)
         },
       },
       xAxis: { type: 'category', data: rotulos },
       yAxis: { type: 'value', axisLabel: { formatter: (v: number) => fmtEixo(v) } },
       series,
     })
-  }, [serie, rotulos, nivel, afetados, ordemCanais, tema, t, proximo, primeiroDiaSemVoz])
+  }, [serie, rotulos, nivel, ordemCanais, tema, t, proximo])
 
   const detalhar = (indice: number) => {
     if (!proximo) return
@@ -221,20 +172,6 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
         colunas: ['Período', ...serie.series.map((s) => s.nome), 'Total'],
         linhas: serie.buckets.map((b, i) => [b, ...serie.series.map((s) => s.valores[i]), serie.series.reduce((x, s) => x + s.valores[i], 0)]),
       })}
-      rodape={
-        afetados.length ? (
-          <span className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
-            <TriangleAlert className="size-3.5 shrink-0 text-status-amarelo-texto" aria-hidden />
-            <span>
-              <strong className="font-semibold text-foreground">Voz sem dados desde 14/11:</strong> a rotina <code className="text-[11px]">{TABELA_TELEFONIA}</code> está parada
-              há 3 dias, e o volume de 14 a 16/11 está subestimado.
-            </span>
-            <Link to={`/farol/${TABELA_TELEFONIA}`} className="font-medium text-primary underline-offset-2 hover:underline">
-              Ver no Farol
-            </Link>
-          </span>
-        ) : undefined
-      }
     >
       {/* coluna flex: em tela cheia o gráfico ocupa a altura que sobra abaixo da trilha */}
       <div className="flex h-full flex-col">

@@ -116,8 +116,7 @@ export function LinhaIndicadores({ saude }: { saude: Saude }) {
         detalhe="Com ressalva"
         icone={FileWarning}
         alerta={saude.relatorios_impactados > 0 ? 'amarelo' : undefined}
-        para="/visao-executiva"
-        ancora="confianca"
+        para="/impactos"
       />
       <Indicador
         rotulo="Tabelas sem PK"

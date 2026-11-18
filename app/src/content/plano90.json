@@ -33,7 +33,7 @@
         "Testes automatizados a cada carga: unicidade, nulos, integridade, volume e frescor",
         "SLA de atualização acordado com cada área consumidora",
         "Dono nomeado para cada tabela, com rotina de acionamento",
-        "Selo de Confiança publicado no topo dos 5 relatórios executivos",
+        "Selo de Confiança dos 5 relatórios executivos publicado na página de impacto",
         "Padrão de modelagem e de nomes para novas tabelas"
       ],
       "riscos": ["Limpeza de histórico duplicado altera números já divulgados", "Resistência a assumir a posição de dono do dado", "Janela de processamento noturna apertada"],

@@ -11,6 +11,7 @@ const Farol = lazy(() => import('@/pages/farol/Farol'))
 const TabelaDetalhe = lazy(() => import('@/pages/farol/TabelaDetalhe'))
 const Rotinas = lazy(() => import('@/pages/Rotinas'))
 const Glossario = lazy(() => import('@/pages/Glossario'))
+const ImpactoRelatorios = lazy(() => import('@/pages/ImpactoRelatorios'))
 const Vendas = lazy(() => import('@/pages/relatorios/Vendas'))
 const CobrancaCarteira = lazy(() => import('@/pages/relatorios/CobrancaCarteira'))
 const CobrancaSafra = lazy(() => import('@/pages/relatorios/CobrancaSafra'))
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="/farol/:tabela" element={<TabelaDetalhe />} />
             <Route path="/rotinas" element={<Rotinas />} />
             <Route path="/glossario" element={<Glossario />} />
+            <Route path="/impactos" element={<ImpactoRelatorios />} />
             <Route path="/relatorios/vendas" element={<Vendas />} />
             <Route path="/relatorios/cobranca-carteira" element={<CobrancaCarteira />} />
             <Route path="/relatorios/cobranca-safra" element={<CobrancaSafra />} />
