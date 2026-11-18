@@ -33,10 +33,32 @@ O ponto central é a **ligação entre as duas metades**: o problema nasce em um
 | **Plano de 90 dias** | Diagnóstico, padronização e monitoramento, com métricas de sucesso e projeção do índice |
 | **Glossário e Artigos** | Definição oficial das métricas e textos do autor |
 
+### Abertura
+
+![Abertura](docs/prints/abertura.png)
+
+### Farol de Dados: 80 tabelas, heatmap de 30 dias e detalhe com linhagem
+
 ![Farol de Dados](docs/prints/farol.png)
-![Detalhe da tabela com linhagem](docs/prints/tabela-detalhe.png)
+![Heatmap de execuções](docs/prints/farol-heatmap.png)
+![Detalhe da tabela](docs/prints/tabela-detalhe.png)
+![Linhagem interativa](docs/prints/linhagem.png)
+
+### Impacto nos relatórios: o número publicado contra o número correto
+
 ![Impacto nos relatórios](docs/prints/impacto-relatorios.png)
-![Relatório de Cobrança](docs/prints/relatorio-cobranca.png)
+
+### Relatórios executivos
+
+![Vendas](docs/prints/relatorio-vendas.png)
+![Cobrança: Carteira e Inadimplência](docs/prints/relatorio-cobranca.png)
+![Cobrança: Safra, MOB e Cohort](docs/prints/relatorio-safra.png)
+![Atendimento](docs/prints/relatorio-atendimento.png)
+![Assembleias e Contemplações](docs/prints/relatorio-assembleias.png)
+
+### Plano de 90 dias
+
+![Plano de 90 dias](docs/prints/plano-90-dias.png)
 
 ## Arquitetura
 

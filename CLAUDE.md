@@ -42,6 +42,7 @@ README.md                     apresentação do projeto, arquitetura, como rodar
 app/                          front-end
   src/types/                  contratos TypeScript dos JSONs (governanca.ts, cubo.ts)
   src/content/                textos editáveis: perfil.json, artigos.json, plano90.json
+  src/pages/                  Abertura, VisaoExecutiva, farol/, Rotinas, ImpactoRelatorios, Glossario, relatorios/ (5), Plano90, Artigos
   public/data/                JSONs gerados (meta, governanca/*, relatorios/*)
 data-engineering/
   catalog/tabelas.py          lista mestre das 80 tabelas (status-alvo, linhagem, donos, SLA)
@@ -53,6 +54,7 @@ data-engineering/
   tests/                      validação e reconciliação
 docs/contratos.md             contratos compartilhados (rotas, tokens, arquivos, regras de coerência)
 docs/roteiro-demo.md          roteiro de demo de 3 minutos
+docs/prints/                  screenshots de cada tela (usados no README)
 ```
 
 ## Como rodar
@@ -105,13 +107,21 @@ UI/UX e Front-end, Visualização (relatórios), QA.
 - [x] Onda 1c: design system, shell, abertura, artigos, plano de 90 dias, filtros globais, motor de cubos, selo de confiança
 - [x] Onda 2: Home, Farol (grade, lista, heatmap), detalhe da tabela com linhagem, Rotinas, Glossário e os 5 relatórios
 - [x] Página Impacto nos relatórios (`app/src/pages/ImpactoRelatorios.tsx`); alertas removidos das páginas de relatório
-- [ ] QA com screenshots
+- [x] QA do orquestrador (17/11, sobre o build de produção): 20 rotas com zero erros e warnings de console, sem `NaN`/`undefined`;
+      42 combinações de filtro nos 5 relatórios sem falha; soma por segmento, por regional e por canal = KPI total
+      (Vendas 28.218 cotas; Atendimento 2.826.342 contatos); caminho do roteiro de demo validado clique a clique;
+      modo escuro conferido; carregamento de cada rota em cerca de 1 s; prints em `docs/prints/`
 - [x] README, roteiro de demo (`docs/roteiro-demo.md`), workflow de deploy (`.github/workflows/deploy.yml`)
 
 ## Pendências conhecidas
 
+- O build emite um aviso do empacotador sobre a diretiva `"use no memo"` de uma dependência (`react-compiler-runtime`); é inofensivo.
+- Chunk do ECharts com 276 kB gzip, carregado sob demanda (fora do bundle inicial de 110 kB gzip).
+- Layout em celular foi conferido só na Abertura; as telas internas são desktop-first.
+
 - Preencher `[PREENCHER]` em `app/src/content/perfil.json`.
-- Publicação: habilitar GitHub Pages (Settings > Pages > Source: GitHub Actions) e levar o código para a branch padrão.
+- Publicação: habilitar GitHub Pages (Settings > Pages > Source: GitHub Actions). O workflow publica a partir da branch padrão
+  (hoje `claude/eager-brown-ywhkr9`, a única do repositório). Em repositório privado, o Pages exige plano pago do GitHub.
 
 ## Números reais da simulação (para conferência)
 
