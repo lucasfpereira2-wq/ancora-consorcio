@@ -151,7 +151,13 @@ export function alternarFiltro(dim: 'segmento' | 'regional' | 'uf' | 'canal', va
   const s = useFiltros.getState()
   if (dim === 'segmento') s.definirSegmentos(alternar(s.segmentos, valor))
   else if (dim === 'canal') s.definirCanais(alternar(s.canais, valor))
-  else if (dim === 'uf') s.definirUfs(alternar(s.ufs, valor))
+  else if (dim === 'uf') {
+    // UF fora das regionais filtradas: troca o recorte geográfico em vez de combinar filtros incompatíveis
+    const regional = meta?.ufs.find((u) => u.sigla === valor)?.regional
+    const fora = !s.ufs.includes(valor) && s.regionais.length > 0 && !!regional && !s.regionais.includes(regional)
+    if (fora) s.aplicar({ regionais: [], ufs: [valor] })
+    else s.definirUfs(alternar(s.ufs, valor))
+  }
   else s.definirRegionais(alternar(s.regionais, valor), meta)
 }
 

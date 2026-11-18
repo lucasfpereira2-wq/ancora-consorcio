@@ -200,7 +200,7 @@ export function MapaVendas({ f, cubo }: { f: FiltrosResolvidos; cubo: Cubo }) {
         csv={csv}
         rodape={<DicaFiltro texto="Clique em um estado para filtrar a UF." ativos={f.ufs} aoLimpar={() => useFiltros.getState().definirUfs([])} />}
       >
-        <EChart ref={refMapa} altura={440} option={optMapa} descricao="Cartograma do crédito comercializado por UF" onEvents={{ click: (p) => nomeDe(p) && alternarFiltro('uf', nomeDe(p)) }} />
+        <EChart ref={refMapa} altura={440} option={optMapa} descricao="Cartograma do crédito comercializado por UF" onEvents={{ click: (p) => nomeDe(p) && alternarFiltro('uf', nomeDe(p), f.meta) }} />
         <div className="mt-1 flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
           <span>Menor volume</span>
           <span className="h-2 w-40 rounded-full" style={{ background: `linear-gradient(to right, ${t.sequencial.join(', ')})` }} aria-hidden />
@@ -216,7 +216,7 @@ export function MapaVendas({ f, cubo }: { f: FiltrosResolvidos; cubo: Cubo }) {
         vazio={d.total === 0}
         csv={csv}
       >
-        <EChart ref={refRanking} altura={464} option={optRanking} descricao="Ranking das UFs por crédito comercializado" onEvents={{ click: (p) => nomeDe(p) && alternarFiltro('uf', nomeDe(p)) }} />
+        <EChart ref={refRanking} altura={464} option={optRanking} descricao="Ranking das UFs por crédito comercializado" onEvents={{ click: (p) => nomeDe(p) && alternarFiltro('uf', nomeDe(p), f.meta) }} />
       </ChartCard>
     </div>
   )
