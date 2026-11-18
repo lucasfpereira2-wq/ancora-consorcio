@@ -1,0 +1,741 @@
+{
+ "nome": "stg_erp_cotas",
+ "descricao": "Posição bruta de cotas por grupo no ERP",
+ "dominio": "Staging",
+ "camada": "staging",
+ "dono": "Thiago Meireles",
+ "dono_area": "Engenharia de Dados",
+ "criticidade": "alta",
+ "frequencia": "diária",
+ "sla_horas": 24,
+ "pipeline": "ingest_erp",
+ "fonte": "ERP Consórcio",
+ "status": "verde",
+ "motivo_status": "No SLA e testes OK",
+ "tem_pk": true,
+ "saude": 99.7,
+ "ultima_carga": "2026-11-17T01:01:25-03:00",
+ "atraso_horas": 0.0,
+ "linhas": 94183,
+ "testes_total": 7,
+ "testes_falhando": 0,
+ "testes_alerta": 0,
+ "execucoes_30d": [
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "atrasada",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso"
+ ],
+ "relatorios_impactados": [
+  "assembleias",
+  "cobranca-carteira",
+  "cobranca-safra",
+  "vendas"
+ ],
+ "incidentes": [],
+ "tags": [],
+ "descricao_longa": "Posição bruta de cotas por grupo no ERP. Pertence ao domínio Staging e fica na camada de staging (dado bruto, como chega da origem). Origem: ERP Consórcio. Carga diária pela rotina `ingest_erp`, com SLA de 24 horas. Tem 11 colunas; chave primária: `id_cota_erp`. Responsável: Thiago Meireles (Engenharia de Dados). Alimenta: Assembleias e Contemplações, Cobrança: Carteira e Inadimplência, Cobrança: Safra, MOB e Cohort, Vendas / Comercial.",
+ "colunas": [
+  {
+   "nome": "id_cota_erp",
+   "tipo": "bigint",
+   "descricao": "Identificador interno da cota no ERP",
+   "pk": true,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "cd_grupo",
+   "tipo": "varchar(8)",
+   "descricao": "Código do grupo",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "nr_cota",
+   "tipo": "integer",
+   "descricao": "Número da cota dentro do grupo",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "cd_cliente_erp",
+   "tipo": "bigint",
+   "descricao": "Código do titular no ERP",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "cd_plano",
+   "tipo": "varchar(12)",
+   "descricao": "Plano da cota",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "situacao_cota",
+   "tipo": "varchar(20)",
+   "descricao": "Situação atual da cota",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "vl_credito_atual",
+   "tipo": "decimal(14,2)",
+   "descricao": "Valor do crédito atualizado",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "pc_pago",
+   "tipo": "decimal(7,4)",
+   "descricao": "Percentual do plano já pago",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "dt_adesao",
+   "tipo": "date",
+   "descricao": "Data de adesão",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "dt_situacao",
+   "tipo": "date",
+   "descricao": "Data da última mudança de situação",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "_dt_carga",
+   "tipo": "timestamp",
+   "descricao": "Data e hora da ingestão",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  }
+ ],
+ "execucoes": [
+  {
+   "data": "2026-10-19",
+   "inicio": "2026-10-19T01:00:04-03:00",
+   "duracao_seg": 262,
+   "linhas": 93364,
+   "linhas_esperadas": 93364,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-20",
+   "inicio": "2026-10-20T01:01:33-03:00",
+   "duracao_seg": 311,
+   "linhas": 93392,
+   "linhas_esperadas": 93392,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-21",
+   "inicio": "2026-10-21T01:00:15-03:00",
+   "duracao_seg": 281,
+   "linhas": 93420,
+   "linhas_esperadas": 93420,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-22",
+   "inicio": "2026-10-22T01:01:50-03:00",
+   "duracao_seg": 314,
+   "linhas": 93448,
+   "linhas_esperadas": 93448,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-23",
+   "inicio": "2026-10-23T03:00:34-03:00",
+   "duracao_seg": 289,
+   "linhas": 93477,
+   "linhas_esperadas": 93477,
+   "status": "atrasada",
+   "anomalia_volume": false,
+   "mensagem": "Janela de backup do ERP estendida; extração iniciou com 2 horas de atraso."
+  },
+  {
+   "data": "2026-10-24",
+   "inicio": "2026-10-24T01:00:33-03:00",
+   "duracao_seg": 268,
+   "linhas": 93505,
+   "linhas_esperadas": 93505,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-25",
+   "inicio": "2026-10-25T01:01:12-03:00",
+   "duracao_seg": 326,
+   "linhas": 93533,
+   "linhas_esperadas": 93533,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-26",
+   "inicio": "2026-10-26T01:01:43-03:00",
+   "duracao_seg": 302,
+   "linhas": 93561,
+   "linhas_esperadas": 93561,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-27",
+   "inicio": "2026-10-27T01:00:28-03:00",
+   "duracao_seg": 322,
+   "linhas": 93590,
+   "linhas_esperadas": 93590,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-28",
+   "inicio": "2026-10-28T01:00:56-03:00",
+   "duracao_seg": 264,
+   "linhas": 93618,
+   "linhas_esperadas": 93618,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-29",
+   "inicio": "2026-10-29T01:00:31-03:00",
+   "duracao_seg": 275,
+   "linhas": 93646,
+   "linhas_esperadas": 93646,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-30",
+   "inicio": "2026-10-30T01:01:47-03:00",
+   "duracao_seg": 282,
+   "linhas": 93674,
+   "linhas_esperadas": 93674,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-31",
+   "inicio": "2026-10-31T01:00:40-03:00",
+   "duracao_seg": 293,
+   "linhas": 93703,
+   "linhas_esperadas": 93703,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-01",
+   "inicio": "2026-11-01T01:00:36-03:00",
+   "duracao_seg": 276,
+   "linhas": 93731,
+   "linhas_esperadas": 93731,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-02",
+   "inicio": "2026-11-02T01:01:34-03:00",
+   "duracao_seg": 264,
+   "linhas": 93759,
+   "linhas_esperadas": 93759,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-03",
+   "inicio": "2026-11-03T01:00:07-03:00",
+   "duracao_seg": 318,
+   "linhas": 93787,
+   "linhas_esperadas": 93787,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-04",
+   "inicio": "2026-11-04T01:01:19-03:00",
+   "duracao_seg": 309,
+   "linhas": 93816,
+   "linhas_esperadas": 93816,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-05",
+   "inicio": "2026-11-05T01:00:55-03:00",
+   "duracao_seg": 262,
+   "linhas": 93844,
+   "linhas_esperadas": 93844,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-06",
+   "inicio": "2026-11-06T01:01:40-03:00",
+   "duracao_seg": 269,
+   "linhas": 93872,
+   "linhas_esperadas": 93872,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-07",
+   "inicio": "2026-11-07T01:01:41-03:00",
+   "duracao_seg": 311,
+   "linhas": 93900,
+   "linhas_esperadas": 93900,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-08",
+   "inicio": "2026-11-08T01:01:17-03:00",
+   "duracao_seg": 326,
+   "linhas": 93929,
+   "linhas_esperadas": 93929,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-09",
+   "inicio": "2026-11-09T01:00:53-03:00",
+   "duracao_seg": 278,
+   "linhas": 93957,
+   "linhas_esperadas": 93957,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-10",
+   "inicio": "2026-11-10T01:00:51-03:00",
+   "duracao_seg": 275,
+   "linhas": 93985,
+   "linhas_esperadas": 93985,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-11",
+   "inicio": "2026-11-11T01:00:48-03:00",
+   "duracao_seg": 260,
+   "linhas": 94013,
+   "linhas_esperadas": 94013,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-12",
+   "inicio": "2026-11-12T01:01:21-03:00",
+   "duracao_seg": 261,
+   "linhas": 94042,
+   "linhas_esperadas": 94042,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-13",
+   "inicio": "2026-11-13T01:01:45-03:00",
+   "duracao_seg": 276,
+   "linhas": 94070,
+   "linhas_esperadas": 94070,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-14",
+   "inicio": "2026-11-14T01:00:20-03:00",
+   "duracao_seg": 285,
+   "linhas": 94098,
+   "linhas_esperadas": 94098,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-15",
+   "inicio": "2026-11-15T01:01:23-03:00",
+   "duracao_seg": 313,
+   "linhas": 94126,
+   "linhas_esperadas": 94126,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-16",
+   "inicio": "2026-11-16T01:00:48-03:00",
+   "duracao_seg": 317,
+   "linhas": 94155,
+   "linhas_esperadas": 94155,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-17",
+   "inicio": "2026-11-17T01:01:25-03:00",
+   "duracao_seg": 273,
+   "linhas": 94183,
+   "linhas_esperadas": 94183,
+   "status": "sucesso",
+   "anomalia_volume": false
+  }
+ ],
+ "testes": [
+  {
+   "id": "stg_erp_cotas.pk_existente",
+   "regra": "pk_existente",
+   "nome": "Chave primária definida",
+   "severidade": "critico",
+   "resultado": "ok",
+   "evidencia": "Chave primária declarada: `id_cota_erp`",
+   "valor_observado": 1,
+   "limite": 1,
+   "unidade": "chave",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT COUNT(*) AS qt_pk\nFROM information_schema.table_constraints\nWHERE table_name = 'stg_erp_cotas' AND constraint_type = 'PRIMARY KEY';"
+  },
+  {
+   "id": "stg_erp_cotas.unicidade.id_cota_erp",
+   "regra": "unicidade",
+   "nome": "Unicidade de `id_cota_erp`",
+   "coluna": "id_cota_erp",
+   "severidade": "critico",
+   "resultado": "ok",
+   "evidencia": "Nenhuma duplicidade em `id_cota_erp` (94.183 linhas verificadas)",
+   "valor_observado": 0,
+   "limite": 0,
+   "unidade": "registros",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT id_cota_erp, COUNT(*) AS qtd\nFROM stg_erp_cotas\nGROUP BY id_cota_erp\nHAVING COUNT(*) > 1;"
+  },
+  {
+   "id": "stg_erp_cotas.nao_nulo.nr_cota",
+   "regra": "nao_nulo",
+   "nome": "Completude (não nulo) de `nr_cota`",
+   "coluna": "nr_cota",
+   "severidade": "alto",
+   "resultado": "ok",
+   "evidencia": "0% de nulos em `nr_cota`",
+   "valor_observado": 0.0,
+   "limite": 0.5,
+   "unidade": "%",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT 100.0 * SUM(CASE WHEN nr_cota IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS pc_nulos\nFROM stg_erp_cotas;"
+  },
+  {
+   "id": "stg_erp_cotas.volume",
+   "regra": "volume",
+   "nome": "Volume da carga",
+   "severidade": "alto",
+   "resultado": "ok",
+   "evidencia": "94.183 linhas na última carga, dentro da faixa esperada (cerca de 94.183)",
+   "valor_observado": 94183,
+   "limite": 94183,
+   "unidade": "linhas",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT dt_execucao, linhas_carregadas, linhas_esperadas\nFROM governanca.log_execucao\nWHERE tabela = 'stg_erp_cotas'\nORDER BY dt_execucao DESC\nLIMIT 1;  -- esperado: média do mesmo dia da semana (8 semanas)"
+  },
+  {
+   "id": "stg_erp_cotas.frescor",
+   "regra": "frescor",
+   "nome": "Frescor (SLA)",
+   "severidade": "critico",
+   "resultado": "ok",
+   "evidencia": "Última carga há 6h (17/11 às 01:01); SLA de 24h",
+   "valor_observado": 7.0,
+   "limite": 24,
+   "unidade": "horas",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - MAX(dt_fim))) / 3600 AS horas_desde_carga\nFROM governanca.log_execucao\nWHERE tabela = 'stg_erp_cotas' AND status IN ('sucesso', 'alerta');"
+  },
+  {
+   "id": "stg_erp_cotas.schema_drift",
+   "regra": "schema_drift",
+   "nome": "Contrato de schema",
+   "severidade": "medio",
+   "resultado": "ok",
+   "evidencia": "Schema idêntico ao contrato (11 colunas)",
+   "valor_observado": 0,
+   "limite": 0,
+   "unidade": "colunas",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'stg_erp_cotas'\nEXCEPT\nSELECT coluna, tipo FROM governanca.contrato_schema WHERE tabela = 'stg_erp_cotas';"
+  },
+  {
+   "id": "stg_erp_cotas.dominio_valores.situacao_cota",
+   "regra": "dominio_valores",
+   "nome": "Domínio de valores de `situacao_cota`",
+   "coluna": "situacao_cota",
+   "severidade": "medio",
+   "resultado": "ok",
+   "evidencia": "100% dos valores de `situacao_cota` dentro do domínio esperado",
+   "valor_observado": 0.0,
+   "limite": 1.0,
+   "unidade": "%",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT situacao_cota, COUNT(*) AS qtd\nFROM stg_erp_cotas\nWHERE situacao_cota NOT IN (SELECT valor FROM governanca.dominio WHERE coluna = 'situacao_cota')\nGROUP BY situacao_cota;"
+  }
+ ],
+ "amostra": {
+  "colunas": [
+   "id_cota_erp",
+   "cd_grupo",
+   "nr_cota",
+   "cd_cliente_erp",
+   "cd_plano",
+   "situacao_cota",
+   "vl_credito_atual",
+   "pc_pago",
+   "dt_adesao",
+   "dt_situacao",
+   "_dt_carga"
+  ],
+  "linhas": [
+   {
+    "valores": [
+     5000000,
+     "G6904",
+     1313,
+     "5621",
+     "PL6029",
+     "Ativa",
+     420000.0,
+     48.01,
+     "2023-12-16",
+     "2026-10-26",
+     "2026-11-14 07:36:19"
+    ]
+   },
+   {
+    "valores": [
+     5000001,
+     "G3465",
+     1221,
+     "2371",
+     "PL2241",
+     "Ativa",
+     420000.0,
+     23.98,
+     "2025-06-05",
+     "2026-10-29",
+     "2026-11-15 14:47:31"
+    ]
+   },
+   {
+    "valores": [
+     5000002,
+     "G3873",
+     1232,
+     "4887",
+     "PL8109",
+     "Contemplada",
+     60000.0,
+     32.5,
+     "2024-04-25",
+     "2026-11-14",
+     "2026-11-15 09:17:14"
+    ]
+   },
+   {
+    "valores": [
+     5000003,
+     "G7427",
+     1034,
+     "8484",
+     "PL4880",
+     "Cancelada",
+     240000.0,
+     36.49,
+     "2026-08-20",
+     "2026-11-15",
+     "2026-11-14 13:43:56"
+    ]
+   },
+   {
+    "valores": [
+     5000004,
+     "G6641",
+     1300,
+     "2200",
+     "PL8107",
+     "Ativa",
+     420000.0,
+     1.11,
+     "2023-04-18",
+     "2026-10-22",
+     "2026-11-16 11:50:26"
+    ]
+   },
+   {
+    "valores": [
+     5000005,
+     "G4670",
+     1087,
+     "1431",
+     "PL1375",
+     "Ativa",
+     150000.0,
+     38.51,
+     "2023-11-09",
+     "2026-11-14",
+     "2026-11-16 18:05:14"
+    ]
+   },
+   {
+    "valores": [
+     5000006,
+     "G6630",
+     1110,
+     "6798",
+     "PL1508",
+     "Ativa",
+     180000.0,
+     5.09,
+     "2025-01-17",
+     "2026-10-24",
+     "2026-11-15 21:52:41"
+    ]
+   },
+   {
+    "valores": [
+     5000007,
+     "G9551",
+     1256,
+     "1867",
+     "PL2666",
+     "Ativa",
+     180000.0,
+     26.04,
+     "2026-05-11",
+     "2026-10-27",
+     "2026-11-14 21:50:44"
+    ]
+   },
+   {
+    "valores": [
+     5000008,
+     "G3837",
+     1369,
+     "2222",
+     "PL2021",
+     "Ativa",
+     420000.0,
+     56.52,
+     "2024-12-24",
+     "2026-10-28",
+     "2026-11-16 20:26:12"
+    ]
+   }
+  ]
+ },
+ "upstream": [],
+ "downstream": [
+  "dim_grupo",
+  "dim_cota",
+  "fato_cota_movimentacao",
+  "fato_transferencia_cota",
+  "fato_cancelamento_cota",
+  "fato_reativacao_cota",
+  "fato_posicao_grupo_mensal"
+ ]
+}

@@ -1,0 +1,652 @@
+{
+ "nome": "fato_cota_movimentacao",
+ "descricao": "Movimentações de situação das cotas",
+ "dominio": "Grupos e Cotas",
+ "camada": "core",
+ "dono": "Camila Furtado",
+ "dono_area": "Operações de Grupos",
+ "criticidade": "media",
+ "frequencia": "diária",
+ "sla_horas": 24,
+ "pipeline": "core_grupos_cotas",
+ "fonte": null,
+ "status": "verde",
+ "motivo_status": "No SLA e testes OK",
+ "tem_pk": true,
+ "saude": 100.0,
+ "ultima_carga": "2026-11-17T02:00:07-03:00",
+ "atraso_horas": 0.0,
+ "linhas": 132489,
+ "testes_total": 7,
+ "testes_falhando": 0,
+ "testes_alerta": 0,
+ "execucoes_30d": [
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso",
+  "sucesso"
+ ],
+ "relatorios_impactados": [],
+ "incidentes": [],
+ "tags": [],
+ "descricao_longa": "Movimentações de situação das cotas. Pertence ao domínio Grupos e Cotas e fica na camada core (dado tratado e modelado). É construída a partir de `stg_erp_cotas`, `dim_cota`. Carga diária pela rotina `core_grupos_cotas`, com SLA de 24 horas. Tem 7 colunas; chave primária: `id_movimentacao`. Responsável: Camila Furtado (Operações de Grupos).",
+ "colunas": [
+  {
+   "nome": "id_movimentacao",
+   "tipo": "bigint",
+   "descricao": "Chave da movimentação",
+   "pk": true,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "id_cota",
+   "tipo": "bigint",
+   "descricao": "Cota movimentada",
+   "pk": false,
+   "fk": {
+    "tabela": "dim_cota",
+    "coluna": "id_cota"
+   },
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "situacao_anterior",
+   "tipo": "varchar(20)",
+   "descricao": "Situação antes da movimentação",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "situacao_nova",
+   "tipo": "varchar(20)",
+   "descricao": "Situação após a movimentação",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "motivo",
+   "tipo": "varchar(60)",
+   "descricao": "Motivo informado",
+   "pk": false,
+   "nulavel": true,
+   "pii": false
+  },
+  {
+   "nome": "usuario_origem",
+   "tipo": "varchar(40)",
+   "descricao": "Usuário ou rotina que originou a movimentação",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  },
+  {
+   "nome": "dt_movimentacao",
+   "tipo": "timestamp",
+   "descricao": "Data e hora da movimentação",
+   "pk": false,
+   "nulavel": false,
+   "pii": false
+  }
+ ],
+ "execucoes": [
+  {
+   "data": "2026-10-19",
+   "inicio": "2026-10-19T02:00:27-03:00",
+   "duracao_seg": 39,
+   "linhas": 33,
+   "linhas_esperadas": 34,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-20",
+   "inicio": "2026-10-20T02:00:50-03:00",
+   "duracao_seg": 33,
+   "linhas": 200,
+   "linhas_esperadas": 201,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-21",
+   "inicio": "2026-10-21T02:00:42-03:00",
+   "duracao_seg": 37,
+   "linhas": 176,
+   "linhas_esperadas": 182,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-22",
+   "inicio": "2026-10-22T02:00:34-03:00",
+   "duracao_seg": 38,
+   "linhas": 176,
+   "linhas_esperadas": 174,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-23",
+   "inicio": "2026-10-23T02:00:37-03:00",
+   "duracao_seg": 37,
+   "linhas": 172,
+   "linhas_esperadas": 170,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-24",
+   "inicio": "2026-10-24T02:01:30-03:00",
+   "duracao_seg": 32,
+   "linhas": 161,
+   "linhas_esperadas": 163,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-25",
+   "inicio": "2026-10-25T02:00:28-03:00",
+   "duracao_seg": 32,
+   "linhas": 72,
+   "linhas_esperadas": 72,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-26",
+   "inicio": "2026-10-26T02:00:06-03:00",
+   "duracao_seg": 35,
+   "linhas": 33,
+   "linhas_esperadas": 34,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-27",
+   "inicio": "2026-10-27T02:00:33-03:00",
+   "duracao_seg": 34,
+   "linhas": 196,
+   "linhas_esperadas": 201,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-28",
+   "inicio": "2026-10-28T02:00:21-03:00",
+   "duracao_seg": 35,
+   "linhas": 183,
+   "linhas_esperadas": 182,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-29",
+   "inicio": "2026-10-29T02:01:49-03:00",
+   "duracao_seg": 40,
+   "linhas": 177,
+   "linhas_esperadas": 174,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-30",
+   "inicio": "2026-10-30T02:00:28-03:00",
+   "duracao_seg": 37,
+   "linhas": 168,
+   "linhas_esperadas": 170,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-10-31",
+   "inicio": "2026-10-31T02:00:04-03:00",
+   "duracao_seg": 38,
+   "linhas": 164,
+   "linhas_esperadas": 163,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-01",
+   "inicio": "2026-11-01T02:00:58-03:00",
+   "duracao_seg": 35,
+   "linhas": 74,
+   "linhas_esperadas": 72,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-02",
+   "inicio": "2026-11-02T02:00:21-03:00",
+   "duracao_seg": 37,
+   "linhas": 33,
+   "linhas_esperadas": 34,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-03",
+   "inicio": "2026-11-03T02:00:45-03:00",
+   "duracao_seg": 40,
+   "linhas": 204,
+   "linhas_esperadas": 201,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-04",
+   "inicio": "2026-11-04T02:00:52-03:00",
+   "duracao_seg": 35,
+   "linhas": 187,
+   "linhas_esperadas": 182,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-05",
+   "inicio": "2026-11-05T02:00:22-03:00",
+   "duracao_seg": 37,
+   "linhas": 178,
+   "linhas_esperadas": 174,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-06",
+   "inicio": "2026-11-06T02:01:40-03:00",
+   "duracao_seg": 38,
+   "linhas": 175,
+   "linhas_esperadas": 170,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-07",
+   "inicio": "2026-11-07T02:01:41-03:00",
+   "duracao_seg": 35,
+   "linhas": 157,
+   "linhas_esperadas": 163,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-08",
+   "inicio": "2026-11-08T02:01:39-03:00",
+   "duracao_seg": 32,
+   "linhas": 72,
+   "linhas_esperadas": 72,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-09",
+   "inicio": "2026-11-09T02:00:42-03:00",
+   "duracao_seg": 37,
+   "linhas": 34,
+   "linhas_esperadas": 34,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-10",
+   "inicio": "2026-11-10T02:01:26-03:00",
+   "duracao_seg": 39,
+   "linhas": 195,
+   "linhas_esperadas": 201,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-11",
+   "inicio": "2026-11-11T02:00:51-03:00",
+   "duracao_seg": 35,
+   "linhas": 188,
+   "linhas_esperadas": 182,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-12",
+   "inicio": "2026-11-12T02:00:19-03:00",
+   "duracao_seg": 35,
+   "linhas": 169,
+   "linhas_esperadas": 174,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-13",
+   "inicio": "2026-11-13T02:01:06-03:00",
+   "duracao_seg": 39,
+   "linhas": 173,
+   "linhas_esperadas": 170,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-14",
+   "inicio": "2026-11-14T02:01:33-03:00",
+   "duracao_seg": 39,
+   "linhas": 160,
+   "linhas_esperadas": 163,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-15",
+   "inicio": "2026-11-15T02:01:35-03:00",
+   "duracao_seg": 39,
+   "linhas": 74,
+   "linhas_esperadas": 72,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-16",
+   "inicio": "2026-11-16T02:01:47-03:00",
+   "duracao_seg": 37,
+   "linhas": 33,
+   "linhas_esperadas": 34,
+   "status": "sucesso",
+   "anomalia_volume": false
+  },
+  {
+   "data": "2026-11-17",
+   "inicio": "2026-11-17T02:00:07-03:00",
+   "duracao_seg": 32,
+   "linhas": 195,
+   "linhas_esperadas": 201,
+   "status": "sucesso",
+   "anomalia_volume": false
+  }
+ ],
+ "testes": [
+  {
+   "id": "fato_cota_movimentacao.pk_existente",
+   "regra": "pk_existente",
+   "nome": "Chave primária definida",
+   "severidade": "critico",
+   "resultado": "ok",
+   "evidencia": "Chave primária declarada: `id_movimentacao`",
+   "valor_observado": 1,
+   "limite": 1,
+   "unidade": "chave",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT COUNT(*) AS qt_pk\nFROM information_schema.table_constraints\nWHERE table_name = 'fato_cota_movimentacao' AND constraint_type = 'PRIMARY KEY';"
+  },
+  {
+   "id": "fato_cota_movimentacao.unicidade.id_movimentacao",
+   "regra": "unicidade",
+   "nome": "Unicidade de `id_movimentacao`",
+   "coluna": "id_movimentacao",
+   "severidade": "alto",
+   "resultado": "ok",
+   "evidencia": "Nenhuma duplicidade em `id_movimentacao` (132.489 linhas verificadas)",
+   "valor_observado": 0,
+   "limite": 0,
+   "unidade": "registros",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT id_movimentacao, COUNT(*) AS qtd\nFROM fato_cota_movimentacao\nGROUP BY id_movimentacao\nHAVING COUNT(*) > 1;"
+  },
+  {
+   "id": "fato_cota_movimentacao.nao_nulo.id_cota",
+   "regra": "nao_nulo",
+   "nome": "Completude (não nulo) de `id_cota`",
+   "coluna": "id_cota",
+   "severidade": "alto",
+   "resultado": "ok",
+   "evidencia": "0% de nulos em `id_cota`",
+   "valor_observado": 0.0,
+   "limite": 0.5,
+   "unidade": "%",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT 100.0 * SUM(CASE WHEN id_cota IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS pc_nulos\nFROM fato_cota_movimentacao;"
+  },
+  {
+   "id": "fato_cota_movimentacao.integridade_referencial",
+   "regra": "integridade_referencial",
+   "nome": "Integridade referencial de `id_cota`",
+   "coluna": "id_cota",
+   "severidade": "alto",
+   "resultado": "ok",
+   "evidencia": "Todas as chaves de `id_cota` existem em `dim_cota`",
+   "valor_observado": 0,
+   "limite": 0,
+   "unidade": "registros",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT COUNT(*) AS qt_orfaos\nFROM fato_cota_movimentacao f\nLEFT JOIN dim_cota p ON p.id_cota = f.id_cota\nWHERE f.id_cota IS NOT NULL AND p.id_cota IS NULL;"
+  },
+  {
+   "id": "fato_cota_movimentacao.volume",
+   "regra": "volume",
+   "nome": "Volume da carga",
+   "severidade": "medio",
+   "resultado": "ok",
+   "evidencia": "195 linhas na última carga, dentro da faixa esperada (cerca de 201)",
+   "valor_observado": 195,
+   "limite": 201,
+   "unidade": "linhas",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT dt_execucao, linhas_carregadas, linhas_esperadas\nFROM governanca.log_execucao\nWHERE tabela = 'fato_cota_movimentacao'\nORDER BY dt_execucao DESC\nLIMIT 1;  -- esperado: média do mesmo dia da semana (8 semanas)"
+  },
+  {
+   "id": "fato_cota_movimentacao.frescor",
+   "regra": "frescor",
+   "nome": "Frescor (SLA)",
+   "severidade": "alto",
+   "resultado": "ok",
+   "evidencia": "Última carga há 5h (17/11 às 02:00); SLA de 24h",
+   "valor_observado": 6.0,
+   "limite": 24,
+   "unidade": "horas",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - MAX(dt_fim))) / 3600 AS horas_desde_carga\nFROM governanca.log_execucao\nWHERE tabela = 'fato_cota_movimentacao' AND status IN ('sucesso', 'alerta');"
+  },
+  {
+   "id": "fato_cota_movimentacao.dominio_valores.situacao_anterior",
+   "regra": "dominio_valores",
+   "nome": "Domínio de valores de `situacao_anterior`",
+   "coluna": "situacao_anterior",
+   "severidade": "medio",
+   "resultado": "ok",
+   "evidencia": "100% dos valores de `situacao_anterior` dentro do domínio esperado",
+   "valor_observado": 0.0,
+   "limite": 1.0,
+   "unidade": "%",
+   "historico_7d": [
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "sql": "SELECT situacao_anterior, COUNT(*) AS qtd\nFROM fato_cota_movimentacao\nWHERE situacao_anterior NOT IN (SELECT valor FROM governanca.dominio WHERE coluna = 'situacao_anterior')\nGROUP BY situacao_anterior;"
+  }
+ ],
+ "amostra": {
+  "colunas": [
+   "id_movimentacao",
+   "id_cota",
+   "situacao_anterior",
+   "situacao_nova",
+   "motivo",
+   "usuario_origem",
+   "dt_movimentacao"
+  ],
+  "linhas": [
+   {
+    "valores": [
+     5000000,
+     74446,
+     "Ativa",
+     "Cancelada",
+     "Quitação antecipada",
+     "erp.batch",
+     "2026-11-14 21:25:26"
+    ]
+   },
+   {
+    "valores": [
+     5000001,
+     74572,
+     "Cancelada",
+     "Contemplada",
+     null,
+     "erp.assembleia",
+     "2026-11-14 18:09:11"
+    ]
+   },
+   {
+    "valores": [
+     5000002,
+     74382,
+     "Ativa",
+     "Ativa",
+     "Contemplação por lance",
+     "erp.batch",
+     "2026-11-16 08:28:38"
+    ]
+   },
+   {
+    "valores": [
+     5000003,
+     74419,
+     "Ativa",
+     "Quitada",
+     "Inadimplência",
+     "bko.rlima",
+     "2026-11-14 12:49:49"
+    ]
+   },
+   {
+    "valores": [
+     5000004,
+     74361,
+     "Cancelada",
+     "Ativa",
+     "Quitação antecipada",
+     "erp.assembleia",
+     "2026-11-16 07:47:34"
+    ]
+   },
+   {
+    "valores": [
+     5000005,
+     74506,
+     "Ativa",
+     "Contemplada",
+     "Solicitação do cliente",
+     "erp.batch",
+     "2026-11-16 15:48:35"
+    ]
+   },
+   {
+    "valores": [
+     5000006,
+     74370,
+     "Cancelada",
+     "Ativa",
+     "Contemplação por lance",
+     "bko.acampos",
+     "2026-11-16 14:03:46"
+    ]
+   },
+   {
+    "valores": [
+     5000007,
+     74552,
+     "Cancelada",
+     "Quitada",
+     "Solicitação do cliente",
+     "bko.rlima",
+     "2026-11-14 17:01:08"
+    ]
+   }
+  ]
+ },
+ "upstream": [
+  "stg_erp_cotas",
+  "dim_cota"
+ ],
+ "downstream": []
+}

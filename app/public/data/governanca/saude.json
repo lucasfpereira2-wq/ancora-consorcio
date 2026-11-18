@@ -1,0 +1,388 @@
+{
+ "indice_geral": 79.3,
+ "variacao_7d": -11.7,
+ "variacao_30d": -15.0,
+ "tendencia_30d": [
+  {
+   "data": "2026-10-19",
+   "indice": 94.3
+  },
+  {
+   "data": "2026-10-20",
+   "indice": 93.6
+  },
+  {
+   "data": "2026-10-21",
+   "indice": 94.2
+  },
+  {
+   "data": "2026-10-22",
+   "indice": 92.1
+  },
+  {
+   "data": "2026-10-23",
+   "indice": 91.7
+  },
+  {
+   "data": "2026-10-24",
+   "indice": 94.1
+  },
+  {
+   "data": "2026-10-25",
+   "indice": 94.1
+  },
+  {
+   "data": "2026-10-26",
+   "indice": 93.6
+  },
+  {
+   "data": "2026-10-27",
+   "indice": 92.5
+  },
+  {
+   "data": "2026-10-28",
+   "indice": 94.0
+  },
+  {
+   "data": "2026-10-29",
+   "indice": 91.5
+  },
+  {
+   "data": "2026-10-30",
+   "indice": 94.1
+  },
+  {
+   "data": "2026-10-31",
+   "indice": 94.1
+  },
+  {
+   "data": "2026-11-01",
+   "indice": 94.1
+  },
+  {
+   "data": "2026-11-02",
+   "indice": 94.1
+  },
+  {
+   "data": "2026-11-03",
+   "indice": 91.7
+  },
+  {
+   "data": "2026-11-04",
+   "indice": 89.4
+  },
+  {
+   "data": "2026-11-05",
+   "indice": 91.9
+  },
+  {
+   "data": "2026-11-06",
+   "indice": 92.1
+  },
+  {
+   "data": "2026-11-07",
+   "indice": 92.2
+  },
+  {
+   "data": "2026-11-08",
+   "indice": 91.7
+  },
+  {
+   "data": "2026-11-09",
+   "indice": 91.9
+  },
+  {
+   "data": "2026-11-10",
+   "indice": 91.0
+  },
+  {
+   "data": "2026-11-11",
+   "indice": 91.6
+  },
+  {
+   "data": "2026-11-12",
+   "indice": 90.8
+  },
+  {
+   "data": "2026-11-13",
+   "indice": 90.8
+  },
+  {
+   "data": "2026-11-14",
+   "indice": 87.5
+  },
+  {
+   "data": "2026-11-15",
+   "indice": 86.8
+  },
+  {
+   "data": "2026-11-16",
+   "indice": 86.4
+  },
+  {
+   "data": "2026-11-17",
+   "indice": 79.3
+  }
+ ],
+ "dimensoes": [
+  {
+   "nome": "Completude",
+   "indice": 97.4,
+   "descricao": "Campos obrigatórios preenchidos (testes de não nulo). Média das tabelas ponderada pela criticidade; alerta vale 55 e falha vale 15."
+  },
+  {
+   "nome": "Unicidade",
+   "indice": 93.6,
+   "descricao": "Chave primária definida e ausência de registros duplicados. Média das tabelas ponderada pela criticidade; alerta vale 55 e falha vale 15."
+  },
+  {
+   "nome": "Frescor",
+   "indice": 88.0,
+   "descricao": "Cargas dentro do SLA e com o volume esperado. Média das tabelas ponderada pela criticidade; alerta vale 55 e falha vale 15."
+  },
+  {
+   "nome": "Integridade",
+   "indice": 91.0,
+   "descricao": "Chaves estrangeiras válidas e valores reconciliados com a origem. Média das tabelas ponderada pela criticidade; alerta vale 55 e falha vale 15."
+  },
+  {
+   "nome": "Conformidade",
+   "indice": 98.3,
+   "descricao": "Schema aderente ao contrato e valores dentro do domínio. Média das tabelas ponderada pela criticidade; alerta vale 55 e falha vale 15."
+  }
+ ],
+ "por_dominio": [
+  {
+   "dominio": "Staging",
+   "indice": 77.8,
+   "tabelas": 14,
+   "vermelho": 4,
+   "amarelo": 1,
+   "verde": 9
+  },
+  {
+   "dominio": "Cadastro",
+   "indice": 74.6,
+   "tabelas": 7,
+   "vermelho": 1,
+   "amarelo": 3,
+   "verde": 3
+  },
+  {
+   "dominio": "Produto",
+   "indice": 92.5,
+   "tabelas": 5,
+   "vermelho": 0,
+   "amarelo": 1,
+   "verde": 4
+  },
+  {
+   "dominio": "Grupos e Cotas",
+   "indice": 86.1,
+   "tabelas": 7,
+   "vermelho": 1,
+   "amarelo": 1,
+   "verde": 5
+  },
+  {
+   "dominio": "Vendas",
+   "indice": 85.0,
+   "tabelas": 10,
+   "vermelho": 0,
+   "amarelo": 4,
+   "verde": 6
+  },
+  {
+   "dominio": "Financeiro e Cobrança",
+   "indice": 78.6,
+   "tabelas": 11,
+   "vermelho": 1,
+   "amarelo": 4,
+   "verde": 6
+  },
+  {
+   "dominio": "Assembleias",
+   "indice": 95.1,
+   "tabelas": 6,
+   "vermelho": 0,
+   "amarelo": 1,
+   "verde": 5
+  },
+  {
+   "dominio": "Atendimento",
+   "indice": 66.0,
+   "tabelas": 10,
+   "vermelho": 3,
+   "amarelo": 2,
+   "verde": 5
+  },
+  {
+   "dominio": "Corporativo",
+   "indice": 91.4,
+   "tabelas": 4,
+   "vermelho": 0,
+   "amarelo": 1,
+   "verde": 3
+  },
+  {
+   "dominio": "Marts",
+   "indice": 63.0,
+   "tabelas": 6,
+   "vermelho": 2,
+   "amarelo": 3,
+   "verde": 1
+  }
+ ],
+ "por_camada": [
+  {
+   "camada": "staging",
+   "indice": 77.8,
+   "tabelas": 14,
+   "vermelho": 4,
+   "amarelo": 1,
+   "verde": 9
+  },
+  {
+   "camada": "core",
+   "indice": 82.0,
+   "tabelas": 60,
+   "vermelho": 6,
+   "amarelo": 17,
+   "verde": 37
+  },
+  {
+   "camada": "mart",
+   "indice": 63.0,
+   "tabelas": 6,
+   "vermelho": 2,
+   "amarelo": 3,
+   "verde": 1
+  }
+ ],
+ "contagem": {
+  "verde": 47,
+  "amarelo": 21,
+  "vermelho": 12,
+  "total": 80
+ },
+ "rotinas_total": 31,
+ "rotinas_falharam_hoje": 4,
+ "testes_total": 524,
+ "testes_falhando": 12,
+ "testes_alerta": 25,
+ "relatorios_total": 5,
+ "relatorios_impactados": 4,
+ "tabelas_sem_pk": 2,
+ "tabelas_sem_dono": 2,
+ "formula": [
+  {
+   "nome": "Testes de qualidade",
+   "peso": 0.4,
+   "descricao": "Parcela de testes aprovados, ponderada pela severidade (crítico 4, alto 3, médio 2, baixo 1). Teste em alerta vale metade."
+  },
+  {
+   "nome": "Frescor / SLA",
+   "peso": 0.3,
+   "descricao": "100% quando a última carga está dentro do SLA; cai de forma linear com as horas de atraso e zera quando o atraso alcança um SLA inteiro."
+  },
+  {
+   "nome": "Sucesso das rotinas (30 dias)",
+   "peso": 0.2,
+   "descricao": "Taxa de sucesso das execuções agendadas nos últimos 30 dias (alerta vale 0,8; atraso vale 0,5; falha vale 0)."
+  },
+  {
+   "nome": "Chave primária",
+   "peso": 0.1,
+   "descricao": "100% quando a tabela tem chave primária definida; zero quando não tem."
+  },
+  {
+   "nome": "Fator de risco do farol",
+   "peso": 0,
+   "descricao": "Multiplicador aplicado ao resultado da tabela: x0,72 quando o farol está amarelo e x0,45 quando está vermelho. O índice geral, por domínio e por camada é a média das tabelas ponderada pela criticidade (alta 3, média 2, baixa 1)."
+  }
+ ],
+ "projecao_90d": [
+  {
+   "dia": 0,
+   "indice": 79.3
+  },
+  {
+   "dia": 5,
+   "indice": 79.9
+  },
+  {
+   "dia": 10,
+   "indice": 80.5
+  },
+  {
+   "dia": 15,
+   "indice": 81.1,
+   "marco": "Inventário concluído"
+  },
+  {
+   "dia": 20,
+   "indice": 81.9
+  },
+  {
+   "dia": 25,
+   "indice": 82.7
+  },
+  {
+   "dia": 30,
+   "indice": 83.5,
+   "marco": "Donos e SLAs definidos"
+  },
+  {
+   "dia": 35,
+   "indice": 84.5
+  },
+  {
+   "dia": 40,
+   "indice": 85.5
+  },
+  {
+   "dia": 45,
+   "indice": 86.5,
+   "marco": "PKs padronizadas"
+  },
+  {
+   "dia": 50,
+   "indice": 87.4
+  },
+  {
+   "dia": 55,
+   "indice": 88.3
+  },
+  {
+   "dia": 60,
+   "indice": 89.2,
+   "marco": "Testes automatizados em tabelas críticas"
+  },
+  {
+   "dia": 65,
+   "indice": 89.8
+  },
+  {
+   "dia": 70,
+   "indice": 90.4
+  },
+  {
+   "dia": 75,
+   "indice": 91.0,
+   "marco": "Alertas e catálogo no ar"
+  },
+  {
+   "dia": 80,
+   "indice": 91.3
+  },
+  {
+   "dia": 85,
+   "indice": 91.7
+  },
+  {
+   "dia": 90,
+   "indice": 92.0,
+   "marco": "OKRs de qualidade em operação"
+  }
+ ]
+}
