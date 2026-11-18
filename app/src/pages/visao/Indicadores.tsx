@@ -120,7 +120,7 @@ export function LinhaIndicadores({ saude }: { saude: Saude }) {
         detalhe="Sem chave primária"
         icone={KeyRound}
         alerta={saude.tabelas_sem_pk > 0 ? 'amarelo' : undefined}
-        para="/farol?busca=sem%20PK"
+        para="/farol?pk=sem"
       />
       <Indicador
         rotulo="Tabelas sem dono"
@@ -128,7 +128,7 @@ export function LinhaIndicadores({ saude }: { saude: Saude }) {
         detalhe="Sem responsável"
         icone={UserRoundX}
         alerta={saude.tabelas_sem_dono > 0 ? 'amarelo' : undefined}
-        para="/farol?busca=sem%20dono"
+        para="/farol?dono=Sem%20dono"
       />
     </div>
   )
