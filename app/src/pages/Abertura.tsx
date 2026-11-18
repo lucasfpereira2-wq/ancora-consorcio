@@ -1,18 +1,4 @@
-import {
-  ArrowRight,
-  CalendarClock,
-  ChartColumn,
-  CircleCheck,
-  Database,
-  ExternalLink,
-  Milestone,
-  Newspaper,
-  OctagonAlert,
-  ShieldCheck,
-  Target,
-  UserRound,
-  type LucideIcon,
-} from 'lucide-react'
+import { ArrowRight, CalendarClock, ChartColumn, CircleCheck, Database, ExternalLink, FlaskConical, type LucideIcon, Milestone, Newspaper, OctagonAlert, ShieldCheck, Target, UserRound } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { MarcaAncora } from '@/components/layout/Ancora'
@@ -74,24 +60,51 @@ function LinkPerfil({ valor, icone: Icone, children }: { valor: string; icone: L
   )
 }
 
+/** Destaque no topo da abertura: deixa claro, antes de qualquer número, que o ambiente é simulado. */
+function AvisoDadosFicticios() {
+  return (
+    <Dica texto={`${perfil.aviso.titulo} ${perfil.aviso.texto}`} lado="bottom">
+      <div
+        role="note"
+        tabIndex={0}
+        className="flex animate-entrar items-center gap-2 rounded-full border border-primary/35 bg-accent py-1.5 pl-2.5 pr-3.5 text-[12.5px] font-semibold leading-none text-accent-foreground shadow-card outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
+        <span className="relative flex size-2" aria-hidden>
+          <span className="absolute inline-flex size-full rounded-full bg-agua-500 opacity-60 motion-safe:animate-ping" />
+          <span className="relative inline-flex size-2 rounded-full bg-agua-500" />
+        </span>
+        <FlaskConical className="size-3.5 shrink-0" aria-hidden />
+        <span className="whitespace-nowrap">
+          {perfil.aviso.rotulo}
+          <span className="hidden font-medium opacity-75 sm:inline"> · {perfil.aviso.destaque}</span>
+        </span>
+      </div>
+    </Dica>
+  )
+}
+
 export default function Abertura() {
   useEffect(() => {
     document.title = `${perfil.nome} · Hub Âncora`
   }, [])
+  const [fotoFalhou, setFotoFalhou] = useState(false)
   const agenda = linkValido(perfil.agenda) ? perfil.agenda : linkValido(`mailto:${perfil.email}`) && !perfil.email.startsWith('[') ? `mailto:${perfil.email}` : perfil.agenda
 
   return (
     <div className="grid min-h-dvh bg-background lg:h-dvh lg:min-h-[660px] lg:grid-cols-[minmax(0,1.14fr)_minmax(0,0.86fr)] lg:overflow-hidden">
       {/* Esquerda: apresentação */}
       <main className="flex min-w-0 flex-col justify-between gap-6 px-6 py-6 sm:px-10 lg:px-14 lg:py-7 xl:px-20 2xl:py-12">
-        <header className="flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
+        <header className="flex items-center justify-between gap-3">
+          <div className="flex shrink-0 items-center gap-2.5">
             <MarcaAncora tamanho={30} />
-            <span className="text-sm font-semibold tracking-tight">
-              Hub Âncora <span className="font-normal text-muted-foreground">· Dados & Governança</span>
+            <span className="whitespace-nowrap text-sm font-semibold tracking-tight">
+              Hub Âncora <span className="hidden font-normal text-muted-foreground sm:inline">· Dados & Governança</span>
             </span>
           </div>
-          <AlternadorTema />
+          <div className="flex items-center gap-2.5">
+            <AvisoDadosFicticios />
+            <AlternadorTema />
+          </div>
         </header>
 
         <div className="max-w-[44rem]">
@@ -182,8 +195,8 @@ export default function Abertura() {
           <span className="absolute size-[300px] rounded-full border border-white/[0.07] xl:size-[340px]" aria-hidden />
           <span className="absolute size-[236px] rounded-full border border-dashed border-agua-500/25 motion-safe:animate-[spin_60s_linear_infinite] xl:size-[268px]" aria-hidden />
           <div className="relative size-[184px] rounded-full bg-gradient-to-br from-agua-500 via-agua-500/30 to-white/10 p-[3px] shadow-[0_24px_70px_-12px_rgb(0_0_0/0.6)] xl:size-[208px]">
-            {perfil.foto ? (
-              <img src={perfil.foto} alt={`Foto de ${perfil.nome}`} className="size-full rounded-full object-cover" />
+            {perfil.foto && !fotoFalhou ? (
+              <img src={perfil.foto} alt={`Foto de ${perfil.nome}`} onError={() => setFotoFalhou(true)} className="size-full rounded-full object-cover" />
             ) : (
               <div className="grid size-full place-items-center rounded-full bg-[radial-gradient(circle_at_30%_25%,#12466B_0%,#062C4B_55%,#00203A_100%)]" role="img" aria-label={`Monograma de ${perfil.nome}`}>
                 <span className="bg-gradient-to-b from-white to-agua-500 bg-clip-text text-[72px] font-semibold leading-none tracking-[-0.06em] text-transparent xl:text-[82px]">
@@ -211,6 +224,14 @@ export default function Abertura() {
             {perfil.porque.titulo}
           </h2>
           <p className="mt-2 text-[13.5px] leading-relaxed text-white/80">{perfil.porque.texto}</p>
+          <p className="mt-3.5 flex items-start gap-2.5 border-t border-white/10 pt-3.5 text-[12.5px] leading-relaxed text-white/70">
+            <span className="mt-px grid size-6 shrink-0 place-items-center rounded-md bg-agua-500/15 text-agua-500">
+              <FlaskConical className="size-3.5" aria-hidden />
+            </span>
+            <span>
+              <strong className="font-semibold text-white">{perfil.aviso.titulo}</strong> {perfil.aviso.texto}
+            </span>
+          </p>
         </section>
       </aside>
     </div>
