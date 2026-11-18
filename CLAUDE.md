@@ -30,6 +30,19 @@ rotinas que duplicam dados e tabelas sem chave primária.
   selo, aviso ou alternador "Reportado | Corrigido" dentro das páginas de relatório.
 - Manter este arquivo sempre atualizado.
 
+## Tela de abertura (`app/src/pages/Abertura.tsx`)
+
+- Uma única tela sem rolagem no desktop (validado em 1366×768 e 1440×900). Esquerda: nome, frase, bio, destaques, pilares e botões.
+  Direita (painel marinho): retrato ou monograma, **linha do tempo animada da trajetória** e o cartão "Por que este Hub?".
+- **Destaque de dados fictícios** (pedido do dono em 18/11): selo "Ambiente simulado · dados 100% fictícios" no topo e a frase
+  "Todos os dados são fictícios..." no cartão da direita. Textos em `perfil.json` → `aviso`.
+- **Trajetória** (`app/src/pages/abertura/Trajetoria.tsx`, conteúdo em `app/src/content/trajetoria.json`): SVG animado com a curva de
+  evolução de cargo (2012 → hoje), faixa de empresas e 7 marcos que se revezam a cada 4,6 s; pausa ao passar o mouse, clique fixa
+  um marco, respeita `prefers-reduced-motion`. Fonte: currículo enviado pelo dono (AeC 2012–2020, Mundiale, Sólides, Mundiale,
+  AeC como coordenador, A3Data, Raro Labs). Nomes de clientes finais foram omitidos de propósito ("um banco", "cliente de crédito").
+- **Foto**: `perfil.json` → `foto` (caminho relativo a `app/public/`, ex.: `foto-lucas.jpg`). Vazio = monograma "LP"; se o arquivo
+  não carregar, volta ao monograma. A foto enviada pelo dono no chat não chegou como arquivo: pendente de reenvio.
+
 ## Stack
 
 React + TypeScript + Vite, Tailwind, shadcn/ui, ECharts, TanStack Table, React Flow, HashRouter.
@@ -42,7 +55,7 @@ CLAUDE.md                     esta memória
 README.md                     apresentação do projeto, arquitetura, como rodar
 app/                          front-end
   src/types/                  contratos TypeScript dos JSONs (governanca.ts, cubo.ts)
-  src/content/                textos editáveis: perfil.json, artigos.json, plano90.json
+  src/content/                textos editáveis: perfil.json (inclui o aviso de dados fictícios), trajetoria.json, artigos.json, plano90.json
   src/pages/                  Abertura, VisaoExecutiva, farol/, Rotinas, ImpactoRelatorios, Glossario, relatorios/ (5), Plano90, Artigos
   public/data/                JSONs gerados (meta, governanca/*, relatorios/*)
 data-engineering/

@@ -9,6 +9,7 @@ import perfil from '@/content/perfil.json'
 import { linkValido } from '@/lib/links'
 import { cn } from '@/lib/utils'
 import { GrafoLinhagem } from './abertura/GrafoLinhagem'
+import { Trajetoria } from './abertura/Trajetoria'
 
 const ICONES_PILAR: Record<string, LucideIcon> = { governanca: ShieldCheck, engenharia: Database, analytics: ChartColumn, gestao: Target }
 
@@ -185,46 +186,48 @@ export default function Abertura() {
       </main>
 
       {/* Direita: retrato sobre o grafo de linhagem (sempre marinho, nos dois temas) */}
-      <aside className="relative isolate flex min-h-[520px] flex-col items-center justify-between overflow-hidden bg-marinho-900 px-6 py-7 text-white lg:min-h-0 lg:px-10">
+      <aside className="relative isolate flex min-h-[520px] flex-col items-center justify-between gap-4 overflow-hidden bg-marinho-900 px-6 py-6 text-white lg:min-h-0 lg:px-9 2xl:py-10">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(120%_90%_at_70%_10%,#0E3A5C_0%,#00203A_48%,#00172B_100%)]" aria-hidden />
-        <GrafoLinhagem className="absolute inset-0 -z-10 size-full opacity-90" />
+        <GrafoLinhagem className="absolute inset-0 -z-10 size-full opacity-45" />
 
         <p className="self-end text-[11px] font-medium uppercase tracking-[0.14em] text-white/45">Linhagem de dados · ambiente simulado</p>
 
         <div className="relative grid place-items-center">
-          <span className="absolute size-[300px] rounded-full border border-white/[0.07] xl:size-[340px]" aria-hidden />
-          <span className="absolute size-[236px] rounded-full border border-dashed border-agua-500/25 motion-safe:animate-[spin_60s_linear_infinite] xl:size-[268px]" aria-hidden />
-          <div className="relative size-[184px] rounded-full bg-gradient-to-br from-agua-500 via-agua-500/30 to-white/10 p-[3px] shadow-[0_24px_70px_-12px_rgb(0_0_0/0.6)] xl:size-[208px]">
+          <span className="absolute size-[190px] rounded-full border border-white/[0.07] 2xl:size-[250px]" aria-hidden />
+          <span className="absolute size-[150px] rounded-full border border-dashed border-agua-500/25 motion-safe:animate-[spin_60s_linear_infinite] 2xl:size-[200px]" aria-hidden />
+          <div className="relative size-[112px] rounded-full bg-gradient-to-br from-agua-500 via-agua-500/30 to-white/10 p-[3px] shadow-[0_20px_56px_-12px_rgb(0_0_0/0.6)] 2xl:size-[156px]">
             {perfil.foto && !fotoFalhou ? (
               <img src={perfil.foto} alt={`Foto de ${perfil.nome}`} onError={() => setFotoFalhou(true)} className="size-full rounded-full object-cover" />
             ) : (
               <div className="grid size-full place-items-center rounded-full bg-[radial-gradient(circle_at_30%_25%,#12466B_0%,#062C4B_55%,#00203A_100%)]" role="img" aria-label={`Monograma de ${perfil.nome}`}>
-                <span className="bg-gradient-to-b from-white to-agua-500 bg-clip-text text-[72px] font-semibold leading-none tracking-[-0.06em] text-transparent xl:text-[82px]">
+                <span className="bg-gradient-to-b from-white to-agua-500 bg-clip-text text-[44px] font-semibold leading-none tracking-[-0.06em] text-transparent 2xl:text-[60px]">
                   {perfil.iniciais}
                 </span>
               </div>
             )}
           </div>
 
-          <div className="absolute -left-24 -top-7 flex animate-entrar items-center gap-2 rounded-full border border-white/10 bg-marinho-950/70 py-1.5 pl-2 pr-3 text-xs backdrop-blur-md xl:-left-28" style={{ animationDelay: '500ms' }}>
+          <div className="absolute -left-40 top-1 flex animate-entrar items-center [@media(max-height:820px)]:hidden gap-2 rounded-full border border-white/10 bg-marinho-950/70 py-1.5 pl-2 pr-3 text-xs backdrop-blur-md 2xl:-left-44" style={{ animationDelay: '500ms' }}>
             <CircleCheck className="size-4 text-[#3CBF62]" aria-hidden />
             <span className="font-mono text-[11px] text-white/85">fato_vendas</span>
             <span className="text-white/50">no SLA</span>
           </div>
-          <div className="absolute -right-28 -bottom-6 flex animate-entrar items-center gap-2 rounded-full border border-white/10 bg-marinho-950/70 py-1.5 pl-2 pr-3 text-xs backdrop-blur-md xl:-right-32" style={{ animationDelay: '650ms' }}>
+          <div className="absolute -right-48 bottom-1 flex animate-entrar items-center [@media(max-height:820px)]:hidden gap-2 rounded-full border border-white/10 bg-marinho-950/70 py-1.5 pl-2 pr-3 text-xs backdrop-blur-md 2xl:-right-52" style={{ animationDelay: '650ms' }}>
             <OctagonAlert className="size-4 text-[#EF6461]" aria-hidden />
             <span className="font-mono text-[11px] text-white/85">fato_parcelas</span>
             <span className="text-white/50">312 duplicados</span>
           </div>
         </div>
 
-        <section className="w-full max-w-md animate-entrar rounded-2xl border border-white/10 bg-white/[0.06] p-5 backdrop-blur-md" style={{ animationDelay: '300ms' }}>
+        <Trajetoria className="max-w-[540px] animate-entrar" />
+
+        <section className="w-full max-w-[540px] animate-entrar rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3.5 backdrop-blur-md" style={{ animationDelay: '300ms' }}>
           <h2 className="flex items-center gap-2 text-[13px] font-semibold text-agua-500">
             <span className="h-px w-5 bg-agua-500" aria-hidden />
             {perfil.porque.titulo}
           </h2>
-          <p className="mt-2 text-[13.5px] leading-relaxed text-white/80">{perfil.porque.texto}</p>
-          <p className="mt-3.5 flex items-start gap-2.5 border-t border-white/10 pt-3.5 text-[12.5px] leading-relaxed text-white/70">
+          <p className="mt-1.5 text-[13px] leading-relaxed text-white/80">{perfil.porque.texto}</p>
+          <p className="mt-2.5 flex items-start gap-2.5 border-t border-white/10 pt-2.5 text-[12px] leading-relaxed text-white/70">
             <span className="mt-px grid size-6 shrink-0 place-items-center rounded-md bg-agua-500/15 text-agua-500">
               <FlaskConical className="size-3.5" aria-hidden />
             </span>
