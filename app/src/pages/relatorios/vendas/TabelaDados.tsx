@@ -11,7 +11,7 @@ import { fmtNumero } from '@/lib/formato'
 import { cn } from '@/lib/utils'
 import { normalizar } from './comum'
 
-export interface ColunaTabela<L> {
+export interface ColunaTabela<L extends object> {
   id: string
   titulo: string
   /** valor usado na ordenação (e na célula, quando `celula` não é informada) */
@@ -23,7 +23,7 @@ export interface ColunaTabela<L> {
   classe?: string
 }
 
-export interface TabelaDadosProps<L> {
+export interface TabelaDadosProps<L extends object> {
   linhas: L[]
   colunas: ColunaTabela<L>[]
   /** texto pesquisável de cada linha */
@@ -42,7 +42,7 @@ export interface TabelaDadosProps<L> {
   extras?: ReactNode
 }
 
-export function TabelaDados<L>({
+export function TabelaDados<L extends object>({
   linhas,
   colunas,
   textoBusca,

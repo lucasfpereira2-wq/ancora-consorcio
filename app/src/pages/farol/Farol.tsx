@@ -220,7 +220,7 @@ export default function Farol() {
         <CartaoResumo rotulo="Em atenção" valor={cont.amarelo} status="amarelo" icone={<IconeStatus s="amarelo" />} detalhe={`${fmtPct(cont.amarelo / Math.max(1, total), 0)} do catálogo`} ativo={sel.status.includes('amarelo')} onClick={() => alternar('status', 'amarelo')} />
         <CartaoResumo rotulo="Saudáveis" valor={cont.verde} status="verde" icone={<IconeStatus s="verde" />} detalhe={`${fmtPct(cont.verde / Math.max(1, total), 0)} do catálogo`} ativo={sel.status.includes('verde')} onClick={() => alternar('status', 'verde')} />
         <CartaoResumo rotulo="Sem chave primária" valor={cont.semPk} icone={<KeyRound className="size-3.5" aria-hidden />} detalhe="unicidade não garantida" ativo={semPk} onClick={() => alterar({ pk: semPk ? null : 'sem' })} />
-        <CartaoResumo rotulo="Sem dono definido" valor={cont.semDono} icone={<UserRoundX className="size-3.5" aria-hidden />} detalhe="ninguém responde pelo dado" ativo={sel.dono.includes(SEM_DONO)} onClick={() => alternar('dono', SEM_DONO)} />
+        <CartaoResumo rotulo="Sem dono definido" valor={cont.semDono} icone={<UserRoundX className="size-3.5" aria-hidden />} detalhe="sem responsável formal" ativo={sel.dono.includes(SEM_DONO)} onClick={() => alternar('dono', SEM_DONO)} />
       </section>
 
       {/* busca + filtros + visão */}

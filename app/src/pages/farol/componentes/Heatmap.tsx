@@ -61,7 +61,7 @@ export function Heatmap({ tabelas, dias, dominios }: { tabelas: TabelaResumo[]; 
             <div className="grid gap-[2px]" style={colunas} aria-hidden>
               {dias.map((d, i) => {
                 const ds = diaSemana(d)
-                const marca = ds === 1 || i === dias.length - 1
+                const marca = (ds === 1 && i < dias.length - 3) || i === dias.length - 1
                 return (
                   <span key={d} className={cn('relative h-7 text-center text-[10px] leading-none text-muted-foreground', (ds === 0 || ds === 6) && 'opacity-55')}>
                     {marca && <span className={cn('tabular absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap', i === dias.length - 1 && 'font-semibold text-foreground')}>{fmtDiaMes(d)}</span>}

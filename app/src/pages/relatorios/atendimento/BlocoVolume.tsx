@@ -1,15 +1,15 @@
 import { ArrowLeft, ChevronRight, MousePointerClick, TriangleAlert } from 'lucide-react'
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ChartCard } from '@/components/dados'
 import { EChart, type EChartHandle } from '@/components/dados/EChart'
 import { Button } from '@/components/ui/button'
 import { filtrar, serieTemporalPor, somarDias, type Granularidade } from '@/lib/cubo'
 import type { FiltrosResolvidos } from '@/lib/filtros'
-import { fmtCompacto, fmtData, fmtDiaMes, fmtMes, fmtNumero, fmtPct } from '@/lib/formato'
+import { fmtData, fmtDiaMes, fmtMes, fmtNumero, fmtPct } from '@/lib/formato'
 import { corDaSerie } from '@/lib/tema-echarts'
 import type { Cubo } from '@/types/cubo'
-import { CANAL_VOZ, DIM_CANAL, opcao, TABELA_TELEFONIA, tooltipHTML, useTokens, type LinhaTooltip } from './util'
+import { CANAL_VOZ, DIM_CANAL, fmtEixo, opcao, TABELA_TELEFONIA, tooltipHTML, useTokens, type LinhaTooltip } from './util'
 
 interface Nivel {
   g: Granularidade
@@ -34,9 +34,16 @@ function intervaloDoBucket(bucket: string, g: Granularidade, nivel: { inicio: st
   return { inicio: max(`${bucket}-01`, nivel.inicio), fim: min(`${bucket}-${String(ultimo).padStart(2, '0')}`, nivel.fim) }
 }
 
+/** O bucket (mês ou semana) foi cortado pelos limites do período: o total não é comparável com os vizinhos. */
+function ehParcial(bucket: string, g: Granularidade, nivel: { inicio: string; fim: string }): boolean {
+  if (g === 'dia') return false
+  const cheio = intervaloDoBucket(bucket, g, { inicio: '0000-01-01', fim: '9999-12-31' })
+  return cheio.inicio < nivel.inicio || cheio.fim > nivel.fim
+}
+
 function tituloDoBucket(bucket: string, g: Granularidade, nivel: { inicio: string; fim: string }): string {
-  if (g === 'mes') return fmtMes(bucket)
   const r = intervaloDoBucket(bucket, g, nivel)
+  if (g === 'mes') return ehParcial(bucket, g, nivel) ? `${fmtMes(bucket)} · parcial, ${fmtDiaMes(r.inicio)} a ${fmtDiaMes(r.fim)}` : fmtMes(bucket)
   if (g === 'dia') return fmtData(bucket)
   return r.inicio === r.fim ? fmtData(r.inicio) : `Semana de ${fmtDiaMes(r.inicio)} a ${fmtDiaMes(r.fim)}`
 }
@@ -80,7 +87,11 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
   const primeiroDiaSemVoz = diasSemVoz[0]
 
   const rotulos = useMemo(
-    () => serie.buckets.map((b) => (nivel.g === 'mes' ? fmtMes(b) : fmtDiaMes(intervaloDoBucket(b, nivel.g, nivel).inicio))),
+    () =>
+      serie.buckets.map((b) => {
+        const base = nivel.g === 'mes' ? fmtMes(b) : fmtDiaMes(intervaloDoBucket(b, nivel.g, nivel).inicio)
+        return nivel.g === 'mes' && ehParcial(b, nivel.g, nivel) ? `${base}\n(parcial)` : base
+      }),
     [serie.buckets, nivel],
   )
 
@@ -161,7 +172,7 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
         },
       },
       xAxis: { type: 'category', data: rotulos },
-      yAxis: { type: 'value', axisLabel: { formatter: (v: number) => fmtCompacto(v) } },
+      yAxis: { type: 'value', axisLabel: { formatter: (v: number) => fmtEixo(v) } },
       series,
     })
   }, [serie, rotulos, nivel, afetados, ordemCanais, tema, t, proximo, primeiroDiaSemVoz])
@@ -175,6 +186,26 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
     setEstado({ chave, pilha: [...pilha, { g: proximo, inicio: r.inicio, fim: r.fim, rotulo }] })
   }
   const voltarPara = (n: number) => setEstado({ chave, pilha: pilha.slice(0, n) })
+
+  // clique em qualquer ponto da coluna (não só sobre a barra): mais fácil de acertar em barras finas
+  const aoDetalhar = useRef(detalhar)
+  aoDetalhar.current = detalhar
+  const temGrafico = serie.series.length > 0
+  useEffect(() => {
+    const inst = ref.current?.instancia()
+    if (!inst || !temGrafico) return
+    const zr = inst.getZr()
+    const clique = (e: { offsetX: number; offsetY: number }) => {
+      const ponto = [e.offsetX, e.offsetY]
+      if (!inst.containPixel('grid', ponto)) return
+      const indice = inst.convertFromPixel({ xAxisIndex: 0 }, ponto[0]) as unknown as number
+      if (Number.isFinite(indice)) aoDetalhar.current(Math.round(indice))
+    }
+    zr.on('click', clique)
+    return () => {
+      zr.off('click', clique)
+    }
+  }, [tema, temGrafico])
 
   const trilha = [raiz, ...pilha]
 
@@ -243,7 +274,7 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
         option={option}
         altura={340}
         descricao="Volume de contatos por canal ao longo do tempo, em barras empilhadas"
-        onEvents={{ click: (p) => detalhar((p as { dataIndex: number }).dataIndex) }}
+        className={proximo ? 'cursor-pointer' : undefined}
       />
     </ChartCard>
   )

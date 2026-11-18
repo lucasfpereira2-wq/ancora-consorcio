@@ -69,7 +69,7 @@ export function RollRate({ cubo, filtrosBase, meta, periodo }: { cubo: Cubo; fil
 
   const option = useMemo<EChartsOption>(() => {
     const t = tokensGrafico(tema)
-    const dados: unknown[] = []
+    const dados: { value: number[]; itemStyle: Record<string, unknown>; label: Record<string, unknown> }[] = []
     origens.forEach((o, io) => {
       destinos.forEach((d, id) => {
         const p = matriz.pct(o, d)

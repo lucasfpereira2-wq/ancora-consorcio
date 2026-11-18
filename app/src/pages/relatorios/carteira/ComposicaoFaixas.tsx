@@ -86,8 +86,8 @@ export function ComposicaoFaixas({
     const t = tokensGrafico(tema)
     const nomes = dados.map((d) => d.nome)
     return {
-      legend: { data: FAIXAS_ATRASO.map((f) => `${f} dias`) },
-      grid: { left: 8, right: 64, top: 34, bottom: 4, containLabel: true },
+      legend: { data: [...FAIXAS_ATRASO], itemGap: 12 },
+      grid: { left: 8, right: 64, top: 38, bottom: 4, containLabel: true },
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
@@ -104,13 +104,13 @@ export function ComposicaoFaixas({
             <div style="opacity:.6;font-size:11px;margin-top:6px">Clique para filtrar o relatório</div></div>`
         },
       },
-      xAxis: { type: 'value', max: 100, axisLabel: { formatter: (v: number) => fmtPct(v, 0, { fracao: false }) }, splitNumber: 4 },
+      xAxis: { type: 'value', max: 100, interval: 25, axisLabel: { formatter: (v: number) => fmtPct(v, 0, { fracao: false }) } },
       yAxis: {
         type: 'category', inverse: true, data: nomes, axisLine: { show: false },
         axisLabel: { color: (v?: string | number) => (selecionados.length && !selecionados.includes(String(v)) ? t.textoSecundario : t.texto), fontSize: 12, width: 110, overflow: 'truncate' },
       },
       series: FAIXAS_ATRASO.map((f, k) => ({
-        type: 'bar' as const, name: `${f} dias`, stack: 'total', barWidth: 20, cursor: 'pointer',
+        type: 'bar' as const, name: f, stack: 'total', barWidth: 20, cursor: 'pointer',
         itemStyle: { color: cores[f], borderColor: t.superficie, borderWidth: 1, borderRadius: 0 },
         data: dados.map((d) => ({
           value: d.pos.saldoAtrasado ? +(((d.pos.porFaixa[f]?.saldo ?? 0) / d.pos.saldoAtrasado) * 100).toFixed(3) : 0,
@@ -141,7 +141,7 @@ export function ComposicaoFaixas({
     colunas: [rotulo, 'Carteira ativa (R$)', 'Over 30 (%)', 'Over 90 (%)', ...FAIXAS_ATRASO.map((f) => `Saldo ${f} (R$)`)],
     linhas: dados.map((d) => [d.nome, Math.round(d.pos.saldo), pct(d.pos.over30), pct(d.pos.over90), ...FAIXAS_ATRASO.map((f) => Math.round(d.pos.porFaixa[f]?.saldo ?? 0))]),
   })
-  const sub = 'Mix do saldo em atraso por faixa (100%). À direita, o over 30 do grupo. Clique para filtrar.'
+  const sub = 'Mix do saldo em atraso por faixa, em dias (100%). À direita, o over 30 do grupo. Clique para filtrar.'
 
   return (
     <div className="grid gap-4 xl:grid-cols-3">
@@ -150,7 +150,6 @@ export function ComposicaoFaixas({
         subtitulo={`Posição de ${dataFoto}`}
         chartRef={refFaixa}
         nomeArquivo="carteira-faixas-de-atraso"
-        acoes={<Alternador rotulo="Métrica" valor={metrica} onChange={setMetrica} opcoes={[{ id: 'saldo', rotulo: 'Saldo' }, { id: 'cotas', rotulo: 'Cotas' }, { id: 'pct', rotulo: '% carteira' }]} />}
         csv={{
           nome: 'carteira-faixas-de-atraso',
           colunas: ['Faixa de atraso', 'Saldo devedor (R$)', 'Cotas', '% da carteira', 'Valor em atraso (R$)'],
@@ -160,7 +159,8 @@ export function ComposicaoFaixas({
           }),
         }}
       >
-        <EChart ref={refFaixa} altura={270} option={optFaixa} descricao="Saldo devedor por faixa de atraso" />
+        <Alternador rotulo="Métrica" valor={metrica} onChange={setMetrica} opcoes={[{ id: 'saldo', rotulo: 'Saldo' }, { id: 'cotas', rotulo: 'Cotas' }, { id: 'pct', rotulo: '% da carteira' }]} />
+        <EChart ref={refFaixa} altura={238} option={optFaixa} descricao="Saldo devedor por faixa de atraso" />
       </ChartCard>
       <ChartCard titulo="Qual segmento carrega o atraso mais grave?" subtitulo={sub} chartRef={refSeg} nomeArquivo="carteira-atraso-por-segmento" csv={csvQuebra('carteira-atraso-por-segmento', 'Segmento', porSegmento)}>
         <EChart ref={refSeg} altura={270} option={optSeg} descricao="Mix do atraso por segmento" onEvents={{ click: (p) => alternarSeg((p as { name: string }).name) }} />

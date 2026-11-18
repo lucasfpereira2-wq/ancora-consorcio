@@ -8,7 +8,7 @@ import { corDaSerie } from '@/lib/tema-echarts'
 import type { Cubo } from '@/types/cubo'
 import { cn } from '@/lib/utils'
 import { BarrasH, ChipFiltro, Secao, type ItemBarra } from './Comuns'
-import { DIM_CANAL, fmtMMSS, opcao, pctCSV, tooltipHTML, useTokens, type LinhaTooltip } from './util'
+import { DIM_CANAL, fmtEixo, fmtMMSS, opcao, pctCSV, tooltipHTML, useTokens, type LinhaTooltip } from './util'
 
 interface LinhaMotivo {
   motivo: string
@@ -92,7 +92,7 @@ export function BlocoMotivos({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) 
     () =>
       opcao({
         legend: { top: 0, left: 0, selectedMode: true },
-        grid: { left: 8, right: 16, top: 40, bottom: 4, containLabel: true },
+        grid: { left: 28, right: 16, top: 40, bottom: 4, containLabel: true },
         tooltip: {
           trigger: 'axis',
           axisPointer: { type: 'shadow' },
@@ -112,7 +112,7 @@ export function BlocoMotivos({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) 
         xAxis: {
           type: 'category',
           data: tabela.map((l) => l.motivo),
-          axisLabel: { interval: 0, width: 84, overflow: 'break', lineHeight: 14, fontSize: 11, hideOverlap: false },
+          axisLabel: { interval: 0, rotate: 32, fontSize: 11, hideOverlap: false, margin: 12 },
         },
         yAxis: { type: 'value', max: 1, axisLabel: { formatter: (v: number) => fmtPct(v, 0) } },
         series: [
@@ -123,7 +123,12 @@ export function BlocoMotivos({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) 
             barMaxWidth: 46,
             barCategoryGap: '30%',
             itemStyle: { color: t.series[0] },
-            data: tabela.map((l) => ({ value: l.participacao, itemStyle: { opacity: selecionado && selecionado !== l.motivo ? 0.28 : 1 } })),
+            data: tabela.map((l, i) => ({
+              value: l.participacao,
+              itemStyle: { opacity: selecionado && selecionado !== l.motivo ? 0.28 : 1 },
+              // o primeiro ponto da linha acumulada coincide com o topo da primeira barra: afasta o rótulo
+              label: i === 0 ? { offset: [-12, -8] } : undefined,
+            })),
             label: {
               show: true,
               position: 'top',
@@ -172,7 +177,7 @@ export function BlocoMotivos({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) 
         },
       },
       xAxis: { type: 'category', data: evolucao.rotulos },
-      yAxis: { type: 'value', axisLabel: { formatter: (v: number) => fmtCompacto(v) } },
+      yAxis: { type: 'value', axisLabel: { formatter: (v: number) => fmtEixo(v) } },
       series: evolucao.series.map((s) => ({
         type: 'bar',
         name: s.nome,
@@ -212,7 +217,7 @@ export function BlocoMotivos({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) 
           <EChart
             ref={refPareto}
             option={optionPareto}
-            altura={360}
+            altura={430}
             descricao="Pareto dos motivos de contato: participação por motivo e participação acumulada"
             onEvents={{ click: (p) => alternarMotivo((p as { name: string }).name) }}
           />
@@ -263,7 +268,7 @@ export function BlocoMotivos({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) 
                           <div className="h-full rounded-full bg-serie-1" style={{ width: `${Math.max(2, (l.participacao / (tabela[0]?.participacao || 1)) * 100)}%`, opacity: selecionado && !ativo ? 0.35 : 1 }} />
                         </div>
                       </td>
-                      <td className="tabular border-t border-border/60 px-2 py-[7px] text-right">{fmtCompacto(l.contatos)}</td>
+                      <td className="tabular whitespace-nowrap border-t border-border/60 px-2 py-[7px] text-right">{fmtCompacto(l.contatos)}</td>
                       <td className="tabular border-t border-border/60 px-2 py-[7px] text-right">{fmtPct(l.participacao)}</td>
                       <td className="tabular border-t border-border/60 px-2 py-[7px] text-right">{fmtMMSS(l.tma)}</td>
                       <td className="tabular rounded-r-lg border-t border-border/60 px-2 py-[7px] text-right">{fmtPct(l.fcr)}</td>

@@ -1,7 +1,7 @@
 /** Peças compartilhadas pelas telas do Farol de Dados (catálogo e detalhe da tabela). */
 import { Ban, CircleCheck, Clock, KeyRound, Minus, OctagonAlert, TriangleAlert, type LucideIcon } from 'lucide-react'
-import { Fragment, type CSSProperties, type ReactNode } from 'react'
-import { STATUS_INFO } from '@/components/dados'
+import { Fragment, createContext, useContext, type CSSProperties, type ReactNode } from 'react'
+import { STATUS_INFO, TextoComTabelas } from '@/components/dados'
 import { fmtData } from '@/lib/formato'
 import { cn } from '@/lib/utils'
 import type { Camada, Criticidade, Status, StatusExecucao, TabelaResumo } from '@/types/governanca'
@@ -147,3 +147,14 @@ export function TextoCodigo({ texto, className }: { texto: string; className?: s
 
 /** Remove as crases (para tooltips, title e CSV). */
 export const semCrases = (t: string) => t.replace(/`/g, '')
+
+/**
+ * Nomes das tabelas do catálogo. Com eles, só viram link os trechos entre crases que são tabelas de fato
+ * (ids de rotina como `core_financeiro_parcelas` ficam apenas em fonte de código).
+ */
+export const TabelasConhecidas = createContext<string[] | undefined>(undefined)
+
+export function TextoTabelas({ texto, className }: { texto: string; className?: string }) {
+  const tabelas = useContext(TabelasConhecidas)
+  return <TextoComTabelas texto={texto} tabelas={tabelas} className={className} />
+}

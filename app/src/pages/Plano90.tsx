@@ -265,13 +265,13 @@ export default function Plano90() {
                 <span className="tabular grid size-9 place-items-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">{i + 1}</span>
                 <div className="min-w-0">
                   <p className="text-[14.5px] font-semibold leading-snug">{p.titulo}</p>
-                  <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{p.impacto}</p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{p.impacto.replace(/`/g, '')}</p>
                 </div>
                 <p className="flex gap-2 text-[13px] leading-relaxed">
                   <CircleAlert className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
                   <span>
                     <span className="font-semibold">Ação: </span>
-                    {p.acao}
+                    {p.acao.replace(/`/g, '')}
                   </span>
                 </p>
                 <div className="flex items-center gap-3 md:flex-col md:items-end">

@@ -44,9 +44,11 @@ function LinhasPorCanal({
 }) {
   const ref = useRef<EChartHandle>(null)
   const tema = useTema((s) => s.tema)
-  const option = useMemo(
-    () =>
-      opcao({
+  const option = useMemo(() => {
+    // eixo em passos "de relógio" (30s, 1min, 5min...), não em múltiplos decimais de segundos
+    const maior = Math.max(0, ...series.flatMap((s) => s.valores.map((v) => v ?? 0)))
+    const passo = [15, 30, 60, 120, 180, 300, 600, 900, 1800, 3600].find((p) => maior / p <= 6) ?? 7200
+    return opcao({
         legend: { top: 0, left: 0 },
         grid: { left: 8, right: 16, top: 40, bottom: 8, containLabel: true },
         tooltip: {
@@ -60,7 +62,7 @@ function LinhasPorCanal({
           },
         },
         xAxis: { type: 'category', data: rotulos, boundaryGap: false },
-        yAxis: { type: 'value', axisLabel: { formatter: (v: number) => fmtMMSS(v) }, minInterval: 30 },
+        yAxis: { type: 'value', min: 0, max: Math.max(passo, Math.ceil(maior / passo) * passo), interval: passo, axisLabel: { formatter: (v: number) => fmtMMSS(v) } },
         series: series.map((s) => ({
           type: 'line',
           name: s.nome,
@@ -71,9 +73,8 @@ function LinhasPorCanal({
           itemStyle: { color: corDaSerie(ordem.indexOf(s.nome), tema) },
           lineStyle: { width: 2 },
         })),
-      }),
-    [series, buckets.length, rotulos, ordem, tema, rodapeTooltip],
-  )
+      })
+  }, [series, buckets.length, rotulos, ordem, tema, rodapeTooltip])
   return (
     <ChartCard
       titulo={titulo}

@@ -34,6 +34,15 @@ export function pctCSV(v: number | null | undefined): number | string {
   return v == null || !Number.isFinite(v) ? '' : Math.round(v * 10000) / 100
 }
 
+const nfEixo = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 })
+/** Rótulo de eixo de volume com unidade consistente entre os ticks: "8 mil", "10 mil", "1,5 mi". */
+export function fmtEixo(v: number): string {
+  const abs = Math.abs(v)
+  if (abs >= 1e6) return `${nfEixo.format(v / 1e6)} mi`
+  if (abs >= 1e3) return `${nfEixo.format(v / 1e3)} mil`
+  return nfEixo.format(v)
+}
+
 const sinal = (v: number) => (v > 0 ? '+' : '')
 
 /** Diferença em pontos percentuais entre duas frações: pronto para KpiCard (variacao + variacaoTexto). */

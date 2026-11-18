@@ -236,9 +236,9 @@ export function eixoCompacto(v: number, moeda = false): string {
 }
 
 /** Variação em pontos percentuais entre duas frações, pronta para o KpiCard: "+0,4 p.p.". */
-export function variacaoPP(atual: number | null, anterior: number | null): { texto: string; valor: number } | null {
+export function variacaoPP(atual: number | null, anterior: number | null, casas = 1): { texto: string; valor: number } | null {
   if (atual == null || anterior == null || !Number.isFinite(atual) || !Number.isFinite(anterior)) return null
   const d = (atual - anterior) * 100
-  const texto = `${d > 0 ? '+' : d < 0 ? '−' : ''}${Math.abs(d).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} p.p.`
+  const texto = `${d > 0 ? '+' : d < 0 ? '−' : ''}${Math.abs(d).toLocaleString('pt-BR', { minimumFractionDigits: casas, maximumFractionDigits: casas })} p.p.`
   return { texto, valor: d }
 }

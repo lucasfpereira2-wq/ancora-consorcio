@@ -37,7 +37,7 @@ function FarolTabelas({ saude }: { saude: Saude }) {
                 <span className="tabular text-[28px] font-semibold leading-none tracking-tight">{fmtNumero(contagem[s])}</span>
                 <span className="tabular text-xs text-muted-foreground">{fmtPct(contagem[s] / total, 0)}</span>
               </span>
-              <span className={cn('mt-1.5 flex items-center gap-1 text-xs font-medium', info.texto)}>
+              <span className={cn('mt-1.5 flex items-center gap-1 whitespace-nowrap text-xs font-medium', info.texto)}>
                 <Icone className="size-3.5" aria-hidden />
                 {ROTULO_FAROL[s]}
               </span>
@@ -60,7 +60,12 @@ function Indicador({ rotulo, valor, de, detalhe, icone: Icone, alerta, para, anc
   const rolar = (e: MouseEvent) => {
     if (!ancora) return
     e.preventDefault()
-    document.getElementById(ancora)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const alvo = document.getElementById(ancora)
+    alvo?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    // garantia: se a rolagem suave for interrompida (ex.: layout ainda animando), conclui sem animação
+    window.setTimeout(() => {
+      if (alvo && alvo.getBoundingClientRect().top > 160) alvo.scrollIntoView({ block: 'start' })
+    }, 700)
   }
   return (
     <Link
@@ -84,7 +89,7 @@ function Indicador({ rotulo, valor, de, detalhe, icone: Icone, alerta, para, anc
 /** Linha de indicadores da Visão Executiva. */
 export function LinhaIndicadores({ saude }: { saude: Saude }) {
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-[minmax(0,2.2fr)_repeat(5,minmax(0,1fr))]">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-[minmax(0,2.5fr)_repeat(5,minmax(0,1fr))]">
       <FarolTabelas saude={saude} />
       <Indicador
         rotulo="Rotinas que falharam hoje"

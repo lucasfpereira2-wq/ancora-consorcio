@@ -60,7 +60,7 @@ export function MetaPorRegional({ f, cuboVendas, cuboMetas }: PropsBase & { cubo
     const maximo = Math.max(...linhas.map((l) => Math.max(l.credito, l.meta)), 1)
     return {
       legend: { data: ['Realizado', 'Meta proporcional'] },
-      grid: { left: 8, right: 64, top: 40, bottom: 4, containLabel: true },
+      grid: { left: 8, right: 12, top: 40, bottom: 4, containLabel: true },
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
@@ -78,22 +78,24 @@ export function MetaPorRegional({ f, cuboVendas, cuboMetas }: PropsBase & { cubo
         },
       },
       xAxis: { type: 'value', max: maximo * 1.04, splitNumber: 4, axisLabel: { formatter: (v: number) => eixoCompacto(v, true) } },
-      yAxis: { type: 'category', inverse: true, data: linhas.map((l) => l.nome), axisLabel: { color: t.texto, fontSize: 12 } },
+      yAxis: [
+        { type: 'category', inverse: true, data: linhas.map((l) => l.nome), axisLabel: { color: t.texto, fontSize: 12 } },
+        {
+          type: 'category',
+          inverse: true,
+          position: 'right',
+          data: linhas.map((l) => fmtPct(l.ating)),
+          axisLine: { show: false },
+          axisPointer: { show: false },
+          axisLabel: { color: t.texto, fontSize: 13, fontWeight: 600, margin: 12 },
+        },
+      ],
       series: [
         {
           name: 'Realizado',
           type: 'bar',
           barWidth: 16,
           itemStyle: { color: t.series[0], borderRadius: [0, 4, 4, 0] },
-          label: {
-            show: true,
-            position: 'right',
-            distance: 10,
-            color: t.texto,
-            fontSize: 12,
-            fontWeight: 600,
-            formatter: (p: unknown) => fmtPct(linhas[(p as { dataIndex: number }).dataIndex]?.ating),
-          },
           data: linhas.map((l) => ({ value: l.credito, itemStyle: { opacity: destaque(l.nome) } })),
         },
         {
@@ -140,16 +142,17 @@ export function FunilComercial({ f, cubo, cenario }: PropsBase & { cubo: Cubo; c
   const etapas = useMemo(() => {
     const t = totais(cubo, filtrar(cubo, f.filtrosCubo, f.meta), ['leads', 'propostas', 'propostas_aprovadas', 'contratos'])
     const lista = [
-      { nome: 'Leads', valor: t.leads },
-      { nome: 'Propostas', valor: t.propostas },
-      { nome: 'Propostas aprovadas', valor: t.propostas_aprovadas },
-      { nome: 'Contratos', valor: t.contratos },
+      { nome: 'Leads', curto: 'Leads', valor: t.leads },
+      { nome: 'Propostas', curto: 'Propostas', valor: t.propostas },
+      { nome: 'Propostas aprovadas', curto: 'Aprovadas', valor: t.propostas_aprovadas },
+      { nome: 'Contratos', curto: 'Contratos', valor: t.contratos },
     ]
     return lista.map((e, i) => ({
       ...e,
       doTopo: razao(e.valor, lista[0].valor),
       daAnterior: i === 0 ? null : razao(e.valor, lista[i - 1].valor),
       anterior: i === 0 ? null : lista[i - 1].nome,
+      anteriorCurto: i === 0 ? null : lista[i - 1].curto,
     }))
   }, [cubo, f.filtrosCubo, f.meta])
 
@@ -166,8 +169,8 @@ export function FunilComercial({ f, cubo, cenario }: PropsBase & { cubo: Cubo; c
           return tip(e.nome, [
             { rotulo: 'Volume', valor: fmtNumero(e.valor), cor: t.series[0], forte: true },
             { rotulo: 'Em relação aos leads', valor: fmtPct(e.doTopo) },
-            e.anterior && { rotulo: `Conversão de ${e.anterior.toLowerCase()}`, valor: fmtPct(e.daAnterior) },
-            e.anterior && e.daAnterior !== null && { rotulo: 'Perda na etapa', valor: fmtPct(1 - e.daAnterior) },
+            !!e.anterior && { rotulo: `Conversão de ${e.anterior.toLowerCase()}`, valor: fmtPct(e.daAnterior) },
+            !!e.anterior && e.daAnterior !== null && { rotulo: 'Perda na etapa', valor: fmtPct(1 - e.daAnterior) },
           ])
         },
       },
@@ -178,8 +181,7 @@ export function FunilComercial({ f, cubo, cenario }: PropsBase & { cubo: Cubo; c
           type: 'bar',
           name: 'Volume',
           barWidth: 30,
-          showBackground: true,
-          backgroundStyle: { color: t.grade, borderRadius: 4 },
+          barMinHeight: 4,
           itemStyle: { color: t.series[0], borderRadius: 4 },
           label: {
             show: true,
@@ -234,7 +236,7 @@ export function FunilComercial({ f, cubo, cenario }: PropsBase & { cubo: Cubo; c
         {etapas.slice(1).map((e) => (
           <div key={e.nome} className="rounded-xl border border-border bg-muted/40 px-3 py-2">
             <dt className="truncate text-[11px] leading-tight text-muted-foreground" title={`${e.anterior} → ${e.nome}`}>
-              {e.anterior} → {e.nome}
+              {e.anteriorCurto} → {e.curto}
             </dt>
             <dd className="tabular mt-0.5 text-base font-semibold leading-tight">{fmtPct(e.daAnterior)}</dd>
           </div>
@@ -377,8 +379,6 @@ export function MixCanal({ f, cubo }: PropsBase & { cubo: Cubo }) {
           type: 'bar',
           name: 'Crédito comercializado',
           barWidth: 26,
-          showBackground: true,
-          backgroundStyle: { color: t.grade, borderRadius: 4 },
           itemStyle: { color: t.series[1], borderRadius: 4 },
           label: {
             show: true,
@@ -445,8 +445,8 @@ export function Cancelamentos({ f, cubo, cuboVendas }: PropsBase & { cubo: Cubo;
   const optEvolucao = useMemo<EChartsOption>(() => {
     const t = tokensGrafico(tema)
     return {
-      legend: { data: d.serie.series.map((s) => s.nome), type: 'scroll' },
-      grid: { left: 8, right: 16, top: 44, bottom: 4, containLabel: true },
+      legend: { data: d.serie.series.map((s) => s.nome), itemGap: 14, right: 8 },
+      grid: { left: 8, right: 16, top: 64, bottom: 4, containLabel: true },
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },

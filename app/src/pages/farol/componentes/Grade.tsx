@@ -33,13 +33,13 @@ export function CardTabela({ t, dias }: { t: TabelaResumo; dias: string[] }) {
             {t.nome}
           </p>
           <p className="mt-1 truncate text-xs text-muted-foreground">
-            {t.dominio} · {ROTULO_CAMADA[t.camada]}
+            {t.dominio.toLowerCase().startsWith(t.camada) ? `Camada ${ROTULO_CAMADA[t.camada].toLowerCase()}` : `${t.dominio} · ${ROTULO_CAMADA[t.camada]}`}
           </p>
         </div>
         {!t.tem_pk && <SeloSemPK />}
       </div>
 
-      <p className={cn('truncate text-[13px] leading-snug', t.status === 'verde' ? 'text-muted-foreground' : 'font-medium text-foreground')} title={semCrases(t.motivo_status)}>
+      <p className={cn('line-clamp-2 min-h-[2.4em] text-[13px] leading-[1.2em]', t.status === 'verde' ? 'text-muted-foreground' : 'font-medium text-foreground')} title={semCrases(t.motivo_status)}>
         <TextoCodigo texto={t.motivo_status} />
       </p>
 

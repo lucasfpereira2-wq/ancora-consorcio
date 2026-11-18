@@ -174,7 +174,7 @@ export function BarrasH({
                 silent: true,
                 symbol: 'none',
                 lineStyle: { color: t.textoSecundario, type: 'dashed', width: 1 },
-                label: { formatter: `${media.rotulo}: ${fmt(media.valor)}`, position: 'end', color: t.textoSecundario, fontSize: 11 },
+                label: { formatter: `${media.rotulo}: ${fmt(media.valor)}`, position: 'start', color: t.textoSecundario, fontSize: 11 },
                 data: [{ xAxis: media.valor }],
               }
             : undefined,

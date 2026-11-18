@@ -42,7 +42,7 @@ export function FaixaExecucoes({ execucoes, className }: { execucoes: Pipeline['
           <span
             key={e.data}
             title={`${fmtData(e.data)}: ${s.rotulo}${e.duracao_seg != null ? ` · ${fmtDuracao(e.duracao_seg)}` : ''}`}
-            className={cn('w-1 shrink-0 rounded-[1.5px] transition-opacity hover:opacity-70', s.ponto, s.altura)}
+            className={cn('w-[3px] shrink-0 rounded-[1px] transition-opacity hover:opacity-70', s.ponto, s.altura)}
           />
         )
       })}

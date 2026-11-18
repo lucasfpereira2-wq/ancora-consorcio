@@ -50,13 +50,23 @@ export function Recebimento({
     const t = tokensGrafico(tema)
     const titulo = (b: string) => (b.length === 7 ? fmtMes(b) : granularidade === 'semana' ? `Semana de ${fmtData(b)}` : fmtData(b))
     const rec = modo === 'reportado' ? reportado : limpo
+    const teto = Math.max(0, ...previsto, ...reportado)
+    const linhaMarca =
+      iDup >= 0 && dup
+        ? {
+            silent: true, symbol: 'none', animation: false,
+            lineStyle: { color: t.status.amarelo, type: 'dashed' as const, width: 1.5 },
+            label: { show: false },
+            data: [[{ coord: [iDup, rec[iDup]] as [number, number] }, { coord: [iDup, teto * 1.04] as [number, number] }]] as never,
+          }
+        : undefined
     const marca =
       iDup >= 0 && dup
         ? {
-            symbol: 'pin', symbolSize: 1, silent: true,
-            data: [{ coord: [iDup, modo === 'reportado' ? reportado[iDup] : limpo[iDup]] as [number, number], value: `${fmtNumero(dup.parcelas)} parcelas duplicadas` }],
+            symbol: 'circle', symbolSize: 1, silent: true,
+            data: [{ name: 'Parcelas duplicadas', coord: [iDup, teto * 1.04] as [number, number], value: `${fmtNumero(dup.parcelas)} parcelas duplicadas` }],
             label: {
-              show: true, position: 'top' as const, distance: 10, formatter: modo === 'reportado' ? `{a|${fmtNumero(dup.parcelas)} parcelas duplicadas}\n{b|+${fmtCompacto(dup.valor, { moeda: true })} em ${fmtData(dup.data).slice(0, 5)}}` : `{a|Duplicatas removidas}\n{b|−${fmtCompacto(dup.valor, { moeda: true })} em ${fmtData(dup.data).slice(0, 5)}}`,
+              show: true, position: 'top' as const, distance: 2, formatter: modo === 'reportado' ? `{a|${fmtNumero(dup.parcelas)} parcelas duplicadas}\n{b|+${fmtCompacto(dup.valor, { moeda: true })} em ${fmtData(dup.data).slice(0, 5)}}` : `{a|Duplicatas removidas}\n{b|−${fmtCompacto(dup.valor, { moeda: true })} em ${fmtData(dup.data).slice(0, 5)}}`,
               backgroundColor: tema === 'escuro' ? '#3A2E0A' : '#FFF6DB', borderColor: t.status.amarelo, borderWidth: 1, borderRadius: 6, padding: [5, 8], align: 'right' as const,
               rich: { a: { color: tema === 'escuro' ? '#F6D98A' : '#7A5600', fontWeight: 700, fontSize: 11, lineHeight: 15, align: 'right' as const }, b: { color: tema === 'escuro' ? '#F6D98A' : '#7A5600', fontSize: 11, lineHeight: 15, align: 'right' as const } },
             },
@@ -64,7 +74,7 @@ export function Recebimento({
         : undefined
     return {
       legend: { data: ['Previsto', modo === 'reportado' ? 'Recebido (reportado)' : 'Recebido (corrigido)', ...(modo === 'reportado' && iDup >= 0 ? ['Duplicado'] : [])] },
-      grid: { left: 8, right: 16, top: 64, bottom: 6, containLabel: true },
+      grid: { left: 8, right: 16, top: 76, bottom: 6, containLabel: true },
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
@@ -88,6 +98,7 @@ export function Recebimento({
           type: 'bar', name: modo === 'reportado' ? 'Recebido (reportado)' : 'Recebido (corrigido)', stack: 'rec', barMaxWidth: 22,
           data: limpo.map((v, i) => ({ value: Math.round(v), itemStyle: { color: t.series[0], borderRadius: modo === 'reportado' && (dupSerie[i] ?? 0) > 0 ? 0 : [4, 4, 0, 0] } })),
           markPoint: modo === 'corrigido' ? marca : undefined,
+          markLine: modo === 'corrigido' ? linhaMarca : undefined,
         },
         ...(modo === 'reportado' && iDup >= 0
           ? [{
@@ -95,6 +106,7 @@ export function Recebimento({
               data: dupSerie.map((v) => (v > 0 ? Math.round(v) : null)),
               itemStyle: { color: t.status.amarelo, borderRadius: [4, 4, 0, 0] as [number, number, number, number] },
               markPoint: marca,
+              markLine: linhaMarca,
             }]
           : []),
       ],
