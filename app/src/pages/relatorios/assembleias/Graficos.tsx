@@ -94,7 +94,7 @@ export function TendenciaContemplacoes({ f, cubo }: PropsBase & { cubo: Cubo }) 
         colunas: ['Período', ...d.series.map((s) => s.nome), 'Total'],
         linhas: d.buckets.map((b, i) => [rotuloLongo(b, g), ...d.series.map((s) => Math.round(s.valores[i])), Math.round(d.totalBucket[i])]),
       })}
-      rodape={d.parcial.some(Boolean) ? 'Barras mais claras indicam período parcial (o histórico vai até a última assembleia apurada).' : undefined}
+      rodape={d.parcial.some(Boolean) ? 'Barras esmaecidas indicam período parcial (o histórico vai até a última assembleia apurada).' : undefined}
     >
       <TrilhaDrill drill={drill} />
       <div

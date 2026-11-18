@@ -126,7 +126,6 @@ export function LanceMedioPorGrupo({ f, grupos, totalGrupos }: { f: FiltrosResol
       { id: 'participantes', titulo: 'Partic.', valor: (g) => g.participantes, alinhar: 'direita', celula: (g) => fmtNumero(g.participantes) },
       { id: 'ocupacao', titulo: 'Ocupação', valor: (g) => g.ocupacao_pct, alinhar: 'direita', celula: (g) => pontos(g.ocupacao_pct) },
       { id: 'lance', titulo: 'Lance médio', valor: (g) => g.lance_medio_pct, alinhar: 'direita', celula: (g) => <span className="font-medium">{pontos(g.lance_medio_pct)}</span> },
-      { id: 'contemplados', titulo: 'Contemplados', valor: (g) => g.contemplados, alinhar: 'direita', celula: (g) => fmtNumero(g.contemplados) },
     ],
     [segmentos, tema],
   )

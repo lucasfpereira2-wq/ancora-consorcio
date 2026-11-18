@@ -160,7 +160,7 @@ export function TendenciaVendas({ cubo, f, metaPorMes }: Props) {
       })}
       rodape={
         g === 'mes' && d.parcial.some(Boolean)
-          ? 'Barras mais claras indicam mês parcial; a meta desses meses é proporcional aos dias corridos do período.'
+          ? 'Barras esmaecidas indicam mês parcial; a meta desses meses é proporcional aos dias corridos do período.'
           : undefined
       }
     >
