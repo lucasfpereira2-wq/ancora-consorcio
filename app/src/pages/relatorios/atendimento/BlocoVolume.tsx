@@ -236,7 +236,9 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
         ) : undefined
       }
     >
-      <div className="mb-2 flex min-h-8 flex-wrap items-center gap-x-1 gap-y-1.5 text-xs">
+      {/* coluna flex: em tela cheia o gráfico ocupa a altura que sobra abaixo da trilha */}
+      <div className="flex h-full flex-col">
+      <div className="mb-2 flex min-h-8 shrink-0 flex-wrap items-center gap-x-1 gap-y-1.5 text-xs">
         {pilha.length > 0 && (
           <Button variant="outline" size="sm" className="mr-1.5 h-7 gap-1 px-2 text-xs" onClick={() => voltarPara(pilha.length - 1)}>
             <ArrowLeft className="size-3.5" aria-hidden />
@@ -269,13 +271,17 @@ export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosRes
           </span>
         )}
       </div>
-      <EChart
-        ref={ref}
-        option={option}
-        altura={340}
-        descricao="Volume de contatos por canal ao longo do tempo, em barras empilhadas"
-        className={proximo ? 'cursor-pointer' : undefined}
-      />
+      <div className="min-h-0 flex-1">
+        <EChart
+          ref={ref}
+          option={option}
+          altura="100%"
+          style={{ minHeight: 340 }}
+          descricao="Volume de contatos por canal ao longo do tempo, em barras empilhadas"
+          className={proximo ? 'cursor-pointer' : undefined}
+        />
+      </div>
+      </div>
     </ChartCard>
   )
 }

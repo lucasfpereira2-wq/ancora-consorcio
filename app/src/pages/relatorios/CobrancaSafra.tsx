@@ -51,14 +51,26 @@ export default function CobrancaSafra() {
   const [selecao, setSelecao] = useState<string[] | null>(null)
 
   const cubo = dados?.cubos.safra_mob
-  const linhas = useMemo(() => {
+  /** linhas do cubo para as safras do período; `sem` ignora o filtro de uma dimensão (quebras com cross-filter) */
+  const selecionar = useMemo(() => {
     if (!cubo) return null
     const ini = f.periodo.inicio.slice(0, 7)
     const fim = f.periodo.fim.slice(0, 7)
     const safras = (cubo.dims.find((d) => d.nome === 'safra')?.valores ?? []).filter((s) => s >= ini && s <= fim)
-    if (!safras.length) return filtrar(cubo, { dims: { safra: ['—'] } }, f.meta)
-    return filtrar(cubo, { ...f.filtrosCubo, inicio: null, fim: null, dims: { ...f.filtrosCubo.dims, safra: safras } }, f.meta)
-  }, [cubo, f.filtrosCubo, f.periodo.inicio, f.periodo.fim, f.meta])
+    return (sem?: 'segmento' | 'canal') => {
+      if (!safras.length) return filtrar(cubo, { dims: { safra: ['—'] } }, f.meta)
+      return filtrar(
+        cubo,
+        {
+          ...f.filtrosCubo, inicio: null, fim: null,
+          segmentos: sem === 'segmento' ? [] : f.filtrosCubo.segmentos,
+          dims: { canal: sem === 'canal' ? [] : f.canais, safra: safras },
+        },
+        f.meta,
+      )
+    }
+  }, [cubo, f.filtrosCubo, f.canais, f.periodo.inicio, f.periodo.fim, f.meta])
+  const linhas = useMemo(() => selecionar?.() ?? null, [selecionar])
   const modelo = useMemo(() => (cubo && linhas ? construirModelo(cubo, linhas) : null), [cubo, linhas])
 
   const destaque = useMemo(() => {
@@ -94,8 +106,8 @@ export default function CobrancaSafra() {
   }, [modelo])
 
   const mobQ = Number(mobQuebra)
-  const porSegmento = useMemo(() => (cubo && linhas ? quebraNoMob(cubo, linhas, 'segmento', mobQ) : []), [cubo, linhas, mobQ])
-  const porCanal = useMemo(() => (cubo && linhas ? quebraNoMob(cubo, linhas, 'canal', mobQ) : []), [cubo, linhas, mobQ])
+  const porSegmento = useMemo(() => (cubo && selecionar ? quebraNoMob(cubo, selecionar('segmento'), 'segmento', mobQ) : []), [cubo, selecionar, mobQ])
+  const porCanal = useMemo(() => (cubo && selecionar ? quebraNoMob(cubo, selecionar('canal'), 'canal', mobQ) : []), [cubo, selecionar, mobQ])
   const orfas = Number((dados?.extras?.cenario as { cotas_fk_orfa?: number } | undefined)?.cotas_fk_orfa ?? 0)
 
   const alternarSegmento = (nome: string) => {

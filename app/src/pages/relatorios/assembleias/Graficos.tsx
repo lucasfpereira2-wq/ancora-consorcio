@@ -8,7 +8,7 @@ import { useTema } from '@/lib/tema'
 import { corDaSerie, tokensGrafico } from '@/lib/tema-echarts'
 import type { Cubo } from '@/types/cubo'
 import { DicaFiltro, Segmentado, TrilhaDrill } from '../vendas/Controles'
-import { alternarFiltro, bucketParcial, eixoCompacto, NOME_GRANULARIDADE, regionaisAtivas, rotuloLongo, tip, useDrill } from '../vendas/comum'
+import { alternarFiltro, bucketParcial, eixoCompacto, indiceDoClique, NOME_GRANULARIDADE, regionaisAtivas, rotuloLongo, tip, useDrill } from '../vendas/comum'
 
 interface PropsBase {
   f: FiltrosResolvidos
@@ -97,18 +97,15 @@ export function TendenciaContemplacoes({ f, cubo }: PropsBase & { cubo: Cubo }) 
       rodape={d.parcial.some(Boolean) ? 'Barras mais claras indicam período parcial (o histórico vai até a última assembleia apurada).' : undefined}
     >
       <TrilhaDrill drill={drill} />
-      <EChart
-        ref={ref}
-        altura={340}
-        option={option}
-        descricao="Contemplações por modalidade ao longo do tempo"
-        onEvents={{
-          click: (p) => {
-            const i = (p as { dataIndex?: number }).dataIndex
-            if (typeof i === 'number' && d.buckets[i]) drill.descer(d.buckets[i])
-          },
+      <div
+        className={drill.podeDescer ? 'cursor-pointer' : undefined}
+        onClick={(e) => {
+          const i = indiceDoClique(e, ref.current?.instancia())
+          if (i !== null && d.buckets[i]) drill.descer(d.buckets[i])
         }}
-      />
+      >
+        <EChart ref={ref} altura={340} option={option} descricao="Contemplações por modalidade ao longo do tempo" />
+      </div>
     </ChartCard>
   )
 }

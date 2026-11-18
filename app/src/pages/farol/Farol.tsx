@@ -1,5 +1,5 @@
 import { Grid3x3, KeyRound, LayoutGrid, List, Radar, Search, SearchX, UserRoundX, X, type LucideIcon } from 'lucide-react'
-import { useCallback, useMemo, type ReactNode } from 'react'
+import { useCallback, useMemo, useState, type ReactNode } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { EmptyState, STATUS_INFO } from '@/components/dados'
 import { Pagina } from '@/components/layout/Pagina'
@@ -109,7 +109,8 @@ export default function Farol() {
     },
     [setParams],
   )
-  const busca = params.get('q') ?? ''
+  // a busca tem estado local (digitação fluida) e é espelhada na URL
+  const [busca, setBusca] = useState(() => params.get('q') ?? '')
   const semPk = params.get('pk') === 'sem'
   const visaoUrl = params.get('visao') as Visao | null
   const visao: Visao = visaoUrl && VISOES.some((v) => v.id === visaoUrl) ? visaoUrl : 'grade'
@@ -166,7 +167,10 @@ export default function Farol() {
   }, [todas])
 
   const filtrosAtivos = CHAVES.reduce((n, k) => n + sel[k].length, 0) + (busca ? 1 : 0) + (semPk ? 1 : 0)
-  const limpar = () => alterar({ q: null, pk: null, ...Object.fromEntries(CHAVES.map((k) => [k, null])) })
+  const limpar = () => {
+    setBusca('')
+    alterar({ q: null, pk: null, ...Object.fromEntries(CHAVES.map((k) => [k, null])) })
+  }
   const total = todas.length
 
   const subtitulo = (
@@ -232,7 +236,10 @@ export default function Farol() {
             <input
               type="search"
               value={busca}
-              onChange={(e) => alterar({ q: e.target.value || null })}
+              onChange={(e) => {
+                setBusca(e.target.value)
+                alterar({ q: e.target.value || null })
+              }}
               placeholder="Buscar por nome ou descrição (ex.: parcelas, telefonia, boleto)"
               className="h-9 w-full rounded-lg border border-border bg-background pl-9 pr-3 text-[13px] outline-none transition-colors placeholder:text-muted-foreground/80 focus:border-primary [&::-webkit-search-cancel-button]:hidden"
             />

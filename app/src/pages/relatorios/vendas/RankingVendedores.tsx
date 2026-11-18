@@ -92,13 +92,19 @@ export function RankingVendedores({ f, cubo, vendedores }: { f: FiltrosResolvido
   return (
     <ChartCard
       titulo="Quem são os vendedores que mais produzem?"
-      subtitulo={`${fmtNumero(linhas.length)} vendedores com vendas no recorte · ${fmtNumero(acima)} (${fmtPct(razao(acima, linhas.length), 0)}) atingiram a meta proporcional do período`}
+      subtitulo={
+        f.segmentos.length
+          ? `${fmtNumero(linhas.length)} vendedores com vendas no recorte`
+          : `${fmtNumero(linhas.length)} vendedores com vendas no recorte · ${fmtNumero(acima)} (${fmtPct(razao(acima, linhas.length), 0)}) atingiram a meta proporcional do período`
+      }
       csv={() => ({
         nome: 'vendas-ranking-vendedores',
         colunas: ['Posição', 'Id', 'Vendedor', 'Equipe', 'Regional', 'UF', 'Canal', 'Cotas', 'Crédito (R$)', 'Ticket médio (R$)', 'Meta do período (R$)', '% da meta'],
         linhas: linhas.map((l) => [l.posicao, l.id, l.nome, l.equipe, l.regional, l.uf, l.canal, Math.round(l.cotas), Math.round(l.credito), l.ticket === null ? null : Math.round(l.ticket), Math.round(l.meta), l.ating === null ? null : Math.round(l.ating * 1000) / 10]),
       })}
-      rodape="Meta do vendedor = meta mensal de crédito × meses do período (proporcional aos dias). A posição considera o crédito comercializado no recorte."
+      rodape={`Meta do vendedor = meta mensal de crédito × meses do período (proporcional aos dias). A posição considera o crédito comercializado no recorte.${
+        f.segmentos.length ? ' Com filtro de segmento, o % compara a venda do segmento com a meta total do vendedor (a meta não é aberta por segmento).' : ''
+      }`}
     >
       <TabelaDados
         linhas={linhas}

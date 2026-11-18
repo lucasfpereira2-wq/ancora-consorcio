@@ -170,8 +170,8 @@
   --radius-xl: calc(var(--radius) + 4px);
   --shadow-card: var(--sombra-card);
   --shadow-elevada: var(--sombra-elevada);
-  --animate-entrar: entrar 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  --animate-surgir: surgir 0.18s ease-out both;
+  --animate-entrar: entrar 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  --animate-surgir: surgir 0.18s ease-out backwards;
   --animate-brilho: brilho 1.6s ease-in-out infinite;
 }
 

@@ -112,7 +112,6 @@ export function TendenciaCarteira({
           type: 'line', name: '% over 30', xAxisIndex: 0, yAxisIndex: 0, data: serie.posicoes.map((p) => pct(p.over30)),
           color: t.series[0], showSymbol: poucos, symbolSize: 7,
           endLabel: { show: n > 1, formatter: (p: { value: unknown }) => fmtPct(p.value as number, 2, { fracao: false }), color: t.texto, fontWeight: 600, fontSize: 11, distance: 6 },
-          markLine: n > 2 ? undefined : undefined,
         },
         {
           type: 'line', name: '% over 90', xAxisIndex: 0, yAxisIndex: 0, data: serie.posicoes.map((p) => pct(p.over90)),
@@ -127,7 +126,7 @@ export function TendenciaCarteira({
         })),
         // camada invisível para capturar o clique do drill-down em qualquer ponto da coluna
         {
-          type: 'bar', name: '_alvo', xAxisIndex: 1, yAxisIndex: 1, barWidth: '100%', barGap: '-100%', z: 10, cursor: g === 'dia' ? 'default' : 'pointer',
+          type: 'bar', name: '_alvo', xAxisIndex: 1, yAxisIndex: 1, barWidth: '100%', barMaxWidth: 4000, barGap: '-100%', z: 10, cursor: g === 'dia' ? 'default' : 'pointer',
           data: serie.posicoes.map((p) => Math.round(p.saldoAtrasado)), itemStyle: { color: 'rgba(0,0,0,0)', borderRadius: 0 },
           emphasis: { itemStyle: { color: tema === 'escuro' ? 'rgba(255,255,255,.06)' : 'rgba(0,32,58,.05)' } }, tooltip: { show: false },
         },

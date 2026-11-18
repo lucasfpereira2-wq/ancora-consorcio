@@ -217,7 +217,7 @@ export function BlocoMotivos({ cubo, f }: { cubo: Cubo; f: FiltrosResolvidos }) 
           <EChart
             ref={refPareto}
             option={optionPareto}
-            altura={430}
+            altura={475}
             descricao="Pareto dos motivos de contato: participação por motivo e participação acumulada"
             onEvents={{ click: (p) => alternarMotivo((p as { name: string }).name) }}
           />

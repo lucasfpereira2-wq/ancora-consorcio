@@ -118,7 +118,7 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
         <KpiCard
           rotulo="Contemplações"
           icone={Trophy}
-          valor={fmtCompacto(k.contemplacoes)}
+          valor={fmtCompacto(Math.round(k.contemplacoes))}
           variacao={k.varContemplacoes}
           sparkline={k.spark.contemplacoes}
           detalhe={`${fmtCompacto(k.creditoContemplado, { moeda: true })} em crédito contemplado`}
@@ -158,7 +158,7 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
         <KpiCard
           rotulo="Grupos ativos"
           icone={Boxes}
-          valor={fmtNumero(k.grupos)}
+          valor={fmtNumero(Math.round(k.grupos))}
           variacao={k.varGrupos}
           maiorE="neutro"
           sparkline={k.spark.grupos}

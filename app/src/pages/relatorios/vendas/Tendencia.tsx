@@ -8,7 +8,7 @@ import { useTema } from '@/lib/tema'
 import { tokensGrafico } from '@/lib/tema-echarts'
 import type { Cubo } from '@/types/cubo'
 import { TrilhaDrill } from './Controles'
-import { bucketParcial, eixoCompacto, intervaloDoBucket, NOME_GRANULARIDADE, proRata, rotuloLongo, tip, useDrill } from './comum'
+import { bucketParcial, eixoCompacto, indiceDoClique, intervaloDoBucket, NOME_GRANULARIDADE, proRata, rotuloLongo, tip, useDrill } from './comum'
 
 interface Props {
   cubo: Cubo
@@ -165,18 +165,15 @@ export function TendenciaVendas({ cubo, f, metaPorMes }: Props) {
       }
     >
       <TrilhaDrill drill={drill} />
-      <EChart
-        ref={ref}
-        altura={400}
-        option={option}
-        descricao="Crédito comercializado e cotas vendidas ao longo do tempo"
-        onEvents={{
-          click: (p) => {
-            const i = (p as { dataIndex?: number }).dataIndex
-            if (typeof i === 'number' && d.buckets[i]) drill.descer(d.buckets[i])
-          },
+      <div
+        className={drill.podeDescer ? 'cursor-pointer' : undefined}
+        onClick={(e) => {
+          const i = indiceDoClique(e, ref.current?.instancia(), 2)
+          if (i !== null && d.buckets[i]) drill.descer(d.buckets[i])
         }}
-      />
+      >
+        <EChart ref={ref} altura={400} option={option} descricao="Crédito comercializado e cotas vendidas ao longo do tempo" />
+      </div>
     </ChartCard>
   )
 }

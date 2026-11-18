@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from 'react'
 import { ChartCard } from '@/components/dados'
 import { EChart, type EChartHandle, type EChartsOption } from '@/components/dados/EChart'
-import { agrupar, type LinhasFiltradas } from '@/lib/cubo'
+import { agrupar, filtrar, type FiltrosCubo, type LinhasFiltradas } from '@/lib/cubo'
 import { useFiltros } from '@/lib/filtros'
 import { fmtCompacto, fmtNumero, fmtPct } from '@/lib/formato'
 import { useTema } from '@/lib/tema'
@@ -21,6 +21,8 @@ export function ComposicaoFaixas({
   posicao,
   dataFoto,
   meta,
+  filtrosBase,
+  fim,
 }: {
   cubo: Cubo
   /** linhas até o fim do período (o motor usa a última fotografia) */
@@ -28,6 +30,9 @@ export function ComposicaoFaixas({
   posicao: PosicaoCarteira
   dataFoto: string
   meta: Meta | null
+  /** filtros de segmento/regional/UF e fim do período: cada quebra ignora o filtro da própria dimensão */
+  filtrosBase: FiltrosCubo
+  fim: string
 }) {
   const tema = useTema((s) => s.tema)
   const [metrica, setMetrica] = useState<Metrica>('saldo')
@@ -37,13 +42,17 @@ export function ComposicaoFaixas({
   const segSel = useFiltros((s) => s.segmentos)
   const regSel = useFiltros((s) => s.regionais)
 
-  const porSegmento = useMemo(() => quebra(agrupar(cubo, linhasFoto, ['segmento', 'faixa'], ['saldo_devedor', 'cotas', 'valor_em_atraso'])), [cubo, linhasFoto])
+  const porSegmento = useMemo(() => {
+    const linhas = filtrosBase.segmentos?.length ? filtrar(cubo, { ...filtrosBase, segmentos: [], fim }, meta) : linhasFoto
+    return quebra(agrupar(cubo, linhas, ['segmento', 'faixa'], ['saldo_devedor', 'cotas', 'valor_em_atraso']))
+  }, [cubo, linhasFoto, filtrosBase, fim, meta])
   const porRegional = useMemo(() => {
     const regDaUf = new Map((meta?.ufs ?? []).map((u) => [u.sigla, u.regional]))
-    const g = agrupar(cubo, linhasFoto, ['uf', 'faixa'], ['saldo_devedor', 'cotas', 'valor_em_atraso']).map((x) => ({ ...x, chave: [regDaUf.get(x.chave[0]) ?? 'Outras', x.chave[1]] }))
+    const linhas = filtrosBase.regionais?.length ? filtrar(cubo, { ...filtrosBase, regionais: [], ufs: [], fim }, meta) : linhasFoto
+    const g = agrupar(cubo, linhas, ['uf', 'faixa'], ['saldo_devedor', 'cotas', 'valor_em_atraso']).map((x) => ({ ...x, chave: [regDaUf.get(x.chave[0]) ?? 'Outras', x.chave[1]] }))
     const ordem = meta?.regionais.map((r) => r.nome) ?? []
     return quebra(g).sort((a, b) => ordem.indexOf(a.nome) - ordem.indexOf(b.nome))
-  }, [cubo, linhasFoto, meta])
+  }, [cubo, linhasFoto, filtrosBase, fim, meta])
 
   const optFaixa = useMemo<EChartsOption>(() => {
     const cores = coresFaixas(tema)

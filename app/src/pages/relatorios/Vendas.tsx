@@ -125,7 +125,7 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
         <KpiCard
           rotulo="Cotas vendidas"
           icone={ShoppingBag}
-          valor={fmtCompacto(k.cotas)}
+          valor={fmtCompacto(Math.round(k.cotas))}
           variacao={k.varCotas}
           comparacao="vs período anterior"
           sparkline={k.spark.cotas}
@@ -160,7 +160,7 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
           detalhe={
             k.credito >= k.metaPeriodo
               ? `${fmtCompacto(k.credito - k.metaPeriodo, { moeda: true })} acima da meta proporcional`
-              : `Faltaram ${fmtCompacto(k.metaPeriodo - k.credito, { moeda: true })} para a meta proporcional`
+              : `${fmtCompacto(k.metaPeriodo - k.credito, { moeda: true })} abaixo da meta proporcional`
           }
           definicao={`Crédito comercializado ÷ meta de crédito do período. As metas são mensais e entram proporcionalmente aos dias corridos do período. ${notas?.metas ?? ''}`}
         />
@@ -177,7 +177,7 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
         <KpiCard
           rotulo="Cancelamentos"
           icone={CircleX}
-          valor={fmtCompacto(k.canceladas)}
+          valor={fmtCompacto(Math.round(k.canceladas))}
           variacao={k.varCanceladas}
           maiorE="pior"
           sparkline={k.spark.canceladas}

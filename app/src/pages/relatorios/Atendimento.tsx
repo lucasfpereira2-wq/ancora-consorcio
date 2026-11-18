@@ -1,5 +1,5 @@
 import { Clock, Gauge, Headset, Hourglass, PhoneOff, Smile, ThumbsUp, TriangleAlert } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { KpiCard } from '@/components/dados'
 import { LayoutRelatorio } from '@/components/relatorio/LayoutRelatorio'
 import { compararPeriodos, filtrar, razao, serieTemporal } from '@/lib/cubo'
@@ -117,11 +117,22 @@ function Conteudo({ dados, f }: { dados: DadosRelatorio; f: FiltrosResolvidos })
   const vNps = difPts(npsAtual.nps, npsAnterior)
   const vCsat = difPP(kpiCsat.atual, kpiCsat.anterior)
   const alerta = voz.afetado ? <AlertaVozKpi /> : undefined
+  // Contorno local de um bug da base: a animação de entrada do LayoutRelatorio (`animate-entrar`, com transform e
+  // fill-mode both) transforma o contêiner em bloco de contenção de `position: fixed`, o que quebra a tela cheia
+  // do ChartCard. Terminada a animação, ela é cancelada (o estado final é idêntico ao estado sem animação).
+  const refTopo = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const alvo = refTopo.current?.closest('.animate-entrar')
+    if (!alvo) return
+    const id = window.setTimeout(() => alvo.getAnimations().forEach((an) => an.cancel()), 700)
+    return () => window.clearTimeout(id)
+  }, [])
+
   const irParaNps = () => document.getElementById('nps')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
   return (
     <>
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div ref={refTopo} className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <KpiCard
           className="sm:col-span-2"
           rotulo="Volume de contatos"

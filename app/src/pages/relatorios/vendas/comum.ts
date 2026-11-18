@@ -242,3 +242,30 @@ export function variacaoPP(atual: number | null, anterior: number | null, casas 
   const texto = `${d > 0 ? '+' : d < 0 ? '−' : ''}${Math.abs(d).toLocaleString('pt-BR', { minimumFractionDigits: casas, maximumFractionDigits: casas })} p.p.`
   return { texto, valor: d }
 }
+
+// ----------------------------------------------------------------------------------------------
+// Clique na coluna inteira (drill-down)
+// ----------------------------------------------------------------------------------------------
+
+interface InstanciaGrafico {
+  getDom: () => HTMLElement
+  containPixel: (finder: { gridIndex: number }, ponto: number[]) => boolean
+  convertFromPixel: (finder: { xAxisIndex: number }, valor: number) => unknown
+}
+
+/**
+ * Índice da categoria do eixo X sob o clique, considerando a coluna inteira (não só a barra).
+ * Devolve null quando o clique cai fora das áreas de plotagem (legenda, títulos, margens).
+ */
+export function indiceDoClique(ev: { clientX: number; clientY: number }, instancia: unknown, grades = 1): number | null {
+  const inst = instancia as InstanciaGrafico | null | undefined
+  if (!inst) return null
+  const r = inst.getDom().getBoundingClientRect()
+  const ponto = [ev.clientX - r.left, ev.clientY - r.top]
+  for (let g = 0; g < grades; g++) {
+    if (!inst.containPixel({ gridIndex: g }, ponto)) continue
+    const i = Number(inst.convertFromPixel({ xAxisIndex: g }, ponto[0]))
+    return Number.isFinite(i) ? Math.round(i) : null
+  }
+  return null
+}

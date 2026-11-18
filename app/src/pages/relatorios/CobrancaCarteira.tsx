@@ -146,7 +146,7 @@ export default function CobrancaCarteira() {
           <TendenciaCarteira cubo={carteira.cubo} filtrosBase={base} meta={f.meta} periodo={f.periodo} granularidade={f.granularidade} />
 
           <Secao titulo="Composição do atraso" descricao={`Fotografia de ${fmtData(carteira.dataFoto)}: onde o atraso está, por faixa, segmento e regional.`}>
-            <ComposicaoFaixas cubo={carteira.cubo} linhasFoto={carteira.linhasFoto} posicao={a} dataFoto={fmtData(carteira.dataFoto)} meta={meta} />
+            <ComposicaoFaixas cubo={carteira.cubo} linhasFoto={carteira.linhasFoto} posicao={a} dataFoto={fmtData(carteira.dataFoto)} meta={meta} filtrosBase={base} fim={f.periodo.fim} />
             {cubos?.roll_rate && <RollRate cubo={cubos.roll_rate} filtrosBase={base} meta={f.meta} periodo={f.periodo} />}
           </Secao>
 

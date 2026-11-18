@@ -237,7 +237,7 @@ export function LinhagemFluxo({ linhagem, tabela }: { linhagem: DadosLinhagem; t
   }, [linhagem, tabela, tema])
 
   // grafos largos abrem focados na vizinhança direta (legível); o botão alterna para a linhagem completa
-  const largo = (grafo?.colunas ?? 0) > 5
+  const largo = (grafo?.colunas ?? 0) > 6
   const [completo, setCompleto] = useState(false)
   const instancia = useRef<ReactFlowInstance | null>(null)
 
