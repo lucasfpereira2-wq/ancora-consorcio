@@ -9,6 +9,7 @@ import { Dica } from '@/components/ui/tooltip'
 import { useMeta, useSelos } from '@/lib/dados'
 import { fmtDataHora } from '@/lib/formato'
 import { DATA_REFERENCIA_PADRAO } from '@/lib/referencia'
+import perfil from '@/content/perfil.json'
 import { GRUPOS_NAVEGACAO, PAGINA_SOBRE, trilhaDaRota, type ItemNavegacao } from '@/lib/relatorios'
 import { useTema } from '@/lib/tema'
 import { cn } from '@/lib/utils'
@@ -87,7 +88,11 @@ function ConteudoSidebar({ recolhida, aoNavegar }: { recolhida: boolean; aoNaveg
           className={cn('flex items-center gap-3 rounded-lg p-2 transition-colors hover:bg-sidebar-accent', recolhida && 'justify-center p-1.5')}
           title="Sobre o Lucas"
         >
-          <span className="grid size-8 shrink-0 place-items-center rounded-full bg-sidebar-accent text-[11px] font-semibold text-agua-500 ring-1 ring-agua-500/40">LP</span>
+          {perfil.foto ? (
+            <img src={perfil.foto} alt="" className="size-8 shrink-0 rounded-full object-cover ring-1 ring-agua-500/50" />
+          ) : (
+            <span className="grid size-8 shrink-0 place-items-center rounded-full bg-sidebar-accent text-[11px] font-semibold text-agua-500 ring-1 ring-agua-500/40">{perfil.iniciais}</span>
+          )}
           {!recolhida && (
             <span className="min-w-0 leading-tight">
               <span className="block truncate text-[13px] font-medium text-white">Sobre o Lucas</span>

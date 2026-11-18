@@ -193,9 +193,9 @@ export default function Abertura() {
         <p className="self-end text-[11px] font-medium uppercase tracking-[0.14em] text-white/45">Linhagem de dados · ambiente simulado</p>
 
         <div className="relative grid place-items-center">
-          <span className="absolute size-[190px] rounded-full border border-white/[0.07] 2xl:size-[250px]" aria-hidden />
-          <span className="absolute size-[150px] rounded-full border border-dashed border-agua-500/25 motion-safe:animate-[spin_60s_linear_infinite] 2xl:size-[200px]" aria-hidden />
-          <div className="relative size-[112px] rounded-full bg-gradient-to-br from-agua-500 via-agua-500/30 to-white/10 p-[3px] shadow-[0_20px_56px_-12px_rgb(0_0_0/0.6)] 2xl:size-[156px]">
+          <span className="absolute size-[190px] rounded-full border border-white/[0.07] [@media(min-height:860px)]:size-[222px] 2xl:size-[250px]" aria-hidden />
+          <span className="absolute size-[150px] rounded-full border border-dashed border-agua-500/25 motion-safe:animate-[spin_60s_linear_infinite] [@media(min-height:860px)]:size-[176px] 2xl:size-[200px]" aria-hidden />
+          <div className="relative size-[112px] [@media(min-height:860px)]:size-[136px] rounded-full bg-gradient-to-br from-agua-500 via-agua-500/30 to-white/10 p-[3px] shadow-[0_20px_56px_-12px_rgb(0_0_0/0.6)] 2xl:size-[156px]">
             {perfil.foto && !fotoFalhou ? (
               <img src={perfil.foto} alt={`Foto de ${perfil.nome}`} onError={() => setFotoFalhou(true)} className="size-full rounded-full object-cover" />
             ) : (
@@ -207,12 +207,12 @@ export default function Abertura() {
             )}
           </div>
 
-          <div className="absolute -left-40 top-1 flex animate-entrar items-center [@media(max-height:820px)]:hidden gap-2 rounded-full border border-white/10 bg-marinho-950/70 py-1.5 pl-2 pr-3 text-xs backdrop-blur-md 2xl:-left-44" style={{ animationDelay: '500ms' }}>
+          <div className="absolute right-full top-1 mr-4 flex animate-entrar items-center gap-2 whitespace-nowrap rounded-full border border-white/10 bg-marinho-950/70 py-1.5 pl-2 pr-3 text-xs backdrop-blur-md [@media(max-height:820px)]:hidden" style={{ animationDelay: '500ms' }}>
             <CircleCheck className="size-4 text-[#3CBF62]" aria-hidden />
             <span className="font-mono text-[11px] text-white/85">fato_vendas</span>
             <span className="text-white/50">no SLA</span>
           </div>
-          <div className="absolute -right-48 bottom-1 flex animate-entrar items-center [@media(max-height:820px)]:hidden gap-2 rounded-full border border-white/10 bg-marinho-950/70 py-1.5 pl-2 pr-3 text-xs backdrop-blur-md 2xl:-right-52" style={{ animationDelay: '650ms' }}>
+          <div className="absolute bottom-1 left-full ml-4 flex animate-entrar items-center gap-2 whitespace-nowrap rounded-full border border-white/10 bg-marinho-950/70 py-1.5 pl-2 pr-3 text-xs backdrop-blur-md [@media(max-height:820px)]:hidden" style={{ animationDelay: '650ms' }}>
             <OctagonAlert className="size-4 text-[#EF6461]" aria-hidden />
             <span className="font-mono text-[11px] text-white/85">fato_parcelas</span>
             <span className="text-white/50">312 duplicados</span>

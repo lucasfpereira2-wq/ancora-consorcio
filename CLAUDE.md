@@ -22,7 +22,7 @@ rotinas que duplicam dados e tabelas sem chave primária.
 - Rodapé: "Ambiente simulado. Dados fictícios gerados para demonstração."
 - Site 100% estático, sem backend. Dados em JSON gerados por Python com seed fixa.
 - Dados pessoais do candidato ainda não informados ficam como `[PREENCHER]` em `app/src/content/perfil.json`
-  (e-mail, agenda, foto). Portfólio: https://www.lucasanalytics.com.br/ · LinkedIn (informado em 18/11):
+  (e-mail, agenda). Portfólio: https://www.lucasanalytics.com.br/ · LinkedIn (informado em 18/11):
   https://www.linkedin.com/in/lucas-fernandes-317427168/
 - **Os relatórios NÃO mostram alertas de erro de dados** (decisão do dono em 17/11): ficam limpos, com os números como
   publicados, para mostrar que o candidato também faz relatórios bonitos. Selos de confiança, "publicado × correto" e
@@ -40,8 +40,9 @@ rotinas que duplicam dados e tabelas sem chave primária.
   evolução de cargo (2012 → hoje), faixa de empresas e 7 marcos que se revezam a cada 4,6 s; pausa ao passar o mouse, clique fixa
   um marco, respeita `prefers-reduced-motion`. Fonte: currículo enviado pelo dono (AeC 2012–2020, Mundiale, Sólides, Mundiale,
   AeC como coordenador, A3Data, Raro Labs). Nomes de clientes finais foram omitidos de propósito ("um banco", "cliente de crédito").
-- **Foto**: `perfil.json` → `foto` (caminho relativo a `app/public/`, ex.: `foto-lucas.jpg`). Vazio = monograma "LP"; se o arquivo
-  não carregar, volta ao monograma. A foto enviada pelo dono no chat não chegou como arquivo: pendente de reenvio.
+- **Foto**: `app/public/foto-lucas.jpg` (640×640, recortada no rosto a partir da foto enviada pelo dono em 18/11), apontada em
+  `perfil.json` → `foto`. Aparece no retrato da abertura e no avatar "Sobre o Lucas" da sidebar. Vazio = monograma "LP";
+  se o arquivo não carregar, a abertura volta ao monograma.
 
 ## Stack
 
@@ -133,7 +134,7 @@ UI/UX e Front-end, Visualização (relatórios), QA.
 - Chunk do ECharts com 276 kB gzip, carregado sob demanda (fora do bundle inicial de 110 kB gzip).
 - Layout em celular foi conferido só na Abertura; as telas internas são desktop-first.
 
-- Preencher e-mail, agenda e foto (`[PREENCHER]`) em `app/src/content/perfil.json`; o LinkedIn já está preenchido.
+- Preencher e-mail e agenda (`[PREENCHER]`) em `app/src/content/perfil.json`; LinkedIn e foto já estão preenchidos.
 - Publicação: o dono publicou o site na **Vercel** (18/11) e validou. Cada push na branch publicada gera novo deploy lá.
   O workflow de GitHub Pages continua no repositório como alternativa: habilitar GitHub Pages (Settings > Pages > Source: GitHub Actions). O workflow publica a partir da branch padrão
   (hoje `claude/eager-brown-ywhkr9`, a única do repositório). Em repositório privado, o Pages exige plano pago do GitHub.
