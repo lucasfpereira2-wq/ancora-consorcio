@@ -63,7 +63,7 @@ INCIDENTES = [
          relatorios={"cobranca-carteira": "Recebimento e recuperação superestimados em ~1,8% no dia 16/11", "cobranca-safra": "Efeito marginal nas curvas de safra (abaixo de 0,1 p.p.)"}),
     dict(id="INC-2032", tabela="stg_telefonia_cdr", tipo="rotina_parada", severidade="critico",
          titulo="Rotina de telefonia parada há 3 dias",
-         tecnico="`ingest_telefonia` falha desde 14/11 às 02:10 com erro de autenticação no SFTP da operadora (credencial expirada). Três execuções consecutivas sem sucesso.",
+         tecnico="`ingest_telefonia` falha desde 14/11 às 02:10 com erro de autenticação no SFTP da operadora (credencial expirada). Quatro execuções consecutivas sem sucesso.",
          negocio="O relatório de Atendimento não tem chamadas de voz de 14 a 16/11. Volume, TMA, TME e abandono do canal Voz estão desatualizados e o total de contatos parece ter caído.",
          causa="Senha do SFTP com rotação trimestral e sem alerta de expiração; falha sem notificação ao dono.",
          acao="Renovar a credencial, reprocessar os 3 dias e configurar alerta de falha com dono definido.",

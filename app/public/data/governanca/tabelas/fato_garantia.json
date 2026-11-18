@@ -14,7 +14,7 @@
  "motivo_status": "Última carga com 9 horas de atraso em relação ao SLA",
  "tem_pk": true,
  "saude": 45.9,
- "ultima_carga": "2026-11-16T13:50:55-03:00",
+ "ultima_carga": "2026-11-16T13:50:27-03:00",
  "atraso_horas": 9.0,
  "linhas": 11146,
  "testes_total": 7,
@@ -129,7 +129,7 @@
  "execucoes": [
   {
    "data": "2026-10-19",
-   "inicio": "2026-10-19T04:51:02-03:00",
+   "inicio": "2026-10-19T04:50:31-03:00",
    "duracao_seg": 33,
    "linhas": 4,
    "linhas_esperadas": 4,
@@ -138,7 +138,7 @@
   },
   {
    "data": "2026-10-20",
-   "inicio": "2026-10-20T04:50:27-03:00",
+   "inicio": "2026-10-20T04:50:13-03:00",
    "duracao_seg": 37,
    "linhas": 22,
    "linhas_esperadas": 22,
@@ -147,7 +147,7 @@
   },
   {
    "data": "2026-10-21",
-   "inicio": "2026-10-21T04:50:29-03:00",
+   "inicio": "2026-10-21T04:50:14-03:00",
    "duracao_seg": 36,
    "linhas": 20,
    "linhas_esperadas": 20,
@@ -156,7 +156,7 @@
   },
   {
    "data": "2026-10-22",
-   "inicio": "2026-10-22T04:51:11-03:00",
+   "inicio": "2026-10-22T04:50:35-03:00",
    "duracao_seg": 35,
    "linhas": 19,
    "linhas_esperadas": 19,
@@ -165,7 +165,7 @@
   },
   {
    "data": "2026-10-23",
-   "inicio": "2026-10-23T04:51:40-03:00",
+   "inicio": "2026-10-23T04:50:50-03:00",
    "duracao_seg": 35,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -174,7 +174,7 @@
   },
   {
    "data": "2026-10-24",
-   "inicio": "2026-10-24T04:50:18-03:00",
+   "inicio": "2026-10-24T04:50:09-03:00",
    "duracao_seg": 37,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -183,7 +183,7 @@
   },
   {
    "data": "2026-10-25",
-   "inicio": "2026-10-25T04:50:48-03:00",
+   "inicio": "2026-10-25T04:50:24-03:00",
    "duracao_seg": 32,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -192,7 +192,7 @@
   },
   {
    "data": "2026-10-26",
-   "inicio": "2026-10-26T04:50:39-03:00",
+   "inicio": "2026-10-26T04:50:19-03:00",
    "duracao_seg": 35,
    "linhas": 4,
    "linhas_esperadas": 4,
@@ -201,7 +201,7 @@
   },
   {
    "data": "2026-10-27",
-   "inicio": "2026-10-27T04:50:54-03:00",
+   "inicio": "2026-10-27T04:50:27-03:00",
    "duracao_seg": 32,
    "linhas": 22,
    "linhas_esperadas": 22,
@@ -210,7 +210,7 @@
   },
   {
    "data": "2026-10-28",
-   "inicio": "2026-10-28T04:50:10-03:00",
+   "inicio": "2026-10-28T04:50:05-03:00",
    "duracao_seg": 37,
    "linhas": 21,
    "linhas_esperadas": 20,
@@ -219,7 +219,7 @@
   },
   {
    "data": "2026-10-29",
-   "inicio": "2026-10-29T04:50:11-03:00",
+   "inicio": "2026-10-29T04:50:05-03:00",
    "duracao_seg": 39,
    "linhas": 19,
    "linhas_esperadas": 19,
@@ -228,7 +228,7 @@
   },
   {
    "data": "2026-10-30",
-   "inicio": "2026-10-30T04:51:26-03:00",
+   "inicio": "2026-10-30T04:50:43-03:00",
    "duracao_seg": 37,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -237,7 +237,7 @@
   },
   {
    "data": "2026-10-31",
-   "inicio": "2026-10-31T04:51:43-03:00",
+   "inicio": "2026-10-31T04:50:51-03:00",
    "duracao_seg": 31,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -246,7 +246,7 @@
   },
   {
    "data": "2026-11-01",
-   "inicio": "2026-11-01T04:51:44-03:00",
+   "inicio": "2026-11-01T04:50:52-03:00",
    "duracao_seg": 33,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -255,7 +255,7 @@
   },
   {
    "data": "2026-11-02",
-   "inicio": "2026-11-02T04:50:18-03:00",
+   "inicio": "2026-11-02T04:50:09-03:00",
    "duracao_seg": 37,
    "linhas": 4,
    "linhas_esperadas": 4,
@@ -264,7 +264,7 @@
   },
   {
    "data": "2026-11-03",
-   "inicio": "2026-11-03T04:50:15-03:00",
+   "inicio": "2026-11-03T04:50:07-03:00",
    "duracao_seg": 35,
    "linhas": 21,
    "linhas_esperadas": 22,
@@ -273,7 +273,7 @@
   },
   {
    "data": "2026-11-04",
-   "inicio": "2026-11-04T04:51:00-03:00",
+   "inicio": "2026-11-04T04:50:30-03:00",
    "duracao_seg": 39,
    "linhas": 20,
    "linhas_esperadas": 20,
@@ -282,7 +282,7 @@
   },
   {
    "data": "2026-11-05",
-   "inicio": "2026-11-05T04:50:26-03:00",
+   "inicio": "2026-11-05T04:50:13-03:00",
    "duracao_seg": 36,
    "linhas": 19,
    "linhas_esperadas": 19,
@@ -291,7 +291,7 @@
   },
   {
    "data": "2026-11-06",
-   "inicio": "2026-11-06T04:51:23-03:00",
+   "inicio": "2026-11-06T04:50:41-03:00",
    "duracao_seg": 32,
    "linhas": 19,
    "linhas_esperadas": 18,
@@ -300,7 +300,7 @@
   },
   {
    "data": "2026-11-07",
-   "inicio": "2026-11-07T04:51:07-03:00",
+   "inicio": "2026-11-07T04:50:33-03:00",
    "duracao_seg": 33,
    "linhas": 19,
    "linhas_esperadas": 18,
@@ -309,7 +309,7 @@
   },
   {
    "data": "2026-11-08",
-   "inicio": "2026-11-08T04:50:55-03:00",
+   "inicio": "2026-11-08T04:50:27-03:00",
    "duracao_seg": 39,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -318,7 +318,7 @@
   },
   {
    "data": "2026-11-09",
-   "inicio": "2026-11-09T04:51:23-03:00",
+   "inicio": "2026-11-09T04:50:41-03:00",
    "duracao_seg": 32,
    "linhas": 4,
    "linhas_esperadas": 4,
@@ -327,8 +327,8 @@
   },
   {
    "data": "2026-11-10",
-   "inicio": "2026-11-10T04:51:14-03:00",
-   "duracao_seg": 38,
+   "inicio": "2026-11-10T04:50:37-03:00",
+   "duracao_seg": 37,
    "linhas": 23,
    "linhas_esperadas": 22,
    "status": "sucesso",
@@ -336,7 +336,7 @@
   },
   {
    "data": "2026-11-11",
-   "inicio": "2026-11-11T04:50:45-03:00",
+   "inicio": "2026-11-11T04:50:22-03:00",
    "duracao_seg": 37,
    "linhas": 19,
    "linhas_esperadas": 20,
@@ -345,7 +345,7 @@
   },
   {
    "data": "2026-11-12",
-   "inicio": "2026-11-12T04:50:25-03:00",
+   "inicio": "2026-11-12T04:50:12-03:00",
    "duracao_seg": 33,
    "linhas": 20,
    "linhas_esperadas": 19,
@@ -354,7 +354,7 @@
   },
   {
    "data": "2026-11-13",
-   "inicio": "2026-11-13T04:51:11-03:00",
+   "inicio": "2026-11-13T04:50:35-03:00",
    "duracao_seg": 36,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -363,7 +363,7 @@
   },
   {
    "data": "2026-11-14",
-   "inicio": "2026-11-14T04:51:34-03:00",
+   "inicio": "2026-11-14T04:50:47-03:00",
    "duracao_seg": 33,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -372,7 +372,7 @@
   },
   {
    "data": "2026-11-15",
-   "inicio": "2026-11-15T04:50:19-03:00",
+   "inicio": "2026-11-15T04:50:09-03:00",
    "duracao_seg": 35,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -381,7 +381,7 @@
   },
   {
    "data": "2026-11-16",
-   "inicio": "2026-11-16T13:50:55-03:00",
+   "inicio": "2026-11-16T13:50:27-03:00",
    "duracao_seg": 34,
    "linhas": 4,
    "linhas_esperadas": 4,

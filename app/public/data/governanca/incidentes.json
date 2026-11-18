@@ -67,7 +67,7 @@
   "situacao": "aberto",
   "detectado_em": "2026-11-17T06:05:00-03:00",
   "inicio_estimado": "2026-11-14T02:10:00-03:00",
-  "resumo_tecnico": "`ingest_telefonia` falha desde 14/11 às 02:10 com erro de autenticação no SFTP da operadora (credencial expirada). Três execuções consecutivas sem sucesso.",
+  "resumo_tecnico": "`ingest_telefonia` falha desde 14/11 às 02:10 com erro de autenticação no SFTP da operadora (credencial expirada). Quatro execuções consecutivas sem sucesso.",
   "impacto_negocio": "O relatório de Atendimento não tem chamadas de voz de 14 a 16/11. Volume, TMA, TME e abandono do canal Voz estão desatualizados e o total de contatos parece ter caído.",
   "causa_raiz": "Senha do SFTP com rotação trimestral e sem alerta de expiração; falha sem notificação ao dono.",
   "acao_recomendada": "Renovar a credencial, reprocessar os 3 dias e configurar alerta de falha com dono definido.",

@@ -5,7 +5,7 @@
   "titulo": "Atenção",
   "mensagem": "Este relatório usa `stg_crm_propostas`, cuja carga de hoje trouxe 412 linhas contra a média de 1.148. Propostas e conversão do funil de 16/11 estão subestimadas; as vendas efetivadas não foram afetadas.",
   "tabela_principal": "stg_crm_propostas",
-  "atualizado_em": "2026-11-17T05:01:33-03:00",
+  "atualizado_em": "2026-11-17T05:00:46-03:00",
   "horas_desde_atualizacao": 3.0,
   "problemas": [
    {
@@ -74,8 +74,8 @@
   "titulo": "Dados com problema crítico",
   "mensagem": "Este relatório usa `fato_parcelas`, que contém 312 registros duplicados hoje. Valores de recebimento de 16/11 podem estar superestimados em ~1,8%. Há também 147 cotas sem grupo em `dim_cota`, ausentes das quebras por grupo.",
   "tabela_principal": "fato_parcelas",
-  "atualizado_em": "2026-11-17T05:21:31-03:00",
-  "horas_desde_atualizacao": 2.6,
+  "atualizado_em": "2026-11-17T05:20:45-03:00",
+  "horas_desde_atualizacao": 2.7,
   "problemas": [
    {
     "tabela": "fato_parcelas",
@@ -132,8 +132,8 @@
   "titulo": "Atenção",
   "mensagem": "Este relatório usa `dim_cota`, que tem 147 cotas apontando para grupos inexistentes. Essas cotas ficam fora das análises por grupo e safra. As parcelas duplicadas em `fato_parcelas` têm efeito marginal nas curvas (abaixo de 0,1 p.p.).",
   "tabela_principal": "dim_cota",
-  "atualizado_em": "2026-11-17T05:21:12-03:00",
-  "horas_desde_atualizacao": 2.6,
+  "atualizado_em": "2026-11-17T05:20:36-03:00",
+  "horas_desde_atualizacao": 2.7,
   "problemas": [
    {
     "tabela": "dim_cota",
@@ -209,7 +209,7 @@
   "titulo": "Dados com problema crítico",
   "mensagem": "Este relatório usa `stg_telefonia_cdr`, que está parada há 3 dias. O canal Voz não tem dados de 14 a 16/11 e os indicadores de voz estão desatualizados. O NPS de outubro foi divulgado como 62; o correto é 56 (respostas duplicadas em `fato_pesquisa_nps`).",
   "tabela_principal": "stg_telefonia_cdr",
-  "atualizado_em": "2026-11-13T05:11:05-03:00",
+  "atualizado_em": "2026-11-13T05:10:32-03:00",
   "horas_desde_atualizacao": 98.8,
   "problemas": [
    {
@@ -279,7 +279,7 @@
   "titulo": "Dados confiáveis",
   "mensagem": "Dados confiáveis, atualizados há 2h. As 13 tabelas que alimentam este relatório estão dentro do SLA e com todos os testes aprovados.",
   "tabela_principal": "mart_assembleias_contemplacoes",
-  "atualizado_em": "2026-11-17T05:30:35-03:00",
+  "atualizado_em": "2026-11-17T05:30:17-03:00",
   "horas_desde_atualizacao": 2.5,
   "problemas": [],
   "tabelas_fonte": [

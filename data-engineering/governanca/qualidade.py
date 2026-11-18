@@ -5,7 +5,7 @@ O farol NUNCA é copiado de tabelas.py: ele é calculado, dia a dia, a partir da
 resultados dos testes. O status-alvo só é usado na validação final (tests/validar_governanca.py).
 """
 from base import (DIAS, N_DIAS, PESO_CRITICIDADE, POR_NOME, SCHEMAS, VOLUMES, cenario, f_dec, f_dh, f_dia,
-                  f_horas, f_int, idx, numero_cenario, rng)
+                  f_horas, f_int, idx, rng)
 
 C = cenario
 HOJE_I = N_DIAS - 1
@@ -271,15 +271,16 @@ def montar_testes(t, execs, estados):
 
 
 def enriquecer_com_simulacao(testes_por_tabela):
-    """Se a simulação publicar números do cenário (ex.: valor em R$ da duplicidade), acrescenta às evidências."""
-    vl = numero_cenario("duplic", "valor") or numero_cenario("duplic", "vl") or numero_cenario("parcelas", "r$")
-    if vl:
-        from base import f_dec as _f
-        txt = f" (R$ {_f(vl, 2)} lançados em duplicidade)"
+    """Acrescenta às evidências os valores em R$ publicados pela simulação (os mesmos dos cubos dos relatórios)."""
+    import conteudo
+    if conteudo.VL_DUP:
         for x in testes_por_tabela.get("fato_parcelas", []):
             if x["regra"] == "unicidade" and x["resultado"] != "ok":
-                x["evidencia"] += txt
-    return vl
+                x["evidencia"] += f" ({conteudo._mil(conteudo.VL_DUP)} lançados em duplicidade no recebimento de 16/11)"
+    if conteudo.VL_REC and conteudo.VL_REC_OK:
+        for x in testes_por_tabela.get("mart_cobranca_carteira", []):
+            if x["regra"] == "reconciliacao" and x["resultado"] != "ok":
+                x["evidencia"] += f": {conteudo._mi(conteudo.VL_REC)} no mart contra {conteudo._mi(conteudo.VL_REC_OK)} no banco"
 
 
 def teste_publico(x):

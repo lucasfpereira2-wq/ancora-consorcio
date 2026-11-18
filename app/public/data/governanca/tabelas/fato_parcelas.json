@@ -14,7 +14,7 @@
  "motivo_status": "312 registros duplicados em `id_parcela`",
  "tem_pk": true,
  "saude": 23.0,
- "ultima_carga": "2026-11-17T02:46:03-03:00",
+ "ultima_carga": "2026-11-17T02:45:31-03:00",
  "atraso_horas": 0.0,
  "linhas": 2814724,
  "testes_total": 8,
@@ -174,8 +174,8 @@
  "execucoes": [
   {
    "data": "2026-10-19",
-   "inicio": "2026-10-19T02:46:38-03:00",
-   "duracao_seg": 77,
+   "inicio": "2026-10-19T02:45:49-03:00",
+   "duracao_seg": 42,
    "linhas": 2238,
    "linhas_esperadas": 2238,
    "status": "sucesso",
@@ -183,8 +183,8 @@
   },
   {
    "data": "2026-10-20",
-   "inicio": "2026-10-20T02:46:30-03:00",
-   "duracao_seg": 77,
+   "inicio": "2026-10-20T02:45:45-03:00",
+   "duracao_seg": 42,
    "linhas": 12814,
    "linhas_esperadas": 12814,
    "status": "sucesso",
@@ -192,8 +192,8 @@
   },
   {
    "data": "2026-10-21",
-   "inicio": "2026-10-21T02:45:56-03:00",
-   "duracao_seg": 94,
+   "inicio": "2026-10-21T02:45:28-03:00",
+   "duracao_seg": 51,
    "linhas": 12263,
    "linhas_esperadas": 12263,
    "status": "sucesso",
@@ -201,8 +201,8 @@
   },
   {
    "data": "2026-10-22",
-   "inicio": "2026-10-22T02:45:46-03:00",
-   "duracao_seg": 84,
+   "inicio": "2026-10-22T02:45:23-03:00",
+   "duracao_seg": 46,
    "linhas": 11520,
    "linhas_esperadas": 11520,
    "status": "sucesso",
@@ -210,8 +210,8 @@
   },
   {
    "data": "2026-10-23",
-   "inicio": "2026-10-23T02:46:33-03:00",
-   "duracao_seg": 80,
+   "inicio": "2026-10-23T02:45:46-03:00",
+   "duracao_seg": 44,
    "linhas": 11552,
    "linhas_esperadas": 11552,
    "status": "sucesso",
@@ -219,8 +219,8 @@
   },
   {
    "data": "2026-10-24",
-   "inicio": "2026-10-24T02:46:18-03:00",
-   "duracao_seg": 94,
+   "inicio": "2026-10-24T02:45:39-03:00",
+   "duracao_seg": 51,
    "linhas": 11066,
    "linhas_esperadas": 11066,
    "status": "sucesso",
@@ -228,8 +228,8 @@
   },
   {
    "data": "2026-10-25",
-   "inicio": "2026-10-25T02:45:47-03:00",
-   "duracao_seg": 89,
+   "inicio": "2026-10-25T02:45:23-03:00",
+   "duracao_seg": 49,
    "linhas": 4743,
    "linhas_esperadas": 4743,
    "status": "sucesso",
@@ -237,8 +237,8 @@
   },
   {
    "data": "2026-10-26",
-   "inicio": "2026-10-26T02:45:29-03:00",
-   "duracao_seg": 82,
+   "inicio": "2026-10-26T02:45:14-03:00",
+   "duracao_seg": 44,
    "linhas": 2216,
    "linhas_esperadas": 2216,
    "status": "sucesso",
@@ -246,8 +246,8 @@
   },
   {
    "data": "2026-10-27",
-   "inicio": "2026-10-27T02:45:23-03:00",
-   "duracao_seg": 89,
+   "inicio": "2026-10-27T02:45:11-03:00",
+   "duracao_seg": 49,
    "linhas": 12907,
    "linhas_esperadas": 12907,
    "status": "sucesso",
@@ -255,8 +255,8 @@
   },
   {
    "data": "2026-10-28",
-   "inicio": "2026-10-28T02:46:13-03:00",
-   "duracao_seg": 83,
+   "inicio": "2026-10-28T02:45:36-03:00",
+   "duracao_seg": 45,
    "linhas": 11668,
    "linhas_esperadas": 11668,
    "status": "sucesso",
@@ -264,8 +264,8 @@
   },
   {
    "data": "2026-10-29",
-   "inicio": "2026-10-29T02:46:33-03:00",
-   "duracao_seg": 87,
+   "inicio": "2026-10-29T02:45:46-03:00",
+   "duracao_seg": 47,
    "linhas": 11793,
    "linhas_esperadas": 11793,
    "status": "sucesso",
@@ -273,8 +273,8 @@
   },
   {
    "data": "2026-10-30",
-   "inicio": "2026-10-30T02:46:50-03:00",
-   "duracao_seg": 88,
+   "inicio": "2026-10-30T02:45:55-03:00",
+   "duracao_seg": 48,
    "linhas": 11543,
    "linhas_esperadas": 11543,
    "status": "sucesso",
@@ -282,8 +282,8 @@
   },
   {
    "data": "2026-10-31",
-   "inicio": "2026-10-31T02:46:40-03:00",
-   "duracao_seg": 84,
+   "inicio": "2026-10-31T02:45:50-03:00",
+   "duracao_seg": 46,
    "linhas": 10608,
    "linhas_esperadas": 10608,
    "status": "sucesso",
@@ -291,8 +291,8 @@
   },
   {
    "data": "2026-11-01",
-   "inicio": "2026-11-01T02:46:36-03:00",
-   "duracao_seg": 83,
+   "inicio": "2026-11-01T02:45:48-03:00",
+   "duracao_seg": 45,
    "linhas": 4757,
    "linhas_esperadas": 4757,
    "status": "sucesso",
@@ -300,8 +300,8 @@
   },
   {
    "data": "2026-11-02",
-   "inicio": "2026-11-02T02:45:21-03:00",
-   "duracao_seg": 82,
+   "inicio": "2026-11-02T02:45:10-03:00",
+   "duracao_seg": 45,
    "linhas": 2195,
    "linhas_esperadas": 2195,
    "status": "sucesso",
@@ -309,8 +309,8 @@
   },
   {
    "data": "2026-11-03",
-   "inicio": "2026-11-03T02:46:34-03:00",
-   "duracao_seg": 77,
+   "inicio": "2026-11-03T02:45:47-03:00",
+   "duracao_seg": 42,
    "linhas": 13311,
    "linhas_esperadas": 13311,
    "status": "sucesso",
@@ -318,8 +318,8 @@
   },
   {
    "data": "2026-11-04",
-   "inicio": "2026-11-04T02:46:25-03:00",
-   "duracao_seg": 88,
+   "inicio": "2026-11-04T02:45:42-03:00",
+   "duracao_seg": 48,
    "linhas": 12320,
    "linhas_esperadas": 12320,
    "status": "sucesso",
@@ -327,8 +327,8 @@
   },
   {
    "data": "2026-11-05",
-   "inicio": "2026-11-05T02:46:16-03:00",
-   "duracao_seg": 78,
+   "inicio": "2026-11-05T02:45:38-03:00",
+   "duracao_seg": 43,
    "linhas": 11152,
    "linhas_esperadas": 11152,
    "status": "sucesso",
@@ -336,8 +336,8 @@
   },
   {
    "data": "2026-11-06",
-   "inicio": "2026-11-06T02:46:02-03:00",
-   "duracao_seg": 95,
+   "inicio": "2026-11-06T02:45:31-03:00",
+   "duracao_seg": 52,
    "linhas": 11091,
    "linhas_esperadas": 11091,
    "status": "sucesso",
@@ -345,8 +345,8 @@
   },
   {
    "data": "2026-11-07",
-   "inicio": "2026-11-07T02:45:43-03:00",
-   "duracao_seg": 85,
+   "inicio": "2026-11-07T02:45:21-03:00",
+   "duracao_seg": 46,
    "linhas": 10511,
    "linhas_esperadas": 10511,
    "status": "sucesso",
@@ -354,8 +354,8 @@
   },
   {
    "data": "2026-11-08",
-   "inicio": "2026-11-08T02:46:28-03:00",
-   "duracao_seg": 80,
+   "inicio": "2026-11-08T02:45:44-03:00",
+   "duracao_seg": 44,
    "linhas": 4754,
    "linhas_esperadas": 4754,
    "status": "sucesso",
@@ -363,8 +363,8 @@
   },
   {
    "data": "2026-11-09",
-   "inicio": "2026-11-09T02:46:33-03:00",
-   "duracao_seg": 95,
+   "inicio": "2026-11-09T02:45:46-03:00",
+   "duracao_seg": 52,
    "linhas": 2278,
    "linhas_esperadas": 2278,
    "status": "sucesso",
@@ -372,8 +372,8 @@
   },
   {
    "data": "2026-11-10",
-   "inicio": "2026-11-10T02:46:43-03:00",
-   "duracao_seg": 77,
+   "inicio": "2026-11-10T02:45:51-03:00",
+   "duracao_seg": 42,
    "linhas": 13122,
    "linhas_esperadas": 13122,
    "status": "sucesso",
@@ -381,8 +381,8 @@
   },
   {
    "data": "2026-11-11",
-   "inicio": "2026-11-11T02:46:00-03:00",
-   "duracao_seg": 84,
+   "inicio": "2026-11-11T02:45:30-03:00",
+   "duracao_seg": 46,
    "linhas": 11583,
    "linhas_esperadas": 11583,
    "status": "sucesso",
@@ -390,8 +390,8 @@
   },
   {
    "data": "2026-11-12",
-   "inicio": "2026-11-12T02:45:11-03:00",
-   "duracao_seg": 89,
+   "inicio": "2026-11-12T02:45:05-03:00",
+   "duracao_seg": 49,
    "linhas": 11488,
    "linhas_esperadas": 11488,
    "status": "sucesso",
@@ -399,8 +399,8 @@
   },
   {
    "data": "2026-11-13",
-   "inicio": "2026-11-13T02:46:36-03:00",
-   "duracao_seg": 85,
+   "inicio": "2026-11-13T02:45:48-03:00",
+   "duracao_seg": 46,
    "linhas": 11546,
    "linhas_esperadas": 11546,
    "status": "sucesso",
@@ -408,8 +408,8 @@
   },
   {
    "data": "2026-11-14",
-   "inicio": "2026-11-14T02:45:25-03:00",
-   "duracao_seg": 83,
+   "inicio": "2026-11-14T02:45:12-03:00",
+   "duracao_seg": 46,
    "linhas": 10888,
    "linhas_esperadas": 10888,
    "status": "sucesso",
@@ -417,8 +417,8 @@
   },
   {
    "data": "2026-11-15",
-   "inicio": "2026-11-15T02:46:32-03:00",
-   "duracao_seg": 79,
+   "inicio": "2026-11-15T02:45:46-03:00",
+   "duracao_seg": 43,
    "linhas": 4581,
    "linhas_esperadas": 4581,
    "status": "sucesso",
@@ -426,8 +426,8 @@
   },
   {
    "data": "2026-11-16",
-   "inicio": "2026-11-16T02:46:30-03:00",
-   "duracao_seg": 77,
+   "inicio": "2026-11-16T02:45:45-03:00",
+   "duracao_seg": 42,
    "linhas": 2166,
    "linhas_esperadas": 2166,
    "status": "sucesso",
@@ -435,8 +435,8 @@
   },
   {
    "data": "2026-11-17",
-   "inicio": "2026-11-17T02:46:03-03:00",
-   "duracao_seg": 94,
+   "inicio": "2026-11-17T02:45:31-03:00",
+   "duracao_seg": 51,
    "linhas": 13526,
    "linhas_esperadas": 13214,
    "status": "alerta",
@@ -473,7 +473,7 @@
    "coluna": "id_parcela",
    "severidade": "critico",
    "resultado": "falha",
-   "evidencia": "312 registros duplicados em `id_parcela`",
+   "evidencia": "312 registros duplicados em `id_parcela` (R$ 341 mil lançados em duplicidade no recebimento de 16/11)",
    "valor_observado": 312,
    "limite": 0,
    "unidade": "registros",
@@ -559,7 +559,7 @@
    "nome": "Frescor (SLA)",
    "severidade": "critico",
    "resultado": "ok",
-   "evidencia": "Última carga há 5h (17/11 às 02:46); SLA de 24h",
+   "evidencia": "Última carga há 5h (17/11 às 02:45); SLA de 24h",
    "valor_observado": 5.2,
    "limite": 24,
    "unidade": "horas",
@@ -650,7 +650,7 @@
      null,
      "Em aberto",
      0,
-     "2026-11-17 02:46:03"
+     "2026-11-17 02:45:31"
     ]
    },
    {
@@ -667,7 +667,7 @@
      603.03,
      "Paga",
      0,
-     "2026-11-17 02:46:03"
+     "2026-11-17 02:45:31"
     ],
     "problema": "Registro duplicado: mesmo `id_parcela` gravado duas vezes no reprocesso do lote de 16/11",
     "colunas_problema": [
@@ -688,7 +688,7 @@
      603.03,
      "Paga",
      0,
-     "2026-11-17 02:58:03"
+     "2026-11-17 02:57:31"
     ],
     "problema": "Registro duplicado: mesmo `id_parcela` gravado duas vezes no reprocesso do lote de 16/11",
     "colunas_problema": [
@@ -709,7 +709,7 @@
      1314.27,
      "Paga",
      0,
-     "2026-11-17 02:46:03"
+     "2026-11-17 02:45:31"
     ]
    },
    {
@@ -726,7 +726,7 @@
      null,
      "Em atraso",
      68,
-     "2026-11-17 02:46:03"
+     "2026-11-17 02:45:31"
     ]
    },
    {
@@ -743,7 +743,7 @@
      2594.48,
      "Paga",
      0,
-     "2026-11-17 02:46:03"
+     "2026-11-17 02:45:31"
     ]
    },
    {
@@ -760,7 +760,7 @@
      null,
      "Em aberto",
      0,
-     "2026-11-17 02:46:03"
+     "2026-11-17 02:45:31"
     ],
     "problema": "Registro duplicado: mesmo `id_parcela` gravado duas vezes no reprocesso do lote de 16/11",
     "colunas_problema": [
@@ -781,7 +781,7 @@
      null,
      "Em aberto",
      0,
-     "2026-11-17 02:58:03"
+     "2026-11-17 02:57:31"
     ],
     "problema": "Registro duplicado: mesmo `id_parcela` gravado duas vezes no reprocesso do lote de 16/11",
     "colunas_problema": [
@@ -802,7 +802,7 @@
      1293.48,
      "Paga",
      0,
-     "2026-11-17 02:46:03"
+     "2026-11-17 02:45:31"
     ]
    }
   ]

@@ -242,26 +242,6 @@ VOLUMES = _volumes()
 ORIGEM_VOLUMES = "simulação" if isinstance(RESUMO.get("volumes"), dict) else "padrão"
 
 
-def numero_cenario(*trechos):
-    """Busca em resumo_simulacao.json['cenario'] um número cuja chave contenha todos os trechos."""
-    cen = RESUMO.get("cenario")
-    if not isinstance(cen, dict):
-        return None
-
-    def _varrer(d, prefixo=""):
-        for k, v in d.items():
-            chave = (prefixo + "." + str(k)).lower()
-            if isinstance(v, dict):
-                achado = _varrer(v, chave)
-                if achado is not None:
-                    return achado
-            elif isinstance(v, (int, float)) and not isinstance(v, bool) and all(t in chave for t in trechos):
-                return v
-        return None
-
-    return _varrer(cen)
-
-
 def gravar(caminho_rel, obj):
     caminho = os.path.join(SAIDA, caminho_rel)
     os.makedirs(os.path.dirname(caminho), exist_ok=True)

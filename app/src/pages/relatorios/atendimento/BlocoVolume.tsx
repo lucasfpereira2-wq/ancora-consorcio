@@ -1,0 +1,250 @@
+import { ArrowLeft, ChevronRight, MousePointerClick, TriangleAlert } from 'lucide-react'
+import { useMemo, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ChartCard } from '@/components/dados'
+import { EChart, type EChartHandle } from '@/components/dados/EChart'
+import { Button } from '@/components/ui/button'
+import { filtrar, serieTemporalPor, somarDias, type Granularidade } from '@/lib/cubo'
+import type { FiltrosResolvidos } from '@/lib/filtros'
+import { fmtCompacto, fmtData, fmtDiaMes, fmtMes, fmtNumero, fmtPct } from '@/lib/formato'
+import { corDaSerie } from '@/lib/tema-echarts'
+import type { Cubo } from '@/types/cubo'
+import { CANAL_VOZ, DIM_CANAL, opcao, TABELA_TELEFONIA, tooltipHTML, useTokens, type LinhaTooltip } from './util'
+
+interface Nivel {
+  g: Granularidade
+  inicio: string
+  fim: string
+  rotulo: string
+}
+
+const NOME_NIVEL: Record<Granularidade, string> = { mes: 'mês', semana: 'semana', dia: 'dia' }
+const PROXIMO: Record<Granularidade, Granularidade | null> = { mes: 'semana', semana: 'dia', dia: null }
+
+const max = (a: string, b: string) => (a > b ? a : b)
+const min = (a: string, b: string) => (a < b ? a : b)
+
+/** Intervalo de datas coberto por um bucket, limitado ao nível atual. */
+function intervaloDoBucket(bucket: string, g: Granularidade, nivel: { inicio: string; fim: string }): { inicio: string; fim: string } {
+  if (g === 'dia') return { inicio: bucket, fim: bucket }
+  if (g === 'semana') return { inicio: max(bucket, nivel.inicio), fim: min(somarDias(bucket, 6), nivel.fim) }
+  const a = Number(bucket.slice(0, 4))
+  const m = Number(bucket.slice(5, 7))
+  const ultimo = new Date(Date.UTC(a, m, 0)).getUTCDate()
+  return { inicio: max(`${bucket}-01`, nivel.inicio), fim: min(`${bucket}-${String(ultimo).padStart(2, '0')}`, nivel.fim) }
+}
+
+function tituloDoBucket(bucket: string, g: Granularidade, nivel: { inicio: string; fim: string }): string {
+  if (g === 'mes') return fmtMes(bucket)
+  const r = intervaloDoBucket(bucket, g, nivel)
+  if (g === 'dia') return fmtData(bucket)
+  return r.inicio === r.fim ? fmtData(r.inicio) : `Semana de ${fmtDiaMes(r.inicio)} a ${fmtDiaMes(r.fim)}`
+}
+
+/**
+ * Tendência de volume por canal com drill-down mês → semana → dia. O clique numa barra detalha o bucket;
+ * a trilha permite voltar. Dias sem dados de voz ficam marcados com uma faixa.
+ */
+export function BlocoVolume({ cubo, f, diasSemVoz }: { cubo: Cubo; f: FiltrosResolvidos; diasSemVoz: string[] }) {
+  const ref = useRef<EChartHandle>(null)
+  const { tema, t } = useTokens()
+
+  // a pilha de drill vale só para a combinação de período + granularidade em que foi criada
+  const chave = `${f.periodo.inicio}|${f.periodo.fim}|${f.granularidade}`
+  const [estado, setEstado] = useState<{ chave: string; pilha: Nivel[] }>({ chave, pilha: [] })
+  const pilha = estado.chave === chave ? estado.pilha : []
+  const raiz: Nivel = useMemo(
+    () => ({ g: f.granularidade, inicio: f.periodo.inicio, fim: f.periodo.fim, rotulo: 'Período filtrado' }),
+    [f.granularidade, f.periodo.inicio, f.periodo.fim],
+  )
+  const nivel = pilha[pilha.length - 1] ?? raiz
+
+  const serie = useMemo(() => {
+    const linhas = filtrar(cubo, { ...f.filtrosCubo, inicio: nivel.inicio, fim: nivel.fim }, f.meta)
+    return serieTemporalPor(cubo, linhas, nivel.g, DIM_CANAL, 'contatos', { inicio: nivel.inicio, fim: nivel.fim })
+  }, [cubo, f.filtrosCubo, f.meta, nivel])
+
+  const ordemCanais = useMemo(() => cubo.dims.find((d) => d.nome === DIM_CANAL)?.valores ?? [], [cubo])
+  const vozNaSelecao = serie.series.some((s) => s.nome === CANAL_VOZ) || !f.canais.length || f.canais.includes(CANAL_VOZ)
+
+  // buckets que contêm dias sem dados de voz
+  const afetados = useMemo(() => {
+    if (!vozNaSelecao) return [] as number[]
+    const out: number[] = []
+    serie.buckets.forEach((b, i) => {
+      const r = intervaloDoBucket(b, nivel.g, nivel)
+      if (diasSemVoz.some((d) => d >= r.inicio && d <= r.fim)) out.push(i)
+    })
+    return out
+  }, [serie.buckets, nivel, diasSemVoz, vozNaSelecao])
+  const primeiroDiaSemVoz = diasSemVoz[0]
+
+  const rotulos = useMemo(
+    () => serie.buckets.map((b) => (nivel.g === 'mes' ? fmtMes(b) : fmtDiaMes(intervaloDoBucket(b, nivel.g, nivel).inicio))),
+    [serie.buckets, nivel],
+  )
+
+  const totalGeral = serie.series.reduce((s, x) => s + x.total, 0)
+  const proximo = PROXIMO[nivel.g]
+
+  const option = useMemo(() => {
+    const denso = serie.buckets.length > 45
+    const series = serie.series.map((s, k) => {
+      const ehVoz = s.nome === CANAL_VOZ
+      return {
+        type: 'bar',
+        name: s.nome,
+        stack: 'canais',
+        cursor: proximo ? 'pointer' : 'default',
+        barMaxWidth: 44,
+        barCategoryGap: denso ? '18%' : '32%',
+        itemStyle: {
+          color: corDaSerie(ordemCanais.indexOf(s.nome), tema),
+          borderRadius: 0,
+          borderColor: t.superficie,
+          borderWidth: denso ? 0 : 1,
+        },
+        emphasis: { focus: 'none' },
+        // no nível diário, voz sem dado é ausência (null), não zero
+        data: s.valores.map((v, i) => (ehVoz && nivel.g === 'dia' && afetados.includes(i) ? null : v)),
+        markArea:
+          k === 0 && afetados.length
+            ? {
+                silent: true,
+                itemStyle: { color: t.status.amarelo, opacity: tema === 'escuro' ? 0.16 : 0.14 },
+                label: {
+                  show: true,
+                  position: afetados[afetados.length - 1] >= serie.buckets.length - 3 ? 'insideTopRight' : 'insideTop',
+                  distance: 0,
+                  offset: [0, -20],
+                  color: t.texto,
+                  fontSize: 11,
+                  fontWeight: 600,
+                },
+                data: [
+                  [
+                    { name: `Voz sem dados desde ${primeiroDiaSemVoz ? fmtDiaMes(primeiroDiaSemVoz) : '14/11'}`, xAxis: afetados[0] },
+                    { xAxis: afetados[afetados.length - 1] },
+                  ],
+                ],
+              }
+            : undefined,
+      }
+    })
+    return opcao({
+      grid: { left: 8, right: 16, top: 58, bottom: 8, containLabel: true },
+      legend: { top: 0, left: 0 },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter: (params: { dataIndex: number; seriesName: string; value: number | null; color: string }[]) => {
+          if (!params.length) return ''
+          const i = params[0].dataIndex
+          const total = params.reduce((s, p) => s + (p.value ?? 0), 0)
+          const linhas: LinhaTooltip[] = params.map((p) => {
+            const semDado = p.seriesName === CANAL_VOZ && afetados.includes(i) && (p.value == null || nivel.g !== 'dia')
+            return {
+              nome: p.seriesName,
+              cor: p.color,
+              valor: p.value == null ? 'sem dados' : fmtNumero(p.value),
+              nota: p.value == null ? undefined : semDado ? 'parcial' : total ? fmtPct(p.value / total, 0) : undefined,
+            }
+          })
+          linhas.push({ nome: 'Total', valor: fmtNumero(total), separar: true })
+          const rodape = [
+            afetados.includes(i) ? 'Canal Voz sem dados de 14 a 16/11: o total está subestimado.' : '',
+            proximo ? `Clique para detalhar por ${NOME_NIVEL[proximo]}.` : '',
+          ]
+            .filter(Boolean)
+            .join(' ')
+          return tooltipHTML(tituloDoBucket(serie.buckets[i], nivel.g, nivel), linhas, rodape || undefined)
+        },
+      },
+      xAxis: { type: 'category', data: rotulos },
+      yAxis: { type: 'value', axisLabel: { formatter: (v: number) => fmtCompacto(v) } },
+      series,
+    })
+  }, [serie, rotulos, nivel, afetados, ordemCanais, tema, t, proximo, primeiroDiaSemVoz])
+
+  const detalhar = (indice: number) => {
+    if (!proximo) return
+    const bucket = serie.buckets[indice]
+    if (!bucket) return
+    const r = intervaloDoBucket(bucket, nivel.g, nivel)
+    const rotulo = nivel.g === 'mes' ? fmtMes(bucket) : r.inicio === r.fim ? fmtData(r.inicio) : `${fmtDiaMes(r.inicio)} a ${fmtDiaMes(r.fim)}`
+    setEstado({ chave, pilha: [...pilha, { g: proximo, inicio: r.inicio, fim: r.fim, rotulo }] })
+  }
+  const voltarPara = (n: number) => setEstado({ chave, pilha: pilha.slice(0, n) })
+
+  const trilha = [raiz, ...pilha]
+
+  return (
+    <ChartCard
+      titulo="Por quais canais os clientes procuram a Âncora, e como o volume evolui?"
+      subtitulo={`Contatos por canal, por ${NOME_NIVEL[nivel.g]} · ${fmtData(nivel.inicio)} a ${fmtData(nivel.fim)} · ${fmtNumero(totalGeral)} contatos`}
+      chartRef={ref}
+      nomeArquivo="volume-de-contatos-por-canal"
+      vazio={!serie.series.length}
+      csv={() => ({
+        nome: 'volume-de-contatos-por-canal',
+        colunas: ['Período', ...serie.series.map((s) => s.nome), 'Total'],
+        linhas: serie.buckets.map((b, i) => [b, ...serie.series.map((s) => s.valores[i]), serie.series.reduce((x, s) => x + s.valores[i], 0)]),
+      })}
+      rodape={
+        afetados.length ? (
+          <span className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
+            <TriangleAlert className="size-3.5 shrink-0 text-status-amarelo-texto" aria-hidden />
+            <span>
+              <strong className="font-semibold text-foreground">Voz sem dados desde 14/11:</strong> a rotina <code className="text-[11px]">{TABELA_TELEFONIA}</code> está parada
+              há 3 dias, e o volume de 14 a 16/11 está subestimado.
+            </span>
+            <Link to={`/farol/${TABELA_TELEFONIA}`} className="font-medium text-primary underline-offset-2 hover:underline">
+              Ver no Farol
+            </Link>
+          </span>
+        ) : undefined
+      }
+    >
+      <div className="mb-2 flex min-h-8 flex-wrap items-center gap-x-1 gap-y-1.5 text-xs">
+        {pilha.length > 0 && (
+          <Button variant="outline" size="sm" className="mr-1.5 h-7 gap-1 px-2 text-xs" onClick={() => voltarPara(pilha.length - 1)}>
+            <ArrowLeft className="size-3.5" aria-hidden />
+            Voltar
+          </Button>
+        )}
+        <nav aria-label="Trilha do detalhamento" className="flex flex-wrap items-center gap-1">
+          {trilha.map((n, i) => {
+            const atual = i === trilha.length - 1
+            return (
+              <span key={`${n.rotulo}-${i}`} className="inline-flex items-center gap-1">
+                {i > 0 && <ChevronRight className="size-3.5 text-muted-foreground/60" aria-hidden />}
+                {atual ? (
+                  <span className="rounded-md bg-muted px-2 py-1 font-medium text-foreground">
+                    {n.rotulo} <span className="font-normal text-muted-foreground">· por {NOME_NIVEL[n.g]}</span>
+                  </span>
+                ) : (
+                  <button type="button" onClick={() => voltarPara(i)} className="rounded-md px-2 py-1 font-medium text-primary hover:bg-muted">
+                    {n.rotulo}
+                  </button>
+                )}
+              </span>
+            )
+          })}
+        </nav>
+        {proximo && (
+          <span className="ml-auto hidden items-center gap-1.5 text-muted-foreground sm:inline-flex">
+            <MousePointerClick className="size-3.5" aria-hidden />
+            Clique numa barra para detalhar por {NOME_NIVEL[proximo]}
+          </span>
+        )}
+      </div>
+      <EChart
+        ref={ref}
+        option={option}
+        altura={340}
+        descricao="Volume de contatos por canal ao longo do tempo, em barras empilhadas"
+        onEvents={{ click: (p) => detalhar((p as { dataIndex: number }).dataIndex) }}
+      />
+    </ChartCard>
+  )
+}

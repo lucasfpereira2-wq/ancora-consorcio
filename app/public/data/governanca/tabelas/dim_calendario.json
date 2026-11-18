@@ -14,7 +14,7 @@
  "motivo_status": "No SLA e testes OK",
  "tem_pk": true,
  "saude": 100.0,
- "ultima_carga": "2026-11-01T02:51:39-03:00",
+ "ultima_carga": "2026-11-01T02:50:49-03:00",
  "atraso_horas": 0.0,
  "linhas": 4018,
  "testes_total": 5,
@@ -242,8 +242,8 @@
   },
   {
    "data": "2026-11-01",
-   "inicio": "2026-11-01T02:51:39-03:00",
-   "duracao_seg": 51,
+   "inicio": "2026-11-01T02:50:49-03:00",
+   "duracao_seg": 37,
    "linhas": 3999,
    "linhas_esperadas": 3999,
    "status": "sucesso",
@@ -466,8 +466,8 @@
    "nome": "Frescor (SLA)",
    "severidade": "alto",
    "resultado": "ok",
-   "evidencia": "Última carga há 16 dias (01/11 às 02:51); SLA de 744h",
-   "valor_observado": 389.1,
+   "evidencia": "Última carga há 16 dias (01/11 às 02:50); SLA de 744h",
+   "valor_observado": 389.2,
    "limite": 744,
    "unidade": "horas",
    "historico_7d": [
@@ -518,69 +518,9 @@
   "linhas": [
    {
     "valores": [
-     "2026-10-31",
+     "2026-11-14",
      2026,
-     10,
-     "2026-11",
-     "segunda-feira",
-     "S",
-     "S",
-     null
-    ]
-   },
-   {
-    "valores": [
-     "2026-11-01",
-     2026,
-     10,
-     "2026-11",
-     "terça-feira",
-     "S",
-     "S",
-     null
-    ]
-   },
-   {
-    "valores": [
-     "2026-11-02",
-     2026,
-     10,
-     "2026-11",
-     "quarta-feira",
-     "S",
-     "S",
-     null
-    ]
-   },
-   {
-    "valores": [
-     "2026-11-03",
-     2026,
-     10,
-     "2026-11",
-     "quinta-feira",
-     "S",
-     "S",
-     null
-    ]
-   },
-   {
-    "valores": [
-     "2026-11-04",
-     2026,
-     10,
-     "2026-11",
-     "sexta-feira",
-     "S",
-     "S",
-     null
-    ]
-   },
-   {
-    "valores": [
-     "2026-11-05",
-     2026,
-     10,
+     11,
      "2026-11",
      "sábado",
      "N",
@@ -590,25 +530,85 @@
    },
    {
     "valores": [
-     "2026-11-06",
+     "2026-11-15",
      2026,
-     10,
+     11,
      "2026-11",
      "domingo",
+     "N",
      "S",
+     "Proclamação da República"
+    ]
+   },
+   {
+    "valores": [
+     "2026-11-16",
+     2026,
+     11,
+     "2026-11",
+     "segunda-feira",
      "S",
+     "N",
      null
     ]
    },
    {
     "valores": [
-     "2026-11-07",
+     "2026-11-17",
      2026,
-     10,
+     11,
      "2026-11",
-     "segunda-feira",
+     "terça-feira",
      "S",
+     "N",
+     null
+    ]
+   },
+   {
+    "valores": [
+     "2026-11-18",
+     2026,
+     11,
+     "2026-11",
+     "quarta-feira",
      "S",
+     "N",
+     null
+    ]
+   },
+   {
+    "valores": [
+     "2026-11-19",
+     2026,
+     11,
+     "2026-11",
+     "quinta-feira",
+     "S",
+     "N",
+     null
+    ]
+   },
+   {
+    "valores": [
+     "2026-11-20",
+     2026,
+     11,
+     "2026-11",
+     "sexta-feira",
+     "N",
+     "S",
+     "Dia da Consciência Negra"
+    ]
+   },
+   {
+    "valores": [
+     "2026-11-21",
+     2026,
+     11,
+     "2026-11",
+     "sábado",
+     "N",
+     "N",
      null
     ]
    }

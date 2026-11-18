@@ -14,7 +14,7 @@
  "motivo_status": "Tabela sem chave primária definida; 2,3% de conversas repetidas nos últimos 7 dias",
  "tem_pk": false,
  "saude": 19.2,
- "ultima_carga": "2026-11-17T07:05:17-03:00",
+ "ultima_carga": "2026-11-17T07:05:08-03:00",
  "atraso_horas": 0.0,
  "linhas": 1602531,
  "testes_total": 7,
@@ -157,7 +157,7 @@
  "execucoes": [
   {
    "data": "2026-10-19",
-   "inicio": "2026-10-19T23:05:22-03:00",
+   "inicio": "2026-10-19T23:05:11-03:00",
    "duracao_seg": 21,
    "linhas": 108,
    "linhas_esperadas": 110,
@@ -166,7 +166,7 @@
   },
   {
    "data": "2026-10-20",
-   "inicio": "2026-10-20T23:05:47-03:00",
+   "inicio": "2026-10-20T23:05:23-03:00",
    "duracao_seg": 23,
    "linhas": 106,
    "linhas_esperadas": 110,
@@ -175,7 +175,7 @@
   },
   {
    "data": "2026-10-21",
-   "inicio": "2026-10-21T23:06:35-03:00",
+   "inicio": "2026-10-21T23:05:47-03:00",
    "duracao_seg": 24,
    "linhas": 111,
    "linhas_esperadas": 110,
@@ -184,7 +184,7 @@
   },
   {
    "data": "2026-10-22",
-   "inicio": "2026-10-22T23:06:23-03:00",
+   "inicio": "2026-10-22T23:05:41-03:00",
    "duracao_seg": 21,
    "linhas": 107,
    "linhas_esperadas": 110,
@@ -193,7 +193,7 @@
   },
   {
    "data": "2026-10-23",
-   "inicio": "2026-10-23T23:05:30-03:00",
+   "inicio": "2026-10-23T23:05:15-03:00",
    "duracao_seg": 21,
    "linhas": 112,
    "linhas_esperadas": 110,
@@ -202,7 +202,7 @@
   },
   {
    "data": "2026-10-24",
-   "inicio": "2026-10-24T23:06:29-03:00",
+   "inicio": "2026-10-24T23:05:44-03:00",
    "duracao_seg": 24,
    "linhas": 108,
    "linhas_esperadas": 110,
@@ -211,7 +211,7 @@
   },
   {
    "data": "2026-10-25",
-   "inicio": "2026-10-25T23:06:41-03:00",
+   "inicio": "2026-10-25T23:05:50-03:00",
    "duracao_seg": 21,
    "linhas": 109,
    "linhas_esperadas": 110,
@@ -220,7 +220,7 @@
   },
   {
    "data": "2026-10-26",
-   "inicio": "2026-10-26T23:05:13-03:00",
+   "inicio": "2026-10-26T23:05:06-03:00",
    "duracao_seg": 23,
    "linhas": 107,
    "linhas_esperadas": 110,
@@ -229,7 +229,7 @@
   },
   {
    "data": "2026-10-27",
-   "inicio": "2026-10-27T23:06:46-03:00",
+   "inicio": "2026-10-27T23:05:53-03:00",
    "duracao_seg": 22,
    "linhas": 108,
    "linhas_esperadas": 110,
@@ -238,7 +238,7 @@
   },
   {
    "data": "2026-10-28",
-   "inicio": "2026-10-28T23:06:03-03:00",
+   "inicio": "2026-10-28T23:05:31-03:00",
    "duracao_seg": 24,
    "linhas": 110,
    "linhas_esperadas": 110,
@@ -247,7 +247,7 @@
   },
   {
    "data": "2026-10-29",
-   "inicio": "2026-10-29T23:05:42-03:00",
+   "inicio": "2026-10-29T23:05:21-03:00",
    "duracao_seg": 22,
    "linhas": 108,
    "linhas_esperadas": 110,
@@ -256,8 +256,8 @@
   },
   {
    "data": "2026-10-30",
-   "inicio": "2026-10-30T23:05:52-03:00",
-   "duracao_seg": 25,
+   "inicio": "2026-10-30T23:05:26-03:00",
+   "duracao_seg": 24,
    "linhas": 113,
    "linhas_esperadas": 110,
    "status": "sucesso",
@@ -265,7 +265,7 @@
   },
   {
    "data": "2026-10-31",
-   "inicio": "2026-10-31T23:05:33-03:00",
+   "inicio": "2026-10-31T23:05:16-03:00",
    "duracao_seg": 21,
    "linhas": 113,
    "linhas_esperadas": 110,
@@ -274,8 +274,8 @@
   },
   {
    "data": "2026-11-01",
-   "inicio": "2026-11-01T23:05:54-03:00",
-   "duracao_seg": 25,
+   "inicio": "2026-11-01T23:05:27-03:00",
+   "duracao_seg": 24,
    "linhas": 112,
    "linhas_esperadas": 110,
    "status": "sucesso",
@@ -283,8 +283,8 @@
   },
   {
    "data": "2026-11-02",
-   "inicio": "2026-11-02T23:06:08-03:00",
-   "duracao_seg": 22,
+   "inicio": "2026-11-02T23:05:34-03:00",
+   "duracao_seg": 21,
    "linhas": 112,
    "linhas_esperadas": 110,
    "status": "sucesso",
@@ -292,8 +292,8 @@
   },
   {
    "data": "2026-11-03",
-   "inicio": "2026-11-03T23:05:48-03:00",
-   "duracao_seg": 20,
+   "inicio": "2026-11-03T23:05:24-03:00",
+   "duracao_seg": 19,
    "linhas": 110,
    "linhas_esperadas": 110,
    "status": "sucesso",
@@ -301,7 +301,7 @@
   },
   {
    "data": "2026-11-04",
-   "inicio": "2026-11-04T23:05:39-03:00",
+   "inicio": "2026-11-04T23:05:19-03:00",
    "duracao_seg": 23,
    "linhas": 113,
    "linhas_esperadas": 110,
@@ -310,7 +310,7 @@
   },
   {
    "data": "2026-11-05",
-   "inicio": "2026-11-05T23:05:21-03:00",
+   "inicio": "2026-11-05T23:05:10-03:00",
    "duracao_seg": 23,
    "linhas": 108,
    "linhas_esperadas": 110,
@@ -319,7 +319,7 @@
   },
   {
    "data": "2026-11-06",
-   "inicio": "2026-11-06T23:05:45-03:00",
+   "inicio": "2026-11-06T23:05:22-03:00",
    "duracao_seg": 20,
    "linhas": 109,
    "linhas_esperadas": 110,
@@ -328,8 +328,8 @@
   },
   {
    "data": "2026-11-07",
-   "inicio": "2026-11-07T23:05:44-03:00",
-   "duracao_seg": 25,
+   "inicio": "2026-11-07T23:05:22-03:00",
+   "duracao_seg": 24,
    "linhas": 110,
    "linhas_esperadas": 110,
    "status": "sucesso",
@@ -337,7 +337,7 @@
   },
   {
    "data": "2026-11-08",
-   "inicio": "2026-11-08T23:06:39-03:00",
+   "inicio": "2026-11-08T23:05:49-03:00",
    "duracao_seg": 25,
    "linhas": 113,
    "linhas_esperadas": 110,
@@ -346,8 +346,8 @@
   },
   {
    "data": "2026-11-09",
-   "inicio": "2026-11-09T23:05:05-03:00",
-   "duracao_seg": 25,
+   "inicio": "2026-11-09T23:05:02-03:00",
+   "duracao_seg": 24,
    "linhas": 107,
    "linhas_esperadas": 110,
    "status": "sucesso",
@@ -355,7 +355,7 @@
   },
   {
    "data": "2026-11-10",
-   "inicio": "2026-11-10T23:05:13-03:00",
+   "inicio": "2026-11-10T23:05:06-03:00",
    "duracao_seg": 21,
    "linhas": 109,
    "linhas_esperadas": 110,
@@ -364,7 +364,7 @@
   },
   {
    "data": "2026-11-11",
-   "inicio": "2026-11-11T23:06:03-03:00",
+   "inicio": "2026-11-11T23:05:31-03:00",
    "duracao_seg": 21,
    "linhas": 113,
    "linhas_esperadas": 110,
@@ -373,7 +373,7 @@
   },
   {
    "data": "2026-11-12",
-   "inicio": "2026-11-12T23:06:45-03:00",
+   "inicio": "2026-11-12T23:05:52-03:00",
    "duracao_seg": 22,
    "linhas": 107,
    "linhas_esperadas": 110,
@@ -382,7 +382,7 @@
   },
   {
    "data": "2026-11-13",
-   "inicio": "2026-11-13T23:06:43-03:00",
+   "inicio": "2026-11-13T23:05:51-03:00",
    "duracao_seg": 24,
    "linhas": 108,
    "linhas_esperadas": 110,
@@ -391,7 +391,7 @@
   },
   {
    "data": "2026-11-14",
-   "inicio": "2026-11-14T23:06:06-03:00",
+   "inicio": "2026-11-14T23:05:33-03:00",
    "duracao_seg": 25,
    "linhas": 114,
    "linhas_esperadas": 110,
@@ -400,7 +400,7 @@
   },
   {
    "data": "2026-11-15",
-   "inicio": "2026-11-15T23:06:20-03:00",
+   "inicio": "2026-11-15T23:05:40-03:00",
    "duracao_seg": 20,
    "linhas": 106,
    "linhas_esperadas": 110,
@@ -409,7 +409,7 @@
   },
   {
    "data": "2026-11-16",
-   "inicio": "2026-11-16T23:06:22-03:00",
+   "inicio": "2026-11-16T23:05:41-03:00",
    "duracao_seg": 21,
    "linhas": 109,
    "linhas_esperadas": 110,
@@ -418,7 +418,7 @@
   },
   {
    "data": "2026-11-17",
-   "inicio": "2026-11-17T07:05:17-03:00",
+   "inicio": "2026-11-17T07:05:08-03:00",
    "duracao_seg": 23,
    "linhas": 113,
    "linhas_esperadas": 110,
@@ -605,7 +605,7 @@
      "Encerrada",
      "web-97f70d88a9",
      "c0ccccd70d8c19896f5083758c2ef33e",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    },
    {
@@ -620,7 +620,7 @@
      "Encerrada",
      "web-fe294ac480",
      "5fa2d66ce1703636a23a7582278f36f5",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    },
    {
@@ -635,7 +635,7 @@
      "Aguardando cliente",
      "web-9baef1647d",
      "96c5be7ffc7a837e91124f090ec00c53",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    },
    {
@@ -650,7 +650,7 @@
      "Encerrada",
      "web-3a20b3d8e5",
      "89e29f40c4a8ca5d831f27fd87c1ef14",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ],
     "problema": "Conversa repetida por reenvio de webhook; sem PK, as duas linhas foram gravadas",
     "colunas_problema": [
@@ -669,7 +669,7 @@
      "Encerrada",
      "web-3f30e1a752",
      "58778050d740124219b6c41e8aca4e29",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ],
     "problema": "Conversa repetida por reenvio de webhook; sem PK, as duas linhas foram gravadas",
     "colunas_problema": [
@@ -688,7 +688,7 @@
      "Encerrada",
      "web-5de53fb887",
      "17796bee478df4f6b01ebc525031d196",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    },
    {
@@ -703,7 +703,7 @@
      "Aguardando cliente",
      "web-dcdf98a3ba",
      "3e4f11e28bfcc5574da05cf7f0a6c8ff",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    },
    {
@@ -718,7 +718,7 @@
      "Encerrada",
      "web-ad55c8b334",
      "219f78e8a5f78b307c96a2c31a95a73f",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    },
    {
@@ -733,7 +733,7 @@
      "Encerrada",
      "web-49581fedc9",
      "c4cb6a475c6436a79caea3c5cc6a76b0",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    },
    {
@@ -748,7 +748,7 @@
      "Em atendimento",
      "web-aa7f2a6c0d",
      "6486a470ad1e70031e47791f0d78734d",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    },
    {
@@ -763,7 +763,7 @@
      "Encerrada",
      "web-a045158841",
      "878c55b10d952b333494efab59d4a048",
-     "2026-11-17 07:05:17"
+     "2026-11-17 07:05:08"
     ]
    }
   ]

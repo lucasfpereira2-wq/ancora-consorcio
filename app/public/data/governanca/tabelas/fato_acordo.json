@@ -14,7 +14,7 @@
  "motivo_status": "No SLA e testes OK",
  "tem_pk": true,
  "saude": 99.3,
- "ultima_carga": "2026-11-17T03:30:56-03:00",
+ "ultima_carga": "2026-11-17T03:30:28-03:00",
  "atraso_horas": 0.0,
  "linhas": 28069,
  "testes_total": 7,
@@ -147,7 +147,7 @@
  "execucoes": [
   {
    "data": "2026-10-19",
-   "inicio": "2026-10-19T03:30:56-03:00",
+   "inicio": "2026-10-19T03:30:28-03:00",
    "duracao_seg": 35,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -156,7 +156,7 @@
   },
   {
    "data": "2026-10-20",
-   "inicio": "2026-10-20T03:30:43-03:00",
+   "inicio": "2026-10-20T03:30:21-03:00",
    "duracao_seg": 35,
    "linhas": 51,
    "linhas_esperadas": 50,
@@ -165,7 +165,7 @@
   },
   {
    "data": "2026-10-21",
-   "inicio": "2026-10-21T03:30:04-03:00",
+   "inicio": "2026-10-21T03:30:02-03:00",
    "duracao_seg": 36,
    "linhas": 46,
    "linhas_esperadas": 45,
@@ -174,7 +174,7 @@
   },
   {
    "data": "2026-10-22",
-   "inicio": "2026-10-22T03:31:03-03:00",
+   "inicio": "2026-10-22T03:30:31-03:00",
    "duracao_seg": 39,
    "linhas": 42,
    "linhas_esperadas": 43,
@@ -183,7 +183,7 @@
   },
   {
    "data": "2026-10-23",
-   "inicio": "2026-10-23T03:30:42-03:00",
+   "inicio": "2026-10-23T03:30:21-03:00",
    "duracao_seg": 38,
    "linhas": 42,
    "linhas_esperadas": 42,
@@ -192,8 +192,8 @@
   },
   {
    "data": "2026-10-24",
-   "inicio": "2026-10-24T03:31:22-03:00",
-   "duracao_seg": 40,
+   "inicio": "2026-10-24T03:30:41-03:00",
+   "duracao_seg": 39,
    "linhas": 41,
    "linhas_esperadas": 41,
    "status": "sucesso",
@@ -201,7 +201,7 @@
   },
   {
    "data": "2026-10-25",
-   "inicio": "2026-10-25T03:30:21-03:00",
+   "inicio": "2026-10-25T03:30:10-03:00",
    "duracao_seg": 37,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -210,7 +210,7 @@
   },
   {
    "data": "2026-10-26",
-   "inicio": "2026-10-26T03:30:44-03:00",
+   "inicio": "2026-10-26T03:30:22-03:00",
    "duracao_seg": 38,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -219,7 +219,7 @@
   },
   {
    "data": "2026-10-27",
-   "inicio": "2026-10-27T03:30:30-03:00",
+   "inicio": "2026-10-27T03:30:15-03:00",
    "duracao_seg": 36,
    "linhas": 51,
    "linhas_esperadas": 50,
@@ -228,7 +228,7 @@
   },
   {
    "data": "2026-10-28",
-   "inicio": "2026-10-28T03:30:31-03:00",
+   "inicio": "2026-10-28T03:30:15-03:00",
    "duracao_seg": 36,
    "linhas": 46,
    "linhas_esperadas": 45,
@@ -237,7 +237,7 @@
   },
   {
    "data": "2026-10-29",
-   "inicio": "2026-10-29T03:30:33-03:00",
+   "inicio": "2026-10-29T03:30:16-03:00",
    "duracao_seg": 39,
    "linhas": 44,
    "linhas_esperadas": 43,
@@ -246,7 +246,7 @@
   },
   {
    "data": "2026-10-30",
-   "inicio": "2026-10-30T03:31:28-03:00",
+   "inicio": "2026-10-30T03:30:44-03:00",
    "duracao_seg": 34,
    "linhas": 41,
    "linhas_esperadas": 42,
@@ -255,8 +255,8 @@
   },
   {
    "data": "2026-10-31",
-   "inicio": "2026-10-31T03:30:46-03:00",
-   "duracao_seg": 33,
+   "inicio": "2026-10-31T03:30:23-03:00",
+   "duracao_seg": 32,
    "linhas": 41,
    "linhas_esperadas": 41,
    "status": "sucesso",
@@ -264,7 +264,7 @@
   },
   {
    "data": "2026-11-01",
-   "inicio": "2026-11-01T03:31:25-03:00",
+   "inicio": "2026-11-01T03:30:42-03:00",
    "duracao_seg": 39,
    "linhas": 19,
    "linhas_esperadas": 18,
@@ -273,7 +273,7 @@
   },
   {
    "data": "2026-11-02",
-   "inicio": "2026-11-02T03:31:34-03:00",
+   "inicio": "2026-11-02T03:30:47-03:00",
    "duracao_seg": 37,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -282,7 +282,7 @@
   },
   {
    "data": "2026-11-03",
-   "inicio": "2026-11-03T03:31:41-03:00",
+   "inicio": "2026-11-03T03:30:50-03:00",
    "duracao_seg": 34,
    "linhas": 48,
    "linhas_esperadas": 50,
@@ -291,7 +291,7 @@
   },
   {
    "data": "2026-11-04",
-   "inicio": "2026-11-04T03:31:19-03:00",
+   "inicio": "2026-11-04T03:30:39-03:00",
    "duracao_seg": 30,
    "linhas": null,
    "linhas_esperadas": 45,
@@ -301,7 +301,7 @@
   },
   {
    "data": "2026-11-05",
-   "inicio": "2026-11-05T03:30:07-03:00",
+   "inicio": "2026-11-05T03:30:03-03:00",
    "duracao_seg": 39,
    "linhas": 44,
    "linhas_esperadas": 43,
@@ -310,7 +310,7 @@
   },
   {
    "data": "2026-11-06",
-   "inicio": "2026-11-06T03:31:41-03:00",
+   "inicio": "2026-11-06T03:30:50-03:00",
    "duracao_seg": 35,
    "linhas": 41,
    "linhas_esperadas": 42,
@@ -319,7 +319,7 @@
   },
   {
    "data": "2026-11-07",
-   "inicio": "2026-11-07T03:30:10-03:00",
+   "inicio": "2026-11-07T03:30:05-03:00",
    "duracao_seg": 36,
    "linhas": 41,
    "linhas_esperadas": 41,
@@ -328,7 +328,7 @@
   },
   {
    "data": "2026-11-08",
-   "inicio": "2026-11-08T03:30:15-03:00",
+   "inicio": "2026-11-08T03:30:07-03:00",
    "duracao_seg": 38,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -337,7 +337,7 @@
   },
   {
    "data": "2026-11-09",
-   "inicio": "2026-11-09T03:31:30-03:00",
+   "inicio": "2026-11-09T03:30:45-03:00",
    "duracao_seg": 36,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -346,8 +346,8 @@
   },
   {
    "data": "2026-11-10",
-   "inicio": "2026-11-10T03:31:08-03:00",
-   "duracao_seg": 34,
+   "inicio": "2026-11-10T03:30:34-03:00",
+   "duracao_seg": 33,
    "linhas": 51,
    "linhas_esperadas": 50,
    "status": "sucesso",
@@ -355,7 +355,7 @@
   },
   {
    "data": "2026-11-11",
-   "inicio": "2026-11-11T03:30:13-03:00",
+   "inicio": "2026-11-11T03:30:06-03:00",
    "duracao_seg": 33,
    "linhas": 45,
    "linhas_esperadas": 45,
@@ -364,7 +364,7 @@
   },
   {
    "data": "2026-11-12",
-   "inicio": "2026-11-12T03:30:39-03:00",
+   "inicio": "2026-11-12T03:30:19-03:00",
    "duracao_seg": 37,
    "linhas": 43,
    "linhas_esperadas": 43,
@@ -373,7 +373,7 @@
   },
   {
    "data": "2026-11-13",
-   "inicio": "2026-11-13T03:31:20-03:00",
+   "inicio": "2026-11-13T03:30:40-03:00",
    "duracao_seg": 39,
    "linhas": 42,
    "linhas_esperadas": 42,
@@ -382,7 +382,7 @@
   },
   {
    "data": "2026-11-14",
-   "inicio": "2026-11-14T03:30:43-03:00",
+   "inicio": "2026-11-14T03:30:21-03:00",
    "duracao_seg": 37,
    "linhas": 41,
    "linhas_esperadas": 41,
@@ -391,7 +391,7 @@
   },
   {
    "data": "2026-11-15",
-   "inicio": "2026-11-15T03:31:30-03:00",
+   "inicio": "2026-11-15T03:30:45-03:00",
    "duracao_seg": 38,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -400,7 +400,7 @@
   },
   {
    "data": "2026-11-16",
-   "inicio": "2026-11-16T03:30:52-03:00",
+   "inicio": "2026-11-16T03:30:26-03:00",
    "duracao_seg": 33,
    "linhas": 8,
    "linhas_esperadas": 8,
@@ -409,7 +409,7 @@
   },
   {
    "data": "2026-11-17",
-   "inicio": "2026-11-17T03:30:56-03:00",
+   "inicio": "2026-11-17T03:30:28-03:00",
    "duracao_seg": 32,
    "linhas": 48,
    "linhas_esperadas": 50,

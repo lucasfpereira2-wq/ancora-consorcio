@@ -196,12 +196,13 @@ def _esperadas(nome, i, dia):
 def _duracao_base(t):
     v = VOLUMES[t["nome"]]
     carga = v["carga"] if v["carga"] is not None else v["total"]
-    seg = 22 + carga / 350
+    seg = 22 + carga / 1500
     if t["camada"] == "core":
         seg *= 1.6
+    seg = min(600.0, seg)
     if t["camada"] == "mart":
         seg = 260 + seg * 3
-    return min(1500.0, max(14.0, seg))
+    return max(14.0, seg)
 
 
 def gerar_execucoes():
@@ -238,7 +239,7 @@ def gerar_execucoes():
             if "extra" in ev:
                 linhas = linhas + ev["extra"]
             dur = base_dur * (0.75 + 0.25 * linhas / max(1, esperadas)) * (1 + r.uniform(-0.12, 0.12)) * ev.get("dur", 1.0)
-            inicio = sched + timedelta(seconds=r.randint(4, 110))
+            inicio = sched + timedelta(seconds=r.randint(2, 55))
             concluida, atraso_h = True, 0.0
             if status == "falha":
                 concluida = False
@@ -252,7 +253,7 @@ def gerar_execucoes():
                     concluida, inicio, dur, linhas = False, None, None, None
                 else:
                     atraso_h = float(ev.get("atraso_h", 1))
-                    inicio = sched + timedelta(hours=atraso_h, seconds=r.randint(4, 110))
+                    inicio = sched + timedelta(hours=atraso_h, seconds=r.randint(2, 55))
             e = dict(data=d_iso, inicio=iso(inicio), duracao_seg=(int(round(dur)) if dur is not None else None),
                      linhas=linhas, linhas_esperadas=esperadas, status=status,
                      anomalia_volume=bool(ev.get("anomalia", False)),
@@ -326,7 +327,9 @@ def execucoes_pipeline(pid, execs):
         durs = [e["duracao_seg"] for e in do_dia if e["duracao_seg"] is not None]
         inicios = [e["_inicio"] for e in do_dia if e.get("_inicio")]
         pior = sorted(do_dia, key=lambda e: PIOR.index(e["status"]))[0]
-        saida.append(dict(data=dia.isoformat(), status=status, duracao_seg=(sum(durs) if durs else None),
+        # tarefas rodam em paralelo: duração do pipeline = tarefa mais longa + parte das demais
+        total = int(max(durs) + 0.25 * (sum(durs) - max(durs))) if durs else None
+        saida.append(dict(data=dia.isoformat(), status=status, duracao_seg=total,
                           inicio=iso(min(inicios)) if inicios else None, mensagem=pior.get("mensagem")))
     return saida
 

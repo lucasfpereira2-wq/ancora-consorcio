@@ -6,7 +6,7 @@ marcadas com `problema` e `colunas_problema` (pares duplicados, nulos, chaves ó
 """
 from datetime import datetime, timedelta
 
-from base import SCHEMAS, VOLUMES, cenario, rng
+from base import RESUMO, SCHEMAS, VOLUMES, cenario, rng
 
 C = cenario
 UFS = ["SP", "SP", "SP", "MG", "RJ", "PR", "RS", "SC", "GO", "BA", "PE", "DF", "MT", "CE"]
@@ -125,7 +125,7 @@ def _valor(tabela, col, k, r, ancora, seq):
         if any(p in nome for p in ("adesao", "cadastro", "formacao", "admissao", "inicio_vigencia", "credenciamento", "contrato", "abertura", "primeira_assembleia")) and tabela.startswith(("dim_", "stg_erp_c")):
             recuo = r.randint(60, 1400)
         if nome == "dt_data":
-            recuo = -k
+            recuo = -k - 14
         d = ancora - timedelta(days=recuo)
         if "previsto" in nome or nome == "dt_vencimento":
             d = ancora + timedelta(days=r.randint(-12, 20))
@@ -249,6 +249,18 @@ PROBLEMAS_AMOSTRA = {
 _NAO_COPIA = ("_dt_carga", "dt_carga", "id_entrega", "id_webhook_evento", "payload_hash")
 
 
+_CEN = RESUMO.get("cenario") if isinstance(RESUMO.get("cenario"), dict) else {}
+_KPI = {
+    "VENDAS_COTAS": (float(_CEN.get("contratos_16nov", 118)), 112.0),
+    "CREDITO_VENDIDO": (round(_CEN.get("contratos_16nov", 118) * _CEN.get("ticket_medio_credito", 142_000), 2), 16_000_000.0),
+    "INAD_OVER30": (float(_CEN.get("over30_pct", C.ALVOS["inadimplencia_over30_pct"])), 6.5),
+    "RECEBIMENTO": (float(_CEN.get("valor_recebido_16nov", 19_300_000)), None),
+    "NPS": (float(_CEN.get("nps_reportado_nov", 61.6)), 60.0),
+    "TMA_VOZ": (372.0, 360.0),
+    "CONTEMPLACOES": (38.0, None),
+}
+
+
 def _coerencia(nome, linhas, pos, r, carga):
     """Ajustes para a amostra parecer dado real: datas em ordem, valores que fecham, carimbo da carga."""
     carimbo = f"{carga:%Y-%m-%d %H:%M:%S}"
@@ -298,6 +310,40 @@ def _coerencia(nome, linhas, pos, r, carga):
             li[pos["qt_respostas_nps"]], li[pos["qt_promotores"]], li[pos["qt_detratores"]] = resp, int(resp * 0.68), int(resp * 0.11)
         if nome == "dim_cliente":
             li[pos["tipo_pessoa"]] = "PF"
+        if nome == "dim_cota":
+            sit = li[pos["situacao_cota"]]
+            li[pos["dt_contemplacao"]] = li[pos["dt_contemplacao"]] or li[pos["dt_atualizacao"]][:10] if sit == "Contemplada" else None
+            li[pos["dt_cancelamento"]] = (li[pos["dt_cancelamento"]] or li[pos["dt_atualizacao"]][:10]) if sit == "Cancelada" else None
+            li[pos["pc_pago"]] = 100.0 if sit == "Quitada" else li[pos["pc_pago"]]
+        if nome == "dim_plano":
+            seg_, prazo = li[pos["nm_plano"]].split(" ")[0], int(li[pos["nm_plano"]].split(" ")[1])
+            li[pos["segmento"]], li[pos["prazo_meses"]] = seg_, prazo
+            li[pos["pc_taxa_administracao"]] = round(r.uniform(14, 22), 2)
+            li[pos["pc_fundo_reserva"]] = r.choice([1.0, 2.0, 3.0])
+            li[pos["pc_seguro"]] = r.choice([None, 0.03, 0.05])
+        if "pc_lance" in pos and "vl_lance" in pos:
+            credito = r.choice([60, 80, 120, 150, 240, 300]) * 1000
+            li[pos["vl_lance"]] = round(credito * li[pos["pc_lance"]] / 100, 2)
+            emb = next((c_ for c_ in ("vl_lance_embutido", "vl_embutido") if c_ in pos), None)
+            if emb:
+                li[pos[emb]] = round(li[pos["vl_lance"]] * 0.4, 2) if li[pos["tipo_lance"]] == "Embutido" else None
+        if "dt_ocorrencia" in pos and "dt_credito" in pos:
+            oc = carga.date() - timedelta(days=1)
+            li[pos["dt_ocorrencia"]] = oc.isoformat()
+            li[pos["dt_credito"]] = (oc + timedelta(days=1)).isoformat() if li[pos["cd_ocorrencia"]] == "06" else None
+            li[pos["vl_tarifa"]] = r.choice([1.89, 2.1, 2.45])
+        if nome == "mart_executivo_kpis":
+            cd = li[pos["cd_kpi"]]
+            v, meta = _KPI[cd]
+            li[pos["vl_kpi"]], li[pos["vl_meta"]], li[pos["vl_periodo_anterior"]] = v, meta, round(v * r.uniform(0.94, 1.05), 2)
+        if nome == "dim_calendario":
+            d = datetime.strptime(li[pos["dt_data"]], "%Y-%m-%d").date()
+            util = d.weekday() < 5 and (d.month, d.day) not in ((11, 2), (11, 15), (11, 20))
+            li[pos["ano"]], li[pos["mes"]], li[pos["competencia"]] = d.year, d.month, f"{d.year}-{d.month:02d}"
+            li[pos["dia_semana"]] = DOM["dia_semana"][d.weekday()]
+            li[pos["fl_dia_util"]] = "S" if util else "N"
+            feriado = {(11, 2): "Finados", (11, 15): "Proclamação da República", (11, 20): "Dia da Consciência Negra"}.get((d.month, d.day))
+            li[pos["fl_feriado"]], li[pos["nm_feriado"]] = ("S" if feriado else "N"), feriado
         if "dt_referencia" in pos:
             li[pos["dt_referencia"]] = (carga.date() - timedelta(days=1 + r.randint(0, 2))).isoformat()
 

@@ -12,13 +12,13 @@
   ],
   "status": "vermelho",
   "ultima_execucao": {
-   "inicio": "2026-11-17T02:11:33-03:00",
-   "duracao_seg": 28,
+   "inicio": "2026-11-17T02:10:46-03:00",
+   "duracao_seg": 26,
    "status": "falha",
    "mensagem": "Falha de autenticação no SFTP da operadora (530 Login incorrect): credencial expirada."
   },
   "taxa_sucesso_30d": 86.7,
-  "duracao_media_seg": 30,
+  "duracao_media_seg": 24,
   "falhas_30d": 4,
   "falhas_recorrentes": [
    {
@@ -31,152 +31,152 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 22
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 27
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 26
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 26
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 26
+    "duracao_seg": 21
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 26
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 30
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 30
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 22
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 30
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 30
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 30
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-14",
     "status": "falha",
-    "duracao_seg": 26
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-15",
     "status": "falha",
-    "duracao_seg": 26
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-16",
     "status": "falha",
-    "duracao_seg": 27
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-17",
     "status": "falha",
-    "duracao_seg": 28
+    "duracao_seg": 26
    }
   ]
  },
@@ -196,13 +196,13 @@
   ],
   "status": "vermelho",
   "ultima_execucao": {
-   "inicio": "2026-11-17T03:00:53-03:00",
-   "duracao_seg": 37,
+   "inicio": "2026-11-17T03:00:26-03:00",
+   "duracao_seg": 36,
    "status": "falha",
    "mensagem": "Tarefa ignorada (upstream_failed): `stg_telefonia_cdr` não foi carregada."
   },
   "taxa_sucesso_30d": 86.7,
-  "duracao_media_seg": 92,
+  "duracao_media_seg": 49,
   "falhas_30d": 4,
   "falhas_recorrentes": [
    {
@@ -215,152 +215,152 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 87
+    "duracao_seg": 49
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 79
+    "duracao_seg": 44
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 82
+    "duracao_seg": 47
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 48
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 49
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 79
+    "duracao_seg": 44
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 152
+    "duracao_seg": 63
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 83
+    "duracao_seg": 47
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 87
+    "duracao_seg": 50
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 76
+    "duracao_seg": 42
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 79
+    "duracao_seg": 45
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 86
+    "duracao_seg": 49
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 76
+    "duracao_seg": 43
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 153
+    "duracao_seg": 63
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 83
+    "duracao_seg": 47
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 81
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 89
+    "duracao_seg": 51
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 89
+    "duracao_seg": 43
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 82
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 153
+    "duracao_seg": 66
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 47
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 47
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 88
+    "duracao_seg": 51
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 48
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 86
+    "duracao_seg": 47
    },
    {
     "data": "2026-11-14",
     "status": "falha",
-    "duracao_seg": 36
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-15",
     "status": "falha",
-    "duracao_seg": 109
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-16",
     "status": "falha",
-    "duracao_seg": 38
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-17",
     "status": "falha",
-    "duracao_seg": 37
+    "duracao_seg": 36
    }
   ]
  },
@@ -377,13 +377,13 @@
   ],
   "status": "vermelho",
   "ultima_execucao": {
-   "inicio": "2026-11-17T03:41:18-03:00",
-   "duracao_seg": 29,
+   "inicio": "2026-11-17T03:40:39-03:00",
+   "duracao_seg": 27,
    "status": "falha",
    "mensagem": "Certificado digital da API do banco expirado (SSL: CERTIFICATE_HAS_EXPIRED)."
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 29,
+  "duracao_media_seg": 24,
   "falhas_30d": 1,
   "falhas_recorrentes": [
    {
@@ -396,152 +396,152 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 26
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 26
+    "duracao_seg": 21
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 26
+    "duracao_seg": 21
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 30
+    "duracao_seg": 25
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 30
+    "duracao_seg": 25
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 26
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 26
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 31
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 26
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 27
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 29
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-17",
     "status": "falha",
-    "duracao_seg": 29
+    "duracao_seg": 27
    }
   ]
  },
@@ -558,13 +558,13 @@
   ],
   "status": "vermelho",
   "ultima_execucao": {
-   "inicio": "2026-11-17T05:10:22-03:00",
-   "duracao_seg": 106,
+   "inicio": "2026-11-17T05:10:11-03:00",
+   "duracao_seg": 105,
    "status": "falha",
    "mensagem": "Etapa de voz ignorada por falha na dependência `fato_chamada`; canais digitais carregados e execução marcada como falha."
   },
   "taxa_sucesso_30d": 86.7,
-  "duracao_media_seg": 329,
+  "duracao_media_seg": 327,
   "falhas_30d": 4,
   "falhas_recorrentes": [
    {
@@ -577,132 +577,132 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 300
+    "duracao_seg": 298
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 367
+    "duracao_seg": 365
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 348
+    "duracao_seg": 346
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 363
+    "duracao_seg": 361
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 307
+    "duracao_seg": 305
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 325
+    "duracao_seg": 323
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 309
+    "duracao_seg": 307
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 322
+    "duracao_seg": 319
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 352
+    "duracao_seg": 350
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 346
+    "duracao_seg": 343
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 351
+    "duracao_seg": 349
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 305
+    "duracao_seg": 303
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 335
+    "duracao_seg": 333
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 354
+    "duracao_seg": 351
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 328
+    "duracao_seg": 326
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 343
+    "duracao_seg": 341
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 311
+    "duracao_seg": 309
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 338
+    "duracao_seg": 336
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 367
+    "duracao_seg": 365
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 290
+    "duracao_seg": 288
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 311
+    "duracao_seg": 309
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 293
+    "duracao_seg": 291
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 355
+    "duracao_seg": 353
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 308
+    "duracao_seg": 306
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 324
+    "duracao_seg": 321
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 299
+    "duracao_seg": 297
    },
    {
     "data": "2026-11-14",
@@ -712,17 +712,17 @@
    {
     "data": "2026-11-15",
     "status": "falha",
-    "duracao_seg": 88
+    "duracao_seg": 87
    },
    {
     "data": "2026-11-16",
     "status": "falha",
-    "duracao_seg": 117
+    "duracao_seg": 116
    },
    {
     "data": "2026-11-17",
     "status": "falha",
-    "duracao_seg": 106
+    "duracao_seg": 105
    }
   ]
  },
@@ -745,165 +745,165 @@
   ],
   "status": "amarelo",
   "ultima_execucao": {
-   "inicio": "2026-11-17T02:00:07-03:00",
-   "duracao_seg": 662,
+   "inicio": "2026-11-17T02:00:06-03:00",
+   "duracao_seg": 186,
    "status": "atrasada",
    "mensagem": "Execução de hoje ainda não concluída: tarefa aguardando liberação de bloqueio na tabela de origem do ERP."
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 679,
+  "duracao_media_seg": 188,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 704
+    "duracao_seg": 195
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 669
+    "duracao_seg": 184
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 654
+    "duracao_seg": 180
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 649
+    "duracao_seg": 179
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 726
+    "duracao_seg": 201
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 715
+    "duracao_seg": 198
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 696
+    "duracao_seg": 193
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 685
+    "duracao_seg": 190
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 721
+    "duracao_seg": 201
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 658
+    "duracao_seg": 181
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 699
+    "duracao_seg": 192
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 725
+    "duracao_seg": 202
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 677
+    "duracao_seg": 186
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 648
+    "duracao_seg": 180
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 731
+    "duracao_seg": 202
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 621
+    "duracao_seg": 171
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 680
+    "duracao_seg": 189
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 693
+    "duracao_seg": 192
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 631
+    "duracao_seg": 174
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 704
+    "duracao_seg": 197
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 628
+    "duracao_seg": 173
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 629
+    "duracao_seg": 174
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 627
+    "duracao_seg": 171
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 700
+    "duracao_seg": 196
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 679
+    "duracao_seg": 188
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 714
+    "duracao_seg": 198
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 681
+    "duracao_seg": 187
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 663
+    "duracao_seg": 182
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 690
+    "duracao_seg": 192
    },
    {
     "data": "2026-11-17",
     "status": "atrasada",
-    "duracao_seg": 662
+    "duracao_seg": 186
    }
   ]
  },
@@ -928,165 +928,165 @@
   ],
   "status": "amarelo",
   "ultima_execucao": {
-   "inicio": "2026-11-17T02:30:15-03:00",
-   "duracao_seg": 261,
+   "inicio": "2026-11-17T02:30:07-03:00",
+   "duracao_seg": 90,
    "status": "atrasada",
    "mensagem": "Aguardou nova tentativa de `stg_crm_propostas`; concluída com 5 horas de atraso."
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 280,
+  "duracao_media_seg": 95,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 274
+    "duracao_seg": 93
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 261
+    "duracao_seg": 88
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 276
+    "duracao_seg": 94
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 264
+    "duracao_seg": 90
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 262
+    "duracao_seg": 89
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 262
+    "duracao_seg": 90
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 335
+    "duracao_seg": 110
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 274
+    "duracao_seg": 93
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 269
+    "duracao_seg": 91
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 259
+    "duracao_seg": 87
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 272
+    "duracao_seg": 94
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 279
+    "duracao_seg": 94
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 264
+    "duracao_seg": 90
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 345
+    "duracao_seg": 112
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 266
+    "duracao_seg": 89
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 268
+    "duracao_seg": 91
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 277
+    "duracao_seg": 94
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 278
+    "duracao_seg": 95
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 276
+    "duracao_seg": 96
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 276
+    "duracao_seg": 96
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 330
+    "duracao_seg": 108
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 281
+    "duracao_seg": 97
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 281
+    "duracao_seg": 96
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 279
+    "duracao_seg": 94
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 273
+    "duracao_seg": 96
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 281
+    "duracao_seg": 96
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 271
+    "duracao_seg": 95
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 341
+    "duracao_seg": 112
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 258
+    "duracao_seg": 88
    },
    {
     "data": "2026-11-17",
     "status": "atrasada",
-    "duracao_seg": 261
+    "duracao_seg": 90
    }
   ]
  },
@@ -1104,165 +1104,165 @@
   ],
   "status": "amarelo",
   "ultima_execucao": {
-   "inicio": "2026-11-17T02:46:03-03:00",
-   "duracao_seg": 155,
+   "inicio": "2026-11-17T02:45:31-03:00",
+   "duracao_seg": 61,
    "status": "alerta",
    "mensagem": "Concluída após 1 retry: o lote de 16/11 foi gravado duas vezes em modo append (312 linhas além do recebido da origem)."
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 142,
+  "duracao_media_seg": 56,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 135
+    "duracao_seg": 52
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 135
+    "duracao_seg": 52
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 156
+    "duracao_seg": 61
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 143
+    "duracao_seg": 56
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 144
+    "duracao_seg": 55
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 156
+    "duracao_seg": 61
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 146
+    "duracao_seg": 59
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 144
+    "duracao_seg": 54
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 144
+    "duracao_seg": 58
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 142
+    "duracao_seg": 55
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 141
+    "duracao_seg": 56
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 152
+    "duracao_seg": 59
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 139
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 134
+    "duracao_seg": 54
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 140
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 139
+    "duracao_seg": 53
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 140
+    "duracao_seg": 57
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 129
+    "duracao_seg": 52
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 155
+    "duracao_seg": 62
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 137
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 142
+    "duracao_seg": 54
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 147
+    "duracao_seg": 61
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 134
+    "duracao_seg": 51
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 145
+    "duracao_seg": 56
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 143
+    "duracao_seg": 58
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 137
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 145
+    "duracao_seg": 57
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 130
+    "duracao_seg": 52
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 140
+    "duracao_seg": 54
    },
    {
     "data": "2026-11-17",
     "status": "alerta",
-    "duracao_seg": 155
+    "duracao_seg": 61
    }
   ]
  },
@@ -1279,12 +1279,12 @@
   ],
   "status": "amarelo",
   "ultima_execucao": {
-   "inicio": "2026-11-17T02:51:16-03:00",
+   "inicio": "2026-11-17T02:50:40-03:00",
    "duracao_seg": 39,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 86.7,
-  "duracao_media_seg": 36,
+  "duracao_media_seg": 35,
   "falhas_30d": 4,
   "falhas_recorrentes": [
    {
@@ -1297,12 +1297,12 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 32
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 41
+    "duracao_seg": 39
    },
    {
     "data": "2026-10-21",
@@ -1312,32 +1312,32 @@
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 31
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 32
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 37
+    "duracao_seg": 36
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 36
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 38
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 35
+    "duracao_seg": 33
    },
    {
     "data": "2026-10-28",
@@ -1347,92 +1347,92 @@
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 35
+    "duracao_seg": 33
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 36
+    "duracao_seg": 34
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 33
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 33
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 36
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 32
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 32
    },
    {
     "data": "2026-11-06",
     "status": "falha",
-    "duracao_seg": 26
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 32
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 32
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 39
+    "duracao_seg": 33
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 36
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 36
+    "duracao_seg": 38
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 39
+    "duracao_seg": 40
    },
    {
     "data": "2026-11-15",
     "status": "falha",
-    "duracao_seg": 27
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-16",
@@ -1639,13 +1639,13 @@
   ],
   "status": "amarelo",
   "ultima_execucao": {
-   "inicio": "2026-11-17T03:30:56-03:00",
-   "duracao_seg": 149,
+   "inicio": "2026-11-17T03:30:22-03:00",
+   "duracao_seg": 64,
    "status": "atrasada",
    "mensagem": "Fila de processamento congestionada após a falha de boletos; concluída com 4 horas de atraso."
   },
   "taxa_sucesso_30d": 93.3,
-  "duracao_media_seg": 162,
+  "duracao_media_seg": 67,
   "falhas_30d": 1,
   "falhas_recorrentes": [
    {
@@ -1658,152 +1658,152 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 157
+    "duracao_seg": 66
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 147
+    "duracao_seg": 61
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 156
+    "duracao_seg": 66
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 159
+    "duracao_seg": 67
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 161
+    "duracao_seg": 68
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 154
+    "duracao_seg": 65
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 225
+    "duracao_seg": 82
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 158
+    "duracao_seg": 68
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 149
+    "duracao_seg": 63
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 154
+    "duracao_seg": 66
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 156
+    "duracao_seg": 66
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 152
+    "duracao_seg": 65
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 155
+    "duracao_seg": 65
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 217
+    "duracao_seg": 81
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 152
+    "duracao_seg": 64
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 143
+    "duracao_seg": 60
    },
    {
     "data": "2026-11-04",
     "status": "falha",
-    "duracao_seg": 113
+    "duracao_seg": 50
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 148
+    "duracao_seg": 64
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 154
+    "duracao_seg": 66
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 158
+    "duracao_seg": 66
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 226
+    "duracao_seg": 83
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 149
+    "duracao_seg": 63
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 145
+    "duracao_seg": 62
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 152
+    "duracao_seg": 66
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 149
+    "duracao_seg": 62
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 151
+    "duracao_seg": 65
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 156
+    "duracao_seg": 65
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 222
+    "duracao_seg": 82
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 148
+    "duracao_seg": 63
    },
    {
     "data": "2026-11-17",
     "status": "atrasada",
-    "duracao_seg": 149
+    "duracao_seg": 64
    }
   ]
  },
@@ -1826,154 +1826,154 @@
    "mensagem": "Aguardando `stg_banco_boletos_registrados`, que falhou hoje às 03:40."
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 47,
+  "duracao_media_seg": 38,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 43
+    "duracao_seg": 35
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 35
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 36
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 50
+    "duracao_seg": 41
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 36
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 49
+    "duracao_seg": 40
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 48
+    "duracao_seg": 39
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 36
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 47
+    "duracao_seg": 38
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 48
+    "duracao_seg": 39
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 50
+    "duracao_seg": 40
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 50
+    "duracao_seg": 41
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 48
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 46
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 46
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 43
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 43
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 52
+    "duracao_seg": 42
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 50
+    "duracao_seg": 41
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 42
+    "duracao_seg": 34
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 50
+    "duracao_seg": 41
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 48
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 48
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 49
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 47
+    "duracao_seg": 38
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 47
+    "duracao_seg": 38
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 50
+    "duracao_seg": 40
    },
    {
     "data": "2026-11-17",
@@ -2118,7 +2118,7 @@
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-11",
@@ -2170,7 +2170,7 @@
   ],
   "status": "amarelo",
   "ultima_execucao": {
-   "inicio": "2026-11-03T10:42:09-03:00",
+   "inicio": "2026-11-03T10:42:04-03:00",
    "duracao_seg": 31,
    "status": "alerta",
    "mensagem": "Planilha de novembro carregada sem 2 das 5 regionais (48 de 80 linhas)."
@@ -2345,12 +2345,12 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T07:05:17-03:00",
+   "inicio": "2026-11-17T07:05:08-03:00",
    "duracao_seg": 23,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 23,
+  "duracao_media_seg": 22,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
@@ -2412,7 +2412,7 @@
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-31",
@@ -2422,17 +2422,17 @@
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 22
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 20
+    "duracao_seg": 19
    },
    {
     "data": "2026-11-04",
@@ -2452,7 +2452,7 @@
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-08",
@@ -2462,7 +2462,7 @@
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-10",
@@ -2519,8 +2519,8 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T07:11:25-03:00",
-   "duracao_seg": 24,
+   "inicio": "2026-11-17T07:10:42-03:00",
+   "duracao_seg": 23,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
@@ -2556,7 +2556,7 @@
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 21
+    "duracao_seg": 20
    },
    {
     "data": "2026-10-25",
@@ -2606,27 +2606,27 @@
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 22
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 22
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-05",
     "status": "alerta",
-    "duracao_seg": 50
+    "duracao_seg": 49
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 22
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 20
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-08",
@@ -2636,7 +2636,7 @@
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 20
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-10",
@@ -2666,7 +2666,7 @@
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 22
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-16",
@@ -2676,7 +2676,7 @@
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 24
+    "duracao_seg": 23
    }
   ]
  },
@@ -2695,164 +2695,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T07:25:28-03:00",
-   "duracao_seg": 103,
+   "inicio": "2026-11-17T07:25:19-03:00",
+   "duracao_seg": 53,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 107,
+  "duracao_media_seg": 54,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 111
+    "duracao_seg": 57
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 103
+    "duracao_seg": 53
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 100
+    "duracao_seg": 51
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 108
+    "duracao_seg": 55
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 111
+    "duracao_seg": 55
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 104
+    "duracao_seg": 56
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 109
+    "duracao_seg": 55
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 113
+    "duracao_seg": 56
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 109
+    "duracao_seg": 56
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 116
+    "duracao_seg": 55
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 105
+    "duracao_seg": 54
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 107
+    "duracao_seg": 56
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 107
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 108
+    "duracao_seg": 58
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 107
+    "duracao_seg": 52
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 108
+    "duracao_seg": 56
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 104
+    "duracao_seg": 54
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 102
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 109
+    "duracao_seg": 57
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 102
+    "duracao_seg": 50
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 108
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 102
+    "duracao_seg": 53
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 105
+    "duracao_seg": 51
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 104
+    "duracao_seg": 54
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 105
+    "duracao_seg": 54
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 102
+    "duracao_seg": 50
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 115
+    "duracao_seg": 56
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 110
+    "duracao_seg": 57
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 111
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 103
+    "duracao_seg": 53
    }
   ]
  },
@@ -2873,164 +2873,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T01:00:30-03:00",
-   "duracao_seg": 391,
+   "inicio": "2026-11-17T01:00:15-03:00",
+   "duracao_seg": 103,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 411,
+  "duracao_media_seg": 108,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 390
+    "duracao_seg": 101
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 437
+    "duracao_seg": 115
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 406
+    "duracao_seg": 106
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 432
+    "duracao_seg": 114
    },
    {
     "data": "2026-10-23",
     "status": "atrasada",
-    "duracao_seg": 411
+    "duracao_seg": 107
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 389
+    "duracao_seg": 102
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 453
+    "duracao_seg": 119
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 424
+    "duracao_seg": 112
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 445
+    "duracao_seg": 118
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 379
+    "duracao_seg": 99
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 401
+    "duracao_seg": 104
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 397
+    "duracao_seg": 105
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 418
+    "duracao_seg": 109
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 389
+    "duracao_seg": 103
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 389
+    "duracao_seg": 101
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 449
+    "duracao_seg": 118
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 429
+    "duracao_seg": 114
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 388
+    "duracao_seg": 101
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 395
+    "duracao_seg": 103
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 429
+    "duracao_seg": 113
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 454
+    "duracao_seg": 119
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 392
+    "duracao_seg": 104
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 401
+    "duracao_seg": 104
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 377
+    "duracao_seg": 99
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 382
+    "duracao_seg": 100
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 392
+    "duracao_seg": 104
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 412
+    "duracao_seg": 107
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 437
+    "duracao_seg": 115
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 448
+    "duracao_seg": 118
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 391
+    "duracao_seg": 103
    }
   ]
  },
@@ -3049,12 +3049,12 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T01:15:30-03:00",
-   "duracao_seg": 83,
+   "inicio": "2026-11-17T01:15:15-03:00",
+   "duracao_seg": 35,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 89,
+  "duracao_media_seg": 37,
   "falhas_30d": 1,
   "falhas_recorrentes": [
    {
@@ -3067,152 +3067,152 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 81
+    "duracao_seg": 32
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 92
+    "duracao_seg": 38
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 91
+    "duracao_seg": 38
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 87
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 91
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 90
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 33
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 88
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 94
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 89
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-29",
     "status": "falha",
-    "duracao_seg": 68
+    "duracao_seg": 35
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 33
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 91
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 88
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 85
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 86
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 89
+    "duracao_seg": 38
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 89
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 94
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 91
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 87
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 93
+    "duracao_seg": 38
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 90
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 91
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 87
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 89
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 94
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 86
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 91
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 83
+    "duracao_seg": 35
    }
   ]
  },
@@ -3229,12 +3229,12 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T01:20:45-03:00",
-   "duracao_seg": 39,
+   "inicio": "2026-11-17T01:20:22-03:00",
+   "duracao_seg": 35,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 42,
+  "duracao_media_seg": 37,
   "falhas_30d": 1,
   "falhas_recorrentes": [
    {
@@ -3247,7 +3247,7 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 36
    },
    {
     "data": "2026-10-20",
@@ -3257,142 +3257,142 @@
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 34
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 40
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 41
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 39
+    "duracao_seg": 34
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 42
+    "duracao_seg": 38
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 42
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 36
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 45
+    "duracao_seg": 40
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 34
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 45
+    "duracao_seg": 40
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 46
+    "duracao_seg": 41
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 41
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 36
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 39
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 45
+    "duracao_seg": 40
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 42
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 34
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 39
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 44
+    "duracao_seg": 40
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 45
+    "duracao_seg": 40
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 45
+    "duracao_seg": 41
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 42
+    "duracao_seg": 38
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 43
+    "duracao_seg": 38
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 35
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 42
+    "duracao_seg": 37
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 42
+    "duracao_seg": 38
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 39
+    "duracao_seg": 35
    }
   ]
  },
@@ -3415,164 +3415,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T01:40:34-03:00",
-   "duracao_seg": 6145,
+   "inicio": "2026-11-17T01:40:17-03:00",
+   "duracao_seg": 1123,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 6306,
+  "duracao_media_seg": 1122,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 6461
+    "duracao_seg": 1151
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 6052
+    "duracao_seg": 1108
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 6286
+    "duracao_seg": 1119
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 6386
+    "duracao_seg": 1132
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 5922
+    "duracao_seg": 1051
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 6359
+    "duracao_seg": 1140
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 6100
+    "duracao_seg": 1094
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 6247
+    "duracao_seg": 1109
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 6073
+    "duracao_seg": 1069
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 6340
+    "duracao_seg": 1142
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 6246
+    "duracao_seg": 1104
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 6448
+    "duracao_seg": 1139
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 6194
+    "duracao_seg": 1116
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 6381
+    "duracao_seg": 1114
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 6137
+    "duracao_seg": 1072
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 6279
+    "duracao_seg": 1121
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 6398
+    "duracao_seg": 1150
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 6702
+    "duracao_seg": 1171
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 6392
+    "duracao_seg": 1137
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 6188
+    "duracao_seg": 1099
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 6152
+    "duracao_seg": 1087
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 6184
+    "duracao_seg": 1096
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 6250
+    "duracao_seg": 1115
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 6114
+    "duracao_seg": 1131
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 6357
+    "duracao_seg": 1135
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 6424
+    "duracao_seg": 1138
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 6653
+    "duracao_seg": 1174
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 6566
+    "duracao_seg": 1152
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 6744
+    "duracao_seg": 1183
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 6145
+    "duracao_seg": 1123
    }
   ]
  },
@@ -3589,164 +3589,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T01:46:41-03:00",
-   "duracao_seg": 37,
+   "inicio": "2026-11-17T01:45:50-03:00",
+   "duracao_seg": 26,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 36,
+  "duracao_media_seg": 25,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 39
+    "duracao_seg": 28
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 33
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 28
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 22
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 35
+    "duracao_seg": 25
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 22
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 36
+    "duracao_seg": 25
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 35
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 34
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 27
    },
    {
     "data": "2026-11-03",
     "status": "alerta",
-    "duracao_seg": 34
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 28
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 37
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 39
+    "duracao_seg": 27
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 27
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 36
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 27
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 38
+    "duracao_seg": 27
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 28
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 32
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 40
+    "duracao_seg": 28
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 37
+    "duracao_seg": 26
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 37
+    "duracao_seg": 26
    }
   ]
  },
@@ -3763,12 +3763,12 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T02:30:44-03:00",
-   "duracao_seg": 23,
+   "inicio": "2026-11-17T02:30:22-03:00",
+   "duracao_seg": 21,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 25,
+  "duracao_media_seg": 22,
   "falhas_30d": 1,
   "falhas_recorrentes": [
    {
@@ -3781,152 +3781,152 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 24
+    "duracao_seg": 22
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 24
+    "duracao_seg": 22
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 26
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 24
+    "duracao_seg": 21
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 24
+    "duracao_seg": 21
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 23
+    "duracao_seg": 21
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 24
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 22
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 23
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 23
+    "duracao_seg": 20
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 24
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 23
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 24
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 23
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 24
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 24
    },
    {
     "data": "2026-11-10",
     "status": "falha",
-    "duracao_seg": 23
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 23
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 23
+    "duracao_seg": 21
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 23
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 27
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 28
+    "duracao_seg": 25
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 25
+    "duracao_seg": 22
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 23
+    "duracao_seg": 21
    }
   ]
  },
@@ -3945,12 +3945,12 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-15T02:50:37-03:00",
-   "duracao_seg": 65,
+   "inicio": "2026-11-15T02:50:18-03:00",
+   "duracao_seg": 40,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 82,
+  "duracao_media_seg": 46,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
@@ -3987,7 +3987,7 @@
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 71
+    "duracao_seg": 47
    },
    {
     "data": "2026-10-26",
@@ -4022,7 +4022,7 @@
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 123
+    "duracao_seg": 55
    },
    {
     "data": "2026-11-02",
@@ -4057,7 +4057,7 @@
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 70
+    "duracao_seg": 44
    },
    {
     "data": "2026-11-09",
@@ -4092,7 +4092,7 @@
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 65
+    "duracao_seg": 40
    },
    {
     "data": "2026-11-16",
@@ -4122,12 +4122,12 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-15T03:00:46-03:00",
-   "duracao_seg": 142,
+   "inicio": "2026-11-15T03:00:23-03:00",
+   "duracao_seg": 63,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 143,
+  "duracao_media_seg": 64,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
@@ -4164,7 +4164,7 @@
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 144
+    "duracao_seg": 64
    },
    {
     "data": "2026-10-26",
@@ -4199,7 +4199,7 @@
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 142
+    "duracao_seg": 64
    },
    {
     "data": "2026-11-02",
@@ -4234,7 +4234,7 @@
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 143
+    "duracao_seg": 65
    },
    {
     "data": "2026-11-09",
@@ -4269,7 +4269,7 @@
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 142
+    "duracao_seg": 63
    },
    {
     "data": "2026-11-16",
@@ -4300,164 +4300,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T03:15:12-03:00",
-   "duracao_seg": 173,
+   "inicio": "2026-11-17T03:15:06-03:00",
+   "duracao_seg": 71,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 186,
+  "duracao_media_seg": 76,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 178
+    "duracao_seg": 73
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 168
+    "duracao_seg": 68
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 178
+    "duracao_seg": 72
    },
    {
     "data": "2026-10-22",
     "status": "alerta",
-    "duracao_seg": 422
+    "duracao_seg": 171
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 178
+    "duracao_seg": 73
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 178
+    "duracao_seg": 72
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 179
+    "duracao_seg": 73
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 182
+    "duracao_seg": 73
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 170
+    "duracao_seg": 69
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 182
+    "duracao_seg": 74
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 178
+    "duracao_seg": 72
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 177
+    "duracao_seg": 70
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 174
+    "duracao_seg": 71
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 186
+    "duracao_seg": 73
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 175
+    "duracao_seg": 73
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 181
+    "duracao_seg": 74
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 178
+    "duracao_seg": 75
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 172
+    "duracao_seg": 69
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 177
+    "duracao_seg": 74
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 175
+    "duracao_seg": 72
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 169
+    "duracao_seg": 72
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 173
+    "duracao_seg": 72
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 183
+    "duracao_seg": 74
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 188
+    "duracao_seg": 76
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 179
+    "duracao_seg": 73
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 171
+    "duracao_seg": 70
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 177
+    "duracao_seg": 72
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 183
+    "duracao_seg": 74
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 184
+    "duracao_seg": 73
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 173
+    "duracao_seg": 71
    }
   ]
  },
@@ -4475,164 +4475,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T03:20:23-03:00",
-   "duracao_seg": 76,
+   "inicio": "2026-11-17T03:20:11-03:00",
+   "duracao_seg": 48,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 76,
+  "duracao_media_seg": 46,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 76
+    "duracao_seg": 47
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 42
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 82
+    "duracao_seg": 48
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 75
+    "duracao_seg": 45
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 83
+    "duracao_seg": 49
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 43
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 78
+    "duracao_seg": 46
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 42
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 77
+    "duracao_seg": 46
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 75
+    "duracao_seg": 47
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 75
+    "duracao_seg": 45
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 74
+    "duracao_seg": 47
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 70
+    "duracao_seg": 42
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 80
+    "duracao_seg": 48
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 74
+    "duracao_seg": 43
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 80
+    "duracao_seg": 49
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 44
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 77
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 74
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 81
+    "duracao_seg": 49
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 44
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 79
+    "duracao_seg": 47
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 69
+    "duracao_seg": 41
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 78
+    "duracao_seg": 47
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 74
+    "duracao_seg": 45
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 77
+    "duracao_seg": 48
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 44
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 78
+    "duracao_seg": 48
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 75
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 76
+    "duracao_seg": 48
    }
   ]
  },
@@ -4650,12 +4650,12 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T03:45:26-03:00",
-   "duracao_seg": 70,
+   "inicio": "2026-11-17T03:45:13-03:00",
+   "duracao_seg": 43,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 74,
+  "duracao_media_seg": 45,
   "falhas_30d": 1,
   "falhas_recorrentes": [
    {
@@ -4668,152 +4668,152 @@
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 76
+    "duracao_seg": 48
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 78
+    "duracao_seg": 48
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 75
+    "duracao_seg": 46
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 43
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 78
+    "duracao_seg": 48
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 81
+    "duracao_seg": 49
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 74
+    "duracao_seg": 45
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 81
+    "duracao_seg": 49
    },
    {
     "data": "2026-10-27",
     "status": "falha",
-    "duracao_seg": 59
+    "duracao_seg": 37
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 75
+    "duracao_seg": 47
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 73
+    "duracao_seg": 44
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 66
+    "duracao_seg": 40
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 45
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 69
+    "duracao_seg": 42
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 78
+    "duracao_seg": 49
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 70
+    "duracao_seg": 44
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 74
+    "duracao_seg": 44
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 76
+    "duracao_seg": 48
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 68
+    "duracao_seg": 41
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 70
+    "duracao_seg": 44
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 76
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 43
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 77
+    "duracao_seg": 47
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 76
+    "duracao_seg": 46
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 73
+    "duracao_seg": 47
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 67
+    "duracao_seg": 41
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 72
+    "duracao_seg": 45
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 70
+    "duracao_seg": 43
    }
   ]
  },
@@ -4830,164 +4830,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T05:01:33-03:00",
-   "duracao_seg": 359,
+   "inicio": "2026-11-17T05:00:46-03:00",
+   "duracao_seg": 358,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 322,
+  "duracao_media_seg": 323,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 354
+    "duracao_seg": 353
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 300
+    "duracao_seg": 299
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 307
+    "duracao_seg": 306
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 320
+    "duracao_seg": 319
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 361
+    "duracao_seg": 360
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 312
+    "duracao_seg": 311
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 293
+    "duracao_seg": 292
    },
    {
     "data": "2026-10-26",
     "status": "atrasada",
-    "duracao_seg": 313
+    "duracao_seg": 312
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 303
+    "duracao_seg": 302
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 352
+    "duracao_seg": 351
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 301
+    "duracao_seg": 300
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 301
+    "duracao_seg": 300
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 361
+    "duracao_seg": 360
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 360
+    "duracao_seg": 339
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 295
+    "duracao_seg": 362
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 340
+    "duracao_seg": 357
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 363
+    "duracao_seg": 349
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 301
+    "duracao_seg": 300
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 299
+    "duracao_seg": 298
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 298
+    "duracao_seg": 297
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 305
+    "duracao_seg": 304
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 299
+    "duracao_seg": 298
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 298
+    "duracao_seg": 297
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 335
+    "duracao_seg": 334
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 337
+    "duracao_seg": 335
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 364
+    "duracao_seg": 363
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 312
+    "duracao_seg": 311
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 316
+    "duracao_seg": 314
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 310
+    "duracao_seg": 309
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 359
+    "duracao_seg": 358
    }
   ]
  },
@@ -5005,164 +5005,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T05:21:12-03:00",
-   "duracao_seg": 823,
+   "inicio": "2026-11-17T05:20:36-03:00",
+   "duracao_seg": 432,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 866,
+  "duracao_media_seg": 462,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 843
+    "duracao_seg": 436
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 871
+    "duracao_seg": 470
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 881
+    "duracao_seg": 460
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 819
+    "duracao_seg": 441
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 837
+    "duracao_seg": 454
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 949
+    "duracao_seg": 505
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 900
+    "duracao_seg": 480
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 957
+    "duracao_seg": 508
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 843
+    "duracao_seg": 463
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 847
+    "duracao_seg": 460
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 843
+    "duracao_seg": 443
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 874
+    "duracao_seg": 474
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 877
+    "duracao_seg": 455
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 820
+    "duracao_seg": 428
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 877
+    "duracao_seg": 467
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 894
+    "duracao_seg": 466
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 905
+    "duracao_seg": 478
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 799
+    "duracao_seg": 416
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 905
+    "duracao_seg": 493
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 856
+    "duracao_seg": 472
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 868
+    "duracao_seg": 449
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 913
+    "duracao_seg": 485
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 791
+    "duracao_seg": 420
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 939
+    "duracao_seg": 497
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 766
+    "duracao_seg": 408
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 860
+    "duracao_seg": 471
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 888
+    "duracao_seg": 491
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 838
+    "duracao_seg": 443
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 903
+    "duracao_seg": 486
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 823
+    "duracao_seg": 432
    }
   ]
  },
@@ -5179,164 +5179,164 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T05:30:35-03:00",
-   "duracao_seg": 373,
+   "inicio": "2026-11-17T05:30:17-03:00",
+   "duracao_seg": 367,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 100.0,
-  "duracao_media_seg": 341,
+  "duracao_media_seg": 336,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
    {
     "data": "2026-10-19",
     "status": "sucesso",
-    "duracao_seg": 371
+    "duracao_seg": 364
    },
    {
     "data": "2026-10-20",
     "status": "sucesso",
-    "duracao_seg": 297
+    "duracao_seg": 292
    },
    {
     "data": "2026-10-21",
     "status": "sucesso",
-    "duracao_seg": 341
+    "duracao_seg": 335
    },
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 343
+    "duracao_seg": 337
    },
    {
     "data": "2026-10-23",
     "status": "sucesso",
-    "duracao_seg": 372
+    "duracao_seg": 366
    },
    {
     "data": "2026-10-24",
     "status": "sucesso",
-    "duracao_seg": 370
+    "duracao_seg": 364
    },
    {
     "data": "2026-10-25",
     "status": "sucesso",
-    "duracao_seg": 366
+    "duracao_seg": 359
    },
    {
     "data": "2026-10-26",
     "status": "sucesso",
-    "duracao_seg": 309
+    "duracao_seg": 304
    },
    {
     "data": "2026-10-27",
     "status": "sucesso",
-    "duracao_seg": 369
+    "duracao_seg": 363
    },
    {
     "data": "2026-10-28",
     "status": "sucesso",
-    "duracao_seg": 333
+    "duracao_seg": 328
    },
    {
     "data": "2026-10-29",
     "status": "sucesso",
-    "duracao_seg": 317
+    "duracao_seg": 311
    },
    {
     "data": "2026-10-30",
     "status": "sucesso",
-    "duracao_seg": 307
+    "duracao_seg": 302
    },
    {
     "data": "2026-10-31",
     "status": "sucesso",
-    "duracao_seg": 337
+    "duracao_seg": 331
    },
    {
     "data": "2026-11-01",
     "status": "sucesso",
-    "duracao_seg": 363
+    "duracao_seg": 357
    },
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 330
+    "duracao_seg": 324
    },
    {
     "data": "2026-11-03",
     "status": "sucesso",
-    "duracao_seg": 368
+    "duracao_seg": 361
    },
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 356
+    "duracao_seg": 350
    },
    {
     "data": "2026-11-05",
     "status": "sucesso",
-    "duracao_seg": 296
+    "duracao_seg": 291
    },
    {
     "data": "2026-11-06",
     "status": "sucesso",
-    "duracao_seg": 362
+    "duracao_seg": 356
    },
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 308
+    "duracao_seg": 303
    },
    {
     "data": "2026-11-08",
     "status": "sucesso",
-    "duracao_seg": 360
+    "duracao_seg": 354
    },
    {
     "data": "2026-11-09",
     "status": "sucesso",
-    "duracao_seg": 338
+    "duracao_seg": 332
    },
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 355
+    "duracao_seg": 349
    },
    {
     "data": "2026-11-11",
     "status": "sucesso",
-    "duracao_seg": 307
+    "duracao_seg": 302
    },
    {
     "data": "2026-11-12",
     "status": "sucesso",
-    "duracao_seg": 365
+    "duracao_seg": 359
    },
    {
     "data": "2026-11-13",
     "status": "sucesso",
-    "duracao_seg": 330
+    "duracao_seg": 325
    },
    {
     "data": "2026-11-14",
     "status": "sucesso",
-    "duracao_seg": 363
+    "duracao_seg": 357
    },
    {
     "data": "2026-11-15",
     "status": "sucesso",
-    "duracao_seg": 306
+    "duracao_seg": 301
    },
    {
     "data": "2026-11-16",
     "status": "sucesso",
-    "duracao_seg": 330
+    "duracao_seg": 324
    },
    {
     "data": "2026-11-17",
     "status": "sucesso",
-    "duracao_seg": 373
+    "duracao_seg": 367
    }
   ]
  },
@@ -5353,12 +5353,12 @@
   ],
   "status": "verde",
   "ultima_execucao": {
-   "inicio": "2026-11-17T06:00:27-03:00",
+   "inicio": "2026-11-17T06:00:13-03:00",
    "duracao_seg": 325,
    "status": "sucesso"
   },
   "taxa_sucesso_30d": 96.7,
-  "duracao_media_seg": 327,
+  "duracao_media_seg": 326,
   "falhas_30d": 0,
   "falhas_recorrentes": [],
   "execucoes_30d": [
@@ -5380,7 +5380,7 @@
    {
     "data": "2026-10-22",
     "status": "sucesso",
-    "duracao_seg": 334
+    "duracao_seg": 333
    },
    {
     "data": "2026-10-23",
@@ -5435,7 +5435,7 @@
    {
     "data": "2026-11-02",
     "status": "sucesso",
-    "duracao_seg": 325
+    "duracao_seg": 324
    },
    {
     "data": "2026-11-03",
@@ -5445,7 +5445,7 @@
    {
     "data": "2026-11-04",
     "status": "sucesso",
-    "duracao_seg": 327
+    "duracao_seg": 326
    },
    {
     "data": "2026-11-05",
@@ -5460,7 +5460,7 @@
    {
     "data": "2026-11-07",
     "status": "sucesso",
-    "duracao_seg": 363
+    "duracao_seg": 362
    },
    {
     "data": "2026-11-08",
@@ -5475,7 +5475,7 @@
    {
     "data": "2026-11-10",
     "status": "sucesso",
-    "duracao_seg": 314
+    "duracao_seg": 313
    },
    {
     "data": "2026-11-11",

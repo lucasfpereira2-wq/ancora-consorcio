@@ -14,7 +14,7 @@
  "motivo_status": "No SLA e testes OK",
  "tem_pk": true,
  "saude": 100.0,
- "ultima_carga": "2026-11-15T03:30:51-03:00",
+ "ultima_carga": "2026-11-15T03:30:25-03:00",
  "atraso_horas": 0.0,
  "linhas": 18,
  "testes_total": 5,
@@ -173,7 +173,7 @@
   },
   {
    "data": "2026-10-25",
-   "inicio": "2026-10-25T03:30:31-03:00",
+   "inicio": "2026-10-25T03:30:15-03:00",
    "duracao_seg": 37,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -236,7 +236,7 @@
   },
   {
    "data": "2026-11-01",
-   "inicio": "2026-11-01T03:31:12-03:00",
+   "inicio": "2026-11-01T03:30:36-03:00",
    "duracao_seg": 33,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -299,7 +299,7 @@
   },
   {
    "data": "2026-11-08",
-   "inicio": "2026-11-08T03:30:52-03:00",
+   "inicio": "2026-11-08T03:30:26-03:00",
    "duracao_seg": 35,
    "linhas": 18,
    "linhas_esperadas": 18,
@@ -362,7 +362,7 @@
   },
   {
    "data": "2026-11-15",
-   "inicio": "2026-11-15T03:30:51-03:00",
+   "inicio": "2026-11-15T03:30:25-03:00",
    "duracao_seg": 35,
    "linhas": 18,
    "linhas_esperadas": 18,

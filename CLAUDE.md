@@ -96,8 +96,9 @@ UI/UX e Front-end, Visualização (relatórios), QA.
 
 - [x] Contratos definidos (tabelas mestre, cenário, tipos TypeScript, tokens)
 - [x] Onda 1a: simulação e cubos dos 5 relatórios (284 validações passando; `python3 data-engineering/run_all.py`)
-- [ ] Onda 1b: motor de governança · design system, shell, abertura, artigos, plano (em andamento)
-- [ ] Onda 2: Home, Farol, detalhe da tabela, Rotinas · 5 relatórios
+- [x] Onda 1b: motor de governança (índice 71,5; 47/21/12; 31 pipelines; 524 testes; 10 incidentes; 28 termos)
+- [x] Onda 1c: design system, shell, abertura, artigos, plano de 90 dias, filtros globais, motor de cubos, selo de confiança
+- [ ] Onda 2: Home, Farol, detalhe da tabela, Rotinas, Glossário · 5 relatórios (em andamento, 5 agentes em paralelo)
 - [ ] QA com screenshots
 - [ ] README, roteiro de demo, workflow de deploy
 
@@ -121,3 +122,22 @@ propostas de 16/11: 412 contra média de 1.148 · voz sem linhas em 14, 15 e 16/
 - `cobranca-safra.json`: `safra_mob` (triangular; `cotas_base` repetida em cada MOB)
 - `atendimento.json`: `contatos`, `motivos`, `hora`, `nps` (com `*_dup`), `csat`, `detracao` (regional/UF por pesos)
 - `assembleias.json`: `contemplacoes`, `lances`, `liberacao`, `grupos`, `extras.grupos`
+
+## Front-end: base compartilhada (ver `app/README.md` para a API completa)
+
+- Versões: React 19, Vite 8, Tailwind 4 (tokens em `app/src/index.css`, sem `tailwind.config`), ECharts 6, react-router 7,
+  zustand 5, TanStack Table 9, React Flow (`@xyflow/react`) 13. Componentes de `components/ui` no padrão shadcn (escritos à mão com Radix).
+- `src/lib/cubo.ts` (filtrar, agrupar, serieTemporal, compararPeriodos), `src/lib/filtros.ts` (zustand, filtros na URL),
+  `src/lib/dados.ts` (carregarJSON + hooks), `src/lib/formato.ts` (formatação brasileira), `src/lib/tema-echarts.ts`.
+- `src/components/dados/` (KpiCard, ChartCard, EChart, SeloConfianca, StatusBadge), `src/components/relatorio/` (LayoutRelatorio, BarraFiltros),
+  `src/components/layout/` (Shell, BuscaGlobal Ctrl+K).
+- Paleta de séries validada (claro): `#175B8C #22ABA8 #6F5FD0 #58A6E8 #B4589E #C2703D`. Acima de 6 categorias, agrupar em "Outros".
+- A dimensão de canal muda por cubo: `canal` (vendas, safra), `canal_cobranca`, `canal_atendimento`.
+
+## Governança: como funciona
+
+- `data-engineering/governanca/gerar.py` simula 30 dias de execuções e os testes de qualidade de cada tabela; o farol é calculado
+  a partir deles e validado contra o status-alvo. Fórmula do índice em `saude.json` → `formula` e em `data-engineering/governanca/README.md`.
+- O nível do selo parte do farol do mart do relatório e é rebaixado para "atenção" se houver upstream não-verde.
+- Ids na linhagem: fontes `fonte:<slug>`, relatórios `relatorio:<id>`, tabelas pelo próprio nome.
+- O motor lê `data-engineering/output/resumo_simulacao.json`; por isso rode sempre `run_all.py` (simulação antes da governança).

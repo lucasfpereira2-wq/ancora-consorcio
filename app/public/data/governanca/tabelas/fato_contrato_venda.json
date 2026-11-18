@@ -14,7 +14,7 @@
  "motivo_status": "No SLA e testes OK",
  "tem_pk": true,
  "saude": 100.0,
- "ultima_carga": "2026-11-17T02:31:09-03:00",
+ "ultima_carga": "2026-11-17T02:30:34-03:00",
  "atraso_horas": 0.0,
  "linhas": 94183,
  "testes_total": 8,
@@ -164,7 +164,7 @@
  "execucoes": [
   {
    "data": "2026-10-19",
-   "inicio": "2026-10-19T02:31:25-03:00",
+   "inicio": "2026-10-19T02:30:42-03:00",
    "duracao_seg": 38,
    "linhas": 14,
    "linhas_esperadas": 14,
@@ -173,7 +173,7 @@
   },
   {
    "data": "2026-10-20",
-   "inicio": "2026-10-20T02:30:22-03:00",
+   "inicio": "2026-10-20T02:30:11-03:00",
    "duracao_seg": 31,
    "linhas": 79,
    "linhas_esperadas": 81,
@@ -182,7 +182,7 @@
   },
   {
    "data": "2026-10-21",
-   "inicio": "2026-10-21T02:30:52-03:00",
+   "inicio": "2026-10-21T02:30:26-03:00",
    "duracao_seg": 35,
    "linhas": 72,
    "linhas_esperadas": 74,
@@ -191,7 +191,7 @@
   },
   {
    "data": "2026-10-22",
-   "inicio": "2026-10-22T02:31:35-03:00",
+   "inicio": "2026-10-22T02:30:47-03:00",
    "duracao_seg": 39,
    "linhas": 69,
    "linhas_esperadas": 70,
@@ -200,7 +200,7 @@
   },
   {
    "data": "2026-10-23",
-   "inicio": "2026-10-23T02:31:41-03:00",
+   "inicio": "2026-10-23T02:30:50-03:00",
    "duracao_seg": 33,
    "linhas": 70,
    "linhas_esperadas": 69,
@@ -209,7 +209,7 @@
   },
   {
    "data": "2026-10-24",
-   "inicio": "2026-10-24T02:31:11-03:00",
+   "inicio": "2026-10-24T02:30:35-03:00",
    "duracao_seg": 32,
    "linhas": 68,
    "linhas_esperadas": 66,
@@ -218,7 +218,7 @@
   },
   {
    "data": "2026-10-25",
-   "inicio": "2026-10-25T02:31:30-03:00",
+   "inicio": "2026-10-25T02:30:45-03:00",
    "duracao_seg": 35,
    "linhas": 29,
    "linhas_esperadas": 29,
@@ -227,8 +227,8 @@
   },
   {
    "data": "2026-10-26",
-   "inicio": "2026-10-26T02:30:49-03:00",
-   "duracao_seg": 35,
+   "inicio": "2026-10-26T02:30:24-03:00",
+   "duracao_seg": 34,
    "linhas": 14,
    "linhas_esperadas": 14,
    "status": "sucesso",
@@ -236,7 +236,7 @@
   },
   {
    "data": "2026-10-27",
-   "inicio": "2026-10-27T02:31:20-03:00",
+   "inicio": "2026-10-27T02:30:40-03:00",
    "duracao_seg": 38,
    "linhas": 82,
    "linhas_esperadas": 81,
@@ -245,7 +245,7 @@
   },
   {
    "data": "2026-10-28",
-   "inicio": "2026-10-28T02:31:26-03:00",
+   "inicio": "2026-10-28T02:30:43-03:00",
    "duracao_seg": 36,
    "linhas": 74,
    "linhas_esperadas": 74,
@@ -254,7 +254,7 @@
   },
   {
    "data": "2026-10-29",
-   "inicio": "2026-10-29T02:31:30-03:00",
+   "inicio": "2026-10-29T02:30:45-03:00",
    "duracao_seg": 34,
    "linhas": 68,
    "linhas_esperadas": 70,
@@ -263,7 +263,7 @@
   },
   {
    "data": "2026-10-30",
-   "inicio": "2026-10-30T02:31:43-03:00",
+   "inicio": "2026-10-30T02:30:51-03:00",
    "duracao_seg": 39,
    "linhas": 70,
    "linhas_esperadas": 69,
@@ -272,7 +272,7 @@
   },
   {
    "data": "2026-10-31",
-   "inicio": "2026-10-31T02:30:42-03:00",
+   "inicio": "2026-10-31T02:30:21-03:00",
    "duracao_seg": 32,
    "linhas": 66,
    "linhas_esperadas": 66,
@@ -281,7 +281,7 @@
   },
   {
    "data": "2026-11-01",
-   "inicio": "2026-11-01T02:30:53-03:00",
+   "inicio": "2026-11-01T02:30:26-03:00",
    "duracao_seg": 33,
    "linhas": 29,
    "linhas_esperadas": 29,
@@ -290,7 +290,7 @@
   },
   {
    "data": "2026-11-02",
-   "inicio": "2026-11-02T02:31:38-03:00",
+   "inicio": "2026-11-02T02:30:49-03:00",
    "duracao_seg": 34,
    "linhas": 14,
    "linhas_esperadas": 14,
@@ -299,7 +299,7 @@
   },
   {
    "data": "2026-11-03",
-   "inicio": "2026-11-03T02:30:05-03:00",
+   "inicio": "2026-11-03T02:30:02-03:00",
    "duracao_seg": 38,
    "linhas": 83,
    "linhas_esperadas": 81,
@@ -308,7 +308,7 @@
   },
   {
    "data": "2026-11-04",
-   "inicio": "2026-11-04T02:31:35-03:00",
+   "inicio": "2026-11-04T02:30:47-03:00",
    "duracao_seg": 36,
    "linhas": 72,
    "linhas_esperadas": 74,
@@ -317,7 +317,7 @@
   },
   {
    "data": "2026-11-05",
-   "inicio": "2026-11-05T02:30:22-03:00",
+   "inicio": "2026-11-05T02:30:11-03:00",
    "duracao_seg": 34,
    "linhas": 72,
    "linhas_esperadas": 70,
@@ -326,8 +326,8 @@
   },
   {
    "data": "2026-11-06",
-   "inicio": "2026-11-06T02:30:13-03:00",
-   "duracao_seg": 32,
+   "inicio": "2026-11-06T02:30:06-03:00",
+   "duracao_seg": 31,
    "linhas": 71,
    "linhas_esperadas": 69,
    "status": "sucesso",
@@ -335,7 +335,7 @@
   },
   {
    "data": "2026-11-07",
-   "inicio": "2026-11-07T02:31:23-03:00",
+   "inicio": "2026-11-07T02:30:41-03:00",
    "duracao_seg": 39,
    "linhas": 66,
    "linhas_esperadas": 66,
@@ -344,8 +344,8 @@
   },
   {
    "data": "2026-11-08",
-   "inicio": "2026-11-08T02:30:44-03:00",
-   "duracao_seg": 33,
+   "inicio": "2026-11-08T02:30:22-03:00",
+   "duracao_seg": 32,
    "linhas": 28,
    "linhas_esperadas": 29,
    "status": "sucesso",
@@ -353,8 +353,8 @@
   },
   {
    "data": "2026-11-09",
-   "inicio": "2026-11-09T02:31:07-03:00",
-   "duracao_seg": 34,
+   "inicio": "2026-11-09T02:30:33-03:00",
+   "duracao_seg": 33,
    "linhas": 14,
    "linhas_esperadas": 14,
    "status": "sucesso",
@@ -362,7 +362,7 @@
   },
   {
    "data": "2026-11-10",
-   "inicio": "2026-11-10T02:30:52-03:00",
+   "inicio": "2026-11-10T02:30:26-03:00",
    "duracao_seg": 36,
    "linhas": 79,
    "linhas_esperadas": 81,
@@ -371,7 +371,7 @@
   },
   {
    "data": "2026-11-11",
-   "inicio": "2026-11-11T02:31:43-03:00",
+   "inicio": "2026-11-11T02:30:51-03:00",
    "duracao_seg": 38,
    "linhas": 73,
    "linhas_esperadas": 74,
@@ -380,7 +380,7 @@
   },
   {
    "data": "2026-11-12",
-   "inicio": "2026-11-12T02:30:34-03:00",
+   "inicio": "2026-11-12T02:30:17-03:00",
    "duracao_seg": 37,
    "linhas": 70,
    "linhas_esperadas": 70,
@@ -389,7 +389,7 @@
   },
   {
    "data": "2026-11-13",
-   "inicio": "2026-11-13T02:31:42-03:00",
+   "inicio": "2026-11-13T02:30:51-03:00",
    "duracao_seg": 39,
    "linhas": 70,
    "linhas_esperadas": 69,
@@ -398,7 +398,7 @@
   },
   {
    "data": "2026-11-14",
-   "inicio": "2026-11-14T02:30:44-03:00",
+   "inicio": "2026-11-14T02:30:22-03:00",
    "duracao_seg": 36,
    "linhas": 68,
    "linhas_esperadas": 66,
@@ -407,8 +407,8 @@
   },
   {
    "data": "2026-11-15",
-   "inicio": "2026-11-15T02:30:32-03:00",
-   "duracao_seg": 34,
+   "inicio": "2026-11-15T02:30:16-03:00",
+   "duracao_seg": 33,
    "linhas": 28,
    "linhas_esperadas": 29,
    "status": "sucesso",
@@ -416,8 +416,8 @@
   },
   {
    "data": "2026-11-16",
-   "inicio": "2026-11-16T02:30:23-03:00",
-   "duracao_seg": 37,
+   "inicio": "2026-11-16T02:30:11-03:00",
+   "duracao_seg": 36,
    "linhas": 14,
    "linhas_esperadas": 14,
    "status": "sucesso",
@@ -425,7 +425,7 @@
   },
   {
    "data": "2026-11-17",
-   "inicio": "2026-11-17T02:31:09-03:00",
+   "inicio": "2026-11-17T02:30:34-03:00",
    "duracao_seg": 36,
    "linhas": 83,
    "linhas_esperadas": 81,
@@ -548,7 +548,7 @@
    "nome": "Frescor (SLA)",
    "severidade": "critico",
    "resultado": "ok",
-   "evidencia": "Última carga há 5h (17/11 às 02:31); SLA de 24h",
+   "evidencia": "Última carga há 5h (17/11 às 02:30); SLA de 24h",
    "valor_observado": 5.5,
    "limite": 24,
    "unidade": "horas",

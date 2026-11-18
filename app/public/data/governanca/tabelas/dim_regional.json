@@ -14,7 +14,7 @@
  "motivo_status": "No SLA e testes OK",
  "tem_pk": true,
  "saude": 100.0,
- "ultima_carga": "2026-11-15T02:51:38-03:00",
+ "ultima_carga": "2026-11-15T02:50:49-03:00",
  "atraso_horas": 0.0,
  "linhas": 5,
  "testes_total": 5,
@@ -165,7 +165,7 @@
   },
   {
    "data": "2026-10-25",
-   "inicio": "2026-10-25T02:50:32-03:00",
+   "inicio": "2026-10-25T02:50:16-03:00",
    "duracao_seg": 39,
    "linhas": 5,
    "linhas_esperadas": 5,
@@ -228,7 +228,7 @@
   },
   {
    "data": "2026-11-01",
-   "inicio": "2026-11-01T02:50:11-03:00",
+   "inicio": "2026-11-01T02:50:05-03:00",
    "duracao_seg": 36,
    "linhas": 5,
    "linhas_esperadas": 5,
@@ -291,7 +291,7 @@
   },
   {
    "data": "2026-11-08",
-   "inicio": "2026-11-08T02:51:15-03:00",
+   "inicio": "2026-11-08T02:50:37-03:00",
    "duracao_seg": 34,
    "linhas": 5,
    "linhas_esperadas": 5,
@@ -354,7 +354,7 @@
   },
   {
    "data": "2026-11-15",
-   "inicio": "2026-11-15T02:51:38-03:00",
+   "inicio": "2026-11-15T02:50:49-03:00",
    "duracao_seg": 33,
    "linhas": 5,
    "linhas_esperadas": 5,
@@ -452,8 +452,8 @@
    "nome": "Frescor (SLA)",
    "severidade": "alto",
    "resultado": "ok",
-   "evidencia": "Última carga há 2 dias (15/11 às 02:51); SLA de 168h",
-   "valor_observado": 53.1,
+   "evidencia": "Última carga há 2 dias (15/11 às 02:50); SLA de 168h",
+   "valor_observado": 53.2,
    "limite": 168,
    "unidade": "horas",
    "historico_7d": [
