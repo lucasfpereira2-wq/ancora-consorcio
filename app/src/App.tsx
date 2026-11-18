@@ -1,122 +1,58 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { lazy, Suspense } from 'react'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import Shell from '@/components/layout/Shell'
+import { TooltipProvider } from '@/components/ui/tooltip'
+import { carregarJSON } from '@/lib/dados'
 
-function App() {
-  const [count, setCount] = useState(0)
+// Rotas de docs/contratos.md. Todas as páginas são lazy: o ECharts só entra quando uma tela com gráfico abre.
+const Abertura = lazy(() => import('@/pages/Abertura'))
+const VisaoExecutiva = lazy(() => import('@/pages/VisaoExecutiva'))
+const Farol = lazy(() => import('@/pages/farol/Farol'))
+const TabelaDetalhe = lazy(() => import('@/pages/farol/TabelaDetalhe'))
+const Rotinas = lazy(() => import('@/pages/Rotinas'))
+const Glossario = lazy(() => import('@/pages/Glossario'))
+const Vendas = lazy(() => import('@/pages/relatorios/Vendas'))
+const CobrancaCarteira = lazy(() => import('@/pages/relatorios/CobrancaCarteira'))
+const CobrancaSafra = lazy(() => import('@/pages/relatorios/CobrancaSafra'))
+const Atendimento = lazy(() => import('@/pages/relatorios/Atendimento'))
+const Assembleias = lazy(() => import('@/pages/relatorios/Assembleias'))
+const Plano90 = lazy(() => import('@/pages/Plano90'))
+const Artigos = lazy(() => import('@/pages/Artigos'))
+const NaoEncontrada = lazy(() => import('@/pages/NaoEncontrada'))
 
+// aquece o cache do meta (data de referência do portal) sem bloquear a primeira pintura
+carregarJSON('meta.json').catch(() => undefined)
+
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <TooltipProvider delayDuration={250} skipDelayDuration={200}>
+      <HashRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<div className="min-h-dvh bg-background" />}>
+                <Abertura />
+              </Suspense>
+            }
+          />
+          <Route element={<Shell />}>
+            <Route path="/visao-executiva" element={<VisaoExecutiva />} />
+            <Route path="/farol" element={<Farol />} />
+            <Route path="/farol/:tabela" element={<TabelaDetalhe />} />
+            <Route path="/rotinas" element={<Rotinas />} />
+            <Route path="/glossario" element={<Glossario />} />
+            <Route path="/relatorios/vendas" element={<Vendas />} />
+            <Route path="/relatorios/cobranca-carteira" element={<CobrancaCarteira />} />
+            <Route path="/relatorios/cobranca-safra" element={<CobrancaSafra />} />
+            <Route path="/relatorios/atendimento" element={<Atendimento />} />
+            <Route path="/relatorios/assembleias" element={<Assembleias />} />
+            <Route path="/plano-90-dias" element={<Plano90 />} />
+            <Route path="/artigos" element={<Artigos />} />
+            <Route path="*" element={<NaoEncontrada />} />
+          </Route>
+        </Routes>
+      </HashRouter>
+    </TooltipProvider>
   )
 }
-
-export default App

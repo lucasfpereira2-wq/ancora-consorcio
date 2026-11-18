@@ -1,7 +1,15 @@
+import { fileURLToPath, URL } from 'node:url'
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 
-// https://vite.dev/config/
+// Site 100% estático (GitHub Pages): caminhos relativos + HashRouter.
 export default defineConfig({
-  plugins: [react()],
+  base: './',
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
+  },
+  build: { chunkSizeWarningLimit: 1200 },
+  test: { include: ['src/**/*.test.ts'] },
 })

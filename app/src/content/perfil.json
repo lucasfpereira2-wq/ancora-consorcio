@@ -1,0 +1,28 @@
+{
+  "nome": "Lucas Pereira",
+  "iniciais": "LP",
+  "titulo": "Gestão de Dados · Estratégia · Performance · Engenharia & Analytics",
+  "frase": "12 anos transformando dado bruto em decisão executiva, e dado confiável em vantagem de negócio.",
+  "bio": "32 anos, pai de duas filhas e há 12 anos na carreira de dados. Já estive dos dois lados: construindo pipelines e liderando times, estratégia e indicadores de performance. Acredito que nenhum dashboard vale mais do que a confiança no dado que está por trás dele.",
+  "destaques": [
+    { "valor": "12+", "rotulo": "anos em dados" },
+    { "valor": "Gestão", "rotulo": "de times e estratégia" },
+    { "valor": "Engenharia", "rotulo": "de dados e pipelines" },
+    { "valor": "Analytics", "rotulo": "e performance" }
+  ],
+  "pilares": [
+    { "icone": "governanca", "titulo": "Governança & Qualidade", "texto": "dado com dono, SLA e teste" },
+    { "icone": "engenharia", "titulo": "Engenharia", "texto": "pipelines confiáveis, modelagem e PKs" },
+    { "icone": "analytics", "titulo": "Analytics & BI", "texto": "relatórios executivos que viram decisão" },
+    { "icone": "gestao", "titulo": "Gestão & Estratégia", "texto": "times, prioridades e indicadores" }
+  ],
+  "porque": {
+    "titulo": "Por que este Hub?",
+    "texto": "Construí este ambiente simulado para mostrar, na prática, como eu atacaria o desafio de qualidade e governança de dados da Âncora: diagnosticar, monitorar e garantir que cada número divulgado seja confiável."
+  },
+  "portfolio": "https://www.lucasanalytics.com.br/",
+  "linkedin": "[PREENCHER: URL do LinkedIn]",
+  "email": "[PREENCHER: e-mail]",
+  "agenda": "[PREENCHER]",
+  "foto": ""
+}
