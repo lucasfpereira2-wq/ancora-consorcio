@@ -54,6 +54,13 @@ function comparativoDe(inc: Incidente): Comparativo | null {
   return null
 }
 
+/** Métricas de apoio do incidente, sem repetir o que o comparativo já mostra. */
+const METRICAS_COM_COMPARATIVO: Record<string, number[]> = { 'INC-2031': [0, 1], 'INC-2027': [3], 'INC-2032': [0, 1], 'INC-2033': [] }
+function metricasDe(inc: Incidente, temComparativo: boolean): Incidente['metricas'] {
+  const indices = temComparativo ? METRICAS_COM_COMPARATIVO[inc.id] : undefined
+  return indices ? indices.map((i) => inc.metricas[i]).filter(Boolean) : inc.metricas.slice(0, 4)
+}
+
 function Resumo({ selos }: { selos: Record<string, Selo> }) {
   const lista = Object.values(selos)
   const n = (nivel: NivelSelo) => lista.filter((s) => s.nivel === nivel).length
@@ -80,15 +87,15 @@ function BlocoComparativo({ c }: { c: Comparativo }) {
   return (
     <div className="rounded-xl border border-border bg-background/60 p-4">
       <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">{c.metrica}</p>
-      <div className="mt-2.5 flex flex-wrap items-end gap-x-5 gap-y-3">
+      <div className="mt-2.5 flex items-end gap-x-4">
         <div>
           <p className="text-xs text-muted-foreground">{c.rotuloPublicado ?? 'No relatório'}</p>
-          <p className="tabular mt-0.5 text-2xl font-semibold leading-none tracking-tight">{c.publicado}</p>
+          <p className="tabular mt-0.5 whitespace-nowrap text-xl font-semibold leading-none tracking-tight">{c.publicado}</p>
         </div>
         <ArrowRight className="mb-1 size-4 shrink-0 text-muted-foreground" aria-hidden />
         <div>
           <p className="text-xs text-muted-foreground">{c.rotuloCorreto ?? 'Correto'}</p>
-          <p className="tabular mt-0.5 text-2xl font-semibold leading-none tracking-tight text-primary">{c.correto}</p>
+          <p className="tabular mt-0.5 whitespace-nowrap text-xl font-semibold leading-none tracking-tight text-primary">{c.correto}</p>
         </div>
       </div>
       <p className="mt-3 text-[13px] font-medium text-foreground/80">{c.diferenca}</p>
@@ -129,7 +136,7 @@ function ProblemaPrincipal({ inc, efeito }: { inc: Incidente; efeito?: string })
       <div className="min-w-0 space-y-3">
         {comp && <BlocoComparativo c={comp} />}
         <dl className="grid grid-cols-2 gap-2">
-          {inc.metricas.slice(0, comp ? 2 : 4).map((m) => (
+          {metricasDe(inc, !!comp).map((m) => (
             <div key={m.rotulo} className="rounded-lg border border-border bg-card px-3 py-2">
               <dt className="text-[11px] leading-tight text-muted-foreground">{m.rotulo}</dt>
               <dd className="tabular mt-0.5 text-sm font-semibold">

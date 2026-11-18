@@ -108,9 +108,10 @@ export function BarrasH({
   const tema = useTema((s) => s.tema)
   const t = tokensGrafico(tema)
   const temSel = !!selecionados?.length
-  const maiorRotulo = Math.max(0, ...itens.map((i) => i.nome.length))
+  const larguraRotulos = Math.min(190, Math.max(76, Math.round(Math.max(0, ...itens.map((i) => i.nome.length)) * 7.4) + 22))
   const option = opcao({
-    grid: { left: 4, right: 64, top: media?.valor != null ? 26 : 8, bottom: 4, containLabel: true },
+    // margem esquerda explícita (não depende da medição de texto do canvas, que varia enquanto a fonte carrega)
+    grid: { left: larguraRotulos, right: 64, top: media?.valor != null ? 26 : 8, bottom: 26, containLabel: false },
     tooltip: {
       trigger: 'item',
       formatter: (p: { dataIndex: number }) => {
@@ -125,7 +126,7 @@ export function BarrasH({
       inverse: true,
       data: itens.map((i) => i.nome),
       axisLine: { show: false },
-      axisLabel: { color: t.texto, fontSize: 12, width: maiorRotulo > 18 ? 150 : undefined, overflow: 'truncate' },
+      axisLabel: { color: t.texto, fontSize: 12, width: larguraRotulos - 12, overflow: 'truncate' },
     },
     series: [
       {
