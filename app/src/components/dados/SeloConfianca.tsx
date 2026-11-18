@@ -83,7 +83,7 @@ export function SeloConfianca({ relatorio, expandido = false, className }: SeloC
           {selo.nivel === 'confiavel' && !selo.mensagem ? (
             <>atualizados há {fmtHoras(selo.horas_desde_atualizacao)}</>
           ) : (
-            <TextoComTabelas texto={selo.mensagem} tabelas={selo.tabelas_fonte.length ? [...selo.tabelas_fonte, ...selo.problemas.map((p) => p.tabela)] : undefined} />
+            <TextoComTabelas texto={semTituloRepetido(selo.mensagem, selo.titulo)} tabelas={selo.tabelas_fonte.length ? [...selo.tabelas_fonte, ...selo.problemas.map((p) => p.tabela)] : undefined} />
           )}
         </p>
         <div className="flex shrink-0 items-center gap-1">
@@ -148,4 +148,11 @@ export function SeloConfianca({ relatorio, expandido = false, className }: SeloC
       </div>
     </div>
   )
+}
+
+/** Evita "Dados confiáveis · Dados confiáveis, atualizados há 2h": remove o título quando a mensagem já começa com ele. */
+function semTituloRepetido(mensagem: string, titulo: string): string {
+  if (!mensagem.toLowerCase().startsWith(titulo.toLowerCase())) return mensagem
+  const resto = mensagem.slice(titulo.length).replace(/^[\s,.:·-]+/, '')
+  return resto ? resto.charAt(0).toUpperCase() + resto.slice(1) : mensagem
 }

@@ -193,7 +193,7 @@ function medida(v: number | undefined, unidade?: string) {
   const n = fmtNumero(v, Number.isInteger(v) ? 0 : Math.abs(v) < 1 ? 2 : 1)
   if (!unidade) return n
   if (unidade === '%') return `${n}%`
-  if (unidade === 'horas') return `${n}h`
+  if (unidade === 'horas') return `${fmtNumero(v, Number.isInteger(v) ? 0 : 1)}h`
   return `${n} ${unidade}`
 }
 
