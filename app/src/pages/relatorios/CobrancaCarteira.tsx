@@ -123,7 +123,7 @@ export default function CobrancaCarteira() {
               definicao="Soma das parcelas vencidas e não pagas das cotas ativas (diferente do saldo devedor das cotas em atraso)."
             />
             <KpiCard
-              rotulo={`Recebimento do período (${etiquetaModo})`} icone={Banknote} valor={<span className="whitespace-nowrap">{fmtCompacto(recAtual, { moeda: true })}</span>} variacao={variacao(recAtual, recAnterior)} maiorE="melhor"
+              rotulo={`Recebimento (${etiquetaModo})`} icone={Banknote} valor={<span className="whitespace-nowrap">{fmtCompacto(recAtual, { moeda: true })}</span>} variacao={variacao(recAtual, recAnterior)} maiorE="melhor"
               sparkline={recSerie}
               detalhe={receb.dup ? (modo === 'corrigido' ? `Sem ${fmtCompacto(receb.dup.valor, { moeda: true })} de parcelas duplicadas` : `Inclui ${fmtCompacto(receb.dup.valor, { moeda: true })} de parcelas duplicadas`) : `${fmtNumero(receb.comp.atual.parcelas_pagas)} parcelas pagas`}
               definicao="Valor das parcelas pagas no período. Reportado: como está na tabela de parcelas. Corrigido: sem os lançamentos duplicados. Alterne a visão no card de recebimento."

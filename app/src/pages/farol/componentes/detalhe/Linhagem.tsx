@@ -6,7 +6,7 @@
 import { Background, BackgroundVariant, Controls, Handle, MarkerType, MiniMap, Panel, Position, ReactFlow, type Edge, type Node, type NodeProps, type ReactFlowInstance } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import { Database, FileBarChart, Focus, Maximize2 } from 'lucide-react'
-import { useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState, type CSSProperties } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { EmptyState, STATUS_INFO, statusDoSelo } from '@/components/dados'
 import { useTema } from '@/lib/tema'
@@ -199,6 +199,7 @@ function montar(linhagem: DadosLinhagem, tabela: string, cores: { vermelho: stri
   })
 
   const relatorios = [...jusante].filter((id) => porId.get(id)!.tipo === 'relatorio').length
+  const proximos = [...ids].filter((id) => Math.abs(coluna.get(id)! - colunaAtual) <= 2)
   return {
     nos,
     edges,
@@ -211,10 +212,10 @@ function montar(linhagem: DadosLinhagem, tabela: string, cores: { vermelho: stri
     },
     colunas: colunas.length,
     linhas: Math.max(...colunas.map((c) => c.length)),
-    // vizinhança direta (foco inicial quando o grafo completo ficaria ilegível)
-    foco: [tabela, ...(entrada.get(tabela) ?? []), ...(saida.get(tabela) ?? [])],
+    // vizinhança (até 2 colunas para cada lado): foco inicial quando o grafo completo ficaria ilegível
+    foco: proximos,
     alturaFoco: (() => {
-      const ys = [tabela, ...(entrada.get(tabela) ?? []), ...(saida.get(tabela) ?? [])].map((id) => linha.get(id) ?? 0)
+      const ys = proximos.map((id) => linha.get(id) ?? 0)
       return (Math.max(...ys) - Math.min(...ys)) * PASSO_Y + ALTURA
     })(),
   }
@@ -275,7 +276,7 @@ export function LinhagemFluxo({ linhagem, tabela }: { linhagem: DadosLinhagem; t
           edges={grafo.edges}
           nodeTypes={TIPOS}
           forceColorMode={tema === 'escuro' ? 'dark' : 'light'}
-          style={{ background: 'transparent' }}
+          style={{ '--xy-background-color': 'transparent', '--xy-attribution-background-color': 'transparent' } as CSSProperties}
           fitView
           fitViewOptions={focado ? opcoesFoco : opcoesTudo}
           onInit={(i) => {
