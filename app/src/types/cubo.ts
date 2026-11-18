@@ -38,6 +38,7 @@ export interface DadosRelatorio {
  * Regra de filtros (válida para todos os relatórios):
  * - filtro de dimensão presente no cubo: aplica nativamente;
  * - filtro de UF em cubo que só tem `regional`: filtra a regional da UF e multiplica as medidas por meta.pesos_uf[uf];
+ * - cubo sem `uf` e sem `regional`: multiplica por meta.pesos_regional[regional] (e por pesos_uf[uf], se houver UF);
  * - filtro de regional em cubo que só tem `uf`: mapeia UF -> regional via meta.ufs;
  * - razões (ticket médio, TMA, % inadimplência, NPS) NUNCA vêm prontas: são calculadas no front a partir de
  *   numerador e denominador aditivos.

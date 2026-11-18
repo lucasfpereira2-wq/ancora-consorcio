@@ -22,6 +22,8 @@ export interface Meta {
   ufs: { sigla: string; nome: string; regional: string }[];
   /** participação da UF dentro da sua regional (soma 1 por regional); usada para alocar cubos sem dimensão uf */
   pesos_uf: Record<string, number>;
+  /** participação de cada regional no total (soma 1); usada em cubos sem uf nem regional (ex.: Atendimento) */
+  pesos_regional: Record<string, number>;
   relatorios: { id: string; titulo: string; rota: string; mart: string }[];
 }
 
