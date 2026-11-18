@@ -9,10 +9,10 @@ import type { Saude, Selo, Status } from '@/types/governanca'
 
 const ROTULO_SELO: Record<Selo['nivel'], string> = { confiavel: 'Confiável', atencao: 'Atenção', critico: 'Problema crítico' }
 
-/** Primeira frase da mensagem do selo (ponto final seguido de maiúscula), para caber no card. */
-function primeiraFrase(texto: string): string {
-  const m = texto.match(/^[\s\S]*?[.!?](?=\s+[A-ZÀ-Ú]|$)/)
-  return (m ? m[0] : texto).trim()
+/** Primeiras frases da mensagem do selo (ponto final seguido de maiúscula), para caber no card. */
+function primeirasFrases(texto: string, n: number): string {
+  const frases = texto.split(/(?<=[.!?])\s+(?=[A-ZÀ-Ú])/)
+  return frases.slice(0, n).join(' ').trim()
 }
 
 /** Os relatórios e o nível de confiança de cada um (atalho para os relatórios). */
@@ -39,8 +39,8 @@ export function ConfiancaRelatorios({ selos }: { selos: Record<string, Selo> | n
                 {selo && status ? <StatusBadge status={status} rotulo={ROTULO_SELO[selo.nivel]} tamanho="sm" className="ml-auto" /> : <span className="ml-auto text-xs text-muted-foreground">Selo indisponível</span>}
               </div>
               {selo && (
-                <p className="relative mt-1.5 line-clamp-4 text-[13px] leading-snug text-muted-foreground">
-                  <TextoComTabelas texto={selo.nivel === 'confiavel' ? primeiraFrase(selo.mensagem) : selo.mensagem} tabelas={[...selo.tabelas_fonte, ...selo.problemas.map((p) => p.tabela)]} />
+                <p className="relative mt-1.5 line-clamp-5 text-[13px] leading-snug text-muted-foreground">
+                  <TextoComTabelas texto={primeirasFrases(selo.mensagem, selo.nivel === 'confiavel' ? 1 : 2)} tabelas={[...selo.tabelas_fonte, ...selo.problemas.map((p) => p.tabela)]} />
                 </p>
               )}
               {selo && (

@@ -2,7 +2,6 @@ name: Publicar Hub Âncora no GitHub Pages
 
 on:
   push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -44,6 +43,8 @@ jobs:
           path: app/dist
 
   deploy:
+    # publica apenas a partir da branch padrão do repositório
+    if: github.ref_name == github.event.repository.default_branch
     needs: build
     runs-on: ubuntu-latest
     environment:

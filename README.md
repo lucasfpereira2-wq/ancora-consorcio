@@ -113,7 +113,7 @@ Os JSONs já estão versionados em `app/public/data`, então o passo 1 só é ne
 
 ## Publicação
 
-O workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) valida os dados, faz o build e publica no GitHub Pages a cada push na branch `main`. Para ativar: **Settings → Pages → Source: GitHub Actions**.
+O workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) valida os dados e faz o build a cada push, e publica no GitHub Pages quando o push é na branch padrão do repositório. Para ativar: **Settings → Pages → Source: GitHub Actions**.
 
 ## Estrutura do repositório
 
