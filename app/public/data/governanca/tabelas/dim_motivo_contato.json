@@ -481,19 +481,19 @@
    {
     "valores": [
      31,
-     "Oferta de lance",
-     "Cadastro",
+     "Reajuste da parcela",
+     "Contemplação",
      "Dados pessoais",
-     "Operações de Assembleias",
+     "Cadastro & CRM",
      "S"
     ]
    },
    {
     "valores": [
      32,
-     "Alteração cadastral",
-     "Contemplação",
-     "Dados pessoais",
+     "Cancelamento de cota",
+     "Financeiro",
+     "Lance",
      "Operações de Assembleias",
      "S"
     ]
@@ -501,10 +501,10 @@
    {
     "valores": [
      33,
-     "Extrato da cota",
-     "Contemplação",
-     "Boleto",
-     "Cadastro & CRM",
+     "Oferta de lance",
+     "Financeiro",
+     "Crédito",
+     "Crédito & Cobrança",
      "S"
     ]
    },
@@ -512,15 +512,25 @@
     "valores": [
      34,
      "Segunda via de boleto",
-     "Financeiro",
+     "Cadastro",
      "Boleto",
-     "Operações de Assembleias",
+     "Cadastro & CRM",
      "S"
     ]
    },
    {
     "valores": [
      35,
+     "Dúvida sobre contemplação",
+     "Financeiro",
+     "Lance",
+     "Cadastro & CRM",
+     "S"
+    ]
+   },
+   {
+    "valores": [
+     36,
      "Transferência de cota",
      "Cadastro",
      "Crédito",
@@ -530,29 +540,9 @@
    },
    {
     "valores": [
-     36,
-     "Negociação de parcelas em atraso",
-     "Cadastro",
-     "Acordo",
-     "Operações de Assembleias",
-     "S"
-    ]
-   },
-   {
-    "valores": [
      37,
-     "Extrato da cota",
-     "Contemplação",
-     "Crédito",
-     "Operações de Assembleias",
-     "S"
-    ]
-   },
-   {
-    "valores": [
-     38,
      "Dúvida sobre contemplação",
-     "Financeiro",
+     "Cadastro",
      "Dados pessoais",
      "Crédito & Cobrança",
      "S"
@@ -560,11 +550,21 @@
    },
    {
     "valores": [
+     38,
+     "Transferência de cota",
+     "Pós-venda",
+     "Boleto",
+     "Cadastro & CRM",
+     "N"
+    ]
+   },
+   {
+    "valores": [
      39,
-     "Segunda via de boleto",
-     "Contemplação",
-     "Crédito",
-     "Operações de Assembleias",
+     "Oferta de lance",
+     "Pós-venda",
+     "Lance",
+     "Cadastro & CRM",
      "S"
     ]
    },
@@ -572,10 +572,10 @@
     "valores": [
      40,
      "Dúvida sobre contemplação",
-     "Cobrança",
-     "Lance",
-     "Operações de Assembleias",
-     "N"
+     "Financeiro",
+     "Dados pessoais",
+     "Crédito & Cobrança",
+     "S"
     ]
    }
   ]

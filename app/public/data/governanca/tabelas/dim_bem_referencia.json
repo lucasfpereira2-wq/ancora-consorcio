@@ -519,121 +519,121 @@
    {
     "valores": [
      40,
-     "B3492",
+     "B4626",
      "Automóvel hatch 1.0",
-     "Pesada",
-     95000.0,
-     "IPCA",
-     "S",
-     "2026-11-12 20:37:23"
+     "Auto",
+     150000.0,
+     "FIPE",
+     "N",
+     "2026-11-14 18:55:37"
     ]
    },
    {
     "valores": [
      41,
-     "B1688",
-     "Trator agrícola 110 cv",
-     "Serviços",
-     95000.0,
-     "INCC",
+     "B6945",
+     "Imóvel residencial R$ 300 mil",
+     "Imóvel",
+     240000.0,
+     "FIPE",
      "S",
-     "2026-11-12 08:42:33"
+     "2026-11-14 17:07:42"
     ]
    },
    {
     "valores": [
      42,
-     "B9572",
+     "B9591",
      "Imóvel residencial R$ 300 mil",
-     "Pesada",
-     180000.0,
-     "INCC",
-     "N",
-     "2026-11-14 10:25:29"
+     "Imóvel",
+     150000.0,
+     "IPCA",
+     "S",
+     "2026-11-13 21:02:12"
     ]
    },
    {
     "valores": [
      43,
-     "B8754",
+     "B7593",
      "Imóvel residencial R$ 500 mil",
-     "Imóvel",
-     420000.0,
-     "IPCA",
-     "S",
-     "2026-11-13 13:06:34"
+     "Serviços",
+     180000.0,
+     "INCC",
+     "N",
+     "2026-11-12 15:16:20"
     ]
    },
    {
     "valores": [
      44,
-     "B1409",
-     "Imóvel residencial R$ 500 mil",
+     "B7727",
+     "Imóvel residencial R$ 300 mil",
      "Serviços",
-     420000.0,
-     "INCC",
-     "S",
-     "2026-11-12 18:47:16"
+     45000.0,
+     "IPCA",
+     "N",
+     "2026-11-12 08:53:48"
     ]
    },
    {
     "valores": [
      45,
-     "B2045",
-     "Imóvel residencial R$ 500 mil",
-     "Serviços",
-     420000.0,
-     "FIPE",
+     "B5210",
+     "Trator agrícola 110 cv",
+     "Pesada",
+     150000.0,
+     "INCC",
      "N",
-     "2026-11-12 20:14:25"
+     "2026-11-13 19:37:11"
     ]
    },
    {
     "valores": [
      46,
-     "B6189",
-     "Imóvel residencial R$ 500 mil",
-     "Serviços",
+     "B7598",
+     "SUV compacto",
+     "Auto",
      180000.0,
      "FIPE",
-     "N",
-     "2026-11-12 12:34:16"
+     "S",
+     "2026-11-13 20:54:49"
     ]
    },
    {
     "valores": [
      47,
-     "B9599",
-     "SUV compacto",
-     "Imóvel",
-     120000.0,
+     "B7375",
+     "Imóvel residencial R$ 500 mil",
+     "Auto",
+     180000.0,
      "FIPE",
      "S",
-     "2026-11-14 21:31:24"
+     "2026-11-12 07:43:33"
     ]
    },
    {
     "valores": [
      48,
-     "B3723",
-     "Trator agrícola 110 cv",
-     "Serviços",
-     300000.0,
-     "IPCA",
-     "S",
-     "2026-11-14 11:27:42"
+     "B2440",
+     "Caminhão semipesado 6x2",
+     "Pesada",
+     95000.0,
+     "INCC",
+     "N",
+     "2026-11-13 15:10:45"
     ]
    },
    {
     "valores": [
      49,
-     "B8269",
-     "Caminhão semipesado 6x2",
-     "Imóvel",
-     95000.0,
-     "IPCA",
-     "N",
-     "2026-11-12 15:14:10"
+     "B7792",
+     "SUV compacto",
+     "Serviços",
+     300000.0,
+     "INCC",
+     "S",
+     "2026-11-13 13:42:46"
     ]
    }
   ]

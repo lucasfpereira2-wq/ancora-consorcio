@@ -13,7 +13,7 @@
  "status": "vermelho",
  "motivo_status": "Sem atualização há 3 dias: depende de `stg_telefonia_cdr`, que está parada",
  "tem_pk": true,
- "saude": 27.0,
+ "saude": 15.0,
  "ultima_carga": "2026-11-13T03:00:19-03:00",
  "atraso_horas": 77.0,
  "linhas": 1745037,

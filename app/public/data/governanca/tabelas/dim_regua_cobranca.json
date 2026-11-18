@@ -513,8 +513,8 @@
     "valores": [
      1,
      "Lembrete pré-vencimento",
-     80,
-     88,
+     73,
+     52,
      "Régua digital (SMS/e-mail)",
      "Enviar SMS e e-mail",
      "S"
@@ -524,8 +524,8 @@
     "valores": [
      2,
      "Aviso D+3",
-     11,
-     51,
+     80,
+     94,
      "WhatsApp",
      "Mensagem no WhatsApp",
      "S"
@@ -535,8 +535,8 @@
     "valores": [
      3,
      "Contato D+10",
-     44,
-     44,
+     51,
+     39,
      "Central de cobrança",
      "Ligação da central",
      "S"
@@ -546,8 +546,8 @@
     "valores": [
      4,
      "Negociação D+30",
-     74,
-     37,
+     73,
+     11,
      "Assessoria externa",
      "Proposta de acordo",
      "S"
@@ -557,8 +557,8 @@
     "valores": [
      5,
      "Assessoria D+60",
-     65,
-     33,
+     74,
+     37,
      "Negativação",
      "Encaminhar para assessoria",
      "S"
@@ -568,8 +568,8 @@
     "valores": [
      6,
      "Negativação D+90",
-     51,
-     86,
+     76,
+     6,
      "Régua digital (SMS/e-mail)",
      "Incluir em órgão de proteção ao crédito",
      "N"
@@ -579,8 +579,8 @@
     "valores": [
      7,
      "Lembrete pré-vencimento",
-     8,
-     10,
+     53,
+     51,
      "WhatsApp",
      "Enviar SMS e e-mail",
      "S"
@@ -590,8 +590,8 @@
     "valores": [
      8,
      "Aviso D+3",
-     64,
-     67,
+     86,
+     52,
      "Central de cobrança",
      "Mensagem no WhatsApp",
      "S"

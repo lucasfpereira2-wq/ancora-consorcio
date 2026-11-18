@@ -13,7 +13,7 @@
  "status": "amarelo",
  "motivo_status": "6,2% dos telefones fora do padrão (DDD ausente ou tamanho inválido)",
  "tem_pk": true,
- "saude": 70.4,
+ "saude": 52.8,
  "ultima_carga": "2026-11-17T01:40:59-03:00",
  "atraso_horas": 0.0,
  "linhas": 1124665,
@@ -556,40 +556,40 @@
    {
     "valores": [
      5000000,
-     318521,
+     318619,
      "Celular",
-     "(11) 9****-4219",
-     null,
+     "(11) 9****-6105",
+     "p***@exemplo.com.br",
      "S",
      "S",
      "S",
-     "2026-11-15 11:35:42"
+     "2026-11-16 09:25:19"
     ]
    },
    {
     "valores": [
      5000001,
-     318515,
-     "Celular",
-     "(21) 9****-8354",
-     "p***@correio.example",
+     318684,
+     "E-mail",
+     "(11) 9****-3385",
+     "l***@exemplo.com.br",
+     "S",
      "S",
      "N",
-     "S",
-     "2026-11-16 08:03:10"
+     "2026-11-16 07:07:03"
     ]
    },
    {
     "valores": [
      5000002,
-     318743,
+     318483,
      "Celular",
      "9****-1187",
-     "r***@exemplo.com.br",
+     null,
      "S",
      "S",
      "S",
-     "2026-11-16 11:33:28"
+     "2026-11-16 10:38:36"
     ],
     "problema": "Telefone fora do padrão (DDD ausente ou tamanho inválido)",
     "colunas_problema": [
@@ -599,53 +599,53 @@
    {
     "valores": [
      5000003,
-     318730,
-     "Fixo",
-     "(31) 9****-8467",
+     318750,
+     "E-mail",
      null,
+     "a***@exemplo.com.br",
      "N",
      "S",
-     "S",
-     "2026-11-15 13:25:11"
+     "N",
+     "2026-11-16 14:56:28"
     ]
    },
    {
     "valores": [
      5000004,
-     318612,
-     "Fixo",
-     "(19) 9****-1480",
-     "e***@empresa.example",
-     "S",
-     "S",
-     "S",
-     "2026-11-14 18:14:30"
+     318555,
+     "E-mail",
+     "(62) 9****-7624",
+     null,
+     "N",
+     "N",
+     "N",
+     "2026-11-14 08:01:27"
     ]
    },
    {
     "valores": [
      5000005,
-     318722,
-     "E-mail",
-     "(62) 9****-1235",
+     318540,
+     "Celular",
      null,
-     "N",
+     "d***@correio.example",
      "S",
      "S",
-     "2026-11-16 17:26:02"
+     "S",
+     "2026-11-14 15:48:38"
     ]
    },
    {
     "valores": [
      5000006,
-     318654,
-     "E-mail",
+     318737,
+     "Fixo",
      "(62) 3***-12",
-     "g***@correio.example",
+     "d***@exemplo.com.br",
+     "S",
      "N",
      "S",
-     "S",
-     "2026-11-16 20:31:52"
+     "2026-11-15 07:57:31"
     ],
     "problema": "Telefone fora do padrão (DDD ausente ou tamanho inválido)",
     "colunas_problema": [
@@ -655,53 +655,53 @@
    {
     "valores": [
      5000007,
-     318410,
-     "Celular",
-     "(41) 9****-3232",
-     "f***@exemplo.com.br",
+     318659,
+     "E-mail",
+     "(19) 9****-8920",
+     "g***@correio.example",
+     "N",
      "S",
      "S",
-     "S",
-     "2026-11-14 11:21:36"
+     "2026-11-16 20:31:52"
     ]
    },
    {
     "valores": [
      5000008,
-     318452,
+     318471,
      "Celular",
+     "(19) 9****-6522",
      null,
-     "p***@exemplo.com.br",
+     "S",
      "S",
      "N",
-     "N",
-     "2026-11-16 12:01:08"
+     "2026-11-14 12:09:07"
     ]
    },
    {
     "valores": [
      5000009,
-     318746,
-     "E-mail",
-     null,
-     "e***@exemplo.com.br",
+     318473,
+     "Celular",
+     "(51) 9****-6782",
+     "b***@empresa.example",
      "S",
-     "N",
-     "N",
-     "2026-11-16 21:16:03"
+     "S",
+     "S",
+     "2026-11-15 13:36:50"
     ]
    },
    {
     "valores": [
      5000010,
-     318606,
-     "Celular",
-     "(81) 9****-3036",
-     "r***@empresa.example",
+     318726,
+     "Fixo",
+     null,
+     null,
      "S",
-     "N",
      "S",
-     "2026-11-14 20:29:37"
+     "S",
+     "2026-11-16 12:58:37"
     ]
    }
   ]

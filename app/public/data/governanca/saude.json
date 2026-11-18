@@ -1,127 +1,127 @@
 {
- "indice_geral": 79.3,
- "variacao_7d": -11.7,
- "variacao_30d": -15.0,
+ "indice_geral": 71.5,
+ "variacao_7d": -16.1,
+ "variacao_30d": -18.6,
  "tendencia_30d": [
   {
    "data": "2026-10-19",
-   "indice": 94.3
+   "indice": 90.1
   },
   {
    "data": "2026-10-20",
-   "indice": 93.6
+   "indice": 89.2
   },
   {
    "data": "2026-10-21",
-   "indice": 94.2
+   "indice": 90.0
   },
   {
    "data": "2026-10-22",
-   "indice": 92.1
+   "indice": 86.5
   },
   {
    "data": "2026-10-23",
-   "indice": 91.7
+   "indice": 86.2
   },
   {
    "data": "2026-10-24",
-   "indice": 94.1
+   "indice": 89.9
   },
   {
    "data": "2026-10-25",
-   "indice": 94.1
+   "indice": 89.9
   },
   {
    "data": "2026-10-26",
-   "indice": 93.6
+   "indice": 89.1
   },
   {
    "data": "2026-10-27",
-   "indice": 92.5
+   "indice": 87.9
   },
   {
    "data": "2026-10-28",
-   "indice": 94.0
+   "indice": 89.9
   },
   {
    "data": "2026-10-29",
-   "indice": 91.5
+   "indice": 86.5
   },
   {
    "data": "2026-10-30",
-   "indice": 94.1
+   "indice": 89.9
   },
   {
    "data": "2026-10-31",
-   "indice": 94.1
+   "indice": 89.9
   },
   {
    "data": "2026-11-01",
-   "indice": 94.1
+   "indice": 89.9
   },
   {
    "data": "2026-11-02",
-   "indice": 94.1
+   "indice": 89.9
   },
   {
    "data": "2026-11-03",
-   "indice": 91.7
+   "indice": 88.4
   },
   {
    "data": "2026-11-04",
-   "indice": 89.4
+   "indice": 85.4
   },
   {
    "data": "2026-11-05",
-   "indice": 91.9
+   "indice": 88.6
   },
   {
    "data": "2026-11-06",
-   "indice": 92.1
+   "indice": 89.1
   },
   {
    "data": "2026-11-07",
-   "indice": 92.2
+   "indice": 89.1
   },
   {
    "data": "2026-11-08",
-   "indice": 91.7
+   "indice": 88.3
   },
   {
    "data": "2026-11-09",
-   "indice": 91.9
+   "indice": 88.6
   },
   {
    "data": "2026-11-10",
-   "indice": 91.0
+   "indice": 87.6
   },
   {
    "data": "2026-11-11",
-   "indice": 91.6
+   "indice": 88.1
   },
   {
    "data": "2026-11-12",
-   "indice": 90.8
+   "indice": 87.0
   },
   {
    "data": "2026-11-13",
-   "indice": 90.8
+   "indice": 87.0
   },
   {
    "data": "2026-11-14",
-   "indice": 87.5
+   "indice": 82.5
   },
   {
    "data": "2026-11-15",
-   "indice": 86.8
+   "indice": 82.2
   },
   {
    "data": "2026-11-16",
-   "indice": 86.4
+   "indice": 81.6
   },
   {
    "data": "2026-11-17",
-   "indice": 79.3
+   "indice": 71.5
   }
  ],
  "dimensoes": [
@@ -154,7 +154,7 @@
  "por_dominio": [
   {
    "dominio": "Staging",
-   "indice": 77.8,
+   "indice": 71.5,
    "tabelas": 14,
    "vermelho": 4,
    "amarelo": 1,
@@ -162,7 +162,7 @@
   },
   {
    "dominio": "Cadastro",
-   "indice": 74.6,
+   "indice": 62.6,
    "tabelas": 7,
    "vermelho": 1,
    "amarelo": 3,
@@ -170,7 +170,7 @@
   },
   {
    "dominio": "Produto",
-   "indice": 92.5,
+   "indice": 89.9,
    "tabelas": 5,
    "vermelho": 0,
    "amarelo": 1,
@@ -178,7 +178,7 @@
   },
   {
    "dominio": "Grupos e Cotas",
-   "indice": 86.1,
+   "indice": 81.2,
    "tabelas": 7,
    "vermelho": 1,
    "amarelo": 1,
@@ -186,7 +186,7 @@
   },
   {
    "dominio": "Vendas",
-   "indice": 85.0,
+   "indice": 76.9,
    "tabelas": 10,
    "vermelho": 0,
    "amarelo": 4,
@@ -194,7 +194,7 @@
   },
   {
    "dominio": "Financeiro e Cobrança",
-   "indice": 78.6,
+   "indice": 69.0,
    "tabelas": 11,
    "vermelho": 1,
    "amarelo": 4,
@@ -202,7 +202,7 @@
   },
   {
    "dominio": "Assembleias",
-   "indice": 95.1,
+   "indice": 93.2,
    "tabelas": 6,
    "vermelho": 0,
    "amarelo": 1,
@@ -210,7 +210,7 @@
   },
   {
    "dominio": "Atendimento",
-   "indice": 66.0,
+   "indice": 55.6,
    "tabelas": 10,
    "vermelho": 3,
    "amarelo": 2,
@@ -218,7 +218,7 @@
   },
   {
    "dominio": "Corporativo",
-   "indice": 91.4,
+   "indice": 86.4,
    "tabelas": 4,
    "vermelho": 0,
    "amarelo": 1,
@@ -226,7 +226,7 @@
   },
   {
    "dominio": "Marts",
-   "indice": 63.0,
+   "indice": 49.2,
    "tabelas": 6,
    "vermelho": 2,
    "amarelo": 3,
@@ -236,7 +236,7 @@
  "por_camada": [
   {
    "camada": "staging",
-   "indice": 77.8,
+   "indice": 71.5,
    "tabelas": 14,
    "vermelho": 4,
    "amarelo": 1,
@@ -244,7 +244,7 @@
   },
   {
    "camada": "core",
-   "indice": 82.0,
+   "indice": 74.5,
    "tabelas": 60,
    "vermelho": 6,
    "amarelo": 17,
@@ -252,7 +252,7 @@
   },
   {
    "camada": "mart",
-   "indice": 63.0,
+   "indice": 49.2,
    "tabelas": 6,
    "vermelho": 2,
    "amarelo": 3,
@@ -298,86 +298,86 @@
   {
    "nome": "Fator de risco do farol",
    "peso": 0,
-   "descricao": "Multiplicador aplicado ao resultado da tabela: x0,72 quando o farol está amarelo e x0,45 quando está vermelho. O índice geral, por domínio e por camada é a média das tabelas ponderada pela criticidade (alta 3, média 2, baixa 1)."
+   "descricao": "Multiplicador aplicado ao resultado da tabela: x0,54 quando o farol está amarelo e x0,25 quando está vermelho. O índice geral, por domínio e por camada é a média das tabelas ponderada pela criticidade (alta 3, média 2, baixa 1)."
   }
  ],
  "projecao_90d": [
   {
    "dia": 0,
-   "indice": 79.3
+   "indice": 71.5
   },
   {
    "dia": 5,
-   "indice": 79.9
+   "indice": 72.5
   },
   {
    "dia": 10,
-   "indice": 80.5
+   "indice": 73.4
   },
   {
    "dia": 15,
-   "indice": 81.1,
+   "indice": 74.4,
    "marco": "Inventário concluído"
   },
   {
    "dia": 20,
-   "indice": 81.9
+   "indice": 75.7
   },
   {
    "dia": 25,
-   "indice": 82.7
+   "indice": 77.0
   },
   {
    "dia": 30,
-   "indice": 83.5,
+   "indice": 78.3,
    "marco": "Donos e SLAs definidos"
   },
   {
    "dia": 35,
-   "indice": 84.5
+   "indice": 79.9
   },
   {
    "dia": 40,
-   "indice": 85.5
+   "indice": 81.5
   },
   {
    "dia": 45,
-   "indice": 86.5,
+   "indice": 83.2,
    "marco": "PKs padronizadas"
   },
   {
    "dia": 50,
-   "indice": 87.4
+   "indice": 84.6
   },
   {
    "dia": 55,
-   "indice": 88.3
+   "indice": 86.1
   },
   {
    "dia": 60,
-   "indice": 89.2,
+   "indice": 87.5,
    "marco": "Testes automatizados em tabelas críticas"
   },
   {
    "dia": 65,
-   "indice": 89.8
+   "indice": 88.4
   },
   {
    "dia": 70,
-   "indice": 90.4
+   "indice": 89.4
   },
   {
    "dia": 75,
-   "indice": 91.0,
+   "indice": 90.4,
    "marco": "Alertas e catálogo no ar"
   },
   {
    "dia": 80,
-   "indice": 91.3
+   "indice": 90.9
   },
   {
    "dia": 85,
-   "indice": 91.7
+   "indice": 91.5
   },
   {
    "dia": 90,

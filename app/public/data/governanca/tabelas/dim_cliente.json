@@ -13,7 +13,7 @@
  "status": "vermelho",
  "motivo_status": "18% de nulos em `cpf_cliente` nos cadastros do canal Parceiro (4,1% do total)",
  "tem_pk": true,
- "saude": 42.3,
+ "saude": 23.5,
  "ultima_carga": "2026-11-17T01:40:34-03:00",
  "atraso_horas": 0.0,
  "linhas": 591929,
@@ -589,49 +589,49 @@
    {
     "valores": [
      318400,
-     902492,
-     "***.384.***-78",
-     "Rodrigo Q. Moraes",
+     902233,
+     "***.885.***-70",
+     "Antônio M. Vieira",
      "PF",
-     "**/**/1998",
-     "Digital",
-     "MT",
-     "Centro-Oeste",
-     "S",
-     "2024-04-10",
-     "2026-11-16 11:55:11"
+     "**/**/1980",
+     "Representante",
+     "PE",
+     "Norte e Nordeste",
+     "N",
+     "2024-06-19",
+     "2026-11-14 20:24:06"
     ]
    },
    {
     "valores": [
      318401,
-     902417,
-     "***.400.***-82",
-     "Rodrigo S. Silveira",
+     902322,
+     "***.434.***-98",
+     "Luiz Henrique M. Silveira",
      "PF",
-     "**/**/1958",
+     "**/**/1987",
      "Digital",
-     "RJ",
-     "Sudeste",
+     "MT",
+     "Centro-Oeste",
      "S",
-     "2025-01-27",
-     "2026-11-16 14:47:18"
+     "2026-08-17",
+     "2026-11-15 08:31:16"
     ]
    },
    {
     "valores": [
      318402,
-     902317,
+     902309,
      null,
-     "Juliana R. Monteiro",
+     "Marcelo M. Macedo",
      "PF",
-     "**/**/1995",
+     "**/**/1959",
      "Parceiro",
-     "SP",
-     "São Paulo",
-     "N",
-     "2026-05-25",
-     "2026-11-14 14:30:20"
+     "PE",
+     "Norte e Nordeste",
+     "S",
+     "2023-05-07",
+     "2026-11-15 11:40:26"
     ],
     "problema": "CPF ausente em cadastro do canal Parceiro",
     "colunas_problema": [
@@ -641,65 +641,65 @@
    {
     "valores": [
      318403,
-     902301,
-     "***.658.***-20",
-     "Gustavo Q. Rezende",
-     "PJ",
-     "**/**/1965",
-     "Representante",
-     "SP",
-     "São Paulo",
+     902470,
+     "***.367.***-88",
+     "Mariana A. Siqueira",
+     "PF",
+     "**/**/1996",
+     "Parceiro",
+     "PR",
+     "Sul",
      "N",
-     "2024-11-09",
-     "2026-11-16 09:34:42"
+     "2026-03-30",
+     "2026-11-14 12:19:48"
     ]
    },
    {
     "valores": [
      318404,
-     902433,
-     "***.556.***-77",
-     "Patrícia C. Siqueira",
+     902161,
+     "***.620.***-28",
+     "Ana Paula B. Antunes",
      "PF",
-     "**/**/1970",
-     "Parceiro",
-     "SC",
-     "Sul",
-     "S",
-     "2024-08-04",
-     "2026-11-14 18:16:35"
+     "**/**/1969",
+     "Loja",
+     "CE",
+     "Norte e Nordeste",
+     "N",
+     "2025-08-06",
+     "2026-11-16 14:48:09"
     ]
    },
    {
     "valores": [
      318405,
-     902489,
-     "***.603.***-12",
-     "Camila Q. Rezende",
-     "PJ",
-     "**/**/1996",
-     "Parceiro",
-     "SC",
-     "Sul",
+     902197,
+     "***.953.***-60",
+     "Larissa F. Moraes",
+     "PF",
+     "**/**/1974",
+     "Digital",
+     "MT",
+     "Centro-Oeste",
      "S",
-     "2026-09-17",
-     "2026-11-16 20:52:42"
+     "2024-09-19",
+     "2026-11-14 15:18:34"
     ]
    },
    {
     "valores": [
      318406,
-     902494,
+     902111,
      null,
-     "Antônio T. Teixeira",
-     "PJ",
-     "**/**/1985",
+     "Paulo Sérgio S. Antunes",
+     "PF",
+     "**/**/1967",
      "Parceiro",
-     "SP",
-     "São Paulo",
+     "SC",
+     "Sul",
      "S",
-     "2024-06-24",
-     "2026-11-14 15:35:59"
+     "2026-04-28",
+     "2026-11-14 08:32:29"
     ],
     "problema": "CPF ausente em cadastro do canal Parceiro",
     "colunas_problema": [
@@ -709,33 +709,33 @@
    {
     "valores": [
      318407,
-     902229,
-     "***.196.***-89",
-     "Ana Paula M. Rezende",
+     902316,
+     "***.145.***-29",
+     "José Roberto F. Antunes",
      "PF",
-     "**/**/1998",
+     "**/**/1962",
      "Digital",
-     "PR",
-     "Sul",
+     "SP",
+     "São Paulo",
      "S",
-     "2026-01-13",
-     "2026-11-16 14:19:02"
+     "2024-11-15",
+     "2026-11-14 13:40:20"
     ]
    },
    {
     "valores": [
      318408,
-     null,
-     "***.790.***-57",
-     "Ricardo S. Macedo",
+     902274,
+     "***.491.***-34",
+     "José Roberto P. Macedo",
      "PF",
-     "**/**/1986",
-     "Digital",
-     "BA",
-     "Norte e Nordeste",
+     "**/**/1968",
+     "Representante",
+     "MT",
+     "Centro-Oeste",
      "S",
-     "2025-03-24",
-     "2026-11-14 14:19:56"
+     "2026-04-23",
+     "2026-11-15 13:28:43"
     ]
    }
   ]

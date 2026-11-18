@@ -13,7 +13,7 @@
  "status": "amarelo",
  "motivo_status": "Última carga com 9 horas de atraso em relação ao SLA",
  "tem_pk": true,
- "saude": 61.3,
+ "saude": 45.9,
  "ultima_carga": "2026-11-16T13:50:55-03:00",
  "atraso_horas": 9.0,
  "linhas": 11146,
@@ -568,23 +568,23 @@
    {
     "valores": [
      5000000,
-     24756,
-     "Alienação fiduciária",
-     "Automóvel hatch 1.0",
-     240000.0,
+     24761,
+     "Fiança",
+     "Imóvel residencial R$ 300 mil",
+     45000.0,
      "S",
      "Em análise",
-     "2026-10-23"
+     "2026-11-01"
     ]
    },
    {
     "valores": [
      5000001,
-     25003,
-     "Fiança",
-     "Imóvel residencial R$ 300 mil",
-     80000.0,
-     "S",
+     24824,
+     "Alienação fiduciária",
+     "Caminhão semipesado 6x2",
+     420000.0,
+     "N",
      "Ativo",
      null
     ]
@@ -592,21 +592,33 @@
    {
     "valores": [
      5000002,
-     24753,
+     24780,
      "Alienação fiduciária",
-     "Caminhão semipesado 6x2",
-     180000.0,
+     "Imóvel residencial R$ 300 mil",
+     300000.0,
      "S",
      "Ativo",
-     "2026-11-10"
+     null
     ]
    },
    {
     "valores": [
      5000003,
-     24927,
+     24906,
      "Alienação fiduciária",
-     "Imóvel residencial R$ 300 mil",
+     "Automóvel hatch 1.0",
+     420000.0,
+     "S",
+     "Encerrado",
+     "2026-11-01"
+    ]
+   },
+   {
+    "valores": [
+     5000004,
+     24716,
+     "Alienação fiduciária",
+     "Trator agrícola 110 cv",
      420000.0,
      "S",
      "Ativo",
@@ -615,50 +627,38 @@
    },
    {
     "valores": [
-     5000004,
-     24939,
-     "Alienação fiduciária",
-     "Automóvel hatch 1.0",
+     5000005,
+     24847,
+     "Fiança",
+     "Imóvel residencial R$ 500 mil",
      420000.0,
      "S",
-     "Em análise",
-     "2026-11-02"
-    ]
-   },
-   {
-    "valores": [
-     5000005,
-     25026,
-     "Fiança",
-     "Caminhão semipesado 6x2",
-     60000.0,
-     "S",
      "Ativo",
-     "2026-10-31"
+     "2026-11-12"
     ]
    },
    {
     "valores": [
      5000006,
-     24793,
-     "Alienação fiduciária",
-     "Caminhão semipesado 6x2",
-     45000.0,
+     25052,
+     "Fiança",
+     "Automóvel hatch 1.0",
+     180000.0,
      "S",
-     "Em análise",
+     "Encerrado",
      "2026-10-26"
     ]
    },
    {
     "valores": [
      5000007,
-     24941,
-     "Alienação fiduciária",
-     "Imóvel residencial R$ 500 mil",
-     45000.0,
+     24964,
+     "Fiança",
+     "Caminhão semipesado 6x2",
+     60000.0,
      "S",
      "Ativo",
-     null
+     "2026-10-31"
     ]
    }
   ]

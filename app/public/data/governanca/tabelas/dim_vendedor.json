@@ -563,71 +563,84 @@
    {
     "valores": [
      210,
-     null,
-     24,
-     "Larissa M. Teixeira",
+     653,
+     18,
+     "Luiz Henrique M. Monteiro",
      "Próprio",
-     "Representante",
-     "Centro-Oeste",
-     "S",
-     "2026-10-24"
+     "Loja",
+     "Sudeste",
+     "N",
+     "2026-11-11"
     ]
    },
    {
     "valores": [
      211,
-     667,
-     12,
-     "Aline B. Macedo",
+     932,
+     22,
+     "Marcelo M. Moraes",
      "Próprio",
-     "Digital",
-     "Sul",
-     "N",
-     "2026-11-16"
+     "Representante",
+     "Centro-Oeste",
+     "S",
+     "2026-10-25"
     ]
    },
    {
     "valores": [
      212,
-     null,
+     776,
      20,
-     "Renata M. Macedo",
+     "Ana Paula M. Vieira",
      "Próprio",
      "Parceiro",
-     "São Paulo",
+     "Norte e Nordeste",
      "S",
-     "2026-11-08"
+     "2026-11-02"
     ]
    },
    {
     "valores": [
      213,
-     656,
-     21,
-     "José Roberto Q. Rezende",
+     null,
+     9,
+     "Ana Paula M. Pacheco",
+     "Próprio",
      "Representante",
-     "Representante",
-     "Norte e Nordeste",
-     "S",
-     "2026-10-24"
+     "São Paulo",
+     "N",
+     "2026-10-26"
     ]
    },
    {
     "valores": [
      214,
-     null,
-     23,
-     "Fernanda B. Freitas",
+     821,
+     16,
+     "Beatriz F. Brandão",
      "Parceiro",
-     "Parceiro",
-     "São Paulo",
+     "Digital",
+     "Sudeste",
      "S",
-     "2026-11-04"
+     "2026-10-31"
     ]
    },
    {
     "valores": [
      215,
+     715,
+     12,
+     "Thiago M. Silveira",
+     "Parceiro",
+     "Digital",
+     "Centro-Oeste",
+     "S",
+     "2026-11-07"
+    ]
+   },
+   {
+    "valores": [
+     216,
      812,
      9,
      "Patrícia A. Rezende",
@@ -640,26 +653,13 @@
    },
    {
     "valores": [
-     216,
-     null,
-     31,
-     "Gustavo C. Antunes",
-     "Próprio",
-     "Representante",
-     "Sudeste",
-     "S",
-     "2026-11-02"
-    ]
-   },
-   {
-    "valores": [
      217,
-     1007,
-     17,
-     "Paulo Sérgio M. Queiroz",
-     "Parceiro",
-     "Parceiro",
-     "Norte e Nordeste",
+     972,
+     10,
+     "Carlos Eduardo F. Cardoso",
+     "Representante",
+     "Loja",
+     "Sudeste",
      "S",
      "2026-10-29"
     ]
@@ -667,14 +667,14 @@
    {
     "valores": [
      218,
-     850,
-     12,
-     "Mariana B. Siqueira",
+     872,
+     28,
+     "Luiz Henrique T. Antunes",
      "Parceiro",
-     "Loja",
-     "São Paulo",
-     "S",
-     "2026-11-16"
+     "Digital",
+     "Centro-Oeste",
+     "N",
+     "2026-10-23"
     ]
    }
   ]

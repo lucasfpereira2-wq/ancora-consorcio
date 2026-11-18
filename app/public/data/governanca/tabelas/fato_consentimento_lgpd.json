@@ -13,7 +13,7 @@
  "status": "amarelo",
  "motivo_status": "2,8% dos consentimentos sem `base_legal` informada",
  "tem_pk": true,
- "saude": 70.0,
+ "saude": 52.5,
  "ultima_carga": "2026-11-17T01:41:44-03:00",
  "atraso_horas": 0.0,
  "linhas": 917489,
@@ -587,55 +587,55 @@
    {
     "valores": [
      5000000,
-     318584,
-     "Pesquisa de satisfação",
+     318558,
+     "Compartilhamento com parceiros",
      "Legítimo interesse",
-     "Loja",
+     "Central de atendimento",
      "S",
-     "2026-11-16 09:49:50",
-     null,
+     "2026-11-14 12:18:40",
+     "2026-11-14 17:07:15",
      "v3.2",
-     "187.22.***.***"
+     "187.12.***.***"
     ]
    },
    {
     "valores": [
      5000001,
-     318603,
-     "Compartilhamento com parceiros",
-     "Legítimo interesse",
-     "Loja",
+     318441,
+     "Análise de crédito",
+     "Consentimento",
+     "Central de atendimento",
      "S",
-     "2026-11-16 10:13:25",
-     null,
+     "2026-11-15 17:36:19",
+     "2026-11-14 11:18:56",
      "v3.2",
-     "187.50.***.***"
+     "187.41.***.***"
     ]
    },
    {
     "valores": [
      5000002,
-     318728,
-     "Cobrança",
-     "Legítimo interesse",
-     "Central de atendimento",
+     318510,
+     "Pesquisa de satisfação",
+     "Execução de contrato",
+     "Loja",
      "S",
-     "2026-11-15 14:47:37",
-     "2026-11-15 17:00:02",
-     "v3.2",
-     "187.47.***.***"
+     "2026-11-16 17:42:22",
+     "2026-11-15 13:09:18",
+     "v2.8",
+     "187.85.***.***"
     ]
    },
    {
     "valores": [
      5000003,
-     318700,
-     "Cobrança",
+     318718,
+     "Pesquisa de satisfação",
      null,
-     "Site",
+     "App",
      "S",
-     "2026-11-14 11:04:04",
-     "2026-11-14 16:41:03",
+     "2026-11-15 12:51:37",
+     "2026-11-15 10:56:36",
      "v3.2",
      "187.45.***.***"
     ],
@@ -647,71 +647,71 @@
    {
     "valores": [
      5000004,
-     318647,
+     318437,
      "Oferta de produtos",
-     "Obrigação legal",
-     "Parceiro",
-     "N",
-     "2026-11-14 07:25:55",
-     "2026-11-15 18:25:11",
-     "v3.1",
-     "187.39.***.***"
+     "Consentimento",
+     "App",
+     "S",
+     "2026-11-16 11:58:54",
+     "2026-11-14 13:30:50",
+     "v3.2",
+     "187.73.***.***"
     ]
    },
    {
     "valores": [
      5000005,
-     318569,
-     "Análise de crédito",
+     318677,
+     "Pesquisa de satisfação",
      "Consentimento",
-     "Site",
-     "N",
-     "2026-11-16 21:55:34",
-     "2026-11-15 15:55:29",
-     "v3.2",
-     null
+     "Central de atendimento",
+     "S",
+     "2026-11-14 20:24:44",
+     "2026-11-15 17:16:14",
+     "v3.1",
+     "187.52.***.***"
     ]
    },
    {
     "valores": [
      5000006,
-     318515,
-     "Pesquisa de satisfação",
-     "Consentimento",
-     "Loja",
+     318518,
+     "Oferta de produtos",
+     "Obrigação legal",
+     "App",
      "S",
-     "2026-11-14 15:43:06",
-     "2026-11-16 18:06:25",
+     "2026-11-14 20:29:37",
+     "2026-11-16 08:23:39",
+     "v3.1",
+     "187.62.***.***"
+    ]
+   },
+   {
+    "valores": [
+     5000007,
+     318461,
+     "Compartilhamento com parceiros",
+     "Execução de contrato",
+     "Parceiro",
+     "S",
+     "2026-11-15 18:02:46",
+     null,
      "v2.8",
      "187.84.***.***"
     ]
    },
    {
     "valores": [
-     5000007,
-     318538,
-     "Pesquisa de satisfação",
-     "Execução de contrato",
-     "App",
-     "S",
-     "2026-11-15 16:49:57",
-     "2026-11-16 17:50:38",
-     "v3.2",
-     "187.26.***.***"
-    ]
-   },
-   {
-    "valores": [
      5000008,
-     318600,
-     "Pesquisa de satisfação",
+     318794,
+     "Compartilhamento com parceiros",
      null,
-     "Parceiro",
-     "S",
-     "2026-11-16 20:41:33",
-     "2026-11-16 16:12:54",
-     "v2.8",
-     "187.60.***.***"
+     "Loja",
+     "N",
+     "2026-11-15 10:11:00",
+     "2026-11-16 20:48:22",
+     "v3.2",
+     "187.34.***.***"
     ],
     "problema": "Consentimento sem `base_legal` informada",
     "colunas_problema": [
@@ -721,43 +721,43 @@
    {
     "valores": [
      5000009,
-     318557,
+     318742,
      "Compartilhamento com parceiros",
-     "Legítimo interesse",
-     "Central de atendimento",
+     "Consentimento",
+     "Parceiro",
      "S",
-     "2026-11-16 10:13:58",
-     "2026-11-16 09:01:55",
-     "v2.8",
-     "187.27.***.***"
+     "2026-11-15 18:24:25",
+     "2026-11-14 10:40:04",
+     "v3.2",
+     null
     ]
    },
    {
     "valores": [
      5000010,
-     318606,
-     "Cobrança",
-     "Consentimento",
-     "Loja",
+     318732,
+     "Compartilhamento com parceiros",
+     "Execução de contrato",
+     "Parceiro",
      "S",
-     "2026-11-16 13:39:47",
-     "2026-11-16 21:25:07",
-     "v3.2",
-     "187.66.***.***"
+     "2026-11-15 16:57:25",
+     "2026-11-15 11:36:42",
+     "v2.8",
+     "187.42.***.***"
     ]
    },
    {
     "valores": [
      5000011,
-     318421,
-     "Compartilhamento com parceiros",
+     318630,
+     "Cobrança",
      "Execução de contrato",
-     "Site",
+     "Central de atendimento",
      "S",
-     "2026-11-14 14:41:34",
-     "2026-11-16 19:58:28",
-     "v3.2",
-     "187.27.***.***"
+     "2026-11-16 07:55:27",
+     "2026-11-16 18:25:52",
+     "v3.1",
+     "187.48.***.***"
     ]
    }
   ]

@@ -543,9 +543,9 @@
    {
     "valores": [
      7,
-     "Equipe Sul 2",
-     27,
-     null,
+     "Equipe Paulista",
+     28,
+     654,
      "Loja",
      "Sudeste",
      "S"
@@ -554,20 +554,31 @@
    {
     "valores": [
      8,
-     "Equipe Digital 1",
-     14,
-     673,
-     "Representante",
-     "Sul",
+     "Equipe Centro-Oeste",
+     44,
+     654,
+     "Parceiro",
+     "Norte e Nordeste",
      "S"
     ]
    },
    {
     "valores": [
      9,
-     "Equipe Paulista",
-     31,
-     967,
+     "Equipe Centro-Oeste",
+     36,
+     739,
+     "Digital",
+     "Sul",
+     "S"
+    ]
+   },
+   {
+    "valores": [
+     10,
+     "Equipe Centro-Oeste",
+     35,
+     null,
      "Representante",
      "Norte e Nordeste",
      "S"
@@ -575,23 +586,12 @@
    },
    {
     "valores": [
-     10,
-     "Equipe Paulista",
-     18,
+     11,
+     "Equipe Digital 1",
+     37,
      null,
      "Representante",
      "Sul",
-     "N"
-    ]
-   },
-   {
-    "valores": [
-     11,
-     "Equipe Paulista",
-     25,
-     757,
-     "Loja",
-     "Norte e Nordeste",
      "S"
     ]
    },
@@ -599,30 +599,41 @@
     "valores": [
      12,
      "Equipe Digital 1",
-     32,
-     748,
+     28,
+     1018,
      "Loja",
      "São Paulo",
-     "N"
+     "S"
     ]
    },
    {
     "valores": [
      13,
-     "Equipe Sul 2",
-     30,
-     772,
-     "Representante",
-     "São Paulo",
-     "N"
+     "Equipe Triângulo",
+     16,
+     711,
+     "Digital",
+     "Sul",
+     "S"
     ]
    },
    {
     "valores": [
      14,
-     "Equipe Centro-Oeste",
-     34,
-     null,
+     "Equipe Paulista",
+     16,
+     833,
+     "Loja",
+     "Sul",
+     "S"
+    ]
+   },
+   {
+    "valores": [
+     15,
+     "Equipe Paulista",
+     29,
+     911,
      "Loja",
      "Sudeste",
      "S"
@@ -630,23 +641,12 @@
    },
    {
     "valores": [
-     15,
-     "Equipe Sul 2",
-     36,
-     836,
-     "Representante",
-     "São Paulo",
-     "S"
-    ]
-   },
-   {
-    "valores": [
      16,
      "Equipe Triângulo",
-     27,
-     929,
-     "Representante",
-     "São Paulo",
+     40,
+     null,
+     "Parceiro",
+     "Centro-Oeste",
      "S"
     ]
    }

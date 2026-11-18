@@ -15,7 +15,7 @@ PESOS = {"frescor": 0.30, "testes": 0.40, "pk": 0.10, "execucoes": 0.20}
 PESO_SEVERIDADE = {"critico": 4, "alto": 3, "medio": 2, "baixo": 1}
 NOTA_TESTE = {"ok": 1.0, "alerta": 0.5, "falha": 0.0}
 NOTA_EXEC = {"sucesso": 1.0, "alerta": 0.8, "atrasada": 0.5, "falha": 0.0, "nao_executou": 0.0}
-FATOR_RISCO = {"verde": 1.0, "amarelo": 0.72, "vermelho": 0.45}
+FATOR_RISCO = {"verde": 1.0, "amarelo": 0.54, "vermelho": 0.25}
 
 # ---- Achados do cenário -------------------------------------------------------------------------
 # Cada achado vira o resultado de um teste a partir de `desde` (None = anterior à janela de 30 dias).
@@ -33,7 +33,7 @@ ACHADOS = {
              evidencia="`cod_cham` reinicia a cada ano: 1,2% dos códigos se repetem entre anos; sem chave, não há como contar chamadas únicas"),
     ],
     "dim_cliente": [dict(regra="nao_nulo", coluna="cpf_cliente", resultado="falha", valor=C.CPF_NULO_PCT_PARCEIRO, limite=2.0, unidade="%")],
-    "dim_cota": [dict(regra="integridade_referencial", coluna="id_grupo", resultado="falha", desde="2026-11-03",
+    "dim_cota": [dict(regra="integridade_referencial", coluna="id_grupo", resultado="falha",
                       valor=C.COTAS_FK_ORFA, limite=0, unidade="registros")],
     "fato_parcelas": [dict(regra="unicidade", coluna="id_parcela", resultado="falha", desde="2026-11-17",
                            valor=C.PARCELAS_DUPLICADAS, limite=0, unidade="registros")],
@@ -51,7 +51,7 @@ ACHADOS = {
     "fato_ticket": [dict(regra="nao_nulo", coluna="id_motivo", resultado="alerta", desde="2026-11-09", valor=2.7, limite=1.0, unidade="%")],
     "dim_colaborador": [dict(regra="schema_drift", coluna="cd_centro_custo", resultado="alerta", desde="2026-11-12", valor=1, limite=0, unidade="colunas")],
     "mart_vendas_comercial": [dict(regra="volume", resultado="alerta", desde="2026-11-17", valor=61, limite=20, unidade="%")],
-    "mart_cobranca_safra_mob": [dict(regra="integridade_referencial", resultado="alerta", desde="2026-11-03", valor=C.COTAS_FK_ORFA, limite=0, unidade="registros",
+    "mart_cobranca_safra_mob": [dict(regra="integridade_referencial", resultado="alerta", valor=C.COTAS_FK_ORFA, limite=0, unidade="registros",
                                      ref=("dim_cota", "dim_grupo", "id_grupo"))],
     "mart_executivo_kpis": [dict(regra="reconciliacao", resultado="alerta", desde="2026-11-14", valor=2, limite=0, unidade="marts")],
 }

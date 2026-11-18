@@ -13,7 +13,7 @@
  "status": "amarelo",
  "motivo_status": "Coluna `cd_centro_custo` passou a chegar como `centro_custo_id` desde 12/11",
  "tem_pk": true,
- "saude": 69.8,
+ "saude": 52.4,
  "ultima_carga": "2026-11-17T01:20:45-03:00",
  "atraso_horas": 0.0,
  "linhas": 1243,
@@ -577,14 +577,14 @@
    {
     "valores": [
      640,
-     "9596",
-     "Beatriz B. Freitas",
-     "***.809.***-53",
-     "a***@empresa.example",
-     "Agente de atendimento",
+     "5413",
+     "Larissa M. Barros",
+     "***.287.***-98",
+     "f***@exemplo.com.br",
+     "Analista de dados",
      "CC-4100",
-     "Crédito & Cobrança",
-     "Em análise",
+     "Operações",
+     "Ativo",
      "2024-06-14",
      "2026-10-30"
     ]
@@ -592,26 +592,26 @@
    {
     "valores": [
      641,
-     "2159",
-     "Aline F. Silveira",
-     "***.390.***-49",
-     "p***@empresa.example",
-     "Agente de atendimento",
+     "7755",
+     "Beatriz T. Freitas",
+     "***.102.***-46",
+     "e***@empresa.example",
+     "Assistente administrativo",
      "CC-1020",
-     "Tecnologia",
+     "Comercial",
      "Encerrado",
-     "2026-01-27",
-     "2026-10-26"
+     "2024-03-19",
+     null
     ]
    },
    {
     "valores": [
      642,
-     "5216",
-     "Paulo Sérgio S. Monteiro",
-     "***.901.***-45",
-     "c***@exemplo.com.br",
-     "Analista de dados",
+     "6707",
+     "Beatriz M. Siqueira",
+     "***.123.***-43",
+     "t***@correio.example",
+     "Agente de atendimento",
      "CC-1020",
      "Operações",
      "Encerrado",
@@ -622,91 +622,91 @@
    {
     "valores": [
      643,
-     "4475",
-     "Juliana P. Queiroz",
-     "***.742.***-17",
-     "d***@exemplo.com.br",
-     "Agente de atendimento",
-     "CC-4100",
-     "Crédito & Cobrança",
-     "Ativo",
-     "2023-10-26",
-     "2026-10-29"
-    ]
-   },
-   {
-    "valores": [
-     644,
-     "6684",
-     "José Roberto V. Queiroz",
-     "***.283.***-86",
-     "e***@exemplo.com.br",
-     "Analista de cobrança",
-     "CC-4100",
-     "Crédito & Cobrança",
-     "Encerrado",
-     "2025-05-19",
-     "2026-11-11"
-    ]
-   },
-   {
-    "valores": [
-     645,
-     "4908",
-     "Patrícia M. Siqueira",
-     "***.991.***-14",
-     "m***@correio.example",
-     "Consultor de vendas",
-     "CC-4100",
-     "Tecnologia",
-     "Encerrado",
-     "2024-07-04",
-     "2026-11-02"
-    ]
-   },
-   {
-    "valores": [
-     646,
-     "8171",
-     "Mariana R. Monteiro",
-     "***.403.***-34",
-     "j***@correio.example",
+     "5001",
+     "Patrícia B. Pacheco",
+     "***.842.***-56",
+     "p***@exemplo.com.br",
      "Agente de atendimento",
      "CC-3010",
-     "Experiência do Cliente",
-     "Em análise",
-     "2025-08-16",
-     "2026-11-06"
-    ]
-   },
-   {
-    "valores": [
-     647,
-     "1351",
-     "Carlos Eduardo Q. Moraes",
-     "***.838.***-73",
-     "g***@empresa.example",
-     "Agente de atendimento",
-     "CC-2040",
      "Tecnologia",
-     "Encerrado",
-     "2023-03-22",
+     "Em análise",
+     "2023-02-15",
      null
     ]
    },
    {
     "valores": [
-     648,
-     "4281",
-     "Carlos Eduardo M. Figueiredo",
-     "***.215.***-38",
-     "g***@empresa.example",
+     644,
+     "9456",
+     "Renata B. Teixeira",
+     "***.455.***-25",
+     "d***@correio.example",
+     "Agente de atendimento",
+     "CC-3010",
+     "Comercial",
+     "Ativo",
+     "2025-01-09",
+     "2026-11-07"
+    ]
+   },
+   {
+    "valores": [
+     645,
+     "2484",
+     "Rodrigo M. Freitas",
+     "***.825.***-47",
+     "r***@exemplo.com.br",
+     "Assistente administrativo",
+     "CC-3010",
+     "Operações",
+     "Ativo",
+     "2024-07-09",
+     null
+    ]
+   },
+   {
+    "valores": [
+     646,
+     "3431",
+     "Camila A. Figueiredo",
+     "***.574.***-67",
+     "g***@correio.example",
      "Consultor de vendas",
-     null,
+     "CC-3010",
      "Crédito & Cobrança",
+     "Ativo",
+     "2024-03-11",
+     "2026-11-04"
+    ]
+   },
+   {
+    "valores": [
+     647,
+     "3174",
+     "Carlos Eduardo Q. Pacheco",
+     "***.577.***-22",
+     "d***@correio.example",
+     "Analista de dados",
+     "CC-1020",
+     "Comercial",
+     "Ativo",
+     "2023-08-20",
+     "2026-10-24"
+    ]
+   },
+   {
+    "valores": [
+     648,
+     "9068",
+     "Ricardo P. Queiroz",
+     "***.592.***-34",
+     "m***@empresa.example",
+     "Analista de dados",
+     null,
+     "Experiência do Cliente",
      "Encerrado",
-     "2024-06-06",
-     "2026-10-31"
+     "2025-08-03",
+     null
     ],
     "problema": "Centro de custo vazio: a origem passou a enviar `centro_custo_id` em 12/11",
     "colunas_problema": [
@@ -716,16 +716,16 @@
    {
     "valores": [
      649,
-     "8440",
-     "Fernanda M. Figueiredo",
-     "***.544.***-87",
-     "b***@correio.example",
+     "7860",
+     "José Roberto V. Antunes",
+     "***.778.***-21",
+     "m***@empresa.example",
      "Assistente administrativo",
      null,
-     "Comercial",
-     "Encerrado",
-     "2025-01-24",
-     null
+     "Tecnologia",
+     "Ativo",
+     "2025-01-31",
+     "2026-11-12"
     ],
     "problema": "Centro de custo vazio: a origem passou a enviar `centro_custo_id` em 12/11",
     "colunas_problema": [
@@ -735,31 +735,31 @@
    {
     "valores": [
      650,
-     "2344",
-     "Luiz Henrique F. Barros",
-     "***.603.***-95",
-     "b***@correio.example",
+     "6819",
+     "Larissa B. Moraes",
+     "***.525.***-65",
+     "m***@exemplo.com.br",
      "Analista de cobrança",
-     "CC-1020",
-     "Comercial",
+     "CC-3010",
+     "Tecnologia",
      "Ativo",
-     "2023-12-31",
-     "2026-10-24"
+     "2023-07-27",
+     "2026-11-14"
     ]
    },
    {
     "valores": [
      651,
-     "2529",
-     "Ana Paula V. Freitas",
-     "***.957.***-61",
-     "e***@correio.example",
-     "Agente de atendimento",
-     "CC-2040",
-     "Experiência do Cliente",
+     "2947",
+     "Rodrigo T. Freitas",
+     "***.861.***-62",
+     "m***@exemplo.com.br",
+     "Supervisor comercial",
+     "CC-1020",
+     "Operações",
      "Ativo",
-     "2026-08-27",
-     "2026-10-26"
+     "2026-08-15",
+     null
     ]
    }
   ]

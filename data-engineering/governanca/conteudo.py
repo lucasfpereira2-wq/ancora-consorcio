@@ -42,7 +42,7 @@ INCIDENTES_META = {
     "INC-2033": dict(detectado="2026-11-17T06:40:00-03:00", inicio="2026-11-17T01:15:00-03:00", situacao="aberto", metricas=[
         ("Linhas carregadas em 17/11", f_int(C.PROPOSTAS_D1)), ("Média das segundas-feiras", f_int(C.PROPOSTAS_MEDIA)),
         ("Queda de volume", f"{C.PROPOSTAS_QUEDA_PCT}%")]),
-    "INC-2024": dict(detectado="2026-11-03T09:15:00-03:00", inicio="2026-11-02T22:00:00-03:00", situacao="em_analise", metricas=[
+    "INC-2024": dict(detectado="2026-11-03T09:15:00-03:00", inicio="2026-10-05T22:00:00-03:00", situacao="em_analise", metricas=[
         ("Cotas com grupo inexistente", f_int(C.COTAS_FK_ORFA))]
         + ([("Participação na carteira ativa", f"{f_dec(100 * C.COTAS_FK_ORFA / COTAS_ATIVAS, 2)}%")] if COTAS_ATIVAS else [])
         + [("Relatórios afetados", "2")]),

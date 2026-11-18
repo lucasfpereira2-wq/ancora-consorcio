@@ -530,8 +530,8 @@
    {
     "valores": [
      60,
-     "**.451.725/0001-**",
-     "Logística Rota Sul Ltda",
+     "**.975.294/0001-**",
+     "Imobiliária Jardim Real Ltda",
      "Antônio S. Queiroz",
      "c***@correio.example",
      "PE",
@@ -543,7 +543,7 @@
    {
     "valores": [
      61,
-     "**.632.693/0001-**",
+     "**.769.681/0001-**",
      "Logística Rota Sul Ltda",
      null,
      "r***@empresa.example",
@@ -556,24 +556,24 @@
    {
     "valores": [
      62,
-     "**.134.189/0001-**",
-     "Transportes Serra Azul Ltda",
-     "Fernanda T. Vieira",
-     "t***@correio.example",
-     "RJ",
-     "Concessionária",
+     "**.428.134/0001-**",
+     "Construtora Vale Verde S.A.",
+     "Larissa B. Teixeira",
+     "d***@correio.example",
+     "MT",
+     "Imobiliária",
      "S",
-     "2026-02-16"
+     "2025-05-18"
     ]
    },
    {
     "valores": [
      63,
-     "**.305.668/0001-**",
-     "Transportes Serra Azul Ltda",
-     null,
-     "l***@empresa.example",
-     "SP",
+     "**.163.206/0001-**",
+     "Comercial Ponte Nova Ltda",
+     "Carlos Eduardo F. Vieira",
+     "l***@exemplo.com.br",
+     "CE",
      "Imobiliária",
      "S",
      "2023-12-13"
@@ -582,66 +582,66 @@
    {
     "valores": [
      64,
-     "**.217.633/0001-**",
-     "Logística Rota Sul Ltda",
-     "Beatriz B. Monteiro",
-     "c***@empresa.example",
-     "SP",
+     "**.911.591/0001-**",
+     "Construtora Vale Verde S.A.",
+     "Marcelo M. Brandão",
+     "f***@exemplo.com.br",
+     "BA",
      "Concessionária",
-     "N",
+     "S",
      "2024-04-30"
     ]
    },
    {
     "valores": [
      65,
-     "**.591.612/0001-**",
+     "**.843.743/0001-**",
      "Auto Center Bandeirantes Ltda",
-     "Ricardo Q. Barros",
-     "r***@empresa.example",
-     "PE",
-     "Correspondente",
+     "Aline F. Freitas",
+     "f***@empresa.example",
+     "MT",
+     "Concessionária",
      "S",
-     "2026-09-13"
+     "2023-02-04"
     ]
    },
    {
     "valores": [
      66,
-     "**.917.742/0001-**",
-     "Comercial Ponte Nova Ltda",
-     "Antônio F. Barros",
-     "d***@exemplo.com.br",
-     "BA",
+     "**.718.420/0001-**",
+     "Clínica Vida Plena Ltda",
+     null,
+     "p***@empresa.example",
+     "MG",
      "Imobiliária",
      "S",
-     "2025-11-20"
+     "2023-07-06"
     ]
    },
    {
     "valores": [
      67,
-     "**.973.565/0001-**",
-     "Clínica Vida Plena Ltda",
-     "José Roberto T. Pacheco",
+     "**.250.497/0001-**",
+     "Imobiliária Jardim Real Ltda",
+     "Thiago M. Queiroz",
      null,
-     "SP",
-     "Concessionária",
-     "S",
-     "2023-11-21"
+     "SC",
+     "Imobiliária",
+     "N",
+     "2025-04-20"
     ]
    },
    {
     "valores": [
      68,
-     "**.330.331/0001-**",
+     "**.833.795/0001-**",
      "Construtora Vale Verde S.A.",
-     "José Roberto V. Barros",
-     "d***@exemplo.com.br",
-     "GO",
-     "Correspondente",
+     "Patrícia S. Macedo",
+     null,
+     "RJ",
+     "Concessionária",
      "S",
-     "2024-04-04"
+     "2025-06-11"
     ]
    }
   ]

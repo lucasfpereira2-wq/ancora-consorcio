@@ -560,10 +560,10 @@
    {
     "valores": [
      1864000,
-     "Loja",
-     "Loja",
-     "Imóvel sem juros",
-     "GO",
+     "Representante",
+     "Campanha paga",
+     "Troque de carro",
+     "MG",
      "Auto",
      "Lead",
      "V4649",
@@ -577,138 +577,138 @@
      "Parceiro",
      "Loja",
      null,
-     "DF",
-     "Pesada",
-     "Perdido",
-     "V1122",
-     "2026-11-15 20:25:05",
-     "2026-11-15 15:30:59"
+     "SP",
+     "Serviços",
+     "Lead",
+     "V2814",
+     "2026-11-14 19:48:56",
+     "2026-11-14 16:41:00"
     ]
    },
    {
     "valores": [
      1864002,
-     "Loja",
-     "Site",
-     null,
-     "SP",
+     "Parceiro",
+     "Parceiro",
+     "Imóvel sem juros",
+     "SC",
      "Auto",
-     "Venda",
-     "V2444",
-     "2026-11-16 08:06:14",
-     "2026-11-15 13:52:19"
+     "Lead",
+     "V9976",
+     "2026-11-15 13:18:07",
+     "2026-11-14 10:36:17"
     ]
    },
    {
     "valores": [
      1864003,
-     "Digital",
      "Loja",
-     null,
-     "DF",
-     "Auto",
-     "Contato",
-     "V1266",
-     "2026-11-15 09:04:09",
-     "2026-11-15 15:48:39"
-    ]
-   },
-   {
-    "valores": [
-     1864004,
-     "Digital",
      "Site",
-     null,
-     "MG",
-     "Imóvel",
-     "Proposta",
-     "V8980",
-     "2026-11-16 16:21:47",
-     "2026-11-16 10:55:09"
-    ]
-   },
-   {
-    "valores": [
-     1864005,
-     "Parceiro",
-     "Campanha paga",
-     "Imóvel sem juros",
-     "SP",
-     "Serviços",
-     "Perdido",
-     "V5105",
-     "2026-11-15 16:24:16",
-     "2026-11-15 20:00:56"
-    ]
-   },
-   {
-    "valores": [
-     1864006,
-     "Parceiro",
-     "Loja",
-     null,
-     "DF",
-     "Auto",
-     "Simulação",
-     "V5567",
-     "2026-11-15 19:54:38",
-     "2026-11-16 12:31:07"
-    ]
-   },
-   {
-    "valores": [
-     1864007,
-     "Digital",
-     "Indicação",
-     null,
-     "PR",
-     "Serviços",
-     "Lead",
-     "V1255",
-     "2026-11-15 16:13:29",
+     "Feirão de Novembro",
+     "RJ",
+     "Pesada",
+     "Contato",
+     "V5866",
+     "2026-11-14 21:37:02",
      null
     ]
    },
    {
     "valores": [
-     1864008,
-     "Digital",
-     "Indicação",
+     1864004,
+     "Parceiro",
+     "Campanha paga",
      "Imóvel sem juros",
+     "CE",
+     "Imóvel",
+     "Simulação",
+     null,
+     "2026-11-16 15:41:49",
+     "2026-11-14 12:44:45"
+    ]
+   },
+   {
+    "valores": [
+     1864005,
+     "Representante",
+     "Loja",
+     "Troque de carro",
+     "BA",
+     "Auto",
+     "Proposta",
+     "V2222",
+     "2026-11-15 12:07:31",
+     null
+    ]
+   },
+   {
+    "valores": [
+     1864006,
+     "Digital",
+     "Campanha paga",
+     "Imóvel sem juros",
+     "DF",
+     "Serviços",
+     "Simulação",
+     "V3460",
+     "2026-11-14 10:04:06",
+     null
+    ]
+   },
+   {
+    "valores": [
+     1864007,
+     "Parceiro",
+     "Campanha paga",
+     null,
+     "RJ",
+     "Serviços",
+     "Lead",
+     "V1043",
+     "2026-11-15 18:38:43",
+     "2026-11-14 18:15:42"
+    ]
+   },
+   {
+    "valores": [
+     1864008,
+     "Representante",
+     "Campanha paga",
+     null,
+     "MT",
+     "Auto",
+     "Lead",
+     "V2935",
+     "2026-11-15 12:32:22",
+     "2026-11-16 21:25:57"
+    ]
+   },
+   {
+    "valores": [
+     1864009,
+     "Digital",
+     "Campanha paga",
+     null,
+     "SP",
+     "Imóvel",
+     "Simulação",
+     "V8593",
+     "2026-11-16 18:16:43",
+     "2026-11-15 09:08:23"
+    ]
+   },
+   {
+    "valores": [
+     1864010,
+     "Representante",
+     "Campanha paga",
+     null,
      "MT",
      "Serviços",
      "Lead",
      "V3418",
      "2026-11-16 08:49:25",
      "2026-11-14 12:18:22"
-    ]
-   },
-   {
-    "valores": [
-     1864009,
-     "Loja",
-     "Loja",
-     null,
-     "DF",
-     "Pesada",
-     "Simulação",
-     null,
-     "2026-11-15 18:42:51",
-     "2026-11-14 17:56:50"
-    ]
-   },
-   {
-    "valores": [
-     1864010,
-     "Parceiro",
-     "Indicação",
-     null,
-     "GO",
-     "Pesada",
-     "Venda",
-     "V2142",
-     "2026-11-14 07:45:07",
-     null
     ]
    }
   ]

@@ -549,46 +549,58 @@
    {
     "valores": [
      120,
-     978,
-     "José Roberto B. Queiroz",
-     "Voz Geral",
-     "Noite",
-     "N1",
-     "N",
-     "2026-11-13"
+     1025,
+     "Fernanda C. Cardoso",
+     "Retenção",
+     "Tarde",
+     "N2",
+     "S",
+     "2026-10-27"
     ]
    },
    {
     "valores": [
      121,
-     864,
-     "Renata S. Antunes",
-     "Voz Cobrança",
-     "Noite",
-     "N1",
-     "N",
-     "2026-10-23"
+     693,
+     "Renata A. Cardoso",
+     "Chat e App",
+     "Tarde",
+     "Retenção",
+     "S",
+     "2026-10-30"
     ]
    },
    {
     "valores": [
      122,
-     871,
-     "Ricardo S. Pacheco",
-     "WhatsApp",
-     "Noite",
-     "N1",
+     845,
+     "Fernanda F. Siqueira",
+     "Voz Geral",
+     "Tarde",
+     "Retenção",
      "N",
-     "2026-11-14"
+     "2026-10-29"
     ]
    },
    {
     "valores": [
      123,
-     863,
-     "Carlos Eduardo R. Monteiro",
-     "Voz Geral",
-     "Tarde",
+     881,
+     "Patrícia M. Silveira",
+     "Chat e App",
+     "Manhã",
+     "N1",
+     "S",
+     "2026-11-03"
+    ]
+   },
+   {
+    "valores": [
+     124,
+     664,
+     "Marcelo M. Teixeira",
+     "Chat e App",
+     "Noite",
      "Retenção",
      "S",
      "2026-11-12"
@@ -596,50 +608,38 @@
    },
    {
     "valores": [
-     124,
-     847,
-     "Mariana Q. Monteiro",
-     "Voz Cobrança",
+     125,
+     900,
+     "Thiago F. Antunes",
+     "Voz Geral",
      "Noite",
      "N2",
-     "N",
-     "2026-11-01"
-    ]
-   },
-   {
-    "valores": [
-     125,
-     782,
-     "Larissa F. Silveira",
-     "Retenção",
-     "Manhã",
-     "N1",
      "S",
-     "2026-10-22"
+     "2026-11-09"
     ]
    },
    {
     "valores": [
      126,
-     902,
-     "Rodrigo M. Brandão",
-     "Voz Cobrança",
-     "Tarde",
-     "N1",
-     "S",
-     "2026-10-23"
+     931,
+     "Juliana S. Siqueira",
+     "WhatsApp",
+     "Manhã",
+     "N2",
+     "N",
+     "2026-10-22"
     ]
    },
    {
     "valores": [
      127,
-     1026,
-     "Antônio S. Freitas",
-     "WhatsApp",
+     723,
+     "Ana Paula V. Barros",
+     "Voz Cobrança",
      "Manhã",
      "Retenção",
      "S",
-     "2026-11-09"
+     "2026-11-08"
     ]
    }
   ]

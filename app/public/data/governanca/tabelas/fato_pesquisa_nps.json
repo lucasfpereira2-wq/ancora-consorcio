@@ -13,7 +13,7 @@
  "status": "vermelho",
  "motivo_status": "Respostas duplicadas em `id_resposta` desde 01/10; NPS de outubro inflado em 6 pontos",
  "tem_pk": true,
- "saude": 41.2,
+ "saude": 22.9,
  "ultima_carga": "2026-11-17T03:20:29-03:00",
  "atraso_horas": 0.0,
  "linhas": 149798,
@@ -562,7 +562,7 @@
      "Atendimento rápido e claro.",
      "2026-11",
      "2026-11-16 14:40:33",
-     "2026-11-16 09:36:13"
+     "2026-11-17 03:20:29"
     ]
    },
    {
@@ -575,7 +575,7 @@
      null,
      "2026-11",
      "2026-11-16 10:30:10",
-     "2026-11-15 16:41:26"
+     "2026-11-17 03:20:29"
     ]
    },
    {
@@ -588,7 +588,7 @@
      "Demorou para resolver, mas resolveu.",
      "2026-11",
      "2026-11-14 13:12:40",
-     "2026-11-15 15:02:10"
+     "2026-11-17 03:20:29"
     ],
     "problema": "Resposta repetida: `id_resposta` já entregue antes pela plataforma",
     "colunas_problema": [
@@ -605,7 +605,7 @@
      "Demorou para resolver, mas resolveu.",
      "2026-11",
      "2026-11-14 13:12:40",
-     "2026-11-15 12:02:05"
+     "2026-11-17 03:20:29"
     ],
     "problema": "Resposta repetida: `id_resposta` já entregue antes pela plataforma",
     "colunas_problema": [
@@ -622,7 +622,7 @@
      null,
      "2026-11",
      "2026-11-15 13:37:24",
-     "2026-11-16 09:31:51"
+     "2026-11-17 03:20:29"
     ]
    },
    {
@@ -635,7 +635,7 @@
      null,
      "2026-11",
      "2026-11-16 15:41:20",
-     "2026-11-16 17:38:50"
+     "2026-11-17 03:20:29"
     ]
    },
    {
@@ -648,7 +648,7 @@
      null,
      "2026-11",
      "2026-11-15 16:35:44",
-     "2026-11-15 17:47:29"
+     "2026-11-17 03:20:29"
     ]
    },
    {
@@ -661,7 +661,7 @@
      null,
      "2026-11",
      "2026-11-16 21:22:18",
-     "2026-11-16 10:02:24"
+     "2026-11-17 03:20:29"
     ],
     "problema": "Resposta repetida: `id_resposta` já entregue antes pela plataforma",
     "colunas_problema": [
@@ -678,7 +678,7 @@
      null,
      "2026-11",
      "2026-11-16 21:22:18",
-     "2026-11-14 09:59:07"
+     "2026-11-17 03:20:29"
     ],
     "problema": "Resposta repetida: `id_resposta` já entregue antes pela plataforma",
     "colunas_problema": [
@@ -695,7 +695,7 @@
      "Gostei do aplicativo.",
      "2026-11",
      "2026-11-16 19:57:07",
-     "2026-11-16 09:49:30"
+     "2026-11-17 03:20:29"
     ]
    },
    {
@@ -708,7 +708,7 @@
      null,
      "2026-11",
      "2026-11-15 20:12:33",
-     "2026-11-16 10:58:28"
+     "2026-11-17 03:20:29"
     ]
    }
   ]

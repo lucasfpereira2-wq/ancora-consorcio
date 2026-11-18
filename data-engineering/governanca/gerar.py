@@ -118,7 +118,7 @@ def main():
             colunas=colunas,
             execucoes=[ex.publico(e) for e in execs[n]],
             testes=[q.teste_publico(x) for x in testes[n]],
-            amostra=amostras.gerar_amostra(n, ancora, st != "verde"),
+            amostra=amostras.gerar_amostra(n, ancora, st != "verde", est["ultima_carga"]),
             upstream=list(UP[n]), downstream=list(DOWN[n]),
         )
 

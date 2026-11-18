@@ -13,7 +13,7 @@
  "status": "vermelho",
  "motivo_status": "Tabela sem chave primária definida; 2,3% de conversas repetidas nos últimos 7 dias",
  "tem_pk": false,
- "saude": 34.5,
+ "saude": 19.2,
  "ultima_carga": "2026-11-17T07:05:17-03:00",
  "atraso_horas": 0.0,
  "linhas": 1602531,
@@ -599,13 +599,13 @@
      "(11) 9****-3408",
      null,
      "2026-11-15 21:51:02",
-     "2026-11-15 16:45:03",
-     100,
+     "2026-11-15 22:11:02",
+     7,
      "A9297",
      "Encerrada",
      "web-97f70d88a9",
      "c0ccccd70d8c19896f5083758c2ef33e",
-     "2026-11-16 16:36:47"
+     "2026-11-17 07:05:17"
     ]
    },
    {
@@ -614,13 +614,13 @@
      "(81) 9****-8668",
      "José Roberto B. Brandão",
      "2026-11-15 10:08:38",
-     "2026-11-15 19:28:16",
-     374,
+     "2026-11-15 10:26:38",
+     24,
      null,
      "Encerrada",
      "web-fe294ac480",
      "5fa2d66ce1703636a23a7582278f36f5",
-     "2026-11-15 09:52:30"
+     "2026-11-17 07:05:17"
     ]
    },
    {
@@ -629,13 +629,13 @@
      "(21) 9****-9764",
      "José Roberto F. Macedo",
      "2026-11-15 10:51:54",
-     "2026-11-14 16:51:34",
-     584,
+     "2026-11-15 11:04:54",
+     37,
      null,
      "Aguardando cliente",
      "web-9baef1647d",
      "96c5be7ffc7a837e91124f090ec00c53",
-     "2026-11-15 17:31:13"
+     "2026-11-17 07:05:17"
     ]
    },
    {
@@ -644,126 +644,126 @@
      "(51) 9****-2176",
      "Fernanda B. Barros",
      "2026-11-15 19:08:20",
-     "2026-11-14 18:17:27",
-     778,
-     "A6065",
-     "Em atendimento",
-     "web-be494543aa",
-     "87c1ef143a5d9d1520b3d8e515a80074",
-     "2026-11-14 19:34:42"
-    ],
-    "problema": "Conversa repetida por reenvio de webhook; sem PK, as duas linhas foram gravadas",
-    "colunas_problema": [
-     "id_conversa"
-    ]
-   },
-   {
-    "valores": [
-     "con-498dbadbe0",
-     "(51) 9****-2176",
-     "Fernanda B. Barros",
-     "2026-11-15 19:08:20",
-     "2026-11-14 18:17:27",
-     778,
-     "A6065",
-     "Em atendimento",
-     "web-849daba857",
-     "8aca4e293fa7229f30e1a75232585dcc",
-     "2026-11-16 20:22:17"
-    ],
-    "problema": "Conversa repetida por reenvio de webhook; sem PK, as duas linhas foram gravadas",
-    "colunas_problema": [
-     "id_conversa"
-    ]
-   },
-   {
-    "valores": [
-     "con-0a45345893",
-     "(62) 9****-6391",
-     null,
-     "2026-11-14 11:22:09",
-     "2026-11-16 16:12:54",
-     620,
-     null,
-     "Em atendimento",
-     "web-6665fd01e2",
-     "153e70c5741219b290daf3ff383a24d8",
-     "2026-11-15 07:35:12"
-    ]
-   },
-   {
-    "valores": [
-     "con-5de53fb887",
-     "(51) 9****-5579",
-     null,
-     "2026-11-14 09:56:51",
-     null,
-     295,
-     "A7687",
+     "2026-11-15 19:13:20",
+     36,
+     "A5689",
      "Encerrada",
-     "web-d6beb0e1bb",
-     "421b41f4f16c7dd1e5b4c4574f4e125b",
-     "2026-11-15 18:42:15"
+     "web-3a20b3d8e5",
+     "89e29f40c4a8ca5d831f27fd87c1ef14",
+     "2026-11-17 07:05:17"
+    ],
+    "problema": "Conversa repetida por reenvio de webhook; sem PK, as duas linhas foram gravadas",
+    "colunas_problema": [
+     "id_conversa"
     ]
    },
    {
     "valores": [
-     "con-ed75a56d00",
-     "(11) 9****-1691",
-     "Antônio R. Antunes",
-     "2026-11-15 15:15:42",
-     "2026-11-14 09:07:19",
-     39,
+     "con-498dbadbe0",
+     "(51) 9****-2176",
+     "Fernanda B. Barros",
+     "2026-11-15 19:08:20",
+     "2026-11-15 19:13:20",
+     36,
+     "A5689",
+     "Encerrada",
+     "web-3f30e1a752",
+     "58778050d740124219b6c41e8aca4e29",
+     "2026-11-17 07:05:17"
+    ],
+    "problema": "Conversa repetida por reenvio de webhook; sem PK, as duas linhas foram gravadas",
+    "colunas_problema": [
+     "id_conversa"
+    ]
+   },
+   {
+    "valores": [
+     "con-08543cd01d",
+     "(81) 9****-5459",
+     "Ana Paula S. Pacheco",
+     "2026-11-14 07:51:18",
+     "2026-11-14 08:10:18",
+     27,
      null,
-     "Em atendimento",
-     "web-19370fec35",
-     "3ba92876c2c0f75dccdd5df207e99bd6",
-     "2026-11-16 16:49:59"
+     "Encerrada",
+     "web-5de53fb887",
+     "17796bee478df4f6b01ebc525031d196",
+     "2026-11-17 07:05:17"
     ]
    },
    {
     "valores": [
-     "con-06b180c45e",
-     "(51) 9****-2701",
-     "Fernanda V. Brandão",
-     "2026-11-15 13:49:28",
-     "2026-11-16 21:32:37",
-     811,
-     "A1330",
+     "con-20ccef8da3",
+     "(71) 9****-5537",
+     "Ricardo M. Rezende",
+     "2026-11-15 11:45:42",
+     "2026-11-15 11:51:42",
+     24,
+     "A6102",
      "Aguardando cliente",
-     "web-4c67db690a",
-     "3cc43c115694f19bfbcc81993730d25c",
-     "2026-11-15 08:12:24"
+     "web-dcdf98a3ba",
+     "3e4f11e28bfcc5574da05cf7f0a6c8ff",
+     "2026-11-17 07:05:17"
     ]
    },
    {
     "valores": [
-     "con-737fbaba8a",
-     "(11) 9****-8233",
+     "con-1f26cc0f81",
+     "(41) 9****-1432",
      null,
-     "2026-11-15 19:39:23",
-     "2026-11-15 16:16:01",
-     520,
-     "A3106",
+     "2026-11-14 12:13:06",
+     null,
+     16,
+     null,
      "Encerrada",
-     "web-9577fd192f",
-     "73a9a65b70d4ded95884afe2f0a2640b",
-     "2026-11-14 14:21:55"
+     "web-ad55c8b334",
+     "219f78e8a5f78b307c96a2c31a95a73f",
+     "2026-11-17 07:05:17"
     ]
    },
    {
     "valores": [
-     "con-31d1885d1e",
-     "(51) 9****-7636",
-     "Larissa F. Brandão",
-     "2026-11-15 17:03:07",
-     "2026-11-16 12:41:24",
-     23,
-     "A2667",
+     "con-72c7f6b0ed",
+     "(21) 9****-9239",
+     "Beatriz S. Siqueira",
+     "2026-11-15 11:13:21",
+     "2026-11-15 11:23:21",
+     33,
+     "A8233",
+     "Encerrada",
+     "web-49581fedc9",
+     "c4cb6a475c6436a79caea3c5cc6a76b0",
+     "2026-11-17 07:05:17"
+    ]
+   },
+   {
+    "valores": [
+     "con-7f0538053b",
+     "(41) 9****-3106",
+     "Larissa Q. Macedo",
+     "2026-11-15 19:42:29",
+     "2026-11-15 19:51:29",
+     22,
+     "A7668",
      "Em atendimento",
-     "web-9400d4727c",
-     "96ce34ec7f03ba736da5ad79040b1747",
-     "2026-11-15 08:03:12"
+     "web-aa7f2a6c0d",
+     "6486a470ad1e70031e47791f0d78734d",
+     "2026-11-17 07:05:17"
+    ]
+   },
+   {
+    "valores": [
+     "con-4502c878e9",
+     "(81) 9****-2667",
+     "Renata S. Figueiredo",
+     "2026-11-15 16:24:06",
+     null,
+     11,
+     "A1391",
+     "Encerrada",
+     "web-a045158841",
+     "878c55b10d952b333494efab59d4a048",
+     "2026-11-17 07:05:17"
     ]
    }
   ]

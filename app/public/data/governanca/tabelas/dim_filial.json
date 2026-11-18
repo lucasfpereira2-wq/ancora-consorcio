@@ -522,7 +522,7 @@
    {
     "valores": [
      14,
-     "Loja Recife",
+     "Loja Londrina",
      "Loja própria",
      "Joinville",
      "SC",
@@ -534,55 +534,67 @@
    {
     "valores": [
      15,
-     "Loja Londrina",
+     "Loja Goiânia",
      "Escritório regional",
-     "Campinas",
-     "SP",
-     "São Paulo",
+     "Londrina",
+     "PR",
+     "Sul",
      "S",
-     "2023-11-21"
+     "2024-02-02"
     ]
    },
    {
     "valores": [
      16,
-     "Matriz São Paulo",
-     "Loja própria",
-     "Brasília",
-     "DF",
-     "Centro-Oeste",
-     "N",
-     "2025-04-20"
+     "Loja Recife",
+     "Matriz",
+     "Recife",
+     "PE",
+     "Norte e Nordeste",
+     "S",
+     "2024-06-22"
     ]
    },
    {
     "valores": [
      17,
-     "Loja Goiânia",
-     "Loja própria",
-     "Niterói",
-     "RJ",
-     "Sudeste",
+     "Escritório Regional Sul",
+     "Matriz",
+     "Recife",
+     "PE",
+     "Norte e Nordeste",
      "S",
-     "2025-08-09"
+     "2023-08-12"
     ]
    },
    {
     "valores": [
      18,
      "Loja Londrina",
-     "Escritório regional",
-     "Londrina",
-     "PR",
-     "Sul",
+     "Loja própria",
+     "Recife",
+     "PE",
+     "Norte e Nordeste",
      "S",
-     "2026-03-08"
+     "2024-10-12"
     ]
    },
    {
     "valores": [
      19,
      "Loja Goiânia",
+     "Escritório regional",
+     "Niterói",
+     "RJ",
+     "Sudeste",
+     "S",
+     "2025-10-11"
+    ]
+   },
+   {
+    "valores": [
+     20,
+     "Loja Recife",
      "Escritório regional",
      "Campinas",
      "SP",
@@ -593,8 +605,8 @@
    },
    {
     "valores": [
-     20,
-     "Matriz São Paulo",
+     21,
+     "Loja Goiânia",
      "Loja própria",
      "Joinville",
      "SC",
@@ -605,62 +617,50 @@
    },
    {
     "valores": [
-     21,
+     22,
      "Matriz São Paulo",
-     "Matriz",
-     "Cuiabá",
-     "MT",
-     "Centro-Oeste",
+     "Loja própria",
+     "Caxias do Sul",
+     "RS",
+     "Sul",
      "S",
      "2023-11-22"
     ]
    },
    {
     "valores": [
-     22,
-     "Loja Goiânia",
-     "Matriz",
-     "Campinas",
-     "SP",
-     "São Paulo",
-     "S",
-     "2024-03-21"
-    ]
-   },
-   {
-    "valores": [
      23,
-     "Escritório Regional Sul",
+     "Matriz São Paulo",
      "Matriz",
-     "Cuiabá",
-     "MT",
-     "Centro-Oeste",
-     "S",
-     "2024-11-09"
+     "Caxias do Sul",
+     "RS",
+     "Sul",
+     "N",
+     "2024-07-09"
     ]
    },
    {
     "valores": [
      24,
-     "Loja Goiânia",
+     "Escritório Regional Sul",
      "Loja própria",
-     "Londrina",
-     "PR",
-     "Sul",
-     "N",
-     "2023-12-30"
+     "Brasília",
+     "DF",
+     "Centro-Oeste",
+     "S",
+     "2023-03-14"
     ]
    },
    {
     "valores": [
      25,
-     "Escritório Regional Sul",
+     "Loja Londrina",
      "Loja própria",
-     "Niterói",
-     "RJ",
-     "Sudeste",
-     "S",
-     "2025-06-08"
+     "Recife",
+     "PE",
+     "Norte e Nordeste",
+     "N",
+     "2023-12-30"
     ]
    }
   ]

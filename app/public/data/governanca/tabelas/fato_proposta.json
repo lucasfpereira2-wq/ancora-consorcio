@@ -13,7 +13,7 @@
  "status": "amarelo",
  "motivo_status": "Volume 61% abaixo do esperado, herdado da carga parcial de `stg_crm_propostas`",
  "tem_pk": true,
- "saude": 70.7,
+ "saude": 53.0,
  "ultima_carga": "2026-11-17T02:30:48-03:00",
  "atraso_horas": 0.0,
  "linhas": 527045,
@@ -603,83 +603,98 @@
    {
     "valores": [
      598300,
-     318515,
-     224,
-     1864193,
-     "Auto",
-     "Digital",
-     150000.0,
+     318536,
+     237,
+     1864239,
+     "Serviços",
+     "Parceiro",
+     80000.0,
      "Convertida",
-     "Renda insuficiente",
-     "2026-11-06",
-     null
+     null,
+     "2026-11-05",
+     "2026-11-04"
     ]
    },
    {
     "valores": [
      598301,
-     318644,
-     240,
-     null,
-     "Serviços",
-     "Digital",
-     120000.0,
-     "Convertida",
-     null,
-     "2026-10-31",
-     null
+     318574,
+     213,
+     1864044,
+     "Imóvel",
+     "Parceiro",
+     45000.0,
+     "Recusada",
+     "Restrição cadastral",
+     "2026-10-26",
+     "2026-11-08"
     ]
    },
    {
     "valores": [
      598302,
-     318618,
-     240,
-     1864062,
+     318532,
+     229,
+     null,
      "Imóvel",
-     "Parceiro",
-     45000.0,
-     "Recusada",
-     "Renda insuficiente",
-     "2026-11-16",
-     "2026-11-01"
+     "Digital",
+     180000.0,
+     "Convertida",
+     null,
+     "2026-11-09",
+     null
     ]
    },
    {
     "valores": [
      598303,
-     318611,
-     232,
-     1864084,
+     318690,
+     210,
+     1864263,
      "Pesada",
-     "Representante",
-     180000.0,
-     "Recusada",
-     null,
-     "2026-10-30",
-     "2026-11-02"
+     "Parceiro",
+     45000.0,
+     "Convertida",
+     "Restrição cadastral",
+     "2026-11-10",
+     "2026-11-09"
     ]
    },
    {
     "valores": [
      598304,
-     318525,
-     239,
-     1864367,
+     318596,
+     215,
+     1864193,
      "Auto",
      "Digital",
-     45000.0,
+     300000.0,
      "Convertida",
      "Renda insuficiente",
-     "2026-10-23",
-     "2026-10-30"
+     "2026-11-09",
+     "2026-11-12"
     ]
    },
    {
     "valores": [
      598305,
-     318575,
-     225,
+     318767,
+     214,
+     1864358,
+     "Serviços",
+     "Digital",
+     240000.0,
+     "Recusada",
+     null,
+     "2026-11-04",
+     "2026-11-06"
+    ]
+   },
+   {
+    "valores": [
+     598306,
+     318645,
+     217,
      1864206,
      "Serviços",
      "Loja",
@@ -692,32 +707,17 @@
    },
    {
     "valores": [
-     598306,
-     318504,
-     227,
-     1864110,
-     "Imóvel",
-     "Representante",
-     45000.0,
-     "Convertida",
-     "Renda insuficiente",
-     "2026-11-03",
-     "2026-10-23"
-    ]
-   },
-   {
-    "valores": [
      598307,
-     318520,
-     228,
-     1864270,
-     "Imóvel",
+     318733,
+     218,
+     1864039,
+     "Auto",
      "Representante",
      95000.0,
-     "Convertida",
-     null,
-     "2026-11-11",
-     "2026-10-30"
+     "Em análise",
+     "Renda insuficiente",
+     "2026-11-14",
+     "2026-10-25"
     ]
    }
   ]

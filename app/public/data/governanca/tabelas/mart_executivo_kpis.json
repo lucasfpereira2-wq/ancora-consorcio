@@ -13,7 +13,7 @@
  "status": "amarelo",
  "motivo_status": "Consolida marts com alerta: Cobrança e Atendimento com problemas críticos",
  "tem_pk": true,
- "saude": 69.3,
+ "saude": 51.9,
  "ultima_carga": "2026-11-17T06:00:27-03:00",
  "atraso_horas": 0.0,
  "linhas": 20048,
@@ -580,7 +580,7 @@
   "linhas": [
    {
     "valores": [
-     "2026-11-02",
+     "2026-11-14",
      "VENDAS_COTAS",
      "Cotas vendidas",
      "Vendas",
@@ -589,12 +589,12 @@
      null,
      "cotas",
      "mart_vendas_comercial",
-     "2026-11-16 21:07:53"
+     "2026-11-17 06:00:27"
     ]
    },
    {
     "valores": [
-     "2026-10-26",
+     "2026-11-14",
      "CREDITO_VENDIDO",
      "Crédito comercializado",
      "Vendas",
@@ -603,12 +603,12 @@
      7447.97,
      "R$",
      "mart_vendas_comercial",
-     "2026-11-16 16:35:01"
+     "2026-11-17 06:00:27"
     ]
    },
    {
     "valores": [
-     "2026-10-26",
+     "2026-11-14",
      "INAD_OVER30",
      "Inadimplência over 30",
      "Cobrança",
@@ -617,12 +617,12 @@
      5850.9,
      "%",
      "mart_cobranca_carteira",
-     "2026-11-15 15:37:19"
+     "2026-11-17 06:00:27"
     ]
    },
    {
     "valores": [
-     "2026-10-22",
+     "2026-11-15",
      "RECEBIMENTO",
      "Recebimento do dia",
      "Cobrança",
@@ -631,12 +631,12 @@
      1024.14,
      "R$",
      "mart_cobranca_carteira",
-     "2026-11-14 08:50:58"
+     "2026-11-17 06:00:27"
     ]
    },
    {
     "valores": [
-     "2026-11-11",
+     "2026-11-15",
      "NPS",
      "NPS",
      "Atendimento",
@@ -645,12 +645,12 @@
      null,
      "pontos",
      "mart_atendimento",
-     "2026-11-16 18:06:11"
+     "2026-11-17 06:00:27"
     ]
    },
    {
     "valores": [
-     "2026-11-01",
+     "2026-11-15",
      "TMA_VOZ",
      "TMA do canal Voz",
      "Atendimento",
@@ -659,12 +659,12 @@
      4702.37,
      "seg",
      "mart_atendimento",
-     "2026-11-16 07:45:44"
+     "2026-11-17 06:00:27"
     ]
    },
    {
     "valores": [
-     "2026-11-08",
+     "2026-11-16",
      "CONTEMPLACOES",
      "Contemplações",
      "Assembleias",
@@ -673,12 +673,12 @@
      null,
      "cotas",
      "mart_assembleias_contemplacoes",
-     "2026-11-15 09:40:54"
+     "2026-11-17 06:00:27"
     ]
    },
    {
     "valores": [
-     "2026-11-06",
+     "2026-11-14",
      "VENDAS_COTAS",
      "Cotas vendidas",
      "Vendas",
@@ -687,7 +687,7 @@
      6934.51,
      "cotas",
      "mart_vendas_comercial",
-     "2026-11-16 12:59:19"
+     "2026-11-17 06:00:27"
     ]
    }
   ]

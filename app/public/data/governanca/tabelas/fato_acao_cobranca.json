@@ -13,7 +13,7 @@
  "status": "amarelo",
  "motivo_status": "Carga concluída com 4 horas de atraso em relação ao SLA",
  "tem_pk": true,
- "saude": 65.5,
+ "saude": 49.1,
  "ultima_carga": "2026-11-17T07:30:23-03:00",
  "atraso_horas": 4.0,
  "linhas": 920520,
@@ -587,37 +587,50 @@
    {
     "valores": [
      5000000,
-     48211968,
-     9,
-     2,
-     "Assessoria externa",
-     "Mensagem entregue",
+     48212291,
+     21,
+     null,
+     "Régua digital (SMS/e-mail)",
+     "Promessa de pagamento",
      "S",
-     113337.01,
-     "2026-11-15 12:56:27"
+     50894.93,
+     "2026-11-15 17:40:53"
     ]
    },
    {
     "valores": [
      5000001,
-     48212203,
-     25,
-     16,
-     "Régua digital (SMS/e-mail)",
-     "Recusa",
+     48212262,
+     9,
+     5,
+     "Central de cobrança",
+     "Sem contato",
      "N",
-     410582.41,
-     "2026-11-15 20:28:02"
+     581938.12,
+     "2026-11-14 19:32:14"
     ]
    },
    {
     "valores": [
      5000002,
-     48211921,
-     1,
-     27,
+     48212153,
+     3,
+     30,
      "Negativação",
-     "Recusa",
+     "Mensagem entregue",
+     "S",
+     611682.61,
+     "2026-11-16 11:59:39"
+    ]
+   },
+   {
+    "valores": [
+     5000003,
+     48211937,
+     31,
+     null,
+     "Assessoria externa",
+     "Promessa de pagamento",
      "S",
      null,
      "2026-11-15 13:57:19"
@@ -625,10 +638,10 @@
    },
    {
     "valores": [
-     5000003,
-     48212181,
-     5,
-     30,
+     5000004,
+     48211985,
+     6,
+     28,
      "Régua digital (SMS/e-mail)",
      "Recusa",
      "S",
@@ -638,10 +651,10 @@
    },
    {
     "valores": [
-     5000004,
-     48212279,
-     29,
-     null,
+     5000005,
+     48212100,
+     1,
+     6,
      "Central de cobrança",
      "Sem contato",
      "N",
@@ -651,93 +664,80 @@
    },
    {
     "valores": [
-     5000005,
-     48212001,
-     8,
-     16,
-     "Assessoria externa",
-     "Promessa de pagamento",
-     "N",
-     576478.63,
-     "2026-11-14 19:11:41"
-    ]
-   },
-   {
-    "valores": [
      5000006,
-     48212137,
-     3,
-     13,
-     "Negativação",
+     48211917,
+     9,
+     null,
+     "Assessoria externa",
      "Mensagem entregue",
-     "S",
-     382949.39,
-     "2026-11-16 11:57:58"
+     "N",
+     476361.62,
+     "2026-11-15 10:57:47"
     ]
    },
    {
     "valores": [
      5000007,
-     48212022,
-     20,
-     22,
-     "Negativação",
-     "Sem contato",
-     "S",
-     601063.81,
-     "2026-11-15 16:30:31"
+     48212160,
+     25,
+     null,
+     "Régua digital (SMS/e-mail)",
+     "Promessa de pagamento",
+     "N",
+     null,
+     "2026-11-15 13:37:24"
     ]
    },
    {
     "valores": [
      5000008,
-     48212148,
-     4,
-     6,
-     "Negativação",
-     "Recusa",
+     48211957,
+     25,
+     15,
+     "Régua digital (SMS/e-mail)",
+     "Sem contato",
      "N",
-     250275.81,
-     "2026-11-16 19:59:48"
+     null,
+     "2026-11-16 16:17:54"
     ]
    },
    {
     "valores": [
      5000009,
-     48211993,
-     4,
-     14,
-     "Central de cobrança",
-     "Recusa",
+     48212236,
+     26,
+     11,
+     "Régua digital (SMS/e-mail)",
+     "Sem contato",
      "N",
-     129737.8,
-     "2026-11-14 08:50:46"
+     401641.05,
+     "2026-11-15 08:39:18"
     ]
    },
    {
     "valores": [
      5000010,
-     48212062,
-     24,
+     48211994,
+     17,
      13,
-     "Régua digital (SMS/e-mail)",
+     "Central de cobrança",
      "Sem contato",
-     "S",
-     363980.24,
-     "2026-11-16 07:25:01"
+     "N",
+     593257.5,
+     "2026-11-14 13:11:06"
     ]
    },
    {
     "valores": [
      5000011,
-     48212295,
-     31,
-     null,
-     "Assessoria externa",
-     "Recusa",
-     "N",
-     493022.69,
-     "2026-11-14 17:58:28"
+     48212239,
+     6,
+     10,
+     "Negativação",
+     "Mensagem entregue",
+     "S",
+     636405.63,
+     "2026-11-14 14:36:47"
     ]
    }
   ]

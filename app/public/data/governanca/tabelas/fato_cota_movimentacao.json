@@ -557,89 +557,89 @@
    {
     "valores": [
      5000000,
-     74446,
+     74304,
      "Ativa",
-     "Cancelada",
-     "Quitação antecipada",
+     "Ativa",
+     "Contemplação por lance",
      "erp.batch",
-     "2026-11-14 21:25:26"
+     "2026-11-15 07:32:56"
     ]
    },
    {
     "valores": [
      5000001,
-     74572,
-     "Cancelada",
-     "Contemplada",
+     74504,
+     "Ativa",
+     "Quitada",
      null,
-     "erp.assembleia",
-     "2026-11-14 18:09:11"
+     "erp.batch",
+     "2026-11-15 17:34:50"
     ]
    },
    {
     "valores": [
      5000002,
-     74382,
-     "Ativa",
-     "Ativa",
-     "Contemplação por lance",
-     "erp.batch",
-     "2026-11-16 08:28:38"
+     74506,
+     "Cancelada",
+     "Cancelada",
+     "Quitação antecipada",
+     "bko.rlima",
+     "2026-11-15 12:15:18"
     ]
    },
    {
     "valores": [
      5000003,
-     74419,
+     74302,
      "Ativa",
-     "Quitada",
-     "Inadimplência",
+     "Cancelada",
+     null,
      "bko.rlima",
-     "2026-11-14 12:49:49"
+     "2026-11-15 10:08:40"
     ]
    },
    {
     "valores": [
      5000004,
-     74361,
-     "Cancelada",
+     74655,
      "Ativa",
-     "Quitação antecipada",
+     "Cancelada",
+     "Solicitação do cliente",
      "erp.assembleia",
-     "2026-11-16 07:47:34"
+     "2026-11-16 08:40:19"
     ]
    },
    {
     "valores": [
      5000005,
-     74506,
-     "Ativa",
-     "Contemplada",
-     "Solicitação do cliente",
+     74549,
+     "Cancelada",
+     "Quitada",
+     "Quitação antecipada",
      "erp.batch",
-     "2026-11-16 15:48:35"
+     "2026-11-16 18:34:37"
     ]
    },
    {
     "valores": [
      5000006,
-     74370,
-     "Cancelada",
+     74384,
      "Ativa",
-     "Contemplação por lance",
+     "Contemplada",
+     null,
      "bko.acampos",
-     "2026-11-16 14:03:46"
+     "2026-11-16 20:14:34"
     ]
    },
    {
     "valores": [
      5000007,
-     74552,
+     74688,
      "Cancelada",
-     "Quitada",
-     "Solicitação do cliente",
-     "bko.rlima",
-     "2026-11-14 17:01:08"
+     "Contemplada",
+     null,
+     "bko.acampos",
+     "2026-11-15 14:05:44"
     ]
    }
   ]

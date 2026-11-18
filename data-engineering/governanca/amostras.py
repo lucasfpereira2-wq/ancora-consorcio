@@ -4,7 +4,7 @@ Amostra de dados fictícia de cada tabela (8 a 12 linhas), coerente com o schema
 Dados pessoais sempre mascarados. Nas tabelas com problema de conteúdo, as linhas problemáticas são
 marcadas com `problema` e `colunas_problema` (pares duplicados, nulos, chaves órfãs, valores inválidos).
 """
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 from base import SCHEMAS, VOLUMES, cenario, rng
 
@@ -113,8 +113,9 @@ def _valor(tabela, col, k, r, ancora, seq):
         return lista[k % len(lista)] if seq else r.choice(lista)
 
     if col["pk"] and not col["fk"] and tipo in ("bigint", "integer", "smallint"):
-        base = BASE_ID.get(nome, {"smallint": 1, "integer": 1_000}.get(tipo, 5_000_000 + r.randint(0, 9) * 0))
-        return (k + 1) if seq else base + k * (1 if tipo != "bigint" else 1) + (0 if base < 100 else r.randint(0, 0))
+        if seq:
+            return k + 1
+        return BASE_ID.get(nome, {"smallint": 1, "integer": 1_000}.get(tipo, 5_000_000)) + k
     if nome.startswith("dt_") or tipo in ("date", "timestamp"):
         if nulo and "nasc" not in nome:
             return None
@@ -186,6 +187,8 @@ def _valor(tabela, col, k, r, ancora, seq):
         return None if nulo else round(r.uniform(0.5, 62) if "pago" in nome or "lance" in nome or "ocupacao" in nome else r.uniform(0.5, 22), 2)
     if nome.startswith("qt_"):
         teto = 40 if any(p in nome for p in ("assemble", "parcelas", "acordo", "contempl")) else 900
+        if nome == "qt_mensagens":
+            return r.randint(2, 38)
         return r.randint(0 if teto == 40 else 12, teto)
     if nome == "nota":
         return r.choice([10, 10, 9, 9, 8, 7, 6, 3]) if "nps" in tabela or "pesquisas" in tabela else r.choice([5, 5, 4, 4, 3, 2])
@@ -207,7 +210,7 @@ def _valor(tabela, col, k, r, ancora, seq):
         return f"{r.getrandbits(128):032x}"
     if tipo.startswith("varchar(36)") or tipo.startswith("varchar(40)"):
         return f"{nome.split('_')[1][:3] if '_' in nome else 'id'}-{r.getrandbits(40):010x}"
-    if nome.startswith("id_") or nome.startswith(("nr_", "cod_")):
+    if nome.startswith("id_") or nome.startswith(("nr_", "cod_cham")):
         if nulo:
             return None
         base = BASE_ID.get(nome.replace("_cedente", "").replace("_cessionario", "").replace("_erp", "").replace("_supervisor", "_colaborador").replace("_helpdesk", ""), 1_000)
@@ -246,7 +249,60 @@ PROBLEMAS_AMOSTRA = {
 _NAO_COPIA = ("_dt_carga", "dt_carga", "id_entrega", "id_webhook_evento", "payload_hash")
 
 
-def gerar_amostra(nome, ancora, tem_problema):
+def _coerencia(nome, linhas, pos, r, carga):
+    """Ajustes para a amostra parecer dado real: datas em ordem, valores que fecham, carimbo da carga."""
+    carimbo = f"{carga:%Y-%m-%d %H:%M:%S}"
+
+    def mais(ts, minutos):
+        return f"{datetime.strptime(ts, '%Y-%m-%d %H:%M:%S') + timedelta(minutes=minutos):%Y-%m-%d %H:%M:%S}"
+
+    for li in linhas:
+        for c_ in ("_dt_carga", "dt_carga"):
+            if c_ in pos:
+                li[pos[c_]] = carimbo
+        if "dt_inicio" in pos and isinstance(li[pos["dt_inicio"]], str) and " " in li[pos["dt_inicio"]]:
+            ini = li[pos["dt_inicio"]]
+            if "dt_atendimento" in pos and li[pos["dt_atendimento"]]:
+                li[pos["dt_atendimento"]] = mais(ini, 1)
+            if "dt_fim" in pos and li[pos["dt_fim"]]:
+                li[pos["dt_fim"]] = mais(ini, r.randint(3, 26))
+        if "dt_abertura" in pos and "dt_primeira_resposta" in pos:
+            ab = li[pos["dt_abertura"]]
+            if li[pos["dt_primeira_resposta"]]:
+                li[pos["dt_primeira_resposta"]] = mais(ab, r.randint(2, 55))
+            if li[pos["dt_resolucao"]]:
+                li[pos["dt_resolucao"]] = mais(ab, r.randint(60, 900))
+        if "hr_ini" in pos and "hr_fim" in pos and li[pos["hr_fim"]]:
+            h, m, s_ = (int(x) for x in li[pos["hr_ini"]].split(":"))
+            li[pos["hr_fim"]] = f"{h:02d}:{min(59, m + r.randint(1, 9)):02d}:{s_:02d}"
+        if all(c_ in pos for c_ in ("vl_parcela", "vl_fundo_comum", "vl_taxa_adm", "vl_fundo_reserva")):
+            v = li[pos["vl_parcela"]]
+            li[pos["vl_taxa_adm"]] = round(v * 0.13, 2)
+            li[pos["vl_fundo_reserva"]] = round(v * 0.02, 2)
+            li[pos["vl_fundo_comum"]] = round(v - li[pos["vl_taxa_adm"]] - li[pos["vl_fundo_reserva"]], 2)
+        if "dias_atraso" in pos and "situacao_parcela" in pos:
+            atrasada = li[pos["situacao_parcela"]] == "Em atraso"
+            li[pos["dias_atraso"]] = r.choice([6, 14, 35, 68]) if atrasada else 0
+            if atrasada:
+                li[pos["dt_vencimento"]] = (carga.date() - timedelta(days=li[pos["dias_atraso"]])).isoformat()
+            elif li[pos["situacao_parcela"]] == "Em aberto":
+                li[pos["dt_vencimento"]] = (carga.date() + timedelta(days=r.randint(1, 20))).isoformat()
+        if nome == "mart_atendimento":
+            c = li[pos["qt_contatos"]]
+            ab = int(c * r.uniform(0.02, 0.09))
+            li[pos["qt_abandonados"]], li[pos["qt_atendidos"]] = ab, c - ab
+            li[pos["tempo_atendimento_seg"]] = (c - ab) * r.randint(240, 420)
+            li[pos["tempo_espera_seg"]] = (c - ab) * r.randint(25, 90)
+            li[pos["qt_resolvidos_primeiro_contato"]] = int((c - ab) * r.uniform(0.62, 0.8))
+            resp = int(c * r.uniform(0.04, 0.09))
+            li[pos["qt_respostas_nps"]], li[pos["qt_promotores"]], li[pos["qt_detratores"]] = resp, int(resp * 0.68), int(resp * 0.11)
+        if nome == "dim_cliente":
+            li[pos["tipo_pessoa"]] = "PF"
+        if "dt_referencia" in pos:
+            li[pos["dt_referencia"]] = (carga.date() - timedelta(days=1 + r.randint(0, 2))).isoformat()
+
+
+def gerar_amostra(nome, ancora, tem_problema, carga):
     cols = SCHEMAS[nome]
     r = rng("amostra", nome)
     seq = nome in SEQUENCIAL
@@ -275,6 +331,7 @@ def gerar_amostra(nome, ancora, tem_problema):
                 li[pos["dt_pagamento"]] = None
             if "vl_pago" in pos:
                 li[pos["vl_pago"]] = li[pos["vl_parcela"]] if pago else None
+    _coerencia(nome, linhas, pos, r, carga)
     saida = [dict(valores=li) for li in linhas]
     if tem_problema:
         for op in PROBLEMAS_AMOSTRA.get(nome, []):
@@ -288,6 +345,8 @@ def gerar_amostra(nome, ancora, tem_problema):
                         for c_ in cols:
                             if c_["nome"] not in _NAO_COPIA:
                                 saida[b]["valores"][pos[c_["nome"]]] = saida[a]["valores"][pos[c_["nome"]]]
+                        if nome == "fato_parcelas":
+                            saida[b]["valores"][pos["dt_carga"]] = f"{carga + timedelta(minutes=12):%Y-%m-%d %H:%M:%S}"
                         marcar += [a, b]
             elif tipo == "nulo":
                 for a in alvo:

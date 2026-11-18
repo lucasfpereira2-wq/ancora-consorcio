@@ -506,7 +506,7 @@
      "Voz Geral",
      "WhatsApp",
      "Geral",
-     370,
+     183,
      "S"
     ]
    },
@@ -516,7 +516,7 @@
      "Voz Cobrança",
      "Chat",
      "Cobrança",
-     617,
+     370,
      "S"
     ]
    },
@@ -526,7 +526,7 @@
      "Voz Contemplados",
      "E-mail",
      "Contemplação",
-     287,
+     155,
      "S"
     ]
    },
@@ -536,7 +536,7 @@
      "WhatsApp",
      "App",
      "Retenção",
-     551,
+     617,
      "S"
     ]
    },
@@ -546,7 +546,7 @@
      "Chat e App",
      "Voz",
      "Digital",
-     151,
+     287,
      "S"
     ]
    },
@@ -556,7 +556,7 @@
      "E-mail",
      "WhatsApp",
      "Geral",
-     112,
+     551,
      "N"
     ]
    },
@@ -566,7 +566,7 @@
      "Retenção",
      "Chat",
      "Cobrança",
-     414,
+     345,
      "S"
     ]
    },
@@ -576,7 +576,7 @@
      "Voz Geral",
      "E-mail",
      "Contemplação",
-     550,
+     151,
      "S"
     ]
    }
