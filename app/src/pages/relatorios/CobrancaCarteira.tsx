@@ -9,7 +9,7 @@ export default function CobrancaCarteira() {
   const { dados, carregando } = useRelatorio(ID)
   const { dados: meta } = useMeta()
   // filtros.filtrosCubo + filtros.meta alimentam filtrar(cubo, ...); filtros.granularidade alimenta serieTemporal(...)
-  const filtros = useFiltrosResolvidos({ dimCanal: 'canal' })
+  const filtros = useFiltrosResolvidos({ dimCanal: 'canal_cobranca' })
   void filtros
 
   return (

@@ -167,7 +167,6 @@ export default function Abertura() {
             <LinkPerfil valor={agenda} icone={CalendarClock}>
               Agendar conversa
             </LinkPerfil>
-            <span className="ml-2 hidden text-xs text-muted-foreground xl:inline">80 tabelas monitoradas · 5 relatórios executivos</span>
           </div>
         </nav>
       </main>

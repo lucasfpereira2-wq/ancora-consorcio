@@ -95,7 +95,8 @@ UI/UX e Front-end, Visualização (relatórios), QA.
 ## Estado atual
 
 - [x] Contratos definidos (tabelas mestre, cenário, tipos TypeScript, tokens)
-- [ ] Onda 1: simulação e cubos · motor de governança · design system, shell, abertura, artigos, plano
+- [x] Onda 1a: simulação e cubos dos 5 relatórios (284 validações passando; `python3 data-engineering/run_all.py`)
+- [ ] Onda 1b: motor de governança · design system, shell, abertura, artigos, plano (em andamento)
 - [ ] Onda 2: Home, Farol, detalhe da tabela, Rotinas · 5 relatórios
 - [ ] QA com screenshots
 - [ ] README, roteiro de demo, workflow de deploy
@@ -104,3 +105,19 @@ UI/UX e Front-end, Visualização (relatórios), QA.
 
 - Preencher `[PREENCHER]` em `app/src/content/perfil.json`.
 - Publicação: habilitar GitHub Pages (Settings > Pages > Source: GitHub Actions) e levar o código para a branch padrão.
+
+## Números reais da simulação (para conferência)
+
+78.480 cotas ativas · saldo de R$ 10,49 bi · over 30 de 6,67% · 55.683 cotas vendidas em 24 meses · ticket médio de R$ 143,8 mil ·
+9.499 contatos por dia útil · 409 grupos · 340 vendedores.
+Cenário: 312 parcelas duplicadas em 16/11 (R$ 341.130, +1,8% sobre o recebimento correto de R$ 18,95 mi) ·
+NPS de outubro 62,01 reportado x 56,06 corrigido (2.035 respostas duplicadas desde 01/10) ·
+propostas de 16/11: 412 contra média de 1.148 · voz sem linhas em 14, 15 e 16/11.
+
+## Cubos por relatório (`app/public/data/relatorios/`)
+
+- `vendas.json`: `vendas`, `cancelamentos`, `funil`, `metas`, `extras.vendedores`
+- `cobranca-carteira.json`: `carteira` (estoque, 152 fotografias), `roll_rate`, `recebimento` (com `*_dup`), `recuperacao`
+- `cobranca-safra.json`: `safra_mob` (triangular; `cotas_base` repetida em cada MOB)
+- `atendimento.json`: `contatos`, `motivos`, `hora`, `nps` (com `*_dup`), `csat`, `detracao` (regional/UF por pesos)
+- `assembleias.json`: `contemplacoes`, `lances`, `liberacao`, `grupos`, `extras.grupos`

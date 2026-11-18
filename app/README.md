@@ -83,6 +83,8 @@ razao(tot.valor, tot.qtd)                                       // ticket médio
 - `filtrar` aplica as regras de `src/types/cubo.ts`: dimensão nativa; UF em cubo só com `regional` (pondera por `meta.pesos_uf`);
   cubo sem geografia (pondera por `meta.pesos_regional`); regional em cubo só com `uf`. Filtros extras: `{ dims: { faixa_atraso: [...] } }`.
 - Medidas `estoque` nunca somam datas: vale a última fotografia do período (em `totais`/`agrupar`) ou de cada bucket (nas séries).
+- O filtro de canal atua na dimensão informada em `useFiltrosResolvidos({ dimCanal })`: nos cubos atuais é `canal` (vendas),
+  `canal_cobranca` (cobrança) e `canal_atendimento` (atendimento).
 - Semanas começam na segunda; buckets sem dado entram com 0; cubos com dimensão `mes` sempre saem mensais.
 - `compararPeriodos` usa o período imediatamente anterior com o mesmo número de dias (`variacao` é `null` sem base).
 
