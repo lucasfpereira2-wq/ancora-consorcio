@@ -22,7 +22,8 @@ rotinas que duplicam dados e tabelas sem chave primária.
 - Rodapé: "Ambiente simulado. Dados fictícios gerados para demonstração."
 - Site 100% estático, sem backend. Dados em JSON gerados por Python com seed fixa.
 - Dados pessoais do candidato ainda não informados ficam como `[PREENCHER]` em `app/src/content/perfil.json`
-  (LinkedIn, e-mail, agenda, foto). Portfólio: https://www.lucasanalytics.com.br/
+  (e-mail, agenda, foto). Portfólio: https://www.lucasanalytics.com.br/ · LinkedIn (informado em 18/11):
+  https://www.linkedin.com/in/lucas-fernandes-317427168/
 - **Os relatórios NÃO mostram alertas de erro de dados** (decisão do dono em 17/11): ficam limpos, com os números como
   publicados, para mostrar que o candidato também faz relatórios bonitos. Selos de confiança, "publicado × correto" e
   links para a tabela causadora vivem somente na página **Impacto nos relatórios** (`/impactos`). Não reintroduzir
@@ -119,8 +120,9 @@ UI/UX e Front-end, Visualização (relatórios), QA.
 - Chunk do ECharts com 276 kB gzip, carregado sob demanda (fora do bundle inicial de 110 kB gzip).
 - Layout em celular foi conferido só na Abertura; as telas internas são desktop-first.
 
-- Preencher `[PREENCHER]` em `app/src/content/perfil.json`.
-- Publicação: habilitar GitHub Pages (Settings > Pages > Source: GitHub Actions). O workflow publica a partir da branch padrão
+- Preencher e-mail, agenda e foto (`[PREENCHER]`) em `app/src/content/perfil.json`; o LinkedIn já está preenchido.
+- Publicação: o dono publicou o site na **Vercel** (18/11) e validou. Cada push na branch publicada gera novo deploy lá.
+  O workflow de GitHub Pages continua no repositório como alternativa: habilitar GitHub Pages (Settings > Pages > Source: GitHub Actions). O workflow publica a partir da branch padrão
   (hoje `claude/eager-brown-ywhkr9`, a única do repositório). Em repositório privado, o Pages exige plano pago do GitHub.
 
 ## Números reais da simulação (para conferência)
