@@ -24,7 +24,7 @@ import {
 } from 'echarts/components'
 import * as echarts from 'echarts/core'
 import type { EChartsOption } from 'echarts'
-import { LabelLayout, UniversalTransition } from 'echarts/features'
+import { LabelLayout, LegacyGridContainLabel, UniversalTransition } from 'echarts/features'
 import { CanvasRenderer } from 'echarts/renderers'
 import { useEffect, useImperativeHandle, useRef, type CSSProperties, type Ref } from 'react'
 import { baixarArquivo } from '@/lib/exportar'
@@ -36,7 +36,7 @@ echarts.use([
   LineChart, BarChart, PieChart, ScatterChart, HeatmapChart, FunnelChart, GaugeChart, TreemapChart, SankeyChart, RadarChart, CustomChart,
   GridComponent, TooltipComponent, LegendComponent, TitleComponent, DatasetComponent, MarkLineComponent, MarkPointComponent,
   MarkAreaComponent, VisualMapComponent, DataZoomComponent, GraphicComponent, CalendarComponent, RadarComponent, AriaComponent,
-  LabelLayout, UniversalTransition, CanvasRenderer,
+  LabelLayout, LegacyGridContainLabel, UniversalTransition, CanvasRenderer,
 ])
 echarts.registerTheme('hub-claro', temaECharts('claro'))
 echarts.registerTheme('hub-escuro', temaECharts('escuro'))

@@ -109,7 +109,7 @@ UI/UX e Front-end, Visualização (relatórios), QA.
 
 ## Números reais da simulação (para conferência)
 
-78.480 cotas ativas · saldo de R$ 10,49 bi · over 30 de 6,67% · 55.683 cotas vendidas em 24 meses · ticket médio de R$ 143,8 mil ·
+78.480 cotas ativas · saldo de R$ 10,49 bi · over 30 de 6,67% em quantidade de cotas (4,72% em saldo; over 90 de 2,79% em saldo) · 55.683 cotas vendidas em 24 meses · ticket médio de R$ 143,8 mil ·
 9.499 contatos por dia útil · 409 grupos · 340 vendedores.
 Cenário: 312 parcelas duplicadas em 16/11 (R$ 341.130, +1,8% sobre o recebimento correto de R$ 18,95 mi) ·
 NPS de outubro 62,01 reportado x 56,06 corrigido (2.035 respostas duplicadas desde 01/10) ·
